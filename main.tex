@@ -1,0 +1,176 @@
+\documentclass[a4paper,czech,czech,openright,BCOR10mm,DIV11]{scrreprt}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{array}
+\usepackage{longtable}
+\usepackage{varioref}
+\usepackage{wrapfig}
+\usepackage{fancybox}
+\usepackage{calc}
+\usepackage{framed}
+\usepackage{url}
+\usepackage{graphicx}
+\usepackage{placeins}
+\makeatletter
+
+\providecommand{\LyX}{L\kern-.1667em\lower.25em\hbox{Y}\kern-.125emX\@}
+\newcommand{\lyxline}[1][1pt]{%
+  \par\noindent%
+  \rule[.5ex]{\linewidth}{#1}\par}
+\newcommand{\noun}[1]{\textsc{#1}}
+\let\SF@@footnote\footnote
+\def\footnote{\ifx\protect\@typeset@protect
+    \expandafter\SF@@footnote
+  \else
+    \expandafter\SF@gobble@opt
+  \fi
+}
+
+\renewcommand{\baselinestretch}{1.2}
+
+\expandafter\def\csname SF@gobble@opt \endcsname{\@ifnextchar[%]
+  \SF@gobble@twobracket
+  \@gobble
+}
+\edef\SF@gobble@opt{\noexpand\protect
+  \expandafter\noexpand\csname SF@gobble@opt \endcsname}
+\def\SF@gobble@twobracket[#1]#2{}
+\providecommand{\tabularnewline}{\\}
+
+\newenvironment{lyxcode}
+{\begin{list}{}{
+\setlength{\rightmargin}{\leftmargin}
+\setlength{\listparindent}{0pt}
+\raggedright
+\setlength{\itemsep}{0pt}
+\setlength{\parsep}{0pt}
+\normalfont\ttfamily}%
+ \item[]}
+{\end{list}}
+
+\usepackage[czech]{babel}
+\usepackage[]{hyperref}
+\usepackage[numbers,sort&compress]{natbib}
+\usepackage{hypernat}
+\newcommand{\BibTeX}{{\sc Bib}\TeX}
+\hypersetup{
+pdftitle={SSZ},
+pdfauthor={Michael Kutý},
+pdfsubject={},
+pdfkeywords={SSZ}                      
+}
+\usepackage{multicol}
+
+
+\usepackage{packages/bc-palatino}
+\usepackage{packages/bc-fancyhdr}
+
+\makeatother
+
+\usepackage{babel}
+
+\usepackage{listing}
+\usepackage{listings}
+\usepackage{color}
+
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+
+\renewcommand*{\lstlistingname}{Kód}
+\renewcommand*{\lstlistlistingname}{Seznam kódů}
+
+\lstset{
+  language=Java,
+  aboveskip=3mm,
+  belowskip=3mm,
+  xleftmargin=0.2mm,
+  showstringspaces=false,
+  columns=flexible,
+  basicstyle={\small\ttfamily},
+  numbers=none,
+  numberstyle=\tiny\color{gray},
+  keywordstyle=\color{blue},
+  commentstyle=\color{dkgreen},
+  stringstyle=\color{mauve},
+  breaklines=true,
+  breakatwhitespace=true,
+  tabsize=3,
+    inputencoding=utf8,
+    extendedchars=true,
+    literate=%
+    {á}{{\'a}}1
+    {č}{{\v{c}}}1
+    {ď}{{\v{d}}}1
+    {é}{{\'e}}1
+    {ě}{{\v{e}}}1
+    {í}{{\'i}}1
+    {ň}{{\v{n}}}1
+    {ó}{{\'o}}1
+    {ř}{{\v{r}}}1
+    {š}{{\v{s}}}1
+    {ť}{{\v{t}}}1
+    {ú}{{\'u}}1
+    {ů}{{\r{u}}}1
+    {ý}{{\'y}}1
+    {ž}{{\v{z}}}1
+    {Á}{{\'A}}1
+    {Č}{{\v{C}}}1
+    {Ď}{{\v{D}}}1
+    {É}{{\'E}}1
+    {Ě}{{\v{E}}}1
+    {Í}{{\'I}}1
+    {Ň}{{\v{N}}}1
+    {Ó}{{\'O}}1
+    {Ř}{{\v{R}}}1
+    {Š}{{\v{S}}}1
+    {Ť}{{\v{T}}}1
+    {Ú}{{\'U}}1
+    {Ů}{{\r{U}}}1
+    {Ý}{{\'Y}}1
+    {Ž}{{\v{Z}}}1
+}
+
+\begin{document}
+
+\thispagestyle{empty}\begin{center}\pagenumbering{roman}\vspace{10mm}
+
+
+\textsf{\textsc{\noun{\LARGE Univerzita Hradec Králové}}}\\
+\vspace{0.5em}
+
+\vspace{15mm}
+
+\includegraphics[width=0.4\textwidth]{logo/uhk}
+
+\vspace{15mm}
+
+
+\textsf{\huge Státní závěrečné zkoušky}{\huge \par}
+
+\vspace{15mm}
+
+
+\textsf{\LARGE Aplikovaná informatika - 3}{\LARGE \par}
+
+\vspace{10mm}
+
+\end{center} 
+
+
+\tableofcontents{}
+
+\include{uvod}
+
+\include{prog}
+
+\include{tech}
+
+\begin{thebibliography}{10}
+\end{thebibliography}
+
+\addcontentsline{toc}{chapter}{Seznam zdrojů} 
+
+\include{prilohy}
+
+\end{document}
