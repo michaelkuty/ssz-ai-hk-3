@@ -14,9 +14,39 @@
 
 \section{Námětové mapy: standard Topic Maps a jeho součásti, základní stavební prvky námětové mapy, postup tvorby námětové mapy, implementace námětových map (prostředí, syntaxe), dotazování se na námětové mapy, odvozování s námětovými mapami, aplikace námětových map.}
 
+\newpage
+
 \section{Objektové modelování a programování - základní pojmy, podstata, využití. Softwarový proces. UML. Událostmi řízené programování. Architektura MVC.}
 
-\newpage
+\subsection{Modelování}
+
+vychází z faktu, že budovaný IS je obrazem (modelem) vnějšího světa
+odráží tedy realitu a struktura systému výchází z reality
+nelze namodelovat přesně celou realitu
+=> abstrakce – odstranění nepodstatných prvků
+lze takto modelovat i velmi rozsáhlé systémy
+modelování umožňuje
+usnadnění komunikace se zákazníkem
+lepší přehled o aktuálním stavu projektu
+snazší vytváření dokumentace atd.
+hlavní principy modelování
+\begin{description}
+\item[abstrakce]
+\item[formalizace]
+\item[jednoznačnost]
+\end{description}
+to, co pro mě není důležité, odstíním
+je přesně dané, co se jak vyjadřuje
+usnadnění komunikace v týmu i se zákazníkem
+vyplývá z formalizace; každý prvek lze jednoznačně identifikovat a popsat
+snížení nadbytečností
+princip tří architektur
+postupná tvorba tří typů architektur
+každá má jinou míru abstrakce, logiku a hloubku popisu, ale každá úplně popisuje celý systém
+jde o
+konceptuální úroveň – popisuje obsah, ne formu (CO?)
+technologická úroveň – popisuje technologii, která bude použitá (JAK?)
+fyzická úroveň – popisuje detaily implementace (ČÍM?)
 
 \subsection{Událostmi řízené programování - Event-driven programming}
 
@@ -33,6 +63,21 @@ Příklady typů událostí:
 \item Událost časovače
 \item Zpráva systému
 \end{itemize}
+
+\subsection{Architektura MVC}
+
+(model-view-controller) – zřejmě odpovídá úrovním modelování tříd (viz výše).
+Lepší by bylo psát VCM nebo MCV, neboť to pak odpovídá vztahům v architektuře.
+rozděluje datový model aplikace, uživatelské rozhraní a řídicí logiku do tří nezávislých komponent
+že modifikace některé z nich má minimální vliv na ostatní.
+vytváření aplikací s využitím architektury MVC vyžaduje vytvoření tří komponent
+Model (model), což je doménově specifická reprezentace informací, s nimiž aplikace pracuje.
+View (pohled), který převádí data reprezentovaná modelem do podoby vhodné k interaktivní prezentaci uživateli.
+Controller (řadič), který reaguje na události (typicky pocházející od uživatele) a zajišťuje změny v modelu nebo v pohled
+Příklad: ve skriptovacím jazyku pro WWW Ruby on Rails dělají:
+Model - z databáze vycucne řádky z tabulky odpovídající danému modelu a převede je na objekt (sloupce tabulky= vlastnosti objektu). Nebo kolekci objektů.
+Controller - z Pohledu získá informaci, co chce uživatel vidět (provést), zpracuje požadavek, od modelu si vyžádá patřičné objekty, ty zpracuje (bussines logic) a předá je patřičnému pohledu (odpovídá požadované akci, nemusí to být tentýž co to celé vyvolal)
+View - vezme zpracované objekty od controleru a vhodně je zobrazí (nijak je neupravuje, to je práce controleru, který volá metodu v modelu) a čeká co si budé páníček přát dále.
 
 \section{ Práce s kolekcemi – typy kolekcí, příklady použití, algoritmy pracující nad kolekcemi (řazení, vyhledávání), základní principy implementace ve zvoleném programovacím jazyce.}
 
