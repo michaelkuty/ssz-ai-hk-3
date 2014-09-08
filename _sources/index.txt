@@ -2,8 +2,6 @@
 Otázky na státnice AI3 ver. 2014!
 ==============================================
 
-#. o co de
-
 PROG
 ===========
 
@@ -24,7 +22,7 @@ PROG
 
 8. :doc:`Práce s kolekcemi – typy kolekcí, příklady použití, algoritmy pracující nad kolekcemi (řazení, vyhledávání), základní principy implementace ve zvoleném programovacím jazyce.<prog/8>`
 
-9. :doc:Problematika perzistentního (trvalého) ukládání dat ve vybraném programovacím jazyce.<prog/9>`
+9. :doc:`Problematika perzistentního (trvalého) ukládání dat ve vybraném programovacím jazyce.<prog/9>`
 
 10. :doc:`Webové aplikace – principy, nástroje. Vícevrstvé aplikace. Zabezpečení aplikace.<prog/10>`
 
@@ -38,13 +36,36 @@ PROG
 TECH
 ===========
 
-# :doc:` <tech/1>`
-# :doc:` <tech/2>`
+1. :doc:`Principy počítačů (historický vývoj, předpoklady fungování, binární logika, modulace signálu).<prog/1>`
+2. :doc:`Architektura počítače (von Neumannovo a Harwardské schéma, Flynnova taxonomie, základní deska, procesor, mikroarchitektura procesoru, paměti, sběrnice, řadič, přídavné karty, ovladače).<prog/2>`
+3. :doc:`Paměťový systém počítače a ukládání dat (typy, principy fungování, frekvence, normy, logická a fyzická struktura disku, RAM, ROM, Cache, HDD, CD, DVD, FLASH…)<prog/3>`
+
+4. :doc:`Architektura periferních zařízení (rozdělení, principy, funkce, typy, rozhraní, příklady)<prog/4>`
+5. :doc:`Servery a pracovní stanice (rozdíly, kritéria výběru, role serverů, serverové technologie, zálohování dat včetně RAID)<prog/5>`
+6. :doc:`Komunikační prostředky (principy komunikace, modulace signálu, rozdělení a porovnání, média, mobilní technologie)<prog/6>`
+7. :doc:`ETHERNET (principy fungování, vývoj a topologie, přístupová metoda, síťová karta, strukturovaná kabeláž)<prog/7>`
+8. :doc:`RM ISO/OSI, TCP/IP (popis a srovnání, funkce zásadních protokolů, IP adresy)<prog/8>`
+9. :doc:`Internet (organizační struktura, vývoj, RFC dokumenty, domény, technické předpoklady pro připojení, hrozby)<prog/9>`
+10. :doc:`Směrování (základní principy, směrovací protokoly, směrovací algoritmy, směrovače)<prog/10>`
+11. :doc:`Propojování a management sítí (přenosová média, technologie pro různé vrstvy, WIFI, VPN, systémy pro vzdálený přístup, řešení založená na SNMP)<prog/11>`
+12. :doc:`Principy operačních systémů (základní rozdělení, druhy operačních systémů, procesy, správa procesů a systémových zdrojů, uživatelská rozhraní).<prog/12>`
+13. :doc:`Souborové systémy a logická struktura dat (principy, porovnání, příklady).<prog/13>`
+14. :doc:`Operační systémy Windows (principy MS DOS, MS Windows, architektura, verze, funkce, rozdíly).<prog/14>`
+15. :doc:`Operační systémy Unix, Linux, BSD, MacOS (základní myšlenky, výhody a nevýhody, open-source, vznik a vývoj, licence, distribuce, základy ovládání - shell, rozdíly, historie a vývoj)<prog/15>`
+16. :doc:`Serverové operační systémy (specifika serverových operačních systémů, rozdíly mezi OS pro osobní počítač a pro server, serverové služby, správa uživatelů)<prog/16>`
+
+
+Syntaxe - **reStructuredText**
+------
+
+* http://sphinx-doc.org/rest.html
 
 Jak přispět ?
+------
 
 1. Fork na githubu
 2. Editace v source/..
+
 
 Indices and tables
 ==================
