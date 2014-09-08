@@ -1,0 +1,92 @@
+\pagenumbering{arabic}%start arabic pagination from 1 
+
+\chapter{PROG}
+
+\section{ Logický program - struktura, základní pojmy, datová struktura seznam, práce s databází Prologu. Hlavní odlišnosti oproti procedurálnímu programování, možnosti použití neprocedurálního programovacího jazyka.}
+
+\section{Databáze, databázový systém. Hlavní funkce DBS. Historický vývoj DBS. Modely dat. Relační algebra: projekce, selekce, spojení. SQL.}
+
+\section{Konceptuální modelování. E-R model a jeho grafické znázornění. Relační model. Typy vztahů mezi entitami a jejich reprezentace v relačním modelu. Vlastnosti relační tabulky. Normální formy relačního schématu.}
+
+\section{Ontologické inženýrství: pojem ontologie v kontextu informatiky, základní stavební prvky ontologií, typy ontologií, jazyky ontologického modelování, návrhové vzory, normalizace ontologie. Odvozování nad ontologií (kontrola konzistence, klasifikace), nástroje, použití ontologií.}
+
+\section{Sémantický web: technologie sémantického webu, metadata, RDF, RDFS, OWL, dotazování se na sémantický web (význam, jazyky), sémantický web a odvozování (význam, jazyky), aplikace sémantického webu.}
+
+\section{Námětové mapy: standard Topic Maps a jeho součásti, základní stavební prvky námětové mapy, postup tvorby námětové mapy, implementace námětových map (prostředí, syntaxe), dotazování se na námětové mapy, odvozování s námětovými mapami, aplikace námětových map.}
+
+\newpage
+
+\section{Objektové modelování a programování - základní pojmy, podstata, využití. Softwarový proces. UML. Událostmi řízené programování. Architektura MVC.}
+
+\subsection{Modelování}
+
+vychází z faktu, že budovaný IS je obrazem (modelem) vnějšího světa
+odráží tedy realitu a struktura systému výchází z reality
+nelze namodelovat přesně celou realitu
+=> abstrakce – odstranění nepodstatných prvků
+lze takto modelovat i velmi rozsáhlé systémy
+modelování umožňuje
+usnadnění komunikace se zákazníkem
+lepší přehled o aktuálním stavu projektu
+snazší vytváření dokumentace atd.
+hlavní principy modelování
+\begin{description}
+\item[abstrakce]
+\item[formalizace]
+\item[jednoznačnost]
+\end{description}
+to, co pro mě není důležité, odstíním
+je přesně dané, co se jak vyjadřuje
+usnadnění komunikace v týmu i se zákazníkem
+vyplývá z formalizace; každý prvek lze jednoznačně identifikovat a popsat
+snížení nadbytečností
+princip tří architektur
+postupná tvorba tří typů architektur
+každá má jinou míru abstrakce, logiku a hloubku popisu, ale každá úplně popisuje celý systém
+jde o
+konceptuální úroveň – popisuje obsah, ne formu (CO?)
+technologická úroveň – popisuje technologii, která bude použitá (JAK?)
+fyzická úroveň – popisuje detaily implementace (ČÍM?)
+
+\subsection{Událostmi řízené programování - Event-driven programming}
+
+Událost (Event) vzniká buď jako výsledek interakce GUI s uživatelem nebo jako důsledek změny vnitřního stavu aplikace či OS
+Obsluhou události nazýváme úsek kódu, který je při vzniku události automaticky vyvolán a provádí činnost k události připojenou (někdy také ohlasová metoda události či Event Handler).
+Příklady typů událostí:
+\begin{itemize}
+\item Klik/DvojKlik
+\item Zaměření/Ztráta zaměření
+\item Změna stavu komponenty
+\item Stisk, uvolnění klávesy
+\item Stisknutí, uvolnění tl. myši
+\item Posun myši
+\item Událost časovače
+\item Zpráva systému
+\end{itemize}
+
+\subsection{Architektura MVC}
+
+(model-view-controller) – zřejmě odpovídá úrovním modelování tříd (viz výše).
+Lepší by bylo psát VCM nebo MCV, neboť to pak odpovídá vztahům v architektuře.
+rozděluje datový model aplikace, uživatelské rozhraní a řídicí logiku do tří nezávislých komponent
+že modifikace některé z nich má minimální vliv na ostatní.
+vytváření aplikací s využitím architektury MVC vyžaduje vytvoření tří komponent
+Model (model), což je doménově specifická reprezentace informací, s nimiž aplikace pracuje.
+View (pohled), který převádí data reprezentovaná modelem do podoby vhodné k interaktivní prezentaci uživateli.
+Controller (řadič), který reaguje na události (typicky pocházející od uživatele) a zajišťuje změny v modelu nebo v pohled
+Příklad: ve skriptovacím jazyku pro WWW Ruby on Rails dělají:
+Model - z databáze vycucne řádky z tabulky odpovídající danému modelu a převede je na objekt (sloupce tabulky= vlastnosti objektu). Nebo kolekci objektů.
+Controller - z Pohledu získá informaci, co chce uživatel vidět (provést), zpracuje požadavek, od modelu si vyžádá patřičné objekty, ty zpracuje (bussines logic) a předá je patřičnému pohledu (odpovídá požadované akci, nemusí to být tentýž co to celé vyvolal)
+View - vezme zpracované objekty od controleru a vhodně je zobrazí (nijak je neupravuje, to je práce controleru, který volá metodu v modelu) a čeká co si budé páníček přát dále.
+
+\section{ Práce s kolekcemi – typy kolekcí, příklady použití, algoritmy pracující nad kolekcemi (řazení, vyhledávání), základní principy implementace ve zvoleném programovacím jazyce.}
+
+\section{Problematika perzistentního (trvalého) ukládání dat ve vybraném programovacím jazyce.}
+
+\section{ Webové aplikace – principy, nástroje. Vícevrstvé aplikace. Zabezpečení aplikace.}
+
+\section{Základní algoritmy a principy počítačové grafiky  – metody vizualizace, určení viditelnosti a osvětlení, reprezentace grafické informace, OPENGL.}
+
+\section{Základy zpracování obrazu a počítačového rozpoznávání – metody snímání, předzpracování, segmentace a klasifikace obrazu, formáty pro ukládání rastrového obrazu, komprese, barva a barevné modely.}
+
+\section{Algoritmy pracující s grafy. Prohledávání grafů do hloubky a do šířky, využití prohledávání grafů v dalších úlohách.  }
