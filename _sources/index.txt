@@ -65,6 +65,8 @@ Jak přispět ?
 
 1. Fork na githubu
 2. Editace v source/..
+3. Build sphinx-build -b html ./source/ ./
+4. Pull request
 
 
 Indices and tables
