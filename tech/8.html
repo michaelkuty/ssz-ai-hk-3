@@ -1,0 +1,217 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>8. ISO - OSI TCP/IP &mdash; Otazky na statnice 0.0.1 documentation</title>
+    
+    <link rel="stylesheet" href="../_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '0.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="top" title="Otazky na statnice 0.0.1 documentation" href="../index.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li><a href="../index.html">Otazky na statnice 0.0.1 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="iso-osi-tcp-ip">
+<h1>8. ISO - OSI TCP/IP<a class="headerlink" href="#iso-osi-tcp-ip" title="Permalink to this headline">¶</a></h1>
+<p>ISO-OSI - Open System Interconnection
+&#8212;</p>
+<p>referenční model mezinárodní organizace pro standardizaci ISO
+řeší problematiku vzájemného propojování uzlů
+definuje
+* do kolika vrstev se problematika bude členit
+* rozhraní jednotlivých vrstev
+* jaké služby mají jednotlivé vrstvy poskytovat</p>
+<p><em>neřeší ale, jak mají být jednotlivé funkce realizovány</em></p>
+<p><em>to řeší různé protokoly, které ale jsou ale zasazené do tohoto referenčních modelu
+celkem sedm vrstev</em></p>
+<p>dají se rozdělit do dvou skupin
+* přenosové
+* aplikačně orientované</p>
+<p><em>na jejich pomezí je transportní vrstva – aby se obě skupiny „domluvily“</em></p>
+<div class="section" id="vrstvy">
+<h2>Vrstvy<a class="headerlink" href="#vrstvy" title="Permalink to this headline">¶</a></h2>
+<ul>
+<li><dl class="first docutils">
+<dt>aplikační vrstva</dt>
+<dd><p class="first last">přímo přístupná uživateli
+obsahuje aplikační protokoly, jejichž prostřednictvím komunikuje aplikace s OSI modelem</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>prezentační vrstva</dt>
+<dd><p class="first last">zajišťuje převody kódů a formátů dat
+provádí kompresi a utajení dat</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>relační vrstva</dt>
+<dd><p class="first last">vytváří logické rozhraní pro aplikační programy
+řídí komunikaci
+synchronizuje přenos</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>transportní vrstva</dt>
+<dd><p class="first last">provádí fragmentaci a defragmentaci paketů
+vytváří záložní kopie pro případ opakování přenosu
+kontrolní součty
+protokol TCP</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>síťová vrstva</dt>
+<dd><p class="first last">provádí výběr optimální cesty (směrování), tj. definuje způsob pohybu paketů po síti
+protokol IP</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>linková vrstva</dt>
+<dd><p class="first last">vytváří rámce
+kontroluje přijaté duplicity
+provádění potvrzování
+zajišťuje adresaci</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>fyzická vrstva</dt>
+<dd><p class="first last">převádění rámců</p>
+</dd>
+</dl>
+</li>
+</ul>
+<img alt="../_images/iso_transport.png" src="../_images/iso_transport.png" />
+<div class="section" id="tcp-ip-transmission-control-protocol">
+<h3>TCP/IP - Transmission Control Protocol<a class="headerlink" href="#tcp-ip-transmission-control-protocol" title="Permalink to this headline">¶</a></h3>
+<img alt="../_images/protokoly.png" src="../_images/protokoly.png" />
+<p>Z ISO/OSI vychází i množina protokolů TCP/IP. Protokol TCP/IP vznikl původně jako
+komunikační protokol ministerstva obrany USA pro sjednocení počítačové komunikace v
+rámci ARPANET. Slouží ke komunikaci především v heterogenních sítích. Dnes je součástí
+prakticky všech operačních systémů (původně byl navrhován hlavně pro UNIX) a je využit ke
+komunikaci i v síti Internet. Z těchto důvodů vzrůstá jeho význam jako celosvětového
+standardu.
+Model TCP/IP je nezávislý na přenosovém mediu a je určen jak pro WAN tak i pro LAN,
+jak pro sériové linky, koaxiální kabely, tak i pro vysokorychlostní optické sítě. Je užíván v
+heterogenní síti (původně určené pro UNIX) Internet. Je to soustava sítí s IP protokolem
+tvořená mezisíťovým počítačem. Jednotlivé podsítě mohou být různé (Ethernet, X.25, ..).
+TCP/IP (Transmission Control Protocol/Internet Protokol) předpokládá, že na nižších
+vrstvách jsou pouze nespolehlivé přenosové služby. Zajištění spolehlivosti dělají vyšší vrstvy
+a to jen při jejich vyžádání.</p>
+<ul class="simple">
+<li>zajišťuje virtuální spojení, virtuální okruh mezi koncovými aplikacemi =&gt; spolehlivý přenost dat</li>
+<li>pomocí sekvence potvrzování se zpětným přenosem paketů (je-li to nutné)</li>
+<li>doručí všechna data bez ztráty a ve správném pořadí</li>
+<li>jde o službu se spojením</li>
+<li>má tedy fáze navázání spojení, přenos dat a ukončení spojení</li>
+<li>plně duplexní spojení</li>
+<li>rozlišuje aplikace pomocí portů</li>
+</ul>
+<img alt="../_images/tcp_udp_header.png" src="../_images/tcp_udp_header.png" />
+</div>
+</div>
+<div class="section" id="navazani-komunikace">
+<h2>Navázání komunikace<a class="headerlink" href="#navazani-komunikace" title="Permalink to this headline">¶</a></h2>
+<img alt="../_images/tcp_connection.png" src="../_images/tcp_connection.png" />
+<div class="section" id="vice">
+<h3>Více<a class="headerlink" href="#vice" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><a class="reference download internal" href="../_downloads/iso_osi_tcp_ip.pdf"><tt class="xref download docutils literal"><span class="pre">Více</span></tt></a></li>
+</ul>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">8. ISO - OSI TCP/IP</a><ul>
+<li><a class="reference internal" href="#vrstvy">Vrstvy</a><ul>
+<li><a class="reference internal" href="#tcp-ip-transmission-control-protocol">TCP/IP - Transmission Control Protocol</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#navazani-komunikace">Navázání komunikace</a><ul>
+<li><a class="reference internal" href="#vice">Více</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="../_sources/tech/8.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li><a href="../index.html">Otazky na statnice 0.0.1 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2014, Michael Kutý.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.3.
+    </div>
+  </body>
+</html>

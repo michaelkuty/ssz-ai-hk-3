@@ -1,0 +1,99 @@
+==============
+7. ETHERNET (principy fungování, vývoj a topologie, přístupová metoda, síťová karta, strukturovaná kabeláž)
+==============
+
+Technologie pro lokální počítačové sítě, založená na přenosech paketů. Definuje vedení a jeho instalaci, formáty paketů, protokoly a metodu řízení přístupu (CSMA/CD). Původ něnavržena firmou Xerox Corporation, pracující rychlostí10 Mbit/s s použitím přístupové metody CSMA/CD na koaxiálním kabelu. Bob Metcalfe nazval novou technologii s všesměrovým vysíláním dle teoriez  19. století o neprostupujícím "etheru", kterým se šíří elektromagnetické vlny "Ether" net.
+Název je v současnosti používán s odkazem na všechny LANsítě, které používají přístupovou metodu CSMA/CD. Ethernet byl původně navržen pro sítě se sporadickým provozem a specifikace IEEE 802.3 byla odvozena z původní technologie Ethernetu v osmdesátých letech. Verze Ethernet 2.0, která byla vyvinuta firmami Digital Equipment Corporation, Intel Corporation a Xerox Corporation, je již plně kompatibilní s normou IEEE 802.3.
+
+.. image:: img/ethernet.png
+
+Preamble 
+-------
+
+synchronizace vstupních obvodů. Ethernet používá osm bytů, u specifikace lEEE802.3 následuje po sedmi bytech oscilujících nul a jedniček zvláštní byte označovaný jako začátek rámce IEEE 802.3 (SOF).
+
+SOF
+-------
+
+Start of Frame slouží k lepší synchronizaci příjmu rámce.Adresy zdroje a příjemce jsou dvě šesti bytová pole, jejichž struktura je určena předpisem IEEE 802.3 tak, že tři první byty obsahují specifikaci dodavatele zařízení a jsou určeny standardizační organizací, a poslední tři byty jsou definovány výrobcem. Adresa zdroje je vždy typu unicast, zatímco adresa příjemce může být typem:
+
+* unicast - dvoubodové„ point-to-point
+* multicast – skupinové (do specifikovaných cílů) 
+* broadcast – všesměrové
+
+**Type** - kód typu protokolu horních vrstev, který bude použit pro zpracování přijatých dat v operacích následujících po dekódování rámce Ethernet.
+
+**Len** - označení délky následujícího pole dat.
+
+Data
+"""""""
+
+po zpracování na fyzické a linkové úrovni jsou data obsažená v rámci odeslána protokolům vyšších vrstev, specifikovaným u sítě typu Ethernet v předcházejícím poli. I když Ethernet ani ve své verzi 2 nespecifikuje žádné výplněv případě malého počtu dat, očekává se minimální délka datové části 46 bytů. IEEE 802.3 předpokládá, že data předávaná nadřízeným vrstvám specifikují použitý protokol na příjmové straně ve své datové části. Jsou specifikovány výplňové byty tak, aby v případě krátkých zpráv byla zajištěna minimální délka rámce 64 bytů.
+FCS - Frame Checks Sequence - kontrolní znak délky 4 byty, který je vytvářen na vysílající straně a kontrolován přijímajícím zařízením za účelem zjištění chyb při přenosu.
+
+
+Přístupové metoda
+-------
+
+* na daném médiu může v jednom okamžiku vysílat jen jedna stanice, jinak problémy (interference=skládání signálu => nesrozumitelnost pro příjemce)
+
+skupiny metod: 
+""""""
+
+* BEZKOLIZNÍ - založeny na tom, že nemůže dojít k tomu, aby začalo vysílat víc stanic současně (~IF)   (žádné kolize) => ale určitá režie systému navíc (režie obsahuje informace kdo právě může  vysílat), může činit až 70% (!)
+	* statické - pravidla určena už při konstrukci sítě (jsme schopni říct dopředu kdy kdo co bude dělat)
+	* centrální - závislé na centrální jednotce, která jako jediná přiděluje právo k vysílání dané stanice
+	
+	* nevýhoda: výpadek centr. stanice = výpadek sítě
+	* má i své výhody
+	* distribuované
+		* chovají se podobně flexibilně jako centrální ale bez centrální jednotky
+		* stanice si mezi sebou stanovují pravidla, podle nichž vysílají
+
+* KOLIZNÍ
+	* náhodné
+		* kolizní (připodobnění k výjimkám ~TRY-CATCH)
+		* založeny na tom, že ke kolizím většinou nedochází a když k nim dojde, umí je řešit
+
+STATICKÉ PŘÍSTUPOVÉ METODY - dáno konstrukcí zařízení
+""""""""
+
+Časový multiplex
+* každá stanice má k dispozici celou šířku frekvenčního pásma
+* sdílení přenosový kanálu (rozdělení přenosové kapacity) v závislosti na čase
+stanice musí být synchronizovány aby věděly, kdy mohou vysílat
+
+úspěšnost (efektivita) je závislá na zátěži v síti (pokud chce vysílat jen 1 stanice => nízká (vysoká režie), pokud více stanic => vysoká režie - velice efektivní (nízká režie))
+
+Naprosto nevhodné pro použití v PS (neefektivní z důvodu stálého zapínání/vypínání stanic)
+
+Použití např. při komunikaci satelitů mezi sebou na oběžné dráze - těch je konstantní počet - v případě změně jejich počtu se překonfiguruje jejich software.
+
+Frekvenční multiplex
+"""""""
+* je zvykem je řadit také mezi statické metody
+* stanice vysílají současně ale každá na vlastním frekvenčním pásmu
+může vysílat kdokoliv
+limitace frekvenčním pásmem (jen určitý počet stanic)
+pokud je 10 pásem a každý komunikuje s každým, každá stanice musí mít 1 vysílač a 9 
+přijímačů  => proto se v PS nepoužívá, použití v multividových vláknech (prakticky jediné);
+u mobilních telefonů není multiplex statický, ale je dynamicky přidělován
+
+CENTRÁLNÍ PŘÍSTUPOVÉ METODY - moderované; s moderátorem,  řízená debata 
+1. C.P.M. na žádost
+	- centrální jednotka je požádána o přidělení práva k vysílání
+	musí existovat další komunikační kanál, aby „hlásící se“ nerušili během probíhající jiné 
+	komunikace nebo musí existovat nějaký další způsob jak dát vědět centrální jednotce
+2. C.P.M. na výzvu
+	- centrální jednotka vyzívá jednotky k vysílání
+	není třeba žádná další cesta (buď někdo vysílá, nebo se centrála ptá)
+	zvýšená režie (výzvu obdrží i ten, kdo právě nechce vysílat - jeden po druhém - nelze 
+řešit ani pomocí broadcastů - kdyby odpověděly 2 stanice => kolize)
+výpadek centra = výpadek sítě
+efektivita a účinnost hlavně při metodě na žádost (až 97% !)
+
+Použití:	telefonní síť (přístroj žádá o přístup k síti)
+družicová komunikace se zemí (tam je jedno co se rozbije, tím spíš, rozbije-li  se centrální jednotka - jde to do kytek tak jako tak)
+
+DPP (demand priority protocol) 	- není protokol ale přístupová metoda !!!
+- patří do skupiny přístupových metod na žádost

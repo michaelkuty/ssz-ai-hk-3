@@ -1,0 +1,233 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>7. ETHERNET (principy fungování, vývoj a topologie, přístupová metoda, síťová karta, strukturovaná kabeláž) &mdash; Otazky na statnice 0.0.1 documentation</title>
+    
+    <link rel="stylesheet" href="../_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '0.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="top" title="Otazky na statnice 0.0.1 documentation" href="../index.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li><a href="../index.html">Otazky na statnice 0.0.1 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="ethernet-principy-fungovani-vyvoj-a-topologie-pristupova-metoda-sitova-karta-strukturovana-kabelaz">
+<h1>7. ETHERNET (principy fungování, vývoj a topologie, přístupová metoda, síťová karta, strukturovaná kabeláž)<a class="headerlink" href="#ethernet-principy-fungovani-vyvoj-a-topologie-pristupova-metoda-sitova-karta-strukturovana-kabelaz" title="Permalink to this headline">¶</a></h1>
+<p>Technologie pro lokální počítačové sítě, založená na přenosech paketů. Definuje vedení a jeho instalaci, formáty paketů, protokoly a metodu řízení přístupu (CSMA/CD). Původ něnavržena firmou Xerox Corporation, pracující rychlostí10 Mbit/s s použitím přístupové metody CSMA/CD na koaxiálním kabelu. Bob Metcalfe nazval novou technologii s všesměrovým vysíláním dle teoriez  19. století o neprostupujícím &#8220;etheru&#8221;, kterým se šíří elektromagnetické vlny &#8220;Ether&#8221; net.
+Název je v současnosti používán s odkazem na všechny LANsítě, které používají přístupovou metodu CSMA/CD. Ethernet byl původně navržen pro sítě se sporadickým provozem a specifikace IEEE 802.3 byla odvozena z&nbsp;původní technologie Ethernetu v osmdesátých letech. Verze Ethernet 2.0, která byla vyvinuta firmami Digital Equipment Corporation, Intel Corporation a Xerox Corporation, je již plně kompatibilní s normou IEEE 802.3.</p>
+<img alt="../_images/ethernet.png" src="../_images/ethernet.png" />
+<div class="section" id="preamble">
+<h2>Preamble<a class="headerlink" href="#preamble" title="Permalink to this headline">¶</a></h2>
+<p>synchronizace vstupních obvodů. Ethernet používá osm bytů, u specifikace lEEE802.3 následuje po sedmi bytech oscilujících nul a jedniček zvláštní byte označovaný jako začátek rámce IEEE 802.3 (SOF).</p>
+</div>
+<div class="section" id="sof">
+<h2>SOF<a class="headerlink" href="#sof" title="Permalink to this headline">¶</a></h2>
+<p>Start of Frame slouží k&nbsp;lepší synchronizaci příjmu rámce.Adresy zdroje a příjemce jsou dvě šesti bytová pole, jejichž struktura je určena předpisem IEEE 802.3 tak, že tři první byty obsahují specifikaci dodavatele zařízení a jsou určeny standardizační organizací, a poslední tři byty jsou definovány výrobcem. Adresa zdroje je vždy typu unicast, zatímco adresa příjemce může být typem:</p>
+<ul class="simple">
+<li>unicast - dvoubodové„ point-to-point</li>
+<li>multicast – skupinové (do specifikovaných cílů)</li>
+<li>broadcast – všesměrové</li>
+</ul>
+<p><strong>Type</strong> - kód typu protokolu horních vrstev, který bude použit pro zpracování přijatých dat v operacích následujících po dekódování rámce Ethernet.</p>
+<p><strong>Len</strong> - označení délky následujícího pole dat.</p>
+<div class="section" id="data">
+<h3>Data<a class="headerlink" href="#data" title="Permalink to this headline">¶</a></h3>
+<p>po zpracování na fyzické a linkové úrovni jsou data obsažená v rámci odeslána protokolům vyšších vrstev, specifikovaným u sítě typu Ethernet v předcházejícím poli. I když Ethernet ani ve své verzi 2 nespecifikuje žádné výplněv případě malého počtu dat, očekává se minimální délka datové části 46 bytů. IEEE 802.3 předpokládá, že data předávaná nadřízeným vrstvám specifikují použitý protokol na příjmové straně ve své datové části. Jsou specifikovány výplňové byty tak, aby v&nbsp;případě krátkých zpráv byla zajištěna minimální délka rámce 64 bytů.
+FCS - Frame Checks Sequence - kontrolní znak délky 4 byty, který je vytvářen na vysílající straně a kontrolován přijímajícím zařízením za účelem zjištění chyb při přenosu.</p>
+</div>
+</div>
+<div class="section" id="pristupove-metoda">
+<h2>Přístupové metoda<a class="headerlink" href="#pristupove-metoda" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>na daném médiu může v&nbsp;jednom okamžiku vysílat jen jedna stanice, jinak problémy (interference=skládání signálu =&gt; nesrozumitelnost pro příjemce)</li>
+</ul>
+<div class="section" id="skupiny-metod">
+<h3>skupiny metod:<a class="headerlink" href="#skupiny-metod" title="Permalink to this headline">¶</a></h3>
+<ul>
+<li><dl class="first docutils">
+<dt>BEZKOLIZNÍ - založeny na tom, že nemůže dojít k&nbsp;tomu, aby začalo vysílat víc stanic současně (~IF)   (žádné kolize) =&gt; ale určitá režie systému navíc (režie obsahuje informace kdo právě může  vysílat), může činit až 70% (!)</dt>
+<dd><ul class="first last">
+<li><p class="first">statické - pravidla určena už při konstrukci sítě (jsme schopni říct dopředu kdy kdo co bude dělat)</p>
+</li>
+<li><p class="first">centrální - závislé na centrální jednotce, která jako jediná přiděluje právo k&nbsp;vysílání dané stanice</p>
+</li>
+<li><p class="first">nevýhoda: výpadek centr. stanice = výpadek sítě</p>
+</li>
+<li><p class="first">má i své výhody</p>
+</li>
+<li><dl class="first docutils">
+<dt>distribuované</dt>
+<dd><ul class="first last simple">
+<li>chovají se podobně flexibilně jako centrální ale bez centrální jednotky</li>
+<li>stanice si mezi sebou stanovují pravidla, podle nichž vysílají</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>KOLIZNÍ</dt>
+<dd><ul class="first last">
+<li><dl class="first docutils">
+<dt>náhodné</dt>
+<dd><ul class="first last simple">
+<li>kolizní (připodobnění k&nbsp;výjimkám ~TRY-CATCH)</li>
+<li>založeny na tom, že ke kolizím většinou nedochází a když k&nbsp;nim dojde, umí je řešit</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div>
+<div class="section" id="staticke-pristupove-metody-dano-konstrukci-zarizeni">
+<h3>STATICKÉ PŘÍSTUPOVÉ METODY - dáno konstrukcí zařízení<a class="headerlink" href="#staticke-pristupove-metody-dano-konstrukci-zarizeni" title="Permalink to this headline">¶</a></h3>
+<p>Časový multiplex
+* každá stanice má k&nbsp;dispozici celou šířku frekvenčního pásma
+* sdílení přenosový kanálu (rozdělení přenosové kapacity) v&nbsp;závislosti na čase
+stanice musí být synchronizovány aby věděly, kdy mohou vysílat</p>
+<p>úspěšnost (efektivita) je závislá na zátěži v&nbsp;síti (pokud chce vysílat jen 1 stanice =&gt; nízká (vysoká režie), pokud více stanic =&gt; vysoká režie - velice efektivní (nízká režie))</p>
+<p>Naprosto nevhodné pro použití v&nbsp;PS (neefektivní z&nbsp;důvodu stálého zapínání/vypínání stanic)</p>
+<p>Použití např. při komunikaci satelitů mezi sebou na oběžné dráze - těch je konstantní počet - v&nbsp;případě změně jejich počtu se překonfiguruje jejich software.</p>
+</div>
+<div class="section" id="frekvencni-multiplex">
+<h3>Frekvenční multiplex<a class="headerlink" href="#frekvencni-multiplex" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>je zvykem je řadit také mezi statické metody</li>
+<li>stanice vysílají současně ale každá na vlastním frekvenčním pásmu</li>
+</ul>
+<p>může vysílat kdokoliv
+limitace frekvenčním pásmem (jen určitý počet stanic)
+pokud je 10 pásem a každý komunikuje s&nbsp;každým, každá stanice musí mít 1 vysílač a 9
+přijímačů  =&gt; proto se v&nbsp;PS nepoužívá, použití v&nbsp;multividových vláknech (prakticky jediné);
+u mobilních telefonů není multiplex statický, ale je dynamicky přidělován</p>
+<p>CENTRÁLNÍ PŘÍSTUPOVÉ METODY - moderované; s&nbsp;moderátorem,  řízená debata
+1. C.P.M. na žádost</p>
+<blockquote>
+<div><ul class="simple">
+<li>centrální jednotka je požádána o přidělení práva k&nbsp;vysílání</li>
+</ul>
+<p>musí existovat další komunikační kanál, aby „hlásící se“ nerušili během probíhající jiné
+komunikace nebo musí existovat nějaký další způsob jak dát vědět centrální jednotce</p>
+</div></blockquote>
+<ol class="arabic" start="2">
+<li><dl class="first docutils">
+<dt>C.P.M. na výzvu</dt>
+<dd><ul class="first simple">
+<li>centrální jednotka vyzívá jednotky k&nbsp;vysílání</li>
+</ul>
+<p class="last">není třeba žádná další cesta (buď někdo vysílá, nebo se centrála ptá)
+zvýšená režie (výzvu obdrží i ten, kdo právě nechce vysílat - jeden po druhém - nelze</p>
+</dd>
+</dl>
+</li>
+</ol>
+<p>řešit ani pomocí broadcastů - kdyby odpověděly 2 stanice =&gt; kolize)
+výpadek centra = výpadek sítě
+efektivita a účinnost hlavně při metodě na žádost (až 97% !)</p>
+<p>Použití:        telefonní síť (přístroj žádá o přístup k&nbsp;síti)
+družicová komunikace se zemí (tam je jedno co se rozbije, tím spíš, rozbije-li  se centrální jednotka - jde to do kytek tak jako tak)</p>
+<p>DPP (demand priority protocol)  - není protokol ale přístupová metoda !!!
+- patří do skupiny přístupových metod na žádost</p>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">7. ETHERNET (principy fungování, vývoj a topologie, přístupová metoda, síťová karta, strukturovaná kabeláž)</a><ul>
+<li><a class="reference internal" href="#preamble">Preamble</a></li>
+<li><a class="reference internal" href="#sof">SOF</a><ul>
+<li><a class="reference internal" href="#data">Data</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#pristupove-metoda">Přístupové metoda</a><ul>
+<li><a class="reference internal" href="#skupiny-metod">skupiny metod:</a></li>
+<li><a class="reference internal" href="#staticke-pristupove-metody-dano-konstrukci-zarizeni">STATICKÉ PŘÍSTUPOVÉ METODY - dáno konstrukcí zařízení</a></li>
+<li><a class="reference internal" href="#frekvencni-multiplex">Frekvenční multiplex</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="../_sources/tech/7.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li><a href="../index.html">Otazky na statnice 0.0.1 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2014, Michael Kutý.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.3.
+    </div>
+  </body>
+</html>

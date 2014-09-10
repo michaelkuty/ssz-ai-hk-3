@@ -2,6 +2,58 @@
 9. Internet (organizační struktura, vývoj, RFC dokumenty, domény, technické předpoklady pro připojení, hrozby)
 =================
 
+Organizační struktura zajištění provozu sítě Internet
+Strukturu ve smyslu organizačního zajištění provozu sítě a orgánů plní několik klíčových organizací, které mají právě tuto činnost v kompetenci. Tyto organizace jsou téměř všechny dobrovolné. Síť Internet jako celek nepatří nikomu.
+První takovou organizací je ISOC (Internet Society). ISOC je dobrovolná organizace, jejímž hlavním cílem je podpora výměny informací pomocí technologie Internet, a která má v kompetenci rozhodování o tom, kde Internet bude a kde nebude zaveden.
+Dalším orgánem je IAB (Internet Architecture Board), která pracuje jako seskupení dobrovolníků a má za úkol řízení technické správy sítě Internet a stanovení standardů, týkajících se komunikace v síti. Členové této organizace jsou jmenováni právě ISOC.
+Struktura sítě Internet
+Internet je prakticky síť, vytvořená pospojováním lokálních sítí. V síti Internet se můžeme setkat s nejrůznějšími druhy sítí, které osahují i nejrůznější typy počítačů. Jelikož tedy není, a ani nemůže být, zajištěno, aby všechny LAN byly totožné a kompatibilní s připojením k Internetu (ke svému nejbližšímu poskytovateli), je třeba kompatibilitu tohoto připojení nějak zajistit. K tomu slouží ROUTERY (směrovače). Router se nachází vždy někde na lokální síti a zprostředkovává připojení k Internetu. Router od sebe odděluje lokální síť a Internet a chrání obě dvě části mezi sebou před negativními jevy buď uvnitř lokální sítě či Internetu. Lokální síť je tedy chráněna před silným síťovým provozem, který je nasměrován do jiné oblasti a naopak Internet je chráněn před výpadky lokální sítě.
+Zároveň je směrovač zařízením, které rozhoduje o tom, jakou další cestou (dále po Internetu) budou došlá data (pakety) odeslána. Směrovač dané lokální sítě tedy nemá přímé spojení se všemi ostatními směrovači, zjistí si tedy adresu kam jsou data zasílána, vybere nejvýhodnější cestu (další směrovač) a tou je odešle dál. Tímto způsobem se data dostanou (podle uvedené adresy) až do určené lokální sítě k danému lokálnímu počítači.
+
+Protokoly
+------------
+
+K tomu, aby byla vůbec možná komunikace mezi vzdálenými počítači v síti (a to platí pro jakoukoli síť, nejen pro Internet), je třeba dodržovat určitá pravidla, která by jasně definovala funkci sítě a jakým způsobem bude probíhat zasílání a příjem zpráv. K tomu slouží tzv. protokoly sítě.
+Protokoly jsou pravidla, podle kterých počítače na Internetu komunikují. Tyto protokoly mají za úkol vše co se týká doručení zprávy z místa na místo. Síť Internet používá protokolů několik.
+Každá zpráva, zasílaná prostřednictvím Internetu prochází nejméně třemi úrovněmi protokolů. Tyto protokoly jsou tedy jeden v druhém (jako ve vrstvách). Jsou to:
+* síťový protokol
+* transportní protokol
+* aplikační protokol
+
+Internet Protokol - IP
+""""""""""
+
+Jako síťový protokol používá Internet tzv. Internet Protokol (IP). Tento síťový protokol řídí a dohlíží na zasílání zpráv z lokální na cílovou stanici. IP se stará např. o identifikaci příjemce a odesílatele (adresy) nebo o to jestli směrovače vědí, co mají udělat s došlými daty. IP protokol je možné přirovnat k obálce s adresou odesilatele a příjemce, do které se vkládají data určená k odeslání.
+IP protokol pracuje s malými částmi zpráv - pakety (především z praktických důvodů, týkajících se efektivního využití sítě). Protože jsou tyto pakety velmi malé (vzhledem k celkovému objemu zasílaných dat), obsahují obvykle 1 - 1500 znaků, je nutné celkovou zprávu rozdělit do takto velkých segmentů a ty zasílat zvlášť.
+
+Transmission Control Protokol – TCP (protokol řízení přenosu)
+"""""""""
+
+Rozdělováním zpráv na pakety však nastávají problémy na přijímací straně, kde je nutné tyto segmenty správně poskládat. O to se stará protokol TCP. Ten je transportním protokolem a obecně zajišťuje celistvost zprávy na přijímací straně.
+
+Na straně odesílatele má TCP za úkol:
+
+* rozdělit zprávu, určenou k odeslání na pakety
+* očíslovat pakety
+* zaslat po síti ve své vlastní TCP „obálce“, která je vložena do IP obálky, informace o očíslování paketů (pořadí), společně s částí přenášených dat,
+
+Na straně příjemce má TCP za úkol:
+
+* „posbírat“ všechny TCP obálky
+* získat z nich data a tyto části složit ve správném pořadí do výsledné zprávy
+* požádat o opětovné zaslání paketu, pokud některý z nich po přenosu chybí či je deformován (kontrolu deformace provádí pomocí porovnávání kontrolních součtů), a zapouzdřit paket v TCP
+
+
+UDP (user datagram protokol)
+""""""""""
+
+Další přenosový protokol, který některé aplikace používají místo protokolu TCP. Důvodem je fakt, že nastavení spojení a přenos pomocí TCP na jedné straně zajišťuje velkou pravděpodobnost, že vyslaná data ve správné podobě k adresátovi dojdou, na druhé straně však dochází k určitému zpoždění. Toto zpoždění nemusí být pro určité aplikace žádoucí a proto používají UDP. UDP používá svou vlastní obálku UDP, která je vložena do IP místo obálky TCP. UDP je mnohem jednodušší než TCP a určité funkce z TCP vypouští. Nezajišťuje například žádosti na zpětné vyslání poškozeného paketu a nestará se ani o sled paketů. V zásadě se UDP používá v takových aplikacích, které posílají jen krátké zprávy (které se svým rozsahem vejdou do jednoho paketu) a jsou schopné odeslat v případě ztráty zprávy paket znovu. O znovuvyslání poškozeného nebo nedošlého paketu se tedy stará samotná aplikace.
+
+Aplikační protokoly
+"""""
+
+Aplikační protokol má za úkol převést po síti přenesenou zprávu do podoby, srozumitelné uživateli. Ten se tedy stará o formátování odeslaných dotazů a přijímaných odpovědí od dotazované vzdálené stanice. V zásadě lze říci, že každý druh aplikace na Internetu používá vlastní aplikační protokol. Rozdílné aplikační protokoly mají tedy např. telnet, mail, atp. apod.
+
 RFC
 ---------
 
