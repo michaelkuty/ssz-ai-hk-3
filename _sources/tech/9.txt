@@ -1,0 +1,56 @@
+=================
+9. Internet (organizační struktura, vývoj, RFC dokumenty, domény, technické předpoklady pro připojení, hrozby)
+=================
+
+RFC
+---------
+
+Specifikace RFC protokolu TCP/IP
+Standardy platné pro protokol TCP/IP jsou postupně zveřejňovány v sadě dokumentů nazývaných RFC (Requests for Comments). Specifikace RFC tvoří stále doplňovaný soubor zpráv, návrhů protokolů a standardů, který popisuje vnitřní strukturu a funkci protokolu TCP/IP a sítě Internet.
+Ačkoli jsou standardy protokolu TCP/IP vždy publikovány v podobě specifikací RFC, nejsou definice standardů obsaženy ve všech těchto specifikacích. Specifikace RFC jsou dílem jednotlivců, kteří na základě vlastního uvážení vytvářejí koncepty nových protokolů a specifikací a dávají je k dispozici sdružení IETF (Internet Engineering Task Force) a dalším pracovním skupinám. Odeslaný koncept nejprve okomentuje technik, skupina odborníků nebo redaktor specifikací RFC a potom je konceptu přiřazen status.
+Pokud je koncept v této úvodní fázi schválen, je na určitou dobu zpřístupněn v síti Internet širší veřejnosti, která se k němu může dále vyjadřovat. Zároveň je mu přiřazeno číslo specifikace RFC. Toto číslo se již nemění.
+Pokud dojde ke změnám navrhovaného standardu, je upravený nebo aktualizovaný koncept distribuován pod novým číslem specifikace RFC (vždy vyšším, než bylo číslo původního konceptu). Podle čísla specifikace RFC lze tedy snadno určit, která ze specifikací je aktuálnější.
+
+Prostředky pro správu sítí
+-------
+* NMS = Network Management Station
+* Open View - od Hewlett Packard 
+* EMS = Enterprise Management System
+* podpora většiny výrobců
+
+SNMP = Simple Network Management Protocol
+-----------
+za standard SNMP je odpovědné sdružení IETF (Internet Engineering Task Force)
+výhoda:
+správa Internetové sítě jediným nástrojem
+nevýhody:
+spotřeba systémových prostředků
+rozdílná podpora standardů výrobci
+práce týmu správců
+vyšší koncová cena
+
+jiné významné nástroje:
+------
+Unicenter
+IMB Tivoli NetView
+MMC (Microsoft Management Console)
+Činnosti správy sítě   
+Mapování a dokumentace topologie sítě
+Monitorování činnosti sítě
+Kontrola procesů v síti a jejich zdokonalování
+Sledování přesného stavu zařízení sítě
+Administrace a podpora uživatele
+Analýza a modelování požadavků pro síť
+Nákup nového zařízení a jeho uvedení do provozu
+Instalace a testování nového zařízení
+Řešení problémů v síti
+Rozhodování o strategii výstavby sítě podle stanoveného rozpočtu a plánu
+
+
+Vzájemné propojování sítí 
+-----
+
+V ideálním případě by měla zcela zaniknout jakákoli specifika jednotlivých sítí, aby se uživatel mohl domnívat, že pracuje v jedné jediné, všezahrnující síti. 
+Vzájemným propojením dvou či více sítí stejného či různého typu vzniká větší celek, pro který má angličtina velmi výstižné označení: internetwork, nebo jen internet (zatímco Internet - s velkým I - je jméno celosvětové počítačové sítě resp. konglomerátu sítí, který vznikl v USA ze zárodečné sítě ARPANET). 
+Problematika vzájemného propojování sítí a jejich součinnosti (v angličtině: internetworking) je sama o sobě značně rozsáhlá, rychle se vyvíjí, a je dnes velmi populární. V současné době existuje řada různých koncepcí toho, jak počítačové sítě navzájem propojovat. Pro jejich pochopení je ale klíčovým momentem poznání toho, že vzájemné propojení je možné realizovat na různých úrovních vrstvového síťového modelu - od fyzické až po aplikační vrstvu. 
+Základní myšlenka vzájemného propojení je naprosto triviální - dvě nebo více sítí se propojí prostřednictvím k tomu určených zařízení, obecně označovaných jako relay, v terminologii ISO též: Intermediary System resp. IS, případně: Internetworking Unit resp. IWU. 

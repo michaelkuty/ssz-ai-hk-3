@@ -36,23 +36,23 @@ PROG
 TECH
 ===========
 
-1. :doc:`Principy počítačů (historický vývoj, předpoklady fungování, binární logika, modulace signálu).<prog/1>`
-2. :doc:`Architektura počítače (von Neumannovo a Harwardské schéma, Flynnova taxonomie, základní deska, procesor, mikroarchitektura procesoru, paměti, sběrnice, řadič, přídavné karty, ovladače).<prog/2>`
-3. :doc:`Paměťový systém počítače a ukládání dat (typy, principy fungování, frekvence, normy, logická a fyzická struktura disku, RAM, ROM, Cache, HDD, CD, DVD, FLASH…)<prog/3>`
+1. :doc:`Principy počítačů (historický vývoj, předpoklady fungování, binární logika, modulace signálu).<tech/1>`
+2. :doc:`Architektura počítače (von Neumannovo a Harwardské schéma, Flynnova taxonomie, základní deska, procesor, mikroarchitektura procesoru, paměti, sběrnice, řadič, přídavné karty, ovladače).<tech/2>`
+3. :doc:`Paměťový systém počítače a ukládání dat (typy, principy fungování, frekvence, normy, logická a fyzická struktura disku, RAM, ROM, Cache, HDD, CD, DVD, FLASH…)<tech/3>`
 
-4. :doc:`Architektura periferních zařízení (rozdělení, principy, funkce, typy, rozhraní, příklady)<prog/4>`
-5. :doc:`Servery a pracovní stanice (rozdíly, kritéria výběru, role serverů, serverové technologie, zálohování dat včetně RAID)<prog/5>`
-6. :doc:`Komunikační prostředky (principy komunikace, modulace signálu, rozdělení a porovnání, média, mobilní technologie)<prog/6>`
-7. :doc:`ETHERNET (principy fungování, vývoj a topologie, přístupová metoda, síťová karta, strukturovaná kabeláž)<prog/7>`
-8. :doc:`RM ISO/OSI, TCP/IP (popis a srovnání, funkce zásadních protokolů, IP adresy)<prog/8>`
-9. :doc:`Internet (organizační struktura, vývoj, RFC dokumenty, domény, technické předpoklady pro připojení, hrozby)<prog/9>`
-10. :doc:`Směrování (základní principy, směrovací protokoly, směrovací algoritmy, směrovače)<prog/10>`
-11. :doc:`Propojování a management sítí (přenosová média, technologie pro různé vrstvy, WIFI, VPN, systémy pro vzdálený přístup, řešení založená na SNMP)<prog/11>`
-12. :doc:`Principy operačních systémů (základní rozdělení, druhy operačních systémů, procesy, správa procesů a systémových zdrojů, uživatelská rozhraní).<prog/12>`
-13. :doc:`Souborové systémy a logická struktura dat (principy, porovnání, příklady).<prog/13>`
-14. :doc:`Operační systémy Windows (principy MS DOS, MS Windows, architektura, verze, funkce, rozdíly).<prog/14>`
-15. :doc:`Operační systémy Unix, Linux, BSD, MacOS (základní myšlenky, výhody a nevýhody, open-source, vznik a vývoj, licence, distribuce, základy ovládání - shell, rozdíly, historie a vývoj)<prog/15>`
-16. :doc:`Serverové operační systémy (specifika serverových operačních systémů, rozdíly mezi OS pro osobní počítač a pro server, serverové služby, správa uživatelů)<prog/16>`
+4. :doc:`Architektura periferních zařízení (rozdělení, principy, funkce, typy, rozhraní, příklady)<tech/4>`
+5. :doc:`Servery a pracovní stanice (rozdíly, kritéria výběru, role serverů, serverové technologie, zálohování dat včetně RAID)<tech/5>`
+6. :doc:`Komunikační prostředky (principy komunikace, modulace signálu, rozdělení a porovnání, média, mobilní technologie)<tech/6>`
+7. :doc:`ETHERNET (principy fungování, vývoj a topologie, přístupová metoda, síťová karta, strukturovaná kabeláž)<tech/7>`
+8. :doc:`RM ISO/OSI, TCP/IP (popis a srovnání, funkce zásadních protokolů, IP adresy)<tech/8>`
+9. :doc:`Internet (organizační struktura, vývoj, RFC dokumenty, domény, technické předpoklady pro připojení, hrozby)<tech/9>`
+10. :doc:`Směrování (základní principy, směrovací protokoly, směrovací algoritmy, směrovače)<tech/10>`
+11. :doc:`Propojování a management sítí (přenosová média, technologie pro různé vrstvy, WIFI, VPN, systémy pro vzdálený přístup, řešení založená na SNMP)<tech/11>`
+12. :doc:`Principy operačních systémů (základní rozdělení, druhy operačních systémů, procesy, správa procesů a systémových zdrojů, uživatelská rozhraní).<tech/12>`
+13. :doc:`Souborové systémy a logická struktura dat (principy, porovnání, příklady).<tech/13>`
+14. :doc:`Operační systémy Windows (principy MS DOS, MS Windows, architektura, verze, funkce, rozdíly).<tech/14>`
+15. :doc:`Operační systémy Unix, Linux, BSD, MacOS (základní myšlenky, výhody a nevýhody, open-source, vznik a vývoj, licence, distribuce, základy ovládání - shell, rozdíly, historie a vývoj)<tech/15>`
+16. :doc:`Serverové operační systémy (specifika serverových operačních systémů, rozdíly mezi OS pro osobní počítač a pro server, serverové služby, správa uživatelů)<tech/16>`
 
 
 Syntaxe - **reStructuredText**
@@ -68,6 +68,7 @@ Jak přispět ?
 3. Build sphinx-build -b html ./source/ ./
 4. Pull request
 
+Většina textů převzata a upravena z http://ai-fim-uhk.wikispaces.com/
 
 Indices and tables
 ==================

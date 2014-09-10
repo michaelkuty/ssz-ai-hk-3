@@ -1,0 +1,155 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>9. Internet (organizační struktura, vývoj, RFC dokumenty, domény, technické předpoklady pro připojení, hrozby) &mdash; Otazky na statnice 0.0.1 documentation</title>
+    
+    <link rel="stylesheet" href="../_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '0.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="top" title="Otazky na statnice 0.0.1 documentation" href="../index.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li><a href="../index.html">Otazky na statnice 0.0.1 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="internet-organizacni-struktura-vyvoj-rfc-dokumenty-domeny-technicke-predpoklady-pro-pripojeni-hrozby">
+<h1>9. Internet (organizační struktura, vývoj, RFC dokumenty, domény, technické předpoklady pro připojení, hrozby)<a class="headerlink" href="#internet-organizacni-struktura-vyvoj-rfc-dokumenty-domeny-technicke-predpoklady-pro-pripojeni-hrozby" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="rfc">
+<h2>RFC<a class="headerlink" href="#rfc" title="Permalink to this headline">¶</a></h2>
+<p>Specifikace RFC protokolu TCP/IP
+Standardy platné pro protokol TCP/IP jsou postupně zveřejňovány v sadě dokumentů nazývaných RFC (Requests for Comments). Specifikace RFC tvoří stále doplňovaný soubor zpráv, návrhů protokolů a standardů, který popisuje vnitřní strukturu a funkci protokolu TCP/IP a sítě Internet.
+Ačkoli jsou standardy protokolu TCP/IP vždy publikovány v podobě specifikací RFC, nejsou definice standardů obsaženy ve všech těchto specifikacích. Specifikace RFC jsou dílem jednotlivců, kteří na základě vlastního uvážení vytvářejí koncepty nových protokolů a specifikací a dávají je k dispozici sdružení IETF (Internet Engineering Task Force) a dalším pracovním skupinám. Odeslaný koncept nejprve okomentuje technik, skupina odborníků nebo redaktor specifikací RFC a potom je konceptu přiřazen status.
+Pokud je koncept v této úvodní fázi schválen, je na určitou dobu zpřístupněn v síti Internet širší veřejnosti, která se k němu může dále vyjadřovat. Zároveň je mu přiřazeno číslo specifikace RFC. Toto číslo se již nemění.
+Pokud dojde ke změnám navrhovaného standardu, je upravený nebo aktualizovaný koncept distribuován pod novým číslem specifikace RFC (vždy vyšším, než bylo číslo původního konceptu). Podle čísla specifikace RFC lze tedy snadno určit, která ze specifikací je aktuálnější.</p>
+</div>
+<div class="section" id="prostredky-pro-spravu-siti">
+<h2>Prostředky pro správu sítí<a class="headerlink" href="#prostredky-pro-spravu-siti" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>NMS = Network Management Station</li>
+<li>Open View - od Hewlett Packard</li>
+<li>EMS = Enterprise Management System</li>
+<li>podpora většiny výrobců</li>
+</ul>
+</div>
+<div class="section" id="snmp-simple-network-management-protocol">
+<h2>SNMP = Simple Network Management Protocol<a class="headerlink" href="#snmp-simple-network-management-protocol" title="Permalink to this headline">¶</a></h2>
+<p>za standard SNMP je odpovědné sdružení IETF (Internet Engineering Task Force)
+výhoda:
+správa Internetové sítě jediným nástrojem
+nevýhody:
+spotřeba systémových prostředků
+rozdílná podpora standardů výrobci
+práce týmu správců
+vyšší koncová cena</p>
+</div>
+<div class="section" id="jine-vyznamne-nastroje">
+<h2>jiné významné nástroje:<a class="headerlink" href="#jine-vyznamne-nastroje" title="Permalink to this headline">¶</a></h2>
+<p>Unicenter
+IMB Tivoli NetView
+MMC (Microsoft Management Console)
+Činnosti správy sítě
+Mapování a dokumentace topologie sítě
+Monitorování činnosti sítě
+Kontrola procesů v síti a jejich zdokonalování
+Sledování přesného stavu zařízení sítě
+Administrace a podpora uživatele
+Analýza a modelování požadavků pro síť
+Nákup nového zařízení a jeho uvedení do provozu
+Instalace a testování nového zařízení
+Řešení problémů v síti
+Rozhodování o strategii výstavby sítě podle stanoveného rozpočtu a plánu</p>
+</div>
+<div class="section" id="vzajemne-propojovani-siti">
+<h2>Vzájemné propojování sítí<a class="headerlink" href="#vzajemne-propojovani-siti" title="Permalink to this headline">¶</a></h2>
+<p>V ideálním případě by měla zcela zaniknout jakákoli specifika jednotlivých sítí, aby se uživatel mohl domnívat, že pracuje v jedné jediné, všezahrnující síti.
+Vzájemným propojením dvou či více sítí stejného či různého typu vzniká větší celek, pro který má angličtina velmi výstižné označení: internetwork, nebo jen internet (zatímco Internet - s velkým I - je jméno celosvětové počítačové sítě resp. konglomerátu sítí, který vznikl v USA ze zárodečné sítě ARPANET).
+Problematika vzájemného propojování sítí a jejich součinnosti (v angličtině: internetworking) je sama o sobě značně rozsáhlá, rychle se vyvíjí, a je dnes velmi populární. V současné době existuje řada různých koncepcí toho, jak počítačové sítě navzájem propojovat. Pro jejich pochopení je ale klíčovým momentem poznání toho, že vzájemné propojení je možné realizovat na různých úrovních vrstvového síťového modelu - od fyzické až po aplikační vrstvu.
+Základní myšlenka vzájemného propojení je naprosto triviální - dvě nebo více sítí se propojí prostřednictvím k tomu určených zařízení, obecně označovaných jako relay, v terminologii ISO též: Intermediary System resp. IS, případně: Internetworking Unit resp. IWU.</p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">9. Internet (organizační struktura, vývoj, RFC dokumenty, domény, technické předpoklady pro připojení, hrozby)</a><ul>
+<li><a class="reference internal" href="#rfc">RFC</a></li>
+<li><a class="reference internal" href="#prostredky-pro-spravu-siti">Prostředky pro správu sítí</a></li>
+<li><a class="reference internal" href="#snmp-simple-network-management-protocol">SNMP = Simple Network Management Protocol</a></li>
+<li><a class="reference internal" href="#jine-vyznamne-nastroje">jiné významné nástroje:</a></li>
+<li><a class="reference internal" href="#vzajemne-propojovani-siti">Vzájemné propojování sítí</a></li>
+</ul>
+</li>
+</ul>
+
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="../_sources/tech/9.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li><a href="../index.html">Otazky na statnice 0.0.1 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2014, Michael Kutý.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.3.
+    </div>
+  </body>
+</html>
