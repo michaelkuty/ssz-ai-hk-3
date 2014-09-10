@@ -1,18 +1,32 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
-  "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>7. ETHERNET (principy fungování, vývoj a topologie, přístupová metoda, síťová karta, strukturovaná kabeláž)</title>
+    <title>7. ETHERNET (principy fungování, vývoj a topologie, přístupová metoda, síťová karta, strukturovaná kabeláž) &mdash; Otazky na statnice 0.0.1 documentation</title>
     
-    <link rel="stylesheet" href="../_static/epub.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" /> 
+    <link rel="stylesheet" href="../_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '0.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="top" title="Otazky na statnice 0.0.1 documentation" href="../index.html" /> 
   </head>
   <body>
-
     <div class="related">
       <h3>Navigation</h3>
       <ul>
@@ -21,23 +35,24 @@
              accesskey="I">index</a></li>
         <li><a href="../index.html">Otazky na statnice 0.0.1 documentation</a> &raquo;</li> 
       </ul>
-    </div>
+    </div>  
 
     <div class="document">
       <div class="documentwrapper">
+        <div class="bodywrapper">
           <div class="body">
             
   <div class="section" id="ethernet-principy-fungovani-vyvoj-a-topologie-pristupova-metoda-sitova-karta-strukturovana-kabelaz">
-<h1>7. ETHERNET (principy fungování, vývoj a topologie, přístupová metoda, síťová karta, strukturovaná kabeláž)</h1>
+<h1>7. ETHERNET (principy fungování, vývoj a topologie, přístupová metoda, síťová karta, strukturovaná kabeláž)<a class="headerlink" href="#ethernet-principy-fungovani-vyvoj-a-topologie-pristupova-metoda-sitova-karta-strukturovana-kabelaz" title="Permalink to this headline">¶</a></h1>
 <p>Technologie pro lokální počítačové sítě, založená na přenosech paketů. Definuje vedení a jeho instalaci, formáty paketů, protokoly a metodu řízení přístupu (CSMA/CD). Původ něnavržena firmou Xerox Corporation, pracující rychlostí10 Mbit/s s použitím přístupové metody CSMA/CD na koaxiálním kabelu. Bob Metcalfe nazval novou technologii s všesměrovým vysíláním dle teoriez  19. století o neprostupujícím &#8220;etheru&#8221;, kterým se šíří elektromagnetické vlny &#8220;Ether&#8221; net.
 Název je v současnosti používán s odkazem na všechny LANsítě, které používají přístupovou metodu CSMA/CD. Ethernet byl původně navržen pro sítě se sporadickým provozem a specifikace IEEE 802.3 byla odvozena z&nbsp;původní technologie Ethernetu v osmdesátých letech. Verze Ethernet 2.0, která byla vyvinuta firmami Digital Equipment Corporation, Intel Corporation a Xerox Corporation, je již plně kompatibilní s normou IEEE 802.3.</p>
 <img alt="../_images/ethernet.png" src="../_images/ethernet.png" />
 <div class="section" id="preamble">
-<h2>Preamble</h2>
+<h2>Preamble<a class="headerlink" href="#preamble" title="Permalink to this headline">¶</a></h2>
 <p>synchronizace vstupních obvodů. Ethernet používá osm bytů, u specifikace lEEE802.3 následuje po sedmi bytech oscilujících nul a jedniček zvláštní byte označovaný jako začátek rámce IEEE 802.3 (SOF).</p>
 </div>
 <div class="section" id="sof">
-<h2>SOF</h2>
+<h2>SOF<a class="headerlink" href="#sof" title="Permalink to this headline">¶</a></h2>
 <p>Start of Frame slouží k&nbsp;lepší synchronizaci příjmu rámce.Adresy zdroje a příjemce jsou dvě šesti bytová pole, jejichž struktura je určena předpisem IEEE 802.3 tak, že tři první byty obsahují specifikaci dodavatele zařízení a jsou určeny standardizační organizací, a poslední tři byty jsou definovány výrobcem. Adresa zdroje je vždy typu unicast, zatímco adresa příjemce může být typem:</p>
 <ul class="simple">
 <li>unicast - dvoubodové„ point-to-point</li>
@@ -47,18 +62,18 @@ Název je v současnosti používán s odkazem na všechny LANsítě, které pou
 <p><strong>Type</strong> - kód typu protokolu horních vrstev, který bude použit pro zpracování přijatých dat v operacích následujících po dekódování rámce Ethernet.</p>
 <p><strong>Len</strong> - označení délky následujícího pole dat.</p>
 <div class="section" id="data">
-<h3>Data</h3>
+<h3>Data<a class="headerlink" href="#data" title="Permalink to this headline">¶</a></h3>
 <p>po zpracování na fyzické a linkové úrovni jsou data obsažená v rámci odeslána protokolům vyšších vrstev, specifikovaným u sítě typu Ethernet v předcházejícím poli. I když Ethernet ani ve své verzi 2 nespecifikuje žádné výplněv případě malého počtu dat, očekává se minimální délka datové části 46 bytů. IEEE 802.3 předpokládá, že data předávaná nadřízeným vrstvám specifikují použitý protokol na příjmové straně ve své datové části. Jsou specifikovány výplňové byty tak, aby v&nbsp;případě krátkých zpráv byla zajištěna minimální délka rámce 64 bytů.
 FCS - Frame Checks Sequence - kontrolní znak délky 4 byty, který je vytvářen na vysílající straně a kontrolován přijímajícím zařízením za účelem zjištění chyb při přenosu.</p>
 </div>
 </div>
 <div class="section" id="pristupove-metoda">
-<h2>Přístupové metoda</h2>
+<h2>Přístupové metoda<a class="headerlink" href="#pristupove-metoda" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li>na daném médiu může v&nbsp;jednom okamžiku vysílat jen jedna stanice, jinak problémy (interference=skládání signálu =&gt; nesrozumitelnost pro příjemce)</li>
 </ul>
 <div class="section" id="skupiny-metod">
-<h3>skupiny metod:</h3>
+<h3>skupiny metod:<a class="headerlink" href="#skupiny-metod" title="Permalink to this headline">¶</a></h3>
 <ul>
 <li><dl class="first docutils">
 <dt>BEZKOLIZNÍ - založeny na tom, že nemůže dojít k&nbsp;tomu, aby začalo vysílat víc stanic současně (~IF)   (žádné kolize) =&gt; ale určitá režie systému navíc (režie obsahuje informace kdo právě může  vysílat), může činit až 70% (!)</dt>
@@ -103,7 +118,7 @@ FCS - Frame Checks Sequence - kontrolní znak délky 4 byty, který je vytváře
 </ul>
 </div>
 <div class="section" id="staticke-pristupove-metody-dano-konstrukci-zarizeni">
-<h3>STATICKÉ PŘÍSTUPOVÉ METODY - dáno konstrukcí zařízení</h3>
+<h3>STATICKÉ PŘÍSTUPOVÉ METODY - dáno konstrukcí zařízení<a class="headerlink" href="#staticke-pristupove-metody-dano-konstrukci-zarizeni" title="Permalink to this headline">¶</a></h3>
 <p>Časový multiplex
 * každá stanice má k&nbsp;dispozici celou šířku frekvenčního pásma
 * sdílení přenosový kanálu (rozdělení přenosové kapacity) v&nbsp;závislosti na čase
@@ -113,7 +128,7 @@ stanice musí být synchronizovány aby věděly, kdy mohou vysílat</p>
 <p>Použití např. při komunikaci satelitů mezi sebou na oběžné dráze - těch je konstantní počet - v&nbsp;případě změně jejich počtu se překonfiguruje jejich software.</p>
 </div>
 <div class="section" id="frekvencni-multiplex">
-<h3>Frekvenční multiplex</h3>
+<h3>Frekvenční multiplex<a class="headerlink" href="#frekvencni-multiplex" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li>je zvykem je řadit také mezi statické metody</li>
 <li>stanice vysílají současně ale každá na vlastním frekvenčním pásmu</li>
@@ -154,7 +169,7 @@ družicová komunikace se zemí (tam je jedno co se rozbije, tím spíš, rozbij
 </div>
 </div>
 <div class="section" id="distribuovane-pristupove-metody">
-<h2>DISTRIBUOVANÉ PŘÍSTUPOVÉ METODY</h2>
+<h2>DISTRIBUOVANÉ PŘÍSTUPOVÉ METODY<a class="headerlink" href="#distribuovane-pristupove-metody" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li>snaha zachovat flexibilitu centra bez nutnosti existence centra</li>
 <li>stanice se dohadují na tom, kdo bude vysílat</li>
@@ -173,7 +188,7 @@ metod založených na fyzickém kruhu) pokud nemáme síť do kruhu, lze vytvoř
 <p>Užití v&nbsp;sítích: Token ring, Arcnet</p>
 </div>
 <div class="section" id="nahodne-pristupove-metody">
-<h2>NÁHODNÉ PŘÍSTUPOVÉ METODY</h2>
+<h2>NÁHODNÉ PŘÍSTUPOVÉ METODY<a class="headerlink" href="#nahodne-pristupove-metody" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li>optimistická víra, že  kolizí bude málo (při běžném provozu skutečně tak, protože čas, kdy
 každá stanice vysílá je krátký ale se zvyšujícím se počtem stanic se zvyšuje režie)</li>
@@ -184,7 +199,7 @@ každá stanice vysílá je krátký ale se zvyšujícím se počtem stanic se z
 <li>řeší situaci, když nastane kolize</li>
 </ul>
 <div class="section" id="aloha">
-<h3>ALOHA</h3>
+<h3>ALOHA<a class="headerlink" href="#aloha" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li>krystalicky čistý přístup náhodné PM</li>
 <li>když chce někdo vysílat, tak vysílá</li>
@@ -193,7 +208,7 @@ každá stanice vysílá je krátký ale se zvyšujícím se počtem stanic se z
 <p>při velké zátěži však efektivnost může klesat až pod 2% (!)</p>
 </div>
 <div class="section" id="csma-carrier-sense-multiple-access">
-<h3>CSMA (Carrier sense multiple access)</h3>
+<h3>CSMA (Carrier sense multiple access)<a class="headerlink" href="#csma-carrier-sense-multiple-access" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li>testování nosné před vícenásobným přístupem</li>
 <li>nosná vlna stejná pro celou síť pokud tam nosná vlna, pak někdo vysílá a musí se počkat,
@@ -205,7 +220,7 @@ jednoznačně dána doba, kdy začnou vysílat další (na začátku dalšího �
 Účinnost CSMA 100-30%</p>
 </div>
 <div class="section" id="csma-cd-with-collision-detection">
-<h3>3. CSMA/CD  (with Collision Detection)</h3>
+<h3>3. CSMA/CD  (with Collision Detection)<a class="headerlink" href="#csma-cd-with-collision-detection" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><strong>používá se ve více než 80% sítí na světě</strong></li>
 <li>původní CSMA + navíc příposlech nosné v&nbsp;průběhu celé doby vysílání (ne tedy jen před
@@ -224,10 +239,66 @@ jednodušší než implementace různých logických kruhů</p>
 
 
           </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">7. ETHERNET (principy fungování, vývoj a topologie, přístupová metoda, síťová karta, strukturovaná kabeláž)</a><ul>
+<li><a class="reference internal" href="#preamble">Preamble</a></li>
+<li><a class="reference internal" href="#sof">SOF</a><ul>
+<li><a class="reference internal" href="#data">Data</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#pristupove-metoda">Přístupové metoda</a><ul>
+<li><a class="reference internal" href="#skupiny-metod">skupiny metod:</a></li>
+<li><a class="reference internal" href="#staticke-pristupove-metody-dano-konstrukci-zarizeni">STATICKÉ PŘÍSTUPOVÉ METODY - dáno konstrukcí zařízení</a></li>
+<li><a class="reference internal" href="#frekvencni-multiplex">Frekvenční multiplex</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#distribuovane-pristupove-metody">DISTRIBUOVANÉ PŘÍSTUPOVÉ METODY</a></li>
+<li><a class="reference internal" href="#nahodne-pristupove-metody">NÁHODNÉ PŘÍSTUPOVÉ METODY</a><ul>
+<li><a class="reference internal" href="#aloha">ALOHA</a></li>
+<li><a class="reference internal" href="#csma-carrier-sense-multiple-access">CSMA (Carrier sense multiple access)</a></li>
+<li><a class="reference internal" href="#csma-cd-with-collision-detection">3. CSMA/CD  (with Collision Detection)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="../_sources/tech/7.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
       </div>
       <div class="clearer"></div>
     </div>
-
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li><a href="../index.html">Otazky na statnice 0.0.1 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
     <div class="footer">
         &copy; Copyright 2014, Michael Kutý.
       Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.3.

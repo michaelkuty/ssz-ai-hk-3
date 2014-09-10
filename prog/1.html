@@ -1,18 +1,32 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
-  "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Otázka PROG č.1 - Logický program - struktura, základní pojmy, datová struktura seznam, práce s databází Prologu. Hlavní odlišnosti oproti procedurálnímu programování, možnosti použití neprocedurálního programovacího jazyka.</title>
+    <title>Otázka PROG č.1 - Logický program - struktura, základní pojmy, datová struktura seznam, práce s databází Prologu. Hlavní odlišnosti oproti procedurálnímu programování, možnosti použití neprocedurálního programovacího jazyka. &mdash; Otazky na statnice 0.0.1 documentation</title>
     
-    <link rel="stylesheet" href="../_static/epub.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" /> 
+    <link rel="stylesheet" href="../_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '0.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="top" title="Otazky na statnice 0.0.1 documentation" href="../index.html" /> 
   </head>
   <body>
-
     <div class="related">
       <h3>Navigation</h3>
       <ul>
@@ -21,26 +35,27 @@
              accesskey="I">index</a></li>
         <li><a href="../index.html">Otazky na statnice 0.0.1 documentation</a> &raquo;</li> 
       </ul>
-    </div>
+    </div>  
 
     <div class="document">
       <div class="documentwrapper">
+        <div class="bodywrapper">
           <div class="body">
             
   <div class="section" id="otazka-prog-c-1-logicky-program-struktura-zakladni-pojmy-datova-struktura-seznam-prace-s-databazi-prologu-hlavni-odlisnosti-oproti-proceduralnimu-programovani-moznosti-pouziti-neproceduralniho-programovaciho-jazyka">
-<h1>Otázka PROG č.1 - Logický program - struktura, základní pojmy, datová struktura seznam, práce s databází Prologu. Hlavní odlišnosti oproti procedurálnímu programování, možnosti použití neprocedurálního programovacího jazyka.</h1>
+<h1>Otázka PROG č.1 - Logický program - struktura, základní pojmy, datová struktura seznam, práce s databází Prologu. Hlavní odlišnosti oproti procedurálnímu programování, možnosti použití neprocedurálního programovacího jazyka.<a class="headerlink" href="#otazka-prog-c-1-logicky-program-struktura-zakladni-pojmy-datova-struktura-seznam-prace-s-databazi-prologu-hlavni-odlisnosti-oproti-proceduralnimu-programovani-moznosti-pouziti-neproceduralniho-programovaciho-jazyka" title="Permalink to this headline">¶</a></h1>
 <p>Prolog je jazyk pro programování symbolických výpočtů. Jeho název, odvozený ze slov PROgramování v LOGice, naznačuje, že jazyk vychází z principů matematické logiky. Jeho úspěch byl podnětem pro vznik nové disciplíny matematické informatiky – logického programování, což je perspektivní styl programování na vyšší abstraktní úrovni.</p>
 <p>Prolog je také strojovým jazykem nejmodernějších počítačů. Má doposud specifické oblasti použití - umělou inteligenci, znalostní inženýrství, atp.</p>
 <div class="section" id="historie">
-<h2>Historie</h2>
+<h2>Historie<a class="headerlink" href="#historie" title="Permalink to this headline">¶</a></h2>
 <p>Jazyk Prolog vznikl v r. 1972 ve Francii na univerzitě v Luminy (Marseille). První verzi jazyka vytvořili A. Colmerauer a P. Roussel jako prostředek pro efektivní odvozování logických důsledků z určité třídy formulí predikátové logiky. K významnému obratu došlo v r. 1981. Způsobil ho japonský projekt počítačů 5.generace, kde byl Prolog zvolen jako základní jazyk logického procesoru centrální jednotky počítače. Vyvolalo to vlnu zájmu o Prolog a metody logického programování. Prolog se začal rychle prosazovat vedle jiných jazyků pro symbolické výpočty (např. Lisp).</p>
 </div>
 <div class="section" id="k-cemu-se-pouziva-prolog">
-<h2>K čemu se používá Prolog</h2>
+<h2>K čemu se používá Prolog<a class="headerlink" href="#k-cemu-se-pouziva-prolog" title="Permalink to this headline">¶</a></h2>
 <p>Od počátku byl Prolog využíván při zpracování přirozeného jazyka (francouštiny) a pro symbolické výpočty v různých oblastech umělé inteligence. Používá se v databázových a expertních systémech, při počítačové podpoře specializovaných činností, např. při projektování (CAD – Computer Aided Design) nebo výuce (CAI – Computer Aided Instruction), i v klasických úlohách symbolických výpočtů, jako je návrh a konstrukce překladačů, a to nejen jako prostředek vhodný pro reprezentaci a zpracování znalostí, ale i jako nástroj pro řešení úloh.</p>
 </div>
 <div class="section" id="porovnani-s-jinymi-jazyky">
-<h2>Porovnání s jinými jazyky</h2>
+<h2>Porovnání s jinými jazyky<a class="headerlink" href="#porovnani-s-jinymi-jazyky" title="Permalink to this headline">¶</a></h2>
 <p>Prolog je konverzační jazyk nové generace programovacích jazyků, která by měla usnadnit tvorbu programů co nejširšímu okruhu uživatelů. Snaží se odstranit část rutiny při programování a tím si zajistit místo vedle osvědčených jazyků jako Fortran, Cobol a Pascal.</p>
 <p>Uživatel Prologu se může více soustředit na popis vlastností relací, tedy na otázku co se má vypočítat, aniž by byl na každém kroku nucen řešit detaily spojené s otázkou jak to udělat a kam uložit získané výsledky.</p>
 <p>V Prologu nejsou příkazy pro řízení běhu výpočtu ani příkazy pro řízení toku dat. Chybějí prostředky pro programování cyklů, větvení apod. a nepoužívá se přiřazovací příkaz. S tím souvisí i rozdílná úloha proměnných. Proměnná v Prologu označuje po dobu výpočtu objekt, který vyhovuje určitým podmínkám. Jeho vymezení se při výpočtu upřesňuje.</p>
@@ -49,16 +64,16 @@
 <p>Logickým programem budeme rozumět posloupnost faktů (nepodmíněných příkazů) (H.) a pravidel (podmíněných příkazů) (H:-A1,A2, ..., An.)</p>
 </div>
 <div class="section" id="datove-typy">
-<h2>Datové typy</h2>
+<h2>Datové typy<a class="headerlink" href="#datove-typy" title="Permalink to this headline">¶</a></h2>
 <p>Konstanty, proměnné a struktury souhrnně označujeme jako termy. Každá implementace jazyka Prolog obsahuje řadu tzv. vestavěných predikátů (procedury nabízené tou kterou implementací jazyka Prolog), které jsou ze syntaktického hlediska také považovány za termy.
 Konstanta nebo proměnná se nazývá atomický term. Atomickými termy jsou tedy jak jednoduchá jména objektů, tak i čísla a proměnné. Z atomických termů můžeme vytvářet i složitější výrazy, které se nazývají struktury.</p>
 </div>
 <div class="section" id="promenne">
-<h2>Proměnné</h2>
+<h2>Proměnné<a class="headerlink" href="#promenne" title="Permalink to this headline">¶</a></h2>
 <p>Začínají velkým písmenem nebo speciálním symbolem &#8220;_&#8221; (podtržítko) a jsou tvořeny libovolnou posloupností písmen, číslic a znaku &#8220;_&#8221;. Proměnnou je také samotný znak &#8220;_&#8221;. Takovou proměnnou nazýváme anonymní proměnná, která je obdobou zájmen cokoli nebo kdokoli. Její zvláštností je to, že každý její výskyt představuje jinou proměnnou, tedy výraz p(_,_) je totéž co p(X,Y), nikoli p(X,X). Hodnoty anonymních proměnných se v dialogu uživateli nevypisují.</p>
 </div>
 <div class="section" id="klauzule">
-<h2>Klauzule</h2>
+<h2>Klauzule<a class="headerlink" href="#klauzule" title="Permalink to this headline">¶</a></h2>
 <p>Programování v Prologu spočívá v deklarování faktů o objektech a relacích mezi objekty, v definování pravidel o objektech a relacích platících mezi nimi a v zodpovídání dotazů. Klauzule jsou výrazy jazyka, pomocí nichž se zapisují nepodmíněné příkazy – fakta, podmíněné příkazy, které vyjadřují pravidla a výrazy, které mají tvar dotazu – cílové klauzule.
 Fakta – nepodmíněné příkazy
 Nepodmíněné příkazy vyjadřují fakt o relaci. Fakta jsou vztahy, které mají jméno, za nímž následuje výčet objektů, kterých se vztah týká. Objekty jsou odděleny čárkami a jejich výčet je uzavřen do kulatých závorek. Každý fakt je ukončen tečkou.
@@ -76,12 +91,12 @@ př.:
 ?- matka(M,X), matka(M,Y).</p>
 </div>
 <div class="section" id="predikaty">
-<h2>Predikáty</h2>
+<h2>Predikáty<a class="headerlink" href="#predikaty" title="Permalink to this headline">¶</a></h2>
 <p>To co jsme dříve nazývali procedurou můžeme přesněji popsat jako všechny klauzule začínající stejným funktorem a mající shodný počet argumentů. Mohou mít stejné jméno struktury a různý počet argumentů. Proto se často uvádí jméno procedury spolu s počtem jejích argumentů (tj. aritou).
 Procedury (jinými slovy predikáty) existují standardní (označované jako vestavěné predikáty). To jsou procedury, které jsou implementovány přímo v systému. Dále jsou procedury, které si uživatel definuje sám. Program je pak tvořen z jednotlivých procedur, které se skládají z příkazů. Příkazy jsou nepodmíněné (tj. fakta) a podmíněné (tj. pravidla). Jedná se jen o jiné chápání – výklad – posloupností klauzulí.</p>
 </div>
 <div class="section" id="seznamove-struktury">
-<h2>Seznamové struktury</h2>
+<h2>Seznamové struktury<a class="headerlink" href="#seznamove-struktury" title="Permalink to this headline">¶</a></h2>
 <p>Velice častou datovou strukturou používanou v symbolických výpočtech jsou seznamy.
 Prolog chápe seznamy jako běžné prologovské struktury, tj. termy s funktorem a argumenty, a také tak s nimi zachází.
 Seznam je tvořen posloupností prvků (tj. libovolných termů) oddělených čárkami a uzavřených do hranatých závorek []. Prvkem seznamu tedy může být konstanta, proměnná či struktura. Seznam je určitou strukturou, která se však vyjadřuje jiným způsobem.
@@ -96,7 +111,7 @@ Jedinou výjimkou je prázdný seznam, který neobsahuje žádné prvky: je repr
 Př.: /* prázdný seznam <a href="#id5"><span class="problematic" id="id6">*</span></a>/ []</p>
 </div>
 <div class="section" id="zapis-seznamu">
-<h2>Zápis seznamů</h2>
+<h2>Zápis seznamů<a class="headerlink" href="#zapis-seznamu" title="Permalink to this headline">¶</a></h2>
 <p>Seznamy lze zapisovat různými způsoby, Prolog však každý seznam interpretuje interně jako strukturu. V Prologu se k zápisu seznamu používá binární funktor &#8221;.&#8221;. Jako syntaktická pomůcka se zavádí &#8220;|&#8221; svislá (někdy přerušovaná) čára, která odděluje hlavu seznamu od těla seznamu. Mezi zvláštnosti seznamů patří to, že programátor má k dispozici speciální seznamovou notaci, která je přehlednější a uživatelsky pohodlnější. Všechny tyto zápisy jsou ekvivalentní.
 Př.:
 /* zápis čtyřprvkového seznamu pomocí funktoru &#8221;.&#8221; <em>/
@@ -120,7 +135,7 @@ Př.:
 [a | b]</p>
 </div>
 <div class="section" id="operace-se-seznamy">
-<h2>Operace se seznamy</h2>
+<h2>Operace se seznamy<a class="headerlink" href="#operace-se-seznamy" title="Permalink to this headline">¶</a></h2>
 <p>Seznamy jsou nejdůležitější struktury používané v Prologu. Mezi základní procedury pro práci s nimi patří append, member, length, delete, aj.</p>
 <p>append /* používá se pro spojování seznamů <em>/
 member /</em> používá se pro určování příslušnosti prvku k seznamu <em>/
@@ -129,7 +144,7 @@ delete; /</em> odstraňuje prvek ze seznamu <a href="#id9"><span class="problema
 <p>Seznam je rekurzivně definovaná datová struktura, také procedury s ním pracující jsou rekurzivní.</p>
 </div>
 <div class="section" id="rizeni-databaze">
-<h2>Řízení databáze</h2>
+<h2>Řízení databáze<a class="headerlink" href="#rizeni-databaze" title="Permalink to this headline">¶</a></h2>
 <p>Nejdůležitějšími predikáty pro řízení databáze jsou predikáty assert a retract. Umožňují ukládat klauzule do databáze nebo je z ní odstraňovat. Užitečným predikátem pro práci s databázi je i predikát listing a clause.
 assert /* ukládá klauzule do databáze <em>/
 asserta /</em> ukládá klauzule do databáze na začátek <em>/
@@ -140,7 +155,7 @@ listing /</em> způsobuje výpis klauzulí v databázi <em>/
 clause /</em> hledá klauzule podle kterých může unifikovat klauzule <a href="#id11"><span class="problematic" id="id12">*</span></a>/</p>
 </div>
 <div class="section" id="rizeni-pruchodu-programem">
-<h2>Řízení průchodu programem</h2>
+<h2>Řízení průchodu programem<a class="headerlink" href="#rizeni-pruchodu-programem" title="Permalink to this headline">¶</a></h2>
 <p>! (řez)
 představuje klíčové rozhodnutí
 překročí-li jej zpracovávání, už se nejde vrátit
@@ -198,10 +213,60 @@ zelený řez, který je možné odstranit, aniž by se tím změnilo fungování
 
 
           </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Otázka PROG č.1 - Logický program - struktura, základní pojmy, datová struktura seznam, práce s databází Prologu. Hlavní odlišnosti oproti procedurálnímu programování, možnosti použití neprocedurálního programovacího jazyka.</a><ul>
+<li><a class="reference internal" href="#historie">Historie</a></li>
+<li><a class="reference internal" href="#k-cemu-se-pouziva-prolog">K čemu se používá Prolog</a></li>
+<li><a class="reference internal" href="#porovnani-s-jinymi-jazyky">Porovnání s jinými jazyky</a></li>
+<li><a class="reference internal" href="#datove-typy">Datové typy</a></li>
+<li><a class="reference internal" href="#promenne">Proměnné</a></li>
+<li><a class="reference internal" href="#klauzule">Klauzule</a></li>
+<li><a class="reference internal" href="#predikaty">Predikáty</a></li>
+<li><a class="reference internal" href="#seznamove-struktury">Seznamové struktury</a></li>
+<li><a class="reference internal" href="#zapis-seznamu">Zápis seznamů</a></li>
+<li><a class="reference internal" href="#operace-se-seznamy">Operace se seznamy</a></li>
+<li><a class="reference internal" href="#rizeni-databaze">Řízení databáze</a></li>
+<li><a class="reference internal" href="#rizeni-pruchodu-programem">Řízení průchodu programem</a></li>
+</ul>
+</li>
+</ul>
+
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="../_sources/prog/1.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
       </div>
       <div class="clearer"></div>
     </div>
-
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li><a href="../index.html">Otazky na statnice 0.0.1 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
     <div class="footer">
         &copy; Copyright 2014, Michael Kutý.
       Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.3.
