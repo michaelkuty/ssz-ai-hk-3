@@ -61,6 +61,7 @@ Syntaxe - **reStructuredText**
 * http://sphinx-doc.org/rest.html
 * SublimeText plugin https://sublime.wbond.net/packages/RestructuredText%20Improved
 * SublimeText plugin https://github.com/mgaitan/sublime-rst-completion
+* dostupné formáty pro export http://sphinx-doc.org/builders.html
 
 Jak přispět ?
 ------

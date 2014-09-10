@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package xmlns="http://www.idpf.org/2007/opf" version="2.0"
+      unique-identifier="unknown">
+  <metadata xmlns:opf="http://www.idpf.org/2007/opf"
+        xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <dc:language>en</dc:language>
+    <dc:title>Otazky na statnice</dc:title>
+    <dc:creator opf:role="aut">Michael Kutý</dc:creator>
+    <dc:publisher>Michael Kutý</dc:publisher>
+    <dc:rights>2014, Michael Kutý</dc:rights>
+    <dc:identifier id="unknown" opf:scheme="unknown">unknown</dc:identifier>
+    <dc:date>2014-09-10</dc:date>
+  </metadata>
+  <manifest>
+    <item id="ncx" href="toc.ncx" media-type="application/x-dtbncx+xml" />
+    <item id="epub-0"
+          href="genindex.html"
+          media-type="application/xhtml+xml" />
+    <item id="epub-1"
+          href="index.html"
+          media-type="application/xhtml+xml" />
+    <item id="epub-2"
+          href="prog/1.html"
+          media-type="application/xhtml+xml" />
+    <item id="epub-3"
+          href="prog/2.html"
+          media-type="application/xhtml+xml" />
+    <item id="epub-4"
+          href="prog/index.html"
+          media-type="application/xhtml+xml" />
+    <item id="epub-5"
+          href="_static/basic.css"
+          media-type="text/css" />
+    <item id="epub-6"
+          href="_static/ajax-loader.gif"
+          media-type="image/gif" />
+    <item id="epub-7"
+          href="_static/epub.css"
+          media-type="text/css" />
+    <item id="epub-8"
+          href="_static/comment-close.png"
+          media-type="image/png" />
+    <item id="epub-9"
+          href="_static/down.png"
+          media-type="image/png" />
+    <item id="epub-10"
+          href="_static/plus.png"
+          media-type="image/png" />
+    <item id="epub-11"
+          href="_static/default.css"
+          media-type="text/css" />
+    <item id="epub-12"
+          href="_static/down-pressed.png"
+          media-type="image/png" />
+    <item id="epub-13"
+          href="_static/minus.png"
+          media-type="image/png" />
+    <item id="epub-14"
+          href="_static/file.png"
+          media-type="image/png" />
+    <item id="epub-15"
+          href="_static/pygments.css"
+          media-type="text/css" />
+    <item id="epub-16"
+          href="_static/up-pressed.png"
+          media-type="image/png" />
+    <item id="epub-17"
+          href="_static/up.png"
+          media-type="image/png" />
+    <item id="epub-18"
+          href="_static/comment.png"
+          media-type="image/png" />
+    <item id="epub-19"
+          href="_static/comment-bright.png"
+          media-type="image/png" />
+    <item id="epub-20"
+          href="tech/1.html"
+          media-type="application/xhtml+xml" />
+    <item id="epub-21"
+          href="tech/10.html"
+          media-type="application/xhtml+xml" />
+    <item id="epub-22"
+          href="tech/2.html"
+          media-type="application/xhtml+xml" />
+    <item id="epub-23"
+          href="tech/index.html"
+          media-type="application/xhtml+xml" />
+    <item id="epub-24"
+          href="tech/7.html"
+          media-type="application/xhtml+xml" />
+    <item id="epub-25"
+          href="tech/9.html"
+          media-type="application/xhtml+xml" />
+    <item id="epub-26"
+          href="tech/8.html"
+          media-type="application/xhtml+xml" />
+    <item id="epub-27"
+          href="_images/tcp_connection.png"
+          media-type="image/png" />
+    <item id="epub-28"
+          href="_images/iso_transport.png"
+          media-type="image/png" />
+    <item id="epub-29"
+          href="_images/protokoly.png"
+          media-type="image/png" />
+    <item id="epub-30"
+          href="_images/tcp_udp_header.png"
+          media-type="image/png" />
+    <item id="epub-31"
+          href="_images/ethernet.png"
+          media-type="image/png" />
+    <item id="epub-32"
+          href="logo/uhk.jpg"
+          media-type="image/jpeg" />
+    <item id="epub-33"
+          href="logo/uhk.png"
+          media-type="image/png" />
+    <item id="epub-34"
+          href="source/tech/img/tcp_connection.png"
+          media-type="image/png" />
+    <item id="epub-35"
+          href="source/tech/img/iso_transport.png"
+          media-type="image/png" />
+    <item id="epub-36"
+          href="source/tech/img/protokoly.png"
+          media-type="image/png" />
+    <item id="epub-37"
+          href="source/tech/img/tcp_udp_header.png"
+          media-type="image/png" />
+    <item id="epub-38"
+          href="source/tech/img/ethernet.png"
+          media-type="image/png" />
+  </manifest>
+  <spine toc="ncx">
+    <itemref idref="epub-1" />
+    <itemref idref="epub-0" />
+  </spine>
+  <guide>
+    <reference type="toc" title="Table of Contents" href="index.html" />
+  </guide>
+</package>

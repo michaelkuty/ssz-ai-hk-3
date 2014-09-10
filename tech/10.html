@@ -1,32 +1,18 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+  "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>9. Směrování (základní principy, směrovací protokoly, směrovací algoritmy, směrovače) &mdash; Otazky na statnice 0.0.1 documentation</title>
+    <title>9. Směrování (základní principy, směrovací protokoly, směrovací algoritmy, směrovače)</title>
     
-    <link rel="stylesheet" href="../_static/default.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    
-    <script type="text/javascript">
-      var DOCUMENTATION_OPTIONS = {
-        URL_ROOT:    '../',
-        VERSION:     '0.0.1',
-        COLLAPSE_INDEX: false,
-        FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true
-      };
-    </script>
-    <script type="text/javascript" src="../_static/jquery.js"></script>
-    <script type="text/javascript" src="../_static/underscore.js"></script>
-    <script type="text/javascript" src="../_static/doctools.js"></script>
-    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <link rel="top" title="Otazky na statnice 0.0.1 documentation" href="../index.html" /> 
+    <link rel="stylesheet" href="../_static/epub.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" /> 
   </head>
   <body>
+
     <div class="related">
       <h3>Navigation</h3>
       <ul>
@@ -35,17 +21,16 @@
              accesskey="I">index</a></li>
         <li><a href="../index.html">Otazky na statnice 0.0.1 documentation</a> &raquo;</li> 
       </ul>
-    </div>  
+    </div>
 
     <div class="document">
       <div class="documentwrapper">
-        <div class="bodywrapper">
           <div class="body">
             
   <div class="section" id="smerovani-zakladni-principy-smerovaci-protokoly-smerovaci-algoritmy-smerovace">
-<h1>9. Směrování (základní principy, směrovací protokoly, směrovací algoritmy, směrovače)<a class="headerlink" href="#smerovani-zakladni-principy-smerovaci-protokoly-smerovaci-algoritmy-smerovace" title="Permalink to this headline">¶</a></h1>
+<h1>9. Směrování (základní principy, směrovací protokoly, směrovací algoritmy, směrovače)</h1>
 <div class="section" id="zakladni-funkce-routeru">
-<h2>Základní funkce routeru<a class="headerlink" href="#zakladni-funkce-routeru" title="Permalink to this headline">¶</a></h2>
+<h2>Základní funkce routeru</h2>
 <p>router = směrovač
 * protokolově závislý
 * umožňuje propojení více než dvou částí globální sítě
@@ -57,11 +42,11 @@
 * přenosový protokol definován na 3. a 4. vrstvě (např. IP vyžaduje TCP)</p>
 </div>
 <div class="section" id="router-smerovac">
-<h2>Router (směrovač)<a class="headerlink" href="#router-smerovac" title="Permalink to this headline">¶</a></h2>
+<h2>Router (směrovač)</h2>
 <p>hardwarové zařízení, které přebírá data z lokální počítačové sítě a směruje je na vzdálený cíl po telefonní či jiné dálkové lince (ISDN, optika), popřípadě provádí opačnou funkci. Náročné zařízení umožňující simultánně přebírat a směrovat data z různých zdrojů na různé cíle, obsahuje také řadu bezpečnostních algoritmů zabraňujících probourání vetřelců do lokální sítě. Směrovače také řídí správným způsobem provoz na linkách, korigují chyby atd.</p>
 </div>
 <div class="section" id="k-vyhodnym-vlastnostem-patri">
-<h2>K výhodným vlastnostem patří<a class="headerlink" href="#k-vyhodnym-vlastnostem-patri" title="Permalink to this headline">¶</a></h2>
+<h2>K výhodným vlastnostem patří</h2>
 <ul class="simple">
 <li>Router nemusí reagovat na všechny rámce (jako bridge), ale pouze na rámce které jsou mu adresovány (je adresovatelný). Tím je dáno menší zatížení routeru.</li>
 <li>Router pracuje s adresami sítí a MAC adresy počítačů musí znát pouze pro přímo připojené sítě. Tím dochází ke značné redukci tabulek (router používá tzv. směrovací tabulku) oproti bridgi, a router je možné použít jako propojovací prvek pro velmi rozsáhlé sítě (např. Internet).</li>
@@ -73,7 +58,7 @@
 * Router je závislý na protokolu použitém třetí vrstvou, nemůže tedy existovat např. univerzální router pro Ethernet. (Činnost routeru je realizována softwarově, takže pro směrování více protokolů může být použit fyzicky jeden počítač s více směrovacími programy.)</p>
 </div>
 <div class="section" id="konfigurace-routeru">
-<h2>Konfigurace routeru<a class="headerlink" href="#konfigurace-routeru" title="Permalink to this headline">¶</a></h2>
+<h2>Konfigurace routeru</h2>
 <ul class="simple">
 <li>Cisco IOS</li>
 <li>telnet, ssh, console port</li>
@@ -82,7 +67,7 @@
 <p>viz. např. <a class="reference external" href="http://www.cisco.com/c/en/us/td/docs/routers/access/1900/software/configuration/guide/Software_Configuration/routconf.html">http://www.cisco.com/c/en/us/td/docs/routers/access/1900/software/configuration/guide/Software_Configuration/routconf.html</a></p>
 </div>
 <div class="section" id="vyznam-vytvoreni-podsiti">
-<h2>Význam vytvoření podsítí<a class="headerlink" href="#vyznam-vytvoreni-podsiti" title="Permalink to this headline">¶</a></h2>
+<h2>Význam vytvoření podsítí</h2>
 <p>význam: u velkých sítí (např. poskytovatelé Internetu)
 podsíť:
 určitou síť tvoří skupina dílčích sítí (podsítí):
@@ -95,7 +80,7 @@ např. 147.230.26.98 s maskou 255.255.255.0 – počítač s adresou 98 v podsí
 pokud cílová adresa leží ve stejné podsíti, posílá se datagram přímo adresátovi</p>
 </div>
 <div class="section" id="staticke-routovani">
-<h2>Statické routování<a class="headerlink" href="#staticke-routovani" title="Permalink to this headline">¶</a></h2>
+<h2>Statické routování</h2>
 <p>směrování (routování) je základní funkcí síťové vrstvy
 směrování se provádí za pomocí směrovací tabulky – ta může být:
 statická (neadaptivní):
@@ -123,7 +108,7 @@ aktualizace směrovacích tabulek má povahu řídící zprávy – vyšší pri
 vlivem zpoždění při přenosu tabulek mohou vznikat routovací smyčky</p>
 </div>
 <div class="section" id="smerovaci-protokoly">
-<h2>Směrovací protokoly<a class="headerlink" href="#smerovaci-protokoly" title="Permalink to this headline">¶</a></h2>
+<h2>Směrovací protokoly</h2>
 <ul class="simple">
 <li>RIP = Routing Information Protocol (RFC 1388)</li>
 <li>IGRP = Interior Gateway Routing Protocol - robustnější než RIP – vektor vzdáleností</li>
@@ -139,7 +124,7 @@ vlivem zpoždění při přenosu tabulek mohou vznikat routovací smyčky</p>
 </ul>
 </div>
 <div class="section" id="rozhodovani">
-<h2>Rozhodování<a class="headerlink" href="#rozhodovani" title="Permalink to this headline">¶</a></h2>
+<h2>Rozhodování</h2>
 <ul class="simple">
 <li>vektor vzdáleností</li>
 <li>zpoždění na lince</li>
@@ -152,56 +137,10 @@ vlivem zpoždění při přenosu tabulek mohou vznikat routovací smyčky</p>
 
 
           </div>
-        </div>
-      </div>
-      <div class="sphinxsidebar">
-        <div class="sphinxsidebarwrapper">
-  <h3><a href="../index.html">Table Of Contents</a></h3>
-  <ul>
-<li><a class="reference internal" href="#">9. Směrování (základní principy, směrovací protokoly, směrovací algoritmy, směrovače)</a><ul>
-<li><a class="reference internal" href="#zakladni-funkce-routeru">Základní funkce routeru</a></li>
-<li><a class="reference internal" href="#router-smerovac">Router (směrovač)</a></li>
-<li><a class="reference internal" href="#k-vyhodnym-vlastnostem-patri">K výhodným vlastnostem patří</a></li>
-<li><a class="reference internal" href="#konfigurace-routeru">Konfigurace routeru</a></li>
-<li><a class="reference internal" href="#vyznam-vytvoreni-podsiti">Význam vytvoření podsítí</a></li>
-<li><a class="reference internal" href="#staticke-routovani">Statické routování</a></li>
-<li><a class="reference internal" href="#smerovaci-protokoly">Směrovací protokoly</a></li>
-<li><a class="reference internal" href="#rozhodovani">Rozhodování</a></li>
-</ul>
-</li>
-</ul>
-
-  <h3>This Page</h3>
-  <ul class="this-page-menu">
-    <li><a href="../_sources/tech/10.txt"
-           rel="nofollow">Show Source</a></li>
-  </ul>
-<div id="searchbox" style="display: none">
-  <h3>Quick search</h3>
-    <form class="search" action="../search.html" method="get">
-      <input type="text" name="q" />
-      <input type="submit" value="Go" />
-      <input type="hidden" name="check_keywords" value="yes" />
-      <input type="hidden" name="area" value="default" />
-    </form>
-    <p class="searchtip" style="font-size: 90%">
-    Enter search terms or a module, class or function name.
-    </p>
-</div>
-<script type="text/javascript">$('#searchbox').show(0);</script>
-        </div>
       </div>
       <div class="clearer"></div>
     </div>
-    <div class="related">
-      <h3>Navigation</h3>
-      <ul>
-        <li class="right" style="margin-right: 10px">
-          <a href="../genindex.html" title="General Index"
-             >index</a></li>
-        <li><a href="../index.html">Otazky na statnice 0.0.1 documentation</a> &raquo;</li> 
-      </ul>
-    </div>
+
     <div class="footer">
         &copy; Copyright 2014, Michael Kutý.
       Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.3.

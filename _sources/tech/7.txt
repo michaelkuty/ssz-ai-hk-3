@@ -97,3 +97,66 @@ družicová komunikace se zemí (tam je jedno co se rozbije, tím spíš, rozbij
 
 DPP (demand priority protocol) 	- není protokol ale přístupová metoda !!!
 - patří do skupiny přístupových metod na žádost
+  
+DISTRIBUOVANÉ PŘÍSTUPOVÉ METODY
+--------
+
+* snaha zachovat flexibilitu centra bez nutnosti existence centra
+* stanice se dohadují na tom, kdo bude vysílat
+* použití TOKENu (pešek, štafetový kolík) - ten si stanice předávají a kdo jej drží, ten může 
+ vysílat, ostatní mlčí
+* stanice musí být podle nějakého klíče uspořádány - KRUH je jediná rozumná varianta (tam 
+si jsou všechny stanice rovny - zajištění rovného přístupu všech stanic)
+
+TOKEN RING  (fyzický kruh)
+- přístupová metoda (pozor! je to také druh sítě užívající tuto PM a také skupina přístupových 
+metod založených na fyzickém kruhu) pokud nemáme síť do kruhu, lze vytvořit logický kruh na úrovni linkové vrstvy (není to ale kruhová topologie sítě) = TOKEN BUS  (pozor! zároveň konkrétní PM v síti Arcnet)
+
+modifikovatelné (možnost dynamického připojování/odpojování stanic),není třeba synchronizace  (ideální situace), z centrálních metod eliminuje nutnost centra, 	slušná efektivnost (60-70%)
+
+Užití v sítích: Token ring, Arcnet
+
+
+NÁHODNÉ PŘÍSTUPOVÉ METODY
+-------
+
+* optimistická víra, že  kolizí bude málo (při běžném provozu skutečně tak, protože čas, kdy 
+  každá stanice vysílá je krátký ale se zvyšujícím se počtem stanic se zvyšuje režie)
+ režie=čas kdy se mohlo přenášet ale nepřenášelo
+
+* řeší situaci, když nastane kolize
+
+ALOHA
+""""""
+* krystalicky čistý přístup náhodné PM
+* když chce někdo vysílat, tak vysílá
+* pro málo zatížené sítě téměř 100% efektivnost
+
+při velké zátěži však efektivnost může klesat až pod 2% (!)
+
+CSMA (Carrier sense multiple access)
+""""""""
+* testování nosné před vícenásobným přístupem
+* nosná vlna stejná pro celou síť pokud tam nosná vlna, pak někdo vysílá a musí se počkat, 
+  jinak lze vysílat
+pokud se někomu podaří vysílat, tak vysílá bez rušení ostatními stanicemi => snížení 
+chybovosti
+jednoznačně dána doba, kdy začnou vysílat další (na začátku dalšího časového úseku)
+Účinnost CSMA 100-30%
+
+3. CSMA/CD  (with Collision Detection)
+"""""""""
+* **používá se ve více než 80% sítí na světě**
+* původní CSMA + navíc příposlech nosné v průběhu celé doby vysílání (ne tedy jen před 
+  vlastním vysíláním)
+
+I když stanice vysílá, tak poslouchá, jestli to, co slyší je stejné, jako to, co jde ven. Když ne (jiná stanice začala ve stejnou chvíli vysílat), přeruší obě vysílání a vyšlou kolizní sekvenci (Jam sequence). Té je rozumět, i když vysílají dvě najednou. Obě si potom náhodně určí, po kolikáté mezirámcové pauze to zkusí znovu (random 1-10).
+
+Pokud žádná jiná stanice nezačne vysílat, může po určité době začít jedna z těch kolizních. V této metodě není potřeba synchronizace, místo ní se používají mezirámcové pauzy. 
+**i při vysokém zatížení sítě účinnost sítě neklesá pod 60%**  
+(to je lepší než distribuované PM i při nejvyšším zatížení!)
+jednodušší než implementace různých logických kruhů
+
+stanice nemusí být již nijak zvlášť dále synchronizovány (děje se automaticky jako vedlejší efekt)
+
+Používá se v sítích ETHERNET, Fast Ethernet a Gigabit ETHERNET.
