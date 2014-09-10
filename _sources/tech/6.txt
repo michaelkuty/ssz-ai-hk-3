@@ -1,0 +1,50 @@
+==============
+6. Komunikační prostředky (principy komunikace, modulace signálu, rozdělení a porovnání, média, mobilní technologie)
+==============
+
+
+
+
+
+
+
+
+
+
+
+
+Modulace signálu
+--------
+
+Aby mohla být zpráva (v podobě bitové posloupnosti) vyslána na kabel, je nutné ji převést na vhodný fyzikální signál
+u klasických kabelů to je elektrický signál, u optických světelné záření
+způsoby přenosu se dělí na
+
+přenos v základním pásmu (baseband)
+"""""""""
+
+* signál ponechán v původní podobě, není tedy jakýmkoliv způsobem modulován.
+* není potřeba modem nebo jakéhokoliv zařízení, které by musely obě strany vlastnit, aby signál pozměnily.
+
+Několik typů
+~~~~~~~~~~~~
+
+unipolární
+-------
+
+napětí 0V je nula; napětí je jednička
+
+bipolární
+--------
+bez návratu k nule
+podobný unipolárnímu, ale nula je značená napětím -5V
+
+s návratem k nule
+--------
+pracuje na principu vrácení se k nule, podle níž se můžou počítače vhodně synchronizovat
+kódování Manchester
+zakódování jednoho datového bitu do více změn přenášeného signálu
+nula je znázorněna změnou z vyšší hodnoty napětí na nižší a jednička opačně
+diferenciální Manchester
+jedna jeho změna je časování a druhá změna je datový bit.
+0 je tedy změna a 1 beze změny.

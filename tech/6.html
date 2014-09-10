@@ -1,0 +1,143 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>6. Komunikační prostředky (principy komunikace, modulace signálu, rozdělení a porovnání, média, mobilní technologie) &mdash; Otazky na statnice 0.0.1 documentation</title>
+    
+    <link rel="stylesheet" href="../_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '0.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="top" title="Otazky na statnice 0.0.1 documentation" href="../index.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li><a href="../index.html">Otazky na statnice 0.0.1 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="komunikacni-prostredky-principy-komunikace-modulace-signalu-rozdeleni-a-porovnani-media-mobilni-technologie">
+<h1>6. Komunikační prostředky (principy komunikace, modulace signálu, rozdělení a porovnání, média, mobilní technologie)<a class="headerlink" href="#komunikacni-prostredky-principy-komunikace-modulace-signalu-rozdeleni-a-porovnani-media-mobilni-technologie" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="modulace-signalu">
+<h2>Modulace signálu<a class="headerlink" href="#modulace-signalu" title="Permalink to this headline">¶</a></h2>
+<p>Aby mohla být zpráva (v podobě bitové posloupnosti) vyslána na kabel, je nutné ji převést na vhodný fyzikální signál
+u klasických kabelů to je elektrický signál, u optických světelné záření
+způsoby přenosu se dělí na</p>
+<div class="section" id="prenos-v-zakladnim-pasmu-baseband">
+<h3>přenos v základním pásmu (baseband)<a class="headerlink" href="#prenos-v-zakladnim-pasmu-baseband" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>signál ponechán v původní podobě, není tedy jakýmkoliv způsobem modulován.</li>
+<li>není potřeba modem nebo jakéhokoliv zařízení, které by musely obě strany vlastnit, aby signál pozměnily.</li>
+</ul>
+<div class="section" id="nekolik-typu">
+<h4>Několik typů<a class="headerlink" href="#nekolik-typu" title="Permalink to this headline">¶</a></h4>
+</div>
+</div>
+</div>
+<div class="section" id="unipolarni">
+<h2>unipolární<a class="headerlink" href="#unipolarni" title="Permalink to this headline">¶</a></h2>
+<p>napětí 0V je nula; napětí je jednička</p>
+</div>
+<div class="section" id="bipolarni">
+<h2>bipolární<a class="headerlink" href="#bipolarni" title="Permalink to this headline">¶</a></h2>
+<p>bez návratu k nule
+podobný unipolárnímu, ale nula je značená napětím -5V</p>
+</div>
+<div class="section" id="s-navratem-k-nule">
+<h2>s návratem k nule<a class="headerlink" href="#s-navratem-k-nule" title="Permalink to this headline">¶</a></h2>
+<p>pracuje na principu vrácení se k nule, podle níž se můžou počítače vhodně synchronizovat
+kódování Manchester
+zakódování jednoho datového bitu do více změn přenášeného signálu
+nula je znázorněna změnou z vyšší hodnoty napětí na nižší a jednička opačně
+diferenciální Manchester
+jedna jeho změna je časování a druhá změna je datový bit.
+0 je tedy změna a 1 beze změny.</p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">6. Komunikační prostředky (principy komunikace, modulace signálu, rozdělení a porovnání, média, mobilní technologie)</a><ul>
+<li><a class="reference internal" href="#modulace-signalu">Modulace signálu</a><ul>
+<li><a class="reference internal" href="#prenos-v-zakladnim-pasmu-baseband">přenos v základním pásmu (baseband)</a><ul>
+<li><a class="reference internal" href="#nekolik-typu">Několik typů</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#unipolarni">unipolární</a></li>
+<li><a class="reference internal" href="#bipolarni">bipolární</a></li>
+<li><a class="reference internal" href="#s-navratem-k-nule">s návratem k nule</a></li>
+</ul>
+</li>
+</ul>
+
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="../_sources/tech/6.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li><a href="../index.html">Otazky na statnice 0.0.1 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2014, Michael Kutý.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.3.
+    </div>
+  </body>
+</html>
