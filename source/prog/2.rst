@@ -1,0 +1,879 @@
+======
+Otázka 2. Databáze, databázový systém. Hlavní funkce DBS. Historický vývoj DBS. Modely dat. Relační algebra: projekce, selekce, spojení. SQL.
+======
+Databáze je souhrn všech uložených dat, potřebných k fungování dané organizace
+
+Databázový řídící systém – (DBS) by měl poskytnout:
+
+* definici databáze,
+* efektivní manipulaci databáze,
+* ochranu dat,
+* zotavení se z chyb systému.
+
+Základní pojmy
+------
+Když do světa zpracování dat vstoupily počítače, nepřišly s revolučními změnami, které by převrátily naruby všechno, co se používalo dosud. Bylo tomu přesně naopak. Počítačové zpracování dat převzalo staleté zkušenosti úředníků, administrativních pracovníků, účetních, skladníků a všech těch, kteří s hromadami údajů museli zápasit mnohem dříve, než byl sestrojen první počítač. Současné zpracování dat v IS, ale i v jiných aplikacích vyžadujících přístup k většímu množství dat, se řeší databázovou technologií. Databázové programy mají za úkol uchovávat, analyzovat a spravovat data ve strukturovaném tvaru. Cílem takto organizovaných dat je rychlé vyhledání uložených údajů, jednoduchý způsob aktualizace, libovolné vyhodnocování a flexibilní spojování.
+
+Databázový systém
+------
+Souhrn prostředků, které dovolují relativně pohodlným a bezpečným způsobem manipulovat s uloženými daty (bází dat) - vytvářet, modifikovat nebo aktualizovat je a především v těchto datech vyhledávat požadované informace. Program (lépe řečeno systém programů), kterým se řídí a spravuje báze dat, se obecně označuje jako systém řízení báze dat (SŘBD). Anglicky jsou tyto prostředky označovány jako Database Management System. Termín relační databázový systém se váže ke způsobu organizace dat. Pokud v rámci prostředků poskytovaných databázovým systémem navrhneme určitou konkrétní strukturu zpracovávaných dat a doplníme databázový systém prostředky realizujícími specifické akce nad těmito daty, získáme teprve přímo použitelný počítačový prostředek k uchovávání informací z určité oblasti dění. Takový konkrétní systém se nazývá informační systém nebo někdy aplikace. Pro vlastní použití je ještě potřeba naplnit IS konkrétními daty. Databázový systém umožňuje s daty pracovat dvojím způsobem. Umožňuje člověku, který je alespoň částečně seznámen se základními principy systému a se strukturou uložených dat, přímo zasahovat do těchto dat a poskytuje mu poměrně silné prostředky pro vyhledávání potřebných informací v těchto datech. Poskytuje prostředky, kterými lze připravit ony výše zmíněné specifické akce a specifické povely pro práci s daty - připravit program, který tyto akce či povely realizuje. Častý případ je ten, kdy je uživatel systému téměř úplně izolován od vlastních prostředků databázového systému. Toto uživatelské rozhraní potom může být snáze přizpůsobeno konkrétním potřebám a zvyklostem potencionálních uživatelů IS.
+
+Základní objekty
+------
+Součástí databázového systému je jazyk, kterým lze tento databázový systém ovládat. Příkazy jazyka lze provádět ve dvou různých režimech. V základním přímém režimu je vydaný příkaz (pokud je syntakticky správný i logicky proveditelný) bezprostředně proveden a systém očekává další příkaz. Strukturovanou posloupnost těchto příkazů jazyka je možno uložit do textového souboru (běžně se pro něj používá extenze .PRG a termín program) a zadat provedení této posloupnosti příkazů v nepřímém režimu. Provedení programu je možné vyvolat jak z přímého režimu, tak i z jiného programu. Základem každého jazyka je souhrn objektů, se kterými je možné manipulovat nebo které je možné vytvářet. Databázový soubor je složený objekt, který je tvořen posloupností záznamů. Každý záznam obsahuje údaje o jistém objektu reálného světa a je tvořen posloupností položek (polí), v nichž jsou uloženy atributy tohoto objektu. Položka má pevné jméno, pevný typ a nabývá vždy nějaké hodnoty tohoto typu. Seznam položek v jednom záznamu, jejich jména a typy jsou dány při definici databázového souboru a jsou shodné pro všechny záznamy daného databázového souboru. Počet záznamů je proměnný podle uložených dat, databázový soubor může být i prázdný, tj. neobsahuje žádný záznam. Jméno databázového souboru je jménem ve smyslu operačního systému. S položkami souborů se pracuje v zásadě stejně, jako se pracuje s proměnnými v jiných programových jazycích. Nejpodstatnější rozdíl je v tom, že hodnoty položek jsou uložené trvalé údaje na paměťovém médiu. Pro práci s dočasnými pracovními hodnotami je možno používat paměťové proměnné a paměťová pole. Proměnná vzniká nejčastěji přiřazením hodnoty, méně často deklarací, zaniká buď explicitním příkazem nebo vymazáním celé oblasti pro paměťové proměnné. Pole je třeba deklarovat a uvést jeho rozměry.
+
+Srovnání vybraných databázových systémů
+------
+Mnoho databázových systémů o sobě tvrdí, že jsou nejrychlejší, nejkomplexněji pojaté, dají se nejsnadněji adaptovat na konkrétní podmínky, existuje pro ně největší počet již vyvinutých aplikací, mají nejjednodušší údržbu a jsou tudíž ve výsledném součtu i nejlevnější. Existuje samozřejmě velké množství hledisek, podle kterých je lze posuzovat. Skutečností je, že souhrn dostupných informací nezřídka představuje změť nesourodých polopravd, ve které se nezkušený uživatel těžko orientuje. Z inzerce lze obvykle získat informaci o tom, že ten či onen program je nejlepší, případně že je nabízen téměř zdarma nebo o 5 % levněji. Z propagačních materiálů lze obvykle zjistit cenu a výčet funkcí, které program obsahuje. Na výstavách ho lze letem světem spatřit v chodu, takže lze posoudit barevné provedení a úroveň prezentace firmy. Situaci se pokouší zachraňovat různé recenze programů v odborných počítačových časopisech. Zde autoři v první části obvykle popíší vlastní dojmy a na závěr přiloží tabulku, obsahující výčet voleb menu, funkcí a možností systémem má/nemá. Recenze většinou obsahují popis balení produktu při dodávce, pečlivé hodnocení způsobu instalace, hardwarové požadavky, odlišnosti od minulé verze, řešení nedostatků minulé verze, novinky. Přináší též mnoho obrázků s použitím základních funkcí. Odlišnosti v základním pojetí i funkčních možnostech jednotlivých programů mají za následek, že u jednoho programu je vyzdvihováno to a u druhého kritizováno něco úplně jiného. Kritika nedostatků z pohledu recenzenta se navíc pravidelně míjí s připomínkami uživatelů, odvozenými z praxe. Za víceméně objektivní jsou považovány srovnávací testy, ve kterých jsou testované programy použity k řešení stejného úkolu, porovnávají se stejné funkce. Výstupem je i srovnávací tabulka časové odezvy při zatížení programů většími objemy dat, tabulka možností a funkcí, vybavenosti a v neposlední řadě i cena.
+
+Databázové modely
+------
+Logická struktura dat se řídí třemi databázovými modely - hierarchickým, síťovým a relačním.
+
+* Hierarchický databázový model. Všechny vztahy mezi daty mohou být znázorněny pomocí stromové struktury. Jako příklad může sloužit struktura nějaké firmy. Na nejvyšším stupni stojí Firma, na dalším stupni následují jednotlivé Divize této firmy, na třetím stupni jsou jednotlivá Oddělení atd. Každý element má právě jednoho předchůdce, ale může mít více následovníků. Pouze na nejvyšším stupni existuje jen jeden element (Firma).
+
+* Síťový databázový model. Síťový model se vyznačuje tím, že každý prvek může mít více následovníků i předchůdců. Příkladem může být správa půjčovny automobilů se skupinou dat Výpůjčky. Tato skupina je podřízena elementům skupiny Zákazníci s daty zákazníků a Auta s informacemi k vypůjčeným automobilům. S oběma má ovšem stejné vztahy.
+
+* Relační databázový model. Nejmodernějším a nejrozšířenějším datovým modelem je model relační. Byl popsán teoretickým matematikem E.F.Coddem s cílem dosažení datové nezávislosti a neporušenosti. Základní myšlenka spočívá v dynamickém řízení vztahů mezi datovými soubory. Relační databáze je tvořena jedním nebo více soubory, které jsou uspořádány do tabulek. Tabulku lze snadno popsat - je určena definovaným počtem sloupců, označovaných jako atributy, a řádků. Jeden sloupec reprezentuje jeden atribut. Každý sloupec (atribut) má specifikován svůj (v rámci dané tabulky jednoznačný) název a je charakterizován oborem hodnot, tj. množinou hodnot, kterých mohou nabývat hodnoty v daném sloupci. Každý řádek reprezentuje instanci datového objektu. Datový objekt je charakterizován množinou atributů (sloupců), instance datového objektu je charakterizována množinou hodnot těchto atributů. V průsečících sloupců a řádků vznikají pole (nebo též položky) databáze. Všechna pole určitého řádku se nazývají věta.
+
+
+Relační algebra. Relační model je založen na přesných výrocích teorie množin a proto umožňuje obzvlášť precizní popis dat. Relační algebra má pro práci s relacemi velký význam. Základními operacemi nad relačními tabulkami jsou projekce, selekce a spojení.
+
+Projekce (project) tabulky definovaná podmnožinou atributů představuje vypuštění některých sloupců neobsažených v požadované množině atributů. Součástí operace projekce je i případné vypuštění duplicitních řádek ve výsledné tabulce. Tabulku lze naopak také rozšířit o sloupec vzniklý nějakou operací nad hodnotami uložených atributů.
+Projekce relace R na atributy B: pB(R), B je podmnožina atributů R
+Selekce (select) tabulky definovaná podmnožinou definičního oboru relace (tj. logickou podmínkou charakterizující tuto podmnožinu) představuje průnik relace s touto novou podmnožinou.
+Selekce relace R podle logické podmínky j: sj(R)
+Spojení (join) tabulek je vytvoření nové spojené tabulky na základě shodných hodnot atributů v obou tabulkách (spojení záznamů týkajících se téhož objektu do jednoho záznamu za sebe). Podle způsobu porovnávání hodnot ve spojovaných sloupcích se rozlišují 3 druhy spojení - na rovnost (Equijoin), na nerovnost (Theta join) - nemá praktický význam, vnější - inkluse (Outer join). Pokud výsledná relace obsahuje všechny sloupce z první i druhé tabulky, vyjma sloupce, který byl využit pro spojení, pak toto spojení je označováno jako přirozené (Natural join).
+? - spojení relací R a S přes sloupce i a j R (i ? j) S
+? je jeden z operátorů: <, <=, >, >=, =
+
+Přirozené spojení (NATURAL JOIN) R*S
+Pro každý atribut Ai který se nachází v R i v S, vyber z R x S ty n-tice, pro které platí R.Ai = S.Ai
+Vypusť pro každý atribut Ai sloupec S.Ai
+
+Vnější spojení (outer join)
+dvou relací umožňuje zahrnout do výsledné relace i ty řádky, pro které neexistuje v druhé relaci stejná hodnota ve společném sloupci; chybějícím hodnotám druhé relace se přiřadí hodnota NULL. Zůstanou tak ve výsledné relaci zachovány i ty řádky, které by se při přirozeném spojení ztratily.
+Vnějším spojením lze tedy do výsledku získat i ty n-tice, které s ničím spojit nelze, přičemž zbývající komponenty n-tic se doplní prázdnými hodnotami.
+Příklady
+
+    Najdi všechny zaměstnance s platem vyšším než 10 000 Kč.
+
+p plat > 10000 (Zaměstnanec)
+
+    Vytvoř seznam obsahující číslo zaměstnance, příjmení, jméno a plat
+
+sc_zam, prijmeni, jmeno, plat(Zaměstnanec)
+
+
+SQL (Structured Query Language)
+strukturovaný dotazovací jazyk, který byl určen americkým ústavem pro normalizaci (ANSI) jako standard pro komunikaci s relačními databázemi. SQL je nezávislý na datech, protože se uživatel nemusí starat o fyzické uložení dat. Jazyk SQL se používá pro získání informací z databázových souborů, přičemž požadavky na výběr se specifikují popisně.
+1970 - E.F.Codd - definice relačního modelu dat, 1974 - první popis dotazovacího jazyka SEQUEL, 1979 - na trh uveden první relační databázový systém ORACLE, 1981 - INGRES, 1982 - SQL/DS, 1982 - zahájení práce na standardu ANSI SQL, 1983 - DB2, 1986 - schválení normy ANSI SQL, 1987 - schválení normy ISO SQL.
+SQL je neprocedurální jazyk (popíšeme jaká data chceme najít, ne jak to má počítač provést - poradí si sám).
+
+
+Příkaz SELECT
+------
+
+.. code-block:: sql
+
+	SELECT [DISTINCT | ALL] {* | [vyraz [AS nove_jmeno]] [,...]}
+	FROM jmeno_tabulky [alias][,...]
+	[WHERE podminka]
+	[GROUP BY seznam_sloupcu]
+	[HAVING podminka]
+	[ORDER BY seznam_sloupcu]
+
+
+Příkaz SELECT –základní funkce
+
+* SELECT Specifikuje které sloupce mají být zahrnuty ve výsledku.
+* FROM Specifikuje tabulku(y) která se má použít
+* WHERE Filtruje řádky
+* GROUP BY Vytváří skupiny řádků se stejnou hodnotou v daném sloupci
+* HAVING Filtruje skupiny podle dané podmínky
+* ORDER BY Specifikuje pořadí hodnot ve výsledku
+
+Příklad 6.1 Všechny sloupce, všechny řádky
+Zobraz všechny informace o všech zaměstnancích
+Znak * lze použít jako zkratku pro 'všechny sloupce':
+
+.. code-block:: sql
+
+	SELECT *
+	FROM zaměstnanec
+
+Příklad 6.2 -výběr sloupců –projekce
+Zobraz seznam pracovníků a jejich platy
+
+.. code-block:: sql
+
+	SELECT jméno, příjmení, plat
+	FROM zaměstnanec
+
+Příklad 6.3 - Použití DISTINCT
+Zobrazte čísla nemovitostí, které si některý klient prohlédl
+
+.. code-block:: sql
+
+	SELECT cNem
+	FROM prohlídka
+	DISTINCT eliminuje duplicity:
+	SELECT DISTINCT cNem
+	FROM prohlídka
+
+
+Příklad 6.4 -Vypočítané hodnoty
+Vypište seznam pracovníků a pro každého uveďte výši ročního platu.
+
+.. code-block:: sql
+	
+	SELECT jméno, příjmení, plat*12 AS roční_plat
+	FROM zaměstnanec
+
+
+Příklad 6.5 - Výběr řádků - selekce
+Zobrazte všechny informace o zaměstnancích s platem větším než 10000 Kč
+
+.. code-block:: sql
+	
+	SELECT * FROM zaměstnanec
+	WHERE plat >10000
+
+
+Příklad 6.6 -Výběr řádků
+Zobraz údaje o pobočkách se sídlem v Praze nebo v Brně
+
+.. code-block:: sql
+	
+	SELECT * FROM Pobočka
+	WHERE město='Praha' OR město='Brno'
+
+
+Příklad 6.7 -interval
+Zobrazte údaje o zaměstnancích s platem v rozmezí 9 000 -12000 Kč.
+
+.. code-block:: sql
+	
+	SELECT *FROM zaměstnanec
+	WHERE plat BETWEEN 9000 AND 12000
+	nebo SELECT *
+	FROM zaměstnanec
+	WHERE plat>= 9000 AND plat <=1000
+
+lze použít i negaci NOT BETWEEN
+
+Příklad 6.8 -Příslušnost k množině
+Zobraz údaje o všech managerech a účetních
+
+.. code-block:: sql
+	
+	SELECT *
+	FROM Zaměstnanec
+	WHERE PracZar IN ('manager','účetní')
+
+nebo
+
+.. code-block:: sql
+
+	SELECT *
+	FROM zaměstnanec
+	WHERE PracZar='manager' OR PracZar='účetní'
+
+IN je efektivnější, obsahuje-li množina více hodnot.
+Je možno použít i negaci NOT IN
+
+Příklad 6.9 -Hledání řetězce
+SQL má dva speciální symboly
+% posloupnost nula nebo více znak ů
+_ libovolný jeden znak
+Najdi zaměstnance, kteří mají v adrese Ostravu.
+
+.. code-block:: sql
+
+	SELECT *
+	FROM zaměstnanec
+	WHERE adresa LIKE '%Ostrava%'
+
+
+Příklad 6.10 -podmínka s použitím NULL
+Zobraz detaily všech prohlídek, kde není zaznamenána žádná poznámka
+
+.. code-block:: sql
+
+	SELECT *
+	FROM prohlídka
+	WHERE poznámka IS NULL
+
+
+Příklad 6.11 - řazení dle jednoho sloupce
+Zobraz seznam zaměstnanců dle výše platu, od nejvyššího
+
+.. code-block:: sql
+	SELECT jméno, příjmení, plat
+	FROM zaměstnanec
+	ORDER BY plat DESC
+
+
+Agregační funkce
+-----
+ISO standard definuje 5 agregačních funkcí:
+* COUNT() vrátí počet hodnot ve specifikovaném sloupci
+* SUM() vrátí součet hodnot ve specifikovaném sloupci
+* AVG() vrátí průměr hodnot ve specifikovaném sloupci
+* MIN() vrátí nejmenší hodnotu ve specifikovaném sloupci
+* MAX() vrátí největší hodnotu ve specifikovaném sloupci
+
+Vlastnosti agregačních funkcí
+------
+Každá z funkcí pracuje s jedním sloupcem a vrací jednu hodnotu
+COUNT, MIN a MAX se aplikuje na numerické i nenumerické hodnoty,
+ale SUM a AVG se mohou použít pouze na numerické hodnoty.
+Kromě COUNT(*), každá funkce nejdříve eliminuje hodnoty NULL a pracuje pouze se zbylými hodnotami
+COUNT(*) spočítá všechny řádky tabulky bez ohledu na výskyt NULL nebo duplicitních hodnot.
+Je možno použít DISTINCT před jménem sloupce za účelem eliminace duplicit.
+DISTINCT nemá vliv na MIN/MAX, ale může mít vliv na SUM/AVG.
+Agregační funkce mohou být použity pouze v seznamu příkazu SELECT a v klauzuli HAVING.
+
+Příklad 6.12 Použití COUNT(*)
+U kolika nemovitostí je požadované nájemné vyšší než 8000 Kč?
+
+.. code-block:: sql
+
+	SELECT COUNT(*) AS počet
+	FROM nemovitost
+	WHERE nájem > 8000
+
+
+Příklad 6.13
+Kolik různých nemovitostí si klienti prohlédli v březnu?
+
+.. code-block:: sql
+
+	SELECT COUNT(DISTINCT cNem) AS počet
+	FROM prohlídka
+	WHERE datum >={1.3.99} AND datum <={31.3.99}
+
+(formát datumu není ve všech SQL serverech stejný, např u MySQl funguje >='1999-03-31' ale i jiné formáty)
+
+Příklad 6.14 -Použití COUNT a SUM
+Najdi počet managerů a součet jejich platů.
+
+.. code-block:: sql
+
+	SELECT COUNT(cZam) AS počet, SUM(plat) AS PlatCelkem
+	FROM zaměstnanec
+	WHERE PracZar ='manager'
+
+
+Příklad 6.15 - Použití MIN, MAX, AVG
+Najdi min, maximum a průměrný plat zaměstnanců
+
+.. code-block:: sql
+
+	SELECT MIN(plat) AS MIN, MAX(plat) AS MAX, AVG(plat) AS průměr
+	FROM zaměstnanec
+
+Který zaměstnanec má minimální plat?
+
+.. code-block:: sql
+
+	SELECT prijmeni,MIN(plat)
+	FROM Zamestnanec
+
+Předchozí příkaz nevrátí správnou hodnotu, nelze míchat ne agregované sloupce s agregovanými.
+POZOR správně:
+
+.. code-block:: sql
+
+	SELECT prijmeni, plat FROM Zamestnanec
+	WHERE plat = (SELECT MIN(plat) FROM Zamestnanec)
+
+
+SELECT - Seskupení dat (Grouping)
+-----
+Agregační funkce můžeme aplikovat na podmnožiny tabulky vytvořené podle výběrového kritéria. Tabulka se konceptuálně rozdělí na skupiny, pro které je hodnota zvoleného sloupce konstantní. Každá položka v seznamu příkazu SELECT musí mít pouze jednu hodnotu v dané skupině a SELECT může obsahovat pouze:
+* názvy sloupců
+* agregační funkce
+* konstanty
+* výrazy obsahující kombinaci výše zmíněných
+
+Příklad 6.16 Použití GROUP BY
+Najdi počet zaměstnancův každé pobočce a jejich celkový plat
+
+.. code-block:: sql
+
+	SELECT cPob, COUNT(cPob) AS počet, SUM(plat) AS PlatCelkem
+	FROM zaměstnanec
+	GROUP BY cPob
+	ORDER BY cPob
+
+Seskupení s podmínkou
+------
+HAVING se používá ve spojení s GROUP BY na filtrování skupin, které budou vybrány do výsledné tabulky. Je podobný jako WHERE, ale WHERE filtruje jednotlivé řádky, zatímco HAVING filtruje skupiny. Názvy sloupců v HAVING se musí objevit také v seznamu GROUP BY, případně musí být obsaženy v agregačních funkcích.
+
+Příklad 6.17 Použití HAVING
+Pro každou pobočku, která má více než jednoho zaměstnance, najdi počet zaměstnancův každé pobočce a součet jejich platů.
+
+.. code-block:: sql
+
+	SELECT cPob,COUNT(cZam)AS PočetZam,SUM(plat) AS PlatCelkem
+	FROM zaměstnanec
+	GROUP BY cPob
+	HAVING COUNT(cZam)>1
+	ORDER BY cPob
+
+
+
+Poddotazy
+(=subqueries)
+Některé SQL dotazy mohou v sobě obsahovat další SELECT - poddotaz
+Poddotaz lze použít v části WHERE a HAVING vnějšího SELECTu
+Poddotazy mohou být požity i v příkazech
+INSERT, UPDATE, a DELETE.
+Poddotazy lze využít i v části FROM , na vytvoření dočasné tabulky (např. ...FROM Zamestnanec, (SELECT p.nazev, p.id, a.mesto FROM pobocka p, adresa a WHERE pobocka.psc=mesto.psc) AS pm WHERE .... )
+
+Příklad 7.1 Poddotaz
+Najdi zaměstnance, kteří pracují v pražských pobočkách
+
+.. code-block:: sql
+
+	SELECT cZam,Jmeno,Prijmeni,PracZar
+	FROM Zamestnanec
+	WHERE cPob IN
+	(SELECT cPob
+	FROM Pobocka
+	WHERE mesto ='Praha')
+
+Příklad 7.2 Poddotaz s agregační funkcí
+Zobraz jméno,příjmení a plat zaměstnanců,kteří mají plat větší jako průměr a zobraz o kolik
+
+.. code-block:: sql
+
+	SELECT cZam,Jmeno,Prijmeni,PracZar,
+	Plat -(SELECT avg(plat) FROM Zamestnanec) AS Rozdil
+	FROM Zamestnanec
+	WHERE Plat >(SELECT AVG(Plat) FROM Zamestnanec)
+
+
+Pravidla pro použití poddotazů
+
+    V poddotazu nelze použít ORDER BY
+    Seznam sloupců v poddotazu musí sestávat pouze z jednoho sloupce nebo výrazu kromě poddotazů, obsahujících EXISTS
+    Názvy sloupců se implicitně týkají tabulky která je uvedena za FROM v poddotazu
+
+
+Příklad 7.3 Vhnízděný poddotaz
+Zobraz nemovitosti, o které se starají zaměstnanci z Pražské pobočky v Brněnské ulici
+
+.. code-block:: sql
+	
+	SELECT cNem, Ulice, Mesto, PSC, Typ, PocetMistn, Najem
+	FROM Nemovitost
+	WHERE cZam IN
+	(SELECT cZam
+	FROM Zamestnanec
+	WHERE cPob =
+	(SELECT cPob
+	FROM Pobocka Mesto
+	WHERE Mesto ='Praha' AND Ulice LIKE '% Brněnská%'))
+
+
+ANY,SOME a ALL
+ANY a ALL lze použít s poddotazy, které produkují jeden sloupec čísel.
+ALL – vrátí TRUE tehdy, když danou podmínku spl ň ují všechny hodnoty vyprodukované poddotazem
+ANY – vrátí TRUE, když alespoň jedna z hodnot vyprodukovaná poddotazem splňuje podmínku
+Je-li výsledek poddotazu prázdná množina, tak ALL vrátí hodnotu TRUE, ANY vrátí FALSE
+SOME lze použít místo ANY
+
+Příklad 7.4 Použití ANY/SOME
+Najdi zaměstnance, kteří mají plat větší než některý ze zaměstnanců pobočky P01
+
+.. code-block:: sql
+
+	SELECT cZam,Jmeno,Prijmeni,PracZar,Plat
+	FROM Zamestnanec
+	WHERE Plat >
+	SOME (SELECT Plat
+	FROM Zamestnanec
+	WHERE cPob = 'P01')
+
+
+Příklad 7.5 Použití ALL
+Najdi zaměstnance, kteří mají plat větší než všichni zaměstnanci pobočky P01
+
+.. code-block:: sql
+	
+	SELECT cZam,Jmeno,Prijmeni,PracZar,Plat
+	FROM Zamestnanec
+	WHERE Plat >
+	ALL (SELECT Plat
+	FROM Zamestnanec
+	WHERE cPob = 'P01')
+
+
+Dotazy na hodnoty z více tabulek
+Poddotaz se dá použít v případech, že sloupce ve výsledku pocházejí z jedné tabulky
+Pokud sloupce ve výsledku pocházejí z více tabulek, je nutné použít JOIN (a tedy více tabulek v části FROM)
+Propojovací sloupce se obvykle specifikují v rámci WHERE
+
+Příklad 7.6 Jednoduchý JOIN
+Zobrazte jména klientů a jejich komentář při prohlídce nemovitosti.
+
+.. code-block:: sql
+
+	SELECT K.cKl,Jmeno,Prijmeni,cNem,Poznamka
+	FROM Klient K,Prohlidka P
+	WHERE K.cKl =P.cKl
+
+alternativně
+
+.. code-block:: sql
+
+	SELECT K.cKl,Jmeno,Prijmeni,cNem,Poznamka
+	FROM Klient K JOIN Prohlidka P ON K.cKl =P.cKl
+
+
+Příklad 7.7 JOIN a ORDER BY
+Pro každou pobočku zobrazte číslo a jméno zaměstnance kteří se starají o nějakou nemovitost a číslo příslušné nemovitosti.
+
+.. code-block:: sql
+
+	SELECT Z.cPob,Z.cZam,Jmeno,Prijmeni,cNem
+	FROM Zamestnanec Z, Nemovitost N
+	WHERE Z.cZam =N.cZam
+	ORDER BY Z.cPob,Z.cZam,N.cNem
+
+
+Příklad 7.8 Spojení 3 tabulek
+Pro každou pobočku zobraz zaměstnance, kteří se starají o nějakou nemovitost spolu s městem, v kterém se nachází pobočka a s nemovitostmi o které se starají
+
+.. code-block:: sql
+	
+	SELECT P.cPob,P.Mesto,Z.cZam,Jmeno,Prijmeni,cNem
+	FROM Pobocka P,Zamestnanec Z,Nemovitost N
+	WHERE P.cPob=Z.cPob AND Z.cZam=N.cZam
+	ORDER BY P.cPob,Z.cZam,cNem
+
+
+Příklad 7.9 Seskupení podle více sloupců
+Pro každou pobočku najdi počet nemovitostí, o
+které se starají zaměstnanci
+
+.. code-block:: sql
+	
+	SELECT Z.cPob,Z.cZam,COUNT(*)AS pocet
+	FROM Zamestnanec Z,Nemovitost N
+	WHERE Z.cZam =N.cZam
+	GROUP BY Z.cPob,Z.cZam
+	ORDER BY Z.cPob,Z.cZam
+
+
+Příklad 7.10 Levé vnější spojení
+Zobraz všechny pobočky a k nim nemovitosti které jsou v témže městě jako příslušná pobočka.
+
+.. code-block:: sql
+
+	SELECT P.*,N.*
+	FROM Pobocka P LEFT OUTER JOIN Nemovitost N ON P. Mesto =N.Mesto FULL OUTER JOIN
+
+
+Příklad 7.11 Pravé vnější spojení
+Zobraz všechny nemovitosti a ke každé nemovitosti také pobočku, ležící v témž městě
+.. code-block:: sql
+
+	SELECT P.*,N.*
+	FROM Pobocka P RIGHT OUTER JOIN Nemovitost N ON P.Mesto =N.Mesto
+
+
+Příklad 7.12
+Pro každou pobočku zobraz všechny zaměstnance a ke každému zaměstnanci také číslo nemovitostí o které se stará
+
+.. code-block:: sql
+
+	SELECT Z.cPob,Z.cZam,Jmeno,Prijmeni,cNem
+	FROM Zamestnanec Z LEFT OUTER JOIN Nemovitost N ON Z.cZam =N.cZam
+	ORDER BY Z.cPob,Z.cZam,N.cNem
+
+
+Příklad 7.13
+Pro každou pobočku zobraz všechny zaměstnance a ke každému zaměstnanci také
+počet nemovitostí o které se stará
+
+.. code-block:: sql
+	SELECT Z.cPob,Z.cZam,Jmeno,Prijmeni,COUNT(cNem) AS pocet
+	FROM Zamestnanec Z LEFT OUTER JOIN Nemovitost N ON Z.cZam =N.cZam
+	GROUP BY Jmeno,Prijmeni,Z.cPob,N.cNem,Z.cZam
+	ORDER BY Z.cPob,Z.cZam
+
+
+EXISTS a NOT EXISTS
+------
+EXISTS a NOT EXISTS lze použít pouze s poddotazy
+Jako výsledek produkují pouze true/false
+True právě tehdy, když existuje alespoň jeden řádek v tabulce, kterou vrátí poddotaz. False právě tehdy,když poddotaz vrátí prázdnou tabulku. Protože EXISTS testuje pouze existenci řádků ve výsledné tabulce poddotazu, výsledek poddotazu může obsahovat libovolný počet sloupců
+
+Příklad 7.14 Použití EXISTS
+Najdi zaměstnance,kteří pracují v pražskýchpobočkách
+
+.. code-block:: sql
+
+	SELECT cZam,Jmeno,Prijmeni,PracZar
+	FROM Zamestnanec Z
+	WHERE EXISTS (SELECT * FROM Pobocka P WHERE Z.cPob=P.cPob AND Mesto='Praha')
+
+Podmínka Z.cPob =P.cPob je nutná aby se uvažovali správné záznamy v pobočce pro každého zaměstnance
+Kdybychom tuto podmínku vypustili, tak bychom v poddotazu dostali všechny záznamy Zamestnance:
+
+.. code-block:: sql
+
+	SELECT *
+	FROM Pobocka WHERE Mesto='Praha'
+
+Podmínka by byla vždy TRUE a dotaz by byl:
+
+.. code-block:: sql
+
+	SELECT cZam,Jmeno,Prijmeni,PracZar
+	FROM Zamestnanec
+	WHERE TRUE
+
+
+Příklad 7.14b Jiná formulace dotazu z Příkladu 7.14
+
+.. code-block:: sql
+
+	SELECT cZam,Jmeno,Prijmeni,PracZar
+	FROM Zamestnanec Z,Pobocka P
+	WHERE Z.cPob=P.cPob AND Mesto='Praha'
+
+Příklad 7.15 Použití UNION
+Zobrazte města, kde je pobočka nebo nemovitost.
+
+.. code-block:: sql
+
+	SELECT Mesto
+	FROM Pobocka
+	WHERE Mesto IS NOT NULL)
+	UNION
+	(SELECT Mesto
+	FROM Nemovitost
+	WHERE Mesto IS NOT NULL)
+
+Další možnosti jazyka SQL
+------
+* Úpravy hodnot v databázi
+* Odstranění hodnot
+* Pohledy
+* Transakce
+* Řízení přístupu k datům
+
+Modifikace dat - UPDATE
+
+.. code-block:: sql
+
+	UPDATE JménoTabulky
+	SET JménoSloupce1=hodnota1 [,JménoSloupce2=hodnota2...]
+	[WHERE Podmínka]
+
+JménoTabulky může být jméno tabulky nebo upravitelného pohledu
+SET specifikuje názvy sloupců, jejichž hodnoty mají být modifikovány
+
+UPDATE WHERE je volitelné:
+není-li uvedeno, tak se modifikují všechny hodnoty vyjmenovaných sloupců
+je-li uvedeno,tak se modifikují hodnoty pouze těch řádků, které vyhovují zadané podmínce
+
+Příklad 8.1 Modifikace hodnot 1 sloupce
+Máme zvýšit o 3% plat všem zaměstnancům.
+
+.. code-block:: sql
+
+	UPDATE Zamestnanec
+	SET Plat =Plat*1.03
+
+Máme zvýšit o 5% plat všem managerům.
+
+.. code-block:: sql
+
+	UPDATE Zamestnanec
+	SET Plat =Plat*1.05
+	WHERE PracZaR ='Manager'
+
+Příklad 8.2 Modifikace hodnot více sloupců
+Uprav pracovní zařazení pracovníka Oskara Pilného
+(cZam='Z0102') na managera a uprav jeho plat na 30000.
+
+.. code-block:: sql
+	UPDATE Zamestnanec
+	SET PracZar='Manager',Plat=30000
+	WHERE cZam ='Z0102'
+
+Odstranění dat - DELETE
+
+.. code-block:: sql
+
+	DELETE FROM JménoTabulky
+	[WHERE podmínka]
+
+JménoTabulky může být jméno základní tabulky nebo pohledu
+Podmínka je volitelná
+Není-li podmínka uvedena, tak se odstraní všechny řádky tabulky
+Je-li podmínka uvedená,tak se odstraní pouze ty řádky, pro které je podmínka splněná.
+
+Příklad 8.3 - DELETE
+Vymažte všechnyřádky tabulky Prohlidka, týkající se nemovitosti N0001.
+
+.. code-block:: sql
+
+	DELETE FROM Prohlidka
+	WHERE cNem ='N0001'
+
+POZOR: DELETE FROM Prohlidka
+Vymaže všechny řádky tabulky Prohlidka
+
+Pohledy -Views
+------
+Pohled je dynamický výsledek jedné nebo více relačních operací realizovaných nad základními relacemi. Virtuální relace která vlastně neexistuje v databázi, ale vytvoří se na vyžádání v okamihu vyžádání. Obsah pohledu je definován jako dotaz na jednu nebo více základních relací. Všechny operace nad pohledem jsou automaticky transformovány do operací nad relacemi z kterých byl pohled odvozen. Pohled je dotaz, uložený v databázi jako trvalý objekt. Jako pojmenovaný pohled můžeme uložit prakticky libovolný příkaz SELECT.
+
+Obvyklé Příklady pohledů:
+* podmnožina řádků nebo sloupců zákl. tabulky
+* spojení tabulek
+* statistický souhrn vytvořený ze zákl.tabulky
+* kombinace pohledů
+
+Výhody pohledů
+* Soustřeďují potřebná data pro uživatele
+* Skrývají složitost podkladových dat
+* Zjednodušují správu uživatelských oprávnění
+* Definují uspořádání dat pro export do jiných aplikací
+
+Vytvoření pohledu - CREATE VIEW
+
+.. code-block:: sql
+
+	CREATE VIEW jméno_pohledu [(jméno_sloupce[,...])] AS DefinujícíDotaz
+	[WITH [CASCADED |LOCAL]CHECK OPTION]
+
+Může přiřadit jméno každému sloupci pro každý sloupec v pohledu.
+Je-li seznam sloupců specifikován,musí mít stejný počet položek jako je
+počet sloupců produkovaný v rámci DefinujícíhoDotazu
+Chybí-li,každý sloupec má jméno příslušného sloupce z DefinujícíhoDotazu.
+Seznam musí být specifikován, může-li vzniknout nejasnost týkající se jména
+sloupce.
+WITH CHECK OPTION zajišťuje, že když řádek nesplňuje WHERE klauzuli
+definujícího dotazu, tak se nepřidá do příslušné základní tabulky
+
+Příklad 8.4 - Create View
+Vytvořte pohled tak, aby manager pobočky P01 viděl detaily pouze pracovníků své pobočky.
+
+.. code-block:: sql
+	
+	CREATE VIEW Zam01 AS SELECT * FROM Zamestnanec
+	WHERE cPob ='P01'
+	WITH CHECK OPTION
+
+
+Příklad 8.5 - Create View
+Vytvoř pohled na údaje zaměstnanců pobočky P01 s vyloučením platu.
+
+.. code-block:: sql
+
+	CREATE VIEW Zam01X
+	AS SELECT cZam,Jmeno,Prijmeni,PracZar
+	FROM Zamestnanec
+	WHERE cPob ='P01'
+
+
+Příklad 8.6
+Vytvoř pohled,kde bude přehled zaměstnanců, kteří se starají o nějakou nemovitost,číslo příslušné pobočky ve které pracují, cZam a počet nemovitostí, o které se každý stará.
+
+.. code-block:: sql
+	
+	CREATE VIEW Přehled (cPob,cZam,pocet)
+	AS SELECT Z.cPob,Z.cZam,COUNT(*)
+	FROM Zamestnanec Z,Nemovitost N
+	WHERE Z.cZam=N.cZam
+	GROUP BY Z.cPob,Z.cZam
+
+Odstranění pohledu -DROP VIEW
+
+.. code-block:: sql
+	
+	DROP VIEW JménoPohledu
+	[RESTRICT |CASCADE]
+
+Odstraní z databáze definici pohledu
+Příklad:[[code format="sql"]] DROP VIEW Zam3code
+
+Postup při použití pohledů
+O kolik nemovitostí se stará každý ze zaměstnanců pobočky P01
+(pohled Prehled z Příkladu 8.6)?
+
+.. code-block:: sql
+
+	SELECT cZam,pocet
+	FROM Prehled
+	WHERE cPob ='P01'
+	ORDER BY cZam
+
+Jak to DB systém zpracuje:
+(a) Jména sloupců v seznamu příkazu SELECT se nahradí jmény sloupců v příslušném definujícím dotazu:
+
+SELECT Z.cZam AS cZam,COUNT(*) AS počet
+
+(b) Jména pohledů v části FROM se nahradí příslušnými jmény části FROM definujícího dotazu:
+
+FROM Zamestnanec Z, Nemovitost N
+
+(c) WHERE z uživatelského dotazu se skombinuje s WHERE definujícího dotazu pomocí AND:
+
+WHERE Z.cZam=N.cZam AND cPob=’P01’
+
+(d) GROUP BY a HAVING se zkopírují z definujícího dotazu :
+
+GROUP BY Z.cPob,Z.cZam
+
+(e) ORDER BY se zkopíruje z dotazu přičemž se jména sloupců nahradí jmény sloupců definujícího dotazu:
+
+ORDER BY Z.cZam
+
+(f) Konečný sloučený dotaz se vykoná:
+
+SELECT Z.cZam AS cZam,COUNT(*)AS Počet
+FROM Zamestnanec Z,Nemovitost N
+WHERE Z.cZam=N.cZam AND cPob='P01'
+GROUP BY Z.cPob,Z.cZam
+ORDER BY Z.cZam
+
+
+Omezení pohledů
+Definice a použití pohledů má určitá omezení:
+(a) je-li sloupec v pohledu založen na agregační funkci:
+
+* Sloupec lze použít pouze v části SELECT a ORDER BY dotazů,přistupujících k pohledu
+* Sloupec nelze použít v části WHERE ani nemůže být argumentem agregační funkce žádného dotazu založeného na pohledu
+
+
+Například následující dotazy jsou chybné:
+
+.. code-block:: sql
+
+	SELECT COUNT(pocet)
+	FROM Prehled
+	SELECT *
+	FROM Prehled
+	WHERE pocet >2
+
+
+(b) Pohled používající seskupení nelze spojit se základní tabulkou nebo s jiným pohledem
+Například pohled Přehled
+
+.. code-block:: sql
+
+	CREATE VIEW Přehled (cPob,cZam,pocet)
+	AS SELECT Z.cPob,Z.cZam,COUNT(*)
+	FROM Zamestnanec Z,Nemovitost NWHERE Z.cZam =N.cZam
+	GROUP BY Z.cPob,Z.cZam
+
+Upravitelnost pohledů
+------
+Všechny úpravy základní tabulky se promítnou do všech pohledůvytvořených nad touto tabulkou
+Analogicky bychom očekávali,že je-li upraven pohled, tak se příslušná změna objeví v základní tabulce.
+
+Uvažujme pohled Prehled. Pokusíme-li se přidat záznam,že v pobočce P01 zaměstnanec Z0006 se stará o 2 nemovitosti:
+
+.. code-block:: sql
+
+	INSERT INTO Prehled
+	VALUES ('P01','SG5',2)
+
+To by ale znamenalo,že máme přidat 2 záznamy do tabulky Nemovitost, kde bude také uvedeno o které nemovitosti se stará (jejich identifikace) –to ale neznáme
+
+ISO specifikuje pohledy, které musí být upravitelné
+Pohled je upravitelný právě tehdy, když:
+
+* není použito DISTINCT
+* Každý prvek v seznamu v části SELECT definujícího dotazu je název sloupce a žádný sloupec se nevyskytuje více než jedenkrát
+* FROM specifikuje pouze jednu tabulku a vylučuje pohledy založené na join,union,intersection nebo difference.
+* Není použit vhnízděný SELECT odkazující se na vnější tabulku.
+* Není použito GROUP BY nebo HAVING .
+* Každý řádek přidaný prostřednictvím pohledu, musí splňovat integritní omezení základní tabulky.
+
+Aby pohled byl upravitelný,musí DBMS být schopen identifikovat příslušný řádek nebo sloupec v základní tabulce.
+
+Transakce v SQL
+------
+Transakce je logická jednotka práce sestávající z jednoho nebo více SQL příkazů které jsou atomické z hlediska zotavení se z chyb.
+Změny,které realizuje jedna transakce,nejsou viditelné pro ostatní konkurenčně probíhající transakce, pokud daná transakce neskončí
+Transakce je i jednotka zotavení se z chyb
+Každá změna v DB se zapisuje do transakčního protokolu –„logu“
+Při výpadku systému DBS automaticky obnoví data pomocí dat v transakčním logu.
+
+Vytvoření transakce
+
+.. code-block:: sql
+
+	BEGIN TRANSACTION
+	Příkaz1
+	Příkaz2
+	COMMIT resp.
+	ROLLBACK
+
+COMMIT končí transakci úspěšně a změny jsou trvale zaznamenány
+ROLLBACK přeruší transakci a všechny změny se anulují, DB se vrátí do stavu před transakcí
+
+Ochrana dat v SQL
+------
+Privilegia (oprávnění) uživatelů
+Privilegia jsou akce, které uživatel může realizovat nad základní tabulkou nebo pohledem: SELECT INSERT UPDATE DELETE REFERENCES
+
+INSERT/UPDATE/REFERENCES může být omezeno na vyjmenované sloupce.
+Vlastník tabulky musí udělit ostatním uživatelům potřebná privilegia použitím
+Na vytvoření pohledu musí uživatel mít SELECT privilegium na všechny tabulky nad kterými vytváří pohled a REFERENCES privilegium na jmenované sloupce.
+
+Udělení práv v SQL - GRANT
+
+.. code-block:: sql
+
+	GRANT {seznam_privilegií |ALL PRIVILEGES}
+	ON jméno_objektu
+	TO {seznam_autorizační_id|PUBLIC}
+	[WITH GRANT OPTION]
+
+ALL PRIVILEGES udělí všechna privilegia
+PUBLIC umožňuje přístup všem
+jméno_objektu může být základní tabulka,pohled,doména
+WITH GRANT OPTION umožňuje odevzdat privilegia
+
+Příklad 8.7 - GRANT
+
+.. code-block:: sql
+	
+	GRANT ALL PRIVILEGES
+	ON zamestnanec
+	TO manager WITH
+	GRANT OPTION GRANT SELECT, UPDATE (salary)
+	ON zamestnanec
+	TO admin
+	GRANT SELECT
+	ON pobocka
+	TO PUBLIC
+
+Odebrání práv v SQL - REVOKE
+REVOKE odebere privilegia udělená příkazem GRANT
+
+.. code-block:: sql
+
+	REVOKE [GRANT OPTION FOR] {seznam_privilegií |ALL PRIVILEGES}
+	ON jméno_objektu
+	FROM {seznam_autoriz_id |PUBLIC}
+	[RESTRICT |CASCADE]
+
+
+Příklad 8.8 -REVOKE
+
+.. code-block:: sql
+
+	REVOKE SELECT
+	ON pobočka
+	FROM PUBLIC REVOKE ALL PRIVILEGES
+	ON zamestnanec FROM zástupce
