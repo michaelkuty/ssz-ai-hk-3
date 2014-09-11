@@ -108,6 +108,10 @@
 </li>
 <li><a class="reference internal" href="#klasifikace">klasifikace</a><ul>
 <li><a class="reference internal" href="#vyuziti-klasifikatoru">VYUŽITÍ KLASIFIKÁTORŮ</a></li>
+<li><a class="reference internal" href="#ucel-klasifikatoru-1">ÚČEL KLASIFIKÁTORU (1)</a></li>
+<li><a class="reference internal" href="#rincip-uzavreneho-sveta-princip-cwa-close-world-assumption">RINCIP UZAVŘENÉHO SVĚTA - PRINCIP CWA (CLOSE WORLD ASSUMPTION)</a></li>
+<li><a class="reference internal" href="#princip-otevreneho-sveta-princip-owa-open-world-assumption">PRINCIP OTEVŘENÉHO SVĚTA PRINCIP OWA (OPEN WORLD ASSUMPTION)</a></li>
+<li><a class="reference internal" href="#owa-vs-cwa-ve-vztahu-k-odvozovani">OWA VS. CWA VE VZTAHU K ODVOZOVÁNÍ</a></li>
 </ul>
 </li>
 </ul>
@@ -334,8 +338,10 @@ třídy sýrová pizza</p>
 <p>Ze splnění omezení allValuesFrom neplyne splnění omezení someValuesFrom
 Příklad: vegetariánská pizza je taková pizza, že všechny její přísady jsou zeleninové nebo sýrové</p>
 <p>Nevíme, zda nějakou přísadu vůbec má</p>
-<p>přednášky ZT1 na <a class="reference external" href="https://github.com/michaelkuty/ssz-ai-hk-3/tree/gh-pages/source/prednasky/zt1/">https://github.com/michaelkuty/ssz-ai-hk-3/tree/gh-pages/source/prednasky/zt1/</a>
-přednášky ZT2 na <a class="reference external" href="https://github.com/michaelkuty/ssz-ai-hk-3/tree/gh-pages/source/prednasky/zt1/">https://github.com/michaelkuty/ssz-ai-hk-3/tree/gh-pages/source/prednasky/zt1/</a></p>
+<ul class="simple">
+<li>přednášky ZT1 na <a class="reference external" href="https://github.com/michaelkuty/ssz-ai-hk-3/tree/gh-pages/source/prednasky/zt1/">https://github.com/michaelkuty/ssz-ai-hk-3/tree/gh-pages/source/prednasky/zt1/</a></li>
+<li>přednášky ZT2 na <a class="reference external" href="https://github.com/michaelkuty/ssz-ai-hk-3/tree/gh-pages/source/prednasky/zt1/">https://github.com/michaelkuty/ssz-ai-hk-3/tree/gh-pages/source/prednasky/zt1/</a></li>
+</ul>
 </div>
 </div>
 <div class="section" id="klasifikace">
@@ -348,6 +354,48 @@ přednášky ZT2 na <a class="reference external" href="https://github.com/micha
 * Korektnost – zachycení znalostí doménovýchexpertů
 * Minimální redundance – žádná neúmyslná synonyma
 * Bohatá axiomatizace – detailní popis tříd</p>
+</div>
+<div class="section" id="ucel-klasifikatoru-1">
+<h3>ÚČEL KLASIFIKÁTORU (1)<a class="headerlink" href="#ucel-klasifikatoru-1" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Usnadnění tvorby ontologie</li>
+<li>Klasifikací jsou odvozeny nové vztahy, které nebyly přímo vloženy tvůrcem</li>
+</ul>
+<p>Klasifikátor provádí:
+* Kontrolu konzistentnosti (zda si jednotlivé části ontologie logicky vzájemně neodporují)
+* Klasifikaci tříd (kontrola příslušnosti tříd, tj. isA relací – tvoří hierarchickou strukturu ontologie)
+* Klasifikace jedinců</p>
+</div>
+<div class="section" id="rincip-uzavreneho-sveta-princip-cwa-close-world-assumption">
+<h3>RINCIP UZAVŘENÉHO SVĚTA - PRINCIP CWA (CLOSE WORLD ASSUMPTION)<a class="headerlink" href="#rincip-uzavreneho-sveta-princip-cwa-close-world-assumption" title="Permalink to this headline">¶</a></h3>
+<p>Nějaké tvrzení o světě může být pravdivé, nepravdivé nebo nerozhodnutelné.
+V uzavřeném světě nepředpokládáme, že budo zjišťovány nové skutečností, které by mohly změnit náš aktuální pohled na svět.</p>
+<dl class="docutils">
+<dt>Předpoklady uzavřeného světa (Prolog):</dt>
+<dd>„Jestliže o tvrzení X neumím prokázat, že je pravdivé, pak přijmu závěr, že tvrzení X je nepravdivé.“
+„Jestliže se neprokáže nevina, pak je obžalovaný vinen.“</dd>
+</dl>
+</div>
+<div class="section" id="princip-otevreneho-sveta-princip-owa-open-world-assumption">
+<h3>PRINCIP OTEVŘENÉHO SVĚTA PRINCIP OWA (OPEN WORLD ASSUMPTION)<a class="headerlink" href="#princip-otevreneho-sveta-princip-owa-open-world-assumption" title="Permalink to this headline">¶</a></h3>
+<p>V otevřeném světě předpokládáme, že časem bude možné přidat další informace k aktuálnímu stavu zkoumání dané
+domény
+Předpoklad otevřeného světa:
+* „Jestliže tvrzení X (obžalovaný je nevinen) není pravdivé, pak tvrzení X může být jak nepravdivé (tudíž obžalovaný
+je vinen) tak nerozhodnutelné.“
+* „Jestliže se neprokáže nevina, pak nelze usuzovat, že obžalovaný je vinen.“</p>
+<p>Opatrný přístup
+* „Jestliže je nějaké tvrzení nerozhodnutelné, a později získám znalosti k určení jeho pravdivosti, není nutné
+přehodnotit předchozí závěry.“</p>
+</div>
+<div class="section" id="owa-vs-cwa-ve-vztahu-k-odvozovani">
+<h3>OWA VS. CWA VE VZTAHU K ODVOZOVÁNÍ<a class="headerlink" href="#owa-vs-cwa-ve-vztahu-k-odvozovani" title="Permalink to this headline">¶</a></h3>
+<p>Databáze je příkladem uzavřeného světa:
+* Hledáme osobu X v živnostenském rejstříku, která provozuje činnost Y Možný výsledek: „Osoba nenalezena.“
+* V principu OWA bychom řekli, že daná osoba není živnostník
+* To, co není v databázi, neexistuje
+* Při použití klasifikátoru bychom jen na základě neobdržení dat nemohli konstatovat, že živnostník neexistuje
+* Klasifikátor může rozhodnout, když má explicitně vyjádřené informace</p>
 </div>
 </div>
 </div>

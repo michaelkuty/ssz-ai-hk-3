@@ -173,8 +173,8 @@ Příklad: vegetariánská pizza je taková pizza, že všechny její přísady 
 Nevíme, zda nějakou přísadu vůbec má
 
 
-přednášky ZT1 na https://github.com/michaelkuty/ssz-ai-hk-3/tree/gh-pages/source/prednasky/zt1/
-přednášky ZT2 na https://github.com/michaelkuty/ssz-ai-hk-3/tree/gh-pages/source/prednasky/zt1/
+* přednášky ZT1 na https://github.com/michaelkuty/ssz-ai-hk-3/tree/gh-pages/source/prednasky/zt1/
+* přednášky ZT2 na https://github.com/michaelkuty/ssz-ai-hk-3/tree/gh-pages/source/prednasky/zt1/
 
 klasifikace
 --------
@@ -189,3 +189,48 @@ Zvyšování kvality ontologie:
 * Korektnost – zachycení znalostí doménovýchexpertů
 * Minimální redundance – žádná neúmyslná synonyma
 * Bohatá axiomatizace – detailní popis tříd
+
+ÚČEL KLASIFIKÁTORU (1)
+""""""
+
+* Usnadnění tvorby ontologie 
+* Klasifikací jsou odvozeny nové vztahy, které nebyly přímo vloženy tvůrcem
+
+Klasifikátor provádí:
+* Kontrolu konzistentnosti (zda si jednotlivé části ontologie logicky vzájemně neodporují)
+* Klasifikaci tříd (kontrola příslušnosti tříd, tj. isA relací – tvoří hierarchickou strukturu ontologie)
+* Klasifikace jedinců
+
+RINCIP UZAVŘENÉHO SVĚTA - PRINCIP CWA (CLOSE WORLD ASSUMPTION)
+""""""
+
+Nějaké tvrzení o světě může být pravdivé, nepravdivé nebo nerozhodnutelné.
+V uzavřeném světě nepředpokládáme, že budo zjišťovány nové skutečností, které by mohly změnit náš aktuální pohled na svět.
+
+Předpoklady uzavřeného světa (Prolog):
+ „Jestliže o tvrzení X neumím prokázat, že je pravdivé, pak přijmu závěr, že tvrzení X je nepravdivé.“
+ „Jestliže se neprokáže nevina, pak je obžalovaný vinen.“
+
+PRINCIP OTEVŘENÉHO SVĚTA PRINCIP OWA (OPEN WORLD ASSUMPTION)
+""""""
+
+V otevřeném světě předpokládáme, že časem bude možné přidat další informace k aktuálnímu stavu zkoumání dané
+domény
+Předpoklad otevřeného světa:
+* „Jestliže tvrzení X (obžalovaný je nevinen) není pravdivé, pak tvrzení X může být jak nepravdivé (tudíž obžalovaný
+je vinen) tak nerozhodnutelné.“
+* „Jestliže se neprokáže nevina, pak nelze usuzovat, že obžalovaný je vinen.“
+
+Opatrný přístup
+* „Jestliže je nějaké tvrzení nerozhodnutelné, a později získám znalosti k určení jeho pravdivosti, není nutné
+přehodnotit předchozí závěry.“
+
+OWA VS. CWA VE VZTAHU K ODVOZOVÁNÍ
+"""""
+
+Databáze je příkladem uzavřeného světa:
+* Hledáme osobu X v živnostenském rejstříku, která provozuje činnost Y Možný výsledek: „Osoba nenalezena.“
+* V principu OWA bychom řekli, že daná osoba není živnostník 
+* To, co není v databázi, neexistuje 
+* Při použití klasifikátoru bychom jen na základě neobdržení dat nemohli konstatovat, že živnostník neexistuje
+* Klasifikátor může rozhodnout, když má explicitně vyjádřené informace
