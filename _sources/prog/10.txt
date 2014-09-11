@@ -1,0 +1,4 @@
+=======
+Otázka č. 10 - Webové aplikace – principy, nástroje. Vícevrstvé aplikace. Zabezpečení aplikace.
+=======
+:download:`Otázka v PDF <pdf/10.pdf>`

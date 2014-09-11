@@ -1,0 +1,19 @@
+======
+Otázka č.3 Paměťový systém počítače a ukládání dat (typy, principy fungování, frekvence, normy, logická a fyzická struktura disku, RAM, ROM, Cache, HDD, CD, DVD, FLASH…)
+======
+Uložení dat
+-----
+Podle fyzikálního principu použitého pro uložení dat můžeme média rozdělit na:
+* magnetická (disky, diskety) 
+* optická (CD a DVD) 
+* elektrická (Flash disky, paměťové karty) 
+* Pružné disky (FD, Flopy Disk, diskety) mají velikost 3.5". Disketu i pevný disk je nutno před prvním použitím naformátovat příkazem FORMAT. Počítač vytvoří na magnetickém povrchu "značky", podle kterých později zapisuje data. Povrch je rozdělen na stopy (soustředné kružnice), resp. válce, a každá stopa je rozdělena na sektory (výseče). Do jedné výseče se zapisuje 512 bajtů. V současnosti používané diskety jsou oboustranné. Standardní způsob formátování diskety 3.5" HD je tento: 
+2strany x 80stop x 18sektorů x 512 B = 1474560 B = 1440 KB = 1.41 MB - tato disketa se nepřesně označuje 1.44 MB. 
+Diskety s kvalitnějšími povrchy lze formátovat na ještě větší kapacity. V horních rozích diskety se nacházejí dva malé otvory. Jeden z nich je možné zakrýt jezdcem. Pokud jsou oba otvory volné, je disketa chráněna proti zápisu.
+Pevný disk (HDD, Hard Disk) je uložen uvnitř počítače. Pevné disky se skládají z více částí, takže mají několik povrchů a kapacity v řádu desítek GB. Údaje o použitém pevném disku bývalo nutno zapsat do programu SETUP BIOS, jinak disk nebyl přístupný. Moderní BIOSy mají i autodetekci disků. Pevný disk můžeme rozdělit na několik částí (partitions) programem FDISK. Jednotlivé části se potom formátují jako FAT (File Alocation Table) nebo NTFS (New Technology File System). Novější NTFS formátování umožňuje nastavovat přístupová práva k jednotlivým souborům a složkám na disku. Dlouhodobým používáním disku či diskety vzniká fragmentace souborů - soubory jsou rozděleny do několika nesouvislých částí, což zpomaluje jejich čtení. K odstranění fragmentace se používá program DEFRAG. Pro vyhledávání chyb na disku slouží program SCANDISK. 
+K ukládání a distribuci dat se používají i optické disky: 
+CD-ROM - optické disky s kapacitou od 650 MB, které nelze přepisovat. Princip ani formát záznamu se neliší od zvukových CD. Rychlost CD mechanik se udává v násobcích rychlosti 150KB/s. 
+CD-R - (Recordable) - CD disky, na které lze zapisovat. Jednou zapsaná data již nemohou být přepsána. 
+CD-RW - (ReWriteable) - CD disky, na které lze zapisovat a lze i přepisovat starší data novými. 
+DVD - (Digital Versatile Disc) - optický disk s vysokou hustotou záznamu. Podle počtu povrchů a vrstev rozdělujeme 4 typy 
+
