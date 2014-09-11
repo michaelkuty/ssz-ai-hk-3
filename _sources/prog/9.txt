@@ -1,5 +1,5 @@
 ======
-Otázka č.9 - Problematika perzistentního (trvalého) ukládání dat ve vybraném programovacím jazyce.
+Problematika perzistentního (trvalého) ukládání dat ve vybraném programovacím jazyce.
 ======
 
 :download:`Otázka v PDF <pdf/9.pdf>`

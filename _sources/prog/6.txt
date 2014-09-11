@@ -1,0 +1,222 @@
+========
+Námětové mapy: standard Topic Maps a jeho součásti, základní stavební prvky námětové mapy, postup tvorby námětové mapy, implementace námětových map (prostředí, syntaxe), dotazování se na námětové mapy, odvozování s námětovými mapami, aplikace námětových map.
+========
+
+Struktura mapy (ontologie) má části:
+* Topic type - typ námětu, třída
+* Association type - typ asociace
+* Occurrence type - typ výskytu
+* Role type - typ role
+* Name type - typ názvu
+
+Topic námět, instance
+""""""
+* Typ námětu (topic type) vystihuje skupinu prvků, ke kterým námět náleží na základě společných charakteristik 
+• Odpovídá pojmu třída v ontologii 
+
+Příklady:
+^^^^^^
+• Jazyk
+• Opera
+• Skladatel
+
+Námět 
+^^^^^^
+
+* Námět (topic) představuje konkrétní prvek, o kterém uvádíme jeho vlastnosti a vztahy k dalším námětům 
+• Odpovídá pojmu jedinec v ontologii 
+
+Typ asociace
+^^^^^^^
+
+.. index:: typ asociace
+
+* Association type, Association class (angl.)
+* Obecný předpis vztahu mezi typy námětů
+* různé pojetí
+* Šablona pro tvorbu konkrétních asociací
+* Třída konkrétních asociací
+* Odpovídá pojmu asociační třída
+* Zpravidla podstatní jméno, sloveso není výjimkou
+* Typ asociace není orientován, namísto směru se používají typy rolí
+* Typu asociace lze přiřadit různé názvy z hlediska jednotlivých typů rolí
+
+**Příklady**
+
+• composed... aktéři v roli: Artist, Work
+• bornIn ... aktéři v roli: Person, Place
+
+
+Asociace
+^^^^^^^
+* Association (angl.)
+* Vyjadřuje konkrétní vztah mezi náměty
+* Základ sémantické sítě (či „znalostní mapy“)
+* Odpovídá pojmu „konkrétní“ objektová relace v ontologii
+
+**Příklady**
+
+• Puccini zkomponoval (composed) Tosca
+* Puccini a Tosca jsou konkrétní hráči v asociaci zkomponoval
+* Puccini narodil-se-v (bornIn) Lucca
+* Puccini a Lucca jsou konkrétní hráči v asociaci narodil-se-v
+
+Typ role
+""""""
+
+*Vyjadřuje způsob účasti aktéra v asociaci*
+* „role“ používané v ontologii: nepřesně vyjádřeno v podobě D(f) a H(f)
+
+**Příklad:**
+
+* Role Tvůrce, použití v asociacích:
+	* Zkomponoval ... aktéři v roli: Skladatel
+	* Napsal ... aktéři v roli: Spisovatel
+
+* Asociace není orientovaná, namísto směru se používají role
+
+Typ výskytu 
+"""""""
+
+* Typ výskytu (occurrence type) vyjadřuje obecný 
+* Výskyt (occurrence) popisuje vztah mezi konkrétním námětem a předpis vztahu mezi námětem a informací konkrétní informací o předmětu
+* Rozlišujeme interní typ výskyt (= atribut) a externí 
+
+Výskyt
+"""""""
+* Odpovídá pojmu „hodnota“ datotypové relace v ontologii (odkaz na zdroj informací, typicky URL) 
+
+• Interní výskyt (internal occurrence)
+	* Vlastnost, atribut, řetězec
+	* Hodnota uložena přímo v námětové mapě
+	* Příklad interního výskytu: 12. 12. 2010
+	* interní typ výskytu: datum narození
+* Externí výskyt (external occurrence)
+	* Příklad: datum narození, popis, číslo kanceláře
+	* Určený pomocí lokátoru, např. URL
+	* Hodnota dostupná např. na Internetu (mimo mapu)
+	* Příklad externího výskytu: http://web.mit.edu/
+	* Externí typ výskytu
+	* Příklad: webová stránka, zvuková nahrávka
+
+Software
+-------
+
+* Ontopia Topic Maps Engine: management námětových map
+* Ontopoly: editor námětových map
+* Omnigator: prohlížeč námětových map
+* Vizigator: vizualizace námětových map
+* Ontopia Navigator Framework (ONF): komponenta pro tvorbu webových aplikací s využitím dotazovacího jazyka tolog, jazyka JSP a
+specifických elementů ONF
+* Ontopia Full-text Search: implementace vyhledávací funkcionality pro webovou aplikaci
+* Ontopia Web Editor Framework: komponenta pro tvorbu editoru
+námětových map ... viz. blíže dokumentace distribuovaná s prostředím Ontopia
+
+Omnigator
+"""""""
+
+„Omnivorous navigator“ = všežravý navigátor - schopný interpretovat jakýkoliv dokument vytvořený dle standardu Topic Maps 
+
+• Klient-server architektura postavená na http protokolu 
+• Na straně serveru pracuje webová aplikace J2EE používající Ontopia 
+* Topic Map Engine a Navigator Framework, který běží na webovém  serveru Tomcat 
+• Tato aplikace čte (a zapisuje) Topic Maps dokumenty a generuje HTML stránky. Na straně klienta dostává standardní webový prohlížeč HTML stránky a pomocí nich zobrazuje pohledy na Topic Maps dokumenty 
+
+Omnigator a jeho možnosti
+^^^^^^^
+
+Prohlížení ontologie a připojených informačních zdrojů
+
+• Zobrazení statistik námětové mapy
+• Dotazování v jazyce Tolog (kombinuje SQL a Prolog)
+* vyhledávání témat, instancí, asociací, výskytů, agregování, třídění, odvozovací pravidla
+• Slučování více map, export a import
+• Filtrování pohledů (vytváření verzí v různých jazycích, možnost filtrování podle uživatelských práv,...)
+
+
+Vizualizace námětové mapy 
+^^^^^^
+
+• Možnost přizpůsobení vizualizace námětové mapy vlastním potřebám: komponenta Vizdesktop (adresář bin v balíku s produktem Ontopia) 
+
+
+Topic Maps
+------
+
+Všeobecné použití: tvorba pojmových map
+
+* Ve vztahu k námětovým mapám – možnost exportu námětové mapy v syntaxi XTM ver. 1.0
+
+Využití námětových map
+------
+
+Reprezentace složitých procesů a pravidel
+^^^^^^^
+
+* Organizace velkých objemů informací pomocí ontologií
+* Zachycení „paměti organizace“, tacitních znalostí
+• E-learning zaměřený na osvojování si konceptů
+• Správa distribuovaných bází znalostí a informací
+• Sloučení informací a znalostí
+
+postup tvorby námětové mapy
+-------
+
+* Analýza
+	* Specifikace domény a stanovení šíře záběru
+	* Všeobecné otázky spojené s vývojem námětové mapy
+	* Snaha nevyvíjet to, co už bylo jednou vyvinuto
+	* Brainstorming
+* Návrh
+* Specifikace schématu námětové mapy a instancí
+* Implementace
+* Výběr přístupu pro tvorbu kódu námětové mapy
+* Tvorba dokumentace
+* Údržba námětové mapy
+
+Omezení zkoumané oblasti
+"""""
+
+* Které předměty má a nemá námětová mapa pokrývat?
+• Nutno určit úroveň detailnosti modelování jednotlivých elementů námětové mapy a množství těchto elementů
+• Toto určujeme pro snadnější management námět. mapy
+* Které informační zdroje mají být zahrnuty a jakou mají mít formu (formát)?
+
+Koncoví uživatelé
+* Jaké uživatelské skupině je námětová mapa určena?
+* Jaká jsou očekávání této uživatelské skupiny?
+* Je zde uživatelská skupina se specifickými požadavky?
+
+
+* instance-of (is-a): je instancí typu
+(vztah mezi námětem a typem námětu)
+* is-subclass-of (is-a-kind-of, ako) 
+* (vztah mezi typy námětů)
+
+Návrh: hierarchie typů
+""""""
+Při tvorbě hierarchie kombinujeme dva typy vztahů:
+
+Příklady:
+* Maxipes Fík is-a Pes
+* Pes ako Šelma
+
+* Ne každá hierarchie je hierarchií typů! 
+* Například nemůže říct: “Paříž AKO Francie“
+* Pro hierarchii typů platí:
+* Když typ A je nadtypem typu B, potom
+• (a) A i B jsou typy
+• (b) je-li C instancí typu B, musí být také instancí typu A
+• (c) je-li D podtypem typu B, musí být i podtype
+
+Syntaxe XTM (XML Topic Maps)
+"""""""
+
+* Část standardu ISO 13250 pod názvem ISO/IEC-3 XML syntaxe 
+• Syntaxe XTM je založená na značkovacím jazyce XML a jazyce XLink => XTM dokument je XML dokumentem 
+• Vznik syntaxe na základě požadavku využití technologie Topic Maps i ve webovém prostředí 
+• Autor syntaxe: nezávislá organizace TopicMaps.org 
+• První verze syntaxe (1.0) představena r. 2000 na konferenci XML 2000 ve Washingtonu 
+• Oficiální publikace syntaxe r. 2001 ve formě standardu ISO 
+• V současné době se jedná o jednu z nejpoužívanějších syntaxí pro tvorbu námětových map 
+• Možnost využití verze 2.0 (prostředí Ontopia ji má v nabídce) 

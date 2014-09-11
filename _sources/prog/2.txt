@@ -1,5 +1,5 @@
 ======
-Otázka 2. Databáze, databázový systém. Hlavní funkce DBS. Historický vývoj DBS. Modely dat. Relační algebra: projekce, selekce, spojení. SQL.
+Databáze, databázový systém. Hlavní funkce DBS. Historický vývoj DBS. Modely dat. Relační algebra: projekce, selekce, spojení. SQL.
 ======
 Databáze je souhrn všech uložených dat, potřebných k fungování dané organizace
 

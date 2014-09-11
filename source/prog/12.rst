@@ -1,0 +1,3 @@
+======
+Základy zpracování obrazu a počítačového rozpoznávání – metody snímání, předzpracování, segmentace a klasifikace obrazu, formáty pro ukládání rastrového obrazu, komprese, barva a barevné modely.
+======

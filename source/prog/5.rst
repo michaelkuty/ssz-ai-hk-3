@@ -1,0 +1,141 @@
+=========
+Sémantický web: technologie sémantického webu, metadata, RDF, RDFS, OWL, dotazování se na sémantický web (význam, jazyky), sémantický web a odvozování (význam, jazyky), aplikace sémantického webu.
+=========
+
+Metadata: klíčový aspekt sémantického webu
+    Obsah sémantického webu = data + metadata
+     • Smysl: obohacení dat na webu o významově bohaté popisy (výroky) pro dosažení automatizovaného zpracování webových               dokumentů webovými agenty
+     • Přechod od webu informačního k webu znalostnímu
+
+
+Typy metadat 
+--------
+
+Příklad metadat: knihovní katalog
+
+• Obsahově nezávislá metadata 
+• Katalogový knihovní záznam publikace (standardní záznam)
+* Příklady: Poslední datum uložení dokumentu, místo uložení, přístup typu uživatele k dokumentu, ...
+• Obsahově závislá metadata
+* Příklady: Velikost dokumentu, barva obrázků, autor, počet stran, jazyk dokumentu, ...
+* Strukturovaná metadata: metadata spojená se strukturováním dokumentu (kapitoly a odstavce knihy, položky objednávky, ...)
+* Doménově specifická metadata: metadata související s aplikační doménou
+• Intra-doménově specifická: zachycují vztahy mezi daty týkající se stejné domény (např. pacient a alergie)
+• Inter-doménově specifická: zachycují vztahy mezi daty různých domén (např. ontologie * filosofie i informatika)
+
+Metadatový framework
+--------
+
+Sestává z množiny specifikací, které jsou zaměřeny např. na reprezentaci, manipulaci, uložení, údržbu a dotazování se na data a     metadata
+
+Komponenty
+"""""""
+
+* Datový model: soubor datových typů a funkcí, pomocí kterých se tvoří abstraktní pohled na webový dokument s možností přístupu k hodnotám uložených v proměnných datových typů
+
+* Serializační formát: poskytuje meta-jazyk a syntaktické konstrukce pro kódování metadat
+* příklad: RDF i OWL mají různé datové modely, přičemž jsou serializovány (zapsány) s použitím XML syntaxe
+
+* Dotazovací jazyk: existence různých přístupů pro dotazování (např. RDF * SPARQL, OWL * SQWRL)
+
+* Specifikace RDF založená na XML (RDF/XML)
+* Specifikace RDF Schématu: tvorba hierarchií
+* Specifikace SPARQL: protokol a dotazovací jazyk pro zpřístupnění RDF dat
+* XSL specifikace s XSLT (transformace XML dokumentu do formy HTML stránky zobrazitelné na webu)
+* XLink, XPointer: reprezentace hypertextových odkazů
+* Specifikace Xquery a Xpath: extrakce XML informací z webových dokumentů
+* Specifikace XML Schématu: definice struktury XML dokumentů pro rozšíření jejich sémantiky
+* Specifikace RDF založená na XML (RDF/XML)
+* Specifikace RDF Schématu: tvorba hierarchií
+* Specifikace SPARQL: protokol a 
+
+
+• Jeden z nejstarších vyvinut s cílem oddělení obsahu od 
+• Primárně určen pro reprezentaci metadat způsobu prezentace webového obsahu přidělených různým webovým zdrojům
+
+RDF
+------
+
+Vlastnosti
+""""""
+
+* Lze tvořit jen jednoduchá tvrzení tvaru podmět-přísudek-předmět 
+* Nelze vyjádřit co podmět, přísudek a předmět znamenají, ani jaké jsou mezi nimi vztahy
+* Krkonoše jsou pohoří, Sněžka je hora, každá hora má výšku, ...
+• Pro tvorbu komplexních ontologií se nehodí,
+vhodnější je OWL
+* Explicitně nemá zabudován koncept reprezentace tříd, implicitně ano ve formě rdf:type a rdf:property => v RDF lze reprezentovat, že něco“ je třídou nebo vlastností
+* S RDF ale nelze reprezentovat, že třída A je podtřídou třídy B => hierarchii tříd a vztahy mezi třídami
+
+Schéma
+"""""""
+
+• RDF Schema, The RDF Vocabulary Description language 
+* Nadstavba jazyka RDF pro tvorbu ontologií, která vznikla rozšířením 
+* a sémantiky RDF 
+* Určeno pro tvorbu struktury RDF tvrzení, resp. pro tvorbu tříd 
+* a tříd vlastností pro reprezentaci vztahů mezi třídami 
+* Zdroje tak mohou být kategorizovány a vnímány jako instance tříd 
+* Třídy zdrojů jsou seskupovány do hierarchie 
+* Třídy jsou vnímány jako rozšíření popisu zdrojů, více je konkretizují 
+* Hierarchie RDF tříd je chápána jako RDF slovník obsahující množinu 
+* RDF tvrzení se specifickým významem 
+* Jedná se také o RDF graf, jako v případě RDF 
+* Jmenný prostor má následující tvar: 
+* ://www.w3.org/2000/01/rdf-schema# (rdfs prefix) 
+
+Síla RDF
+""""""
+
+* tvorba jednoduchých ontologií, resp. vztahů  mezi třídami
+• Nízká výpočetní složitost
+
+* S RDF schématem lze vyjádřit:
+
+	* explicitně třídu,
+	* datové typy,
+	* def. obor, obor hodnot,
+	* podtřídu,
+	* „pod-vlastnost“, a další 
+
+Slabé stránky RDFS 
+"""""""
+
+* ekvivalenci tříd
+* inverzní vlastnosti
+* funkcionalitu vlastnosti nebo její tranzitivitu
+* omezení kardinality vlastností
+* negaci tvrzení
+* disjunktnost tříd, ale pouze vztah je podtřídou
+* třídu použitím logických operátorů AND (průnik), OR (sjednocení), NOT (negace) na třídy
+
+Metadatový framework založený na OWL (W3C)
+"""""""
+
+• OWL jazyk nabízí konstrukce, které umožňují vyjádřit různé typy omezení a axiomů na úrovni schémat a dat 
+
+Shrnutí funkcí metadat
+"""""""
+
+* Shrnutí (popisná funkce): sumarizace obsahu
+* Vyhledávání: prohledávání metadat s cílem vyšší přesnosti výsledků
+* Doporučení: umožňuje uživateli určit, která data potřebuje
+* Vybírání: pomoc při rozhodování, který zdroj informací načíst
+* Přístup: zajištění přístupu k datům (např. uvedením přesné lokace)
+* Interpretace: instrukce, jak se má s daty zacházet (např. formát, kódování, jazyk, šifrování, ...)
+* Specifikace: informace ovlivňující užití dat (např. právní podmínky, velikost, stáří, přístup. práva, ...)
+* Historie: popis historie nebo původu dat
+* Správa dat: specifikace pro správu objektu (např. datum poslední modifikace, datum vytvoření, ...)
+* Propojování a vztahy mezi daty: specifikace vztahů mezi objekty (např. mezi článkem a časopisem, mezi překladem a originálem, ...)
+
+Budoucnost metadat
+""""""
+
+* Některé standardy se stanou vůdčími
+* Důležitost vícejazyčnosti při tvorbě metadat (již zakomponováno v RDF)
+* Nutné počítat se širokým spektrem zdrojů (obrázky, videa, dynamicky generované objekty, ...)
+* Způsoby hodnocení efektivnosti metadat (metriky)
+* Teoretické základy pro tvorbu metadat (formální modely, metodologie, úvaha nad právními otázkami)
+
+
+* přednášky ZT2 na https://github.com/michaelkuty/ssz-ai-hk-3/tree/gh-pages/source/prednasky/zt2/

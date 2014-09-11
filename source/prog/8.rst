@@ -1,5 +1,5 @@
 ======
-Otázka č.7 - Práce s kolekcemi – typy kolekcí, příklady použití, algoritmy pracující nad kolekcemi (řazení, vyhledávání), základní principy implementace ve zvoleném programovacím jazyce.
+Práce s kolekcemi – typy kolekcí, příklady použití, algoritmy pracující nad kolekcemi (řazení, vyhledávání), základní principy implementace ve zvoleném programovacím jazyce.
 ======
 
 :download:`Otázka v PDF <pdf/8.pdf>`

@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>5. Sémantický web: technologie sémantického webu, metadata, RDF, RDFS, OWL, dotazování se na sémantický web (význam, jazyky), sémantický web a odvozování (význam, jazyky), aplikace sémantického webu. &mdash; Otázky na státnice 0.1.0 documentation</title>
+    
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-3.1.0/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-3.1.0/css/bootstrap-theme.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '0.1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-3.1.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <link rel="top" title="Otázky na státnice 0.1.0 documentation" href="../index.html" />
+    <link rel="next" title="6. Námětové mapy: standard Topic Maps a jeho součásti, základní stavební prvky námětové mapy, postup tvorby námětové mapy, implementace námětových map (prostředí, syntaxe), dotazování se na námětové mapy, odvozování s námětovými mapami, aplikace námětových map." href="6.html" />
+    <link rel="prev" title="4. Ontologické inženýrství: pojem ontologie v kontextu informatiky, základní stavební prvky ontologií, typy ontologií, jazyky ontologického modelování, návrhové vzory, normalizace ontologie. Odvozování nad ontologií (kontrola konzistence, klasifikace), nástroje, použití ontologií." href="4.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+  </head>
+  <body>
+
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../index.html">
+          Otázky na státnice</a>
+        <span class="navbar-text navbar-version pull-left"><b>0.0.2</b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            <li class="divider-vertical"></li>
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="../index.html">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="1.html">1. Logický program - struktura, základní pojmy, datová struktura seznam, práce s databází Prologu. Hlavní odlišnosti oproti procedurálnímu programování, možnosti použití neprocedurálního programovacího jazyka.</a></li>
+<li class="toctree-l1"><a class="reference internal" href="2.html">2. Databáze, databázový systém. Hlavní funkce DBS. Historický vývoj DBS. Modely dat. Relační algebra: projekce, selekce, spojení. SQL.</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3.html">3. Konceptuální modelování. E-R model a jeho grafické znázornění. Relační model. Typy vztahů mezi entitami a jejich reprezentace v relačním modelu. Vlastnosti relační tabulky. Normální formy relačního schématu.</a></li>
+<li class="toctree-l1"><a class="reference internal" href="4.html">4. Ontologické inženýrství: pojem ontologie v kontextu informatiky, základní stavební prvky ontologií, typy ontologií, jazyky ontologického modelování, návrhové vzory, normalizace ontologie. Odvozování nad ontologií (kontrola konzistence, klasifikace), nástroje, použití ontologií.</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">5. Sémantický web: technologie sémantického webu, metadata, RDF, RDFS, OWL, dotazování se na sémantický web (význam, jazyky), sémantický web a odvozování (význam, jazyky), aplikace sémantického webu.</a></li>
+<li class="toctree-l1"><a class="reference internal" href="6.html">6. Námětové mapy: standard Topic Maps a jeho součásti, základní stavební prvky námětové mapy, postup tvorby námětové mapy, implementace námětových map (prostředí, syntaxe), dotazování se na námětové mapy, odvozování s námětovými mapami, aplikace námětových map.</a></li>
+<li class="toctree-l1"><a class="reference internal" href="7.html">7. Objektové modelování a programování - základní pojmy, podstata, využití. Softwarový proces. UML. Událostmi řízené programování. Architektura MVC.</a></li>
+<li class="toctree-l1"><a class="reference internal" href="8.html">8. Práce s kolekcemi – typy kolekcí, příklady použití, algoritmy pracující nad kolekcemi (řazení, vyhledávání), základní principy implementace ve zvoleném programovacím jazyce.</a></li>
+<li class="toctree-l1"><a class="reference internal" href="9.html">9. Problematika perzistentního (trvalého) ukládání dat ve vybraném programovacím jazyce.</a></li>
+<li class="toctree-l1"><a class="reference internal" href="10.html">10. Webové aplikace – principy, nástroje. Vícevrstvé aplikace. Zabezpečení aplikace.</a></li>
+<li class="toctree-l1"><a class="reference internal" href="11.html">11. Základní algoritmy a principy počítačové grafiky  – metody vizualizace, určení viditelnosti a osvětlení, reprezentace grafické informace, OPENGL.</a></li>
+<li class="toctree-l1"><a class="reference internal" href="12.html">12. Základy zpracování obrazu a počítačového rozpoznávání – metody snímání, předzpracování, segmentace a klasifikace obrazu, formáty pro ukládání rastrového obrazu, komprese, barva a barevné modely.</a></li>
+<li class="toctree-l1"><a class="reference internal" href="13.html">13. Algoritmy pracující s grafy. Prohledávání grafů do hloubky a do šířky, využití prohledávání grafů v dalších úlohách.</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../tech/2.html">1. Otázka č.2: Architektura počítače (von Neumannovo a Harwardské schéma, Flynnova taxonomie, základní deska, procesor, mikroarchitektura procesoru, paměti, sběrnice, řadič, přídavné karty, ovladače).</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tech/3.html">2. Otázka č.3 Paměťový systém počítače a ukládání dat (typy, principy fungování, frekvence, normy, logická a fyzická struktura disku, RAM, ROM, Cache, HDD, CD, DVD, FLASH…)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tech/5.html">3. Servery a pracovní stanice (rozdíly, kritéria výběru, role serverů, serverové technologie, zálohování dat včetně RAID)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tech/6.html">4. 6. Komunikační prostředky (principy komunikace, modulace signálu, rozdělení a porovnání, média, mobilní technologie)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tech/7.html">5. 7. ETHERNET (principy fungování, vývoj a topologie, přístupová metoda, síťová karta, strukturovaná kabeláž)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tech/8.html">6. 8. ISO - OSI TCP/IP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tech/9.html">7. 9. Internet (organizační struktura, vývoj, RFC dokumenty, domény, technické předpoklady pro připojení, hrozby)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tech/10.html">8. 9. Směrování (základní principy, směrovací protokoly, směrovací algoritmy, směrovače)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tech/11.html">9. Management (správa) sítě</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tech/11.html#wifi">10. WIFI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tech/11.html#s-postupnym-rustem-site-se-v-ni-musi-nachazet-vice-zarizeni">11. S postupným růstem sítě se v ní musí nacházet více zařízení</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tech/11.html#vpn">12. VPN</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tech/11.html#systemy-pro-vzdaleny-pristup">13. Systémy pro vzdálený přístup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tech/11.html#snmp">14. SNMP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tech/11.html#nastroje-pro-monitoring-management-a-analyzu-pocitacove-site">15. Nástroje pro monitoring, management a analýzu počítačové sítě</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tech/12.html">16. Principy operačních systémů (základní rozdělení, druhy operačních systémů, procesy, správa procesů a systémových zdrojů, uživatelská rozhraní).</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tech/13.html">17. Souborové systémy a logická struktura dat (principy, porovnání, příklady).</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tech/14.html">18. Operační systémy Windows (principy MS DOS, MS Windows, architektura, verze, funkce, rozdíly).</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tech/15.html">19. Operační systémy Unix, Linux, BSD, MacOS (základní myšlenky, výhody a nevýhody, open-source, vznik a vývoj, licence, distribuce, základy ovládání - shell, rozdíly, historie a vývoj)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tech/16.html">20. Serverové operační systémy (specifika serverových operačních systémů, rozdíly mezi OS pro osobní počítač a pro server, serverové služby, správa uživatelů)</a></li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
+<li><a class="reference internal" href="#">5. Sémantický web: technologie sémantického webu, metadata, RDF, RDFS, OWL, dotazování se na sémantický web (význam, jazyky), sémantický web a odvozování (význam, jazyky), aplikace sémantického webu.</a><ul>
+<li><a class="reference internal" href="#typy-metadat">5.1. Typy metadat</a></li>
+<li><a class="reference internal" href="#metadatovy-framework">5.2. Metadatový framework</a><ul>
+<li><a class="reference internal" href="#komponenty">5.2.1. Komponenty</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#rdf">5.3. RDF</a><ul>
+<li><a class="reference internal" href="#vlastnosti">5.3.1. Vlastnosti</a></li>
+<li><a class="reference internal" href="#schema">5.3.2. Schéma</a></li>
+<li><a class="reference internal" href="#sila-rdf">5.3.3. Síla RDF</a></li>
+<li><a class="reference internal" href="#slabe-stranky-rdfs">5.3.4. Slabé stránky RDFS</a></li>
+<li><a class="reference internal" href="#metadatovy-framework-zalozeny-na-owl-w3c">5.3.5. Metadatový framework založený na OWL (W3C)</a></li>
+<li><a class="reference internal" href="#shrnuti-funkci-metadat">5.3.6. Shrnutí funkcí metadat</a></li>
+<li><a class="reference internal" href="#budoucnost-metadat">5.3.7. Budoucnost metadat</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+  <li>
+    <a href="4.html" title="Previous Chapter: 4. Ontologické inženýrství: pojem ontologie v kontextu informatiky, základní stavební prvky ontologií, typy ontologií, jazyky ontologického modelování, návrhové vzory, normalizace ontologie. Odvozování nad ontologií (kontrola konzistence, klasifikace), nástroje, použití ontologií."><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm">&laquo; 4. Ontologické i...</span>
+    </a>
+  </li>
+  <li>
+    <a href="6.html" title="Next Chapter: 6. Námětové mapy: standard Topic Maps a jeho součásti, základní stavební prvky námětové mapy, postup tvorby námětové mapy, implementace námětových map (prostředí, syntaxe), dotazování se na námětové mapy, odvozování s námětovými mapami, aplikace námětových map."><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm">6. Námětové mapy... &raquo;</span>
+    </a>
+  </li>
+              
+            
+            
+            
+            
+              <li class="hidden-sm">
+<div id="sourcelink">
+  <a href="../_sources/prog/5.txt"
+     rel="nofollow">Source</a>
+</div></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      
+  <div class="section" id="semanticky-web-technologie-semantickeho-webu-metadata-rdf-rdfs-owl-dotazovani-se-na-semanticky-web-vyznam-jazyky-semanticky-web-a-odvozovani-vyznam-jazyky-aplikace-semantickeho-webu">
+<h1>5. Sémantický web: technologie sémantického webu, metadata, RDF, RDFS, OWL, dotazování se na sémantický web (význam, jazyky), sémantický web a odvozování (význam, jazyky), aplikace sémantického webu.<a class="headerlink" href="#semanticky-web-technologie-semantickeho-webu-metadata-rdf-rdfs-owl-dotazovani-se-na-semanticky-web-vyznam-jazyky-semanticky-web-a-odvozovani-vyznam-jazyky-aplikace-semantickeho-webu" title="Permalink to this headline">¶</a></h1>
+<dl class="docutils">
+<dt>Metadata: klíčový aspekt sémantického webu</dt>
+<dd><dl class="first last docutils">
+<dt>Obsah sémantického webu = data + metadata</dt>
+<dd><ul class="first last simple">
+<li>Smysl: obohacení dat na webu o významově bohaté popisy (výroky) pro dosažení automatizovaného zpracování webových               dokumentů webovými agenty</li>
+<li>Přechod od webu informačního k webu znalostnímu</li>
+</ul>
+</dd>
+</dl>
+</dd>
+</dl>
+<div class="section" id="typy-metadat">
+<h2>5.1. Typy metadat<a class="headerlink" href="#typy-metadat" title="Permalink to this headline">¶</a></h2>
+<p>Příklad metadat: knihovní katalog</p>
+<ul class="simple">
+<li>Obsahově nezávislá metadata</li>
+<li>Katalogový knihovní záznam publikace (standardní záznam)</li>
+</ul>
+<ul class="simple">
+<li>Příklady: Poslední datum uložení dokumentu, místo uložení, přístup typu uživatele k dokumentu, ...</li>
+</ul>
+<ul class="simple">
+<li>Obsahově závislá metadata</li>
+</ul>
+<ul class="simple">
+<li>Příklady: Velikost dokumentu, barva obrázků, autor, počet stran, jazyk dokumentu, ...</li>
+<li>Strukturovaná metadata: metadata spojená se strukturováním dokumentu (kapitoly a odstavce knihy, položky objednávky, ...)</li>
+<li>Doménově specifická metadata: metadata související s aplikační doménou</li>
+</ul>
+<ul class="simple">
+<li>Intra-doménově specifická: zachycují vztahy mezi daty týkající se stejné domény (např. pacient a alergie)</li>
+<li>Inter-doménově specifická: zachycují vztahy mezi daty různých domén (např. ontologie * filosofie i informatika)</li>
+</ul>
+</div>
+<div class="section" id="metadatovy-framework">
+<h2>5.2. Metadatový framework<a class="headerlink" href="#metadatovy-framework" title="Permalink to this headline">¶</a></h2>
+<p>Sestává z množiny specifikací, které jsou zaměřeny např. na reprezentaci, manipulaci, uložení, údržbu a dotazování se na data a     metadata</p>
+<div class="section" id="komponenty">
+<h3>5.2.1. Komponenty<a class="headerlink" href="#komponenty" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Datový model: soubor datových typů a funkcí, pomocí kterých se tvoří abstraktní pohled na webový dokument s možností přístupu k hodnotám uložených v proměnných datových typů</li>
+<li>Serializační formát: poskytuje meta-jazyk a syntaktické konstrukce pro kódování metadat</li>
+<li>příklad: RDF i OWL mají různé datové modely, přičemž jsou serializovány (zapsány) s použitím XML syntaxe</li>
+<li>Dotazovací jazyk: existence různých přístupů pro dotazování (např. RDF * SPARQL, OWL * SQWRL)</li>
+<li>Specifikace RDF založená na XML (RDF/XML)</li>
+<li>Specifikace RDF Schématu: tvorba hierarchií</li>
+<li>Specifikace SPARQL: protokol a dotazovací jazyk pro zpřístupnění RDF dat</li>
+<li>XSL specifikace s XSLT (transformace XML dokumentu do formy HTML stránky zobrazitelné na webu)</li>
+<li>XLink, XPointer: reprezentace hypertextových odkazů</li>
+<li>Specifikace Xquery a Xpath: extrakce XML informací z webových dokumentů</li>
+<li>Specifikace XML Schématu: definice struktury XML dokumentů pro rozšíření jejich sémantiky</li>
+<li>Specifikace RDF založená na XML (RDF/XML)</li>
+<li>Specifikace RDF Schématu: tvorba hierarchií</li>
+<li>Specifikace SPARQL: protokol a</li>
+</ul>
+<ul class="simple">
+<li>Jeden z nejstarších vyvinut s cílem oddělení obsahu od</li>
+<li>Primárně určen pro reprezentaci metadat způsobu prezentace webového obsahu přidělených různým webovým zdrojům</li>
+</ul>
+</div>
+</div>
+<div class="section" id="rdf">
+<h2>5.3. RDF<a class="headerlink" href="#rdf" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="vlastnosti">
+<h3>5.3.1. Vlastnosti<a class="headerlink" href="#vlastnosti" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Lze tvořit jen jednoduchá tvrzení tvaru podmět-přísudek-předmět</li>
+<li>Nelze vyjádřit co podmět, přísudek a předmět znamenají, ani jaké jsou mezi nimi vztahy</li>
+<li>Krkonoše jsou pohoří, Sněžka je hora, každá hora má výšku, ...</li>
+</ul>
+<ul class="simple">
+<li>Pro tvorbu komplexních ontologií se nehodí,</li>
+</ul>
+<p>vhodnější je OWL
+* Explicitně nemá zabudován koncept reprezentace tříd, implicitně ano ve formě rdf:type a rdf:property =&gt; v RDF lze reprezentovat, že něco“ je třídou nebo vlastností
+* S RDF ale nelze reprezentovat, že třída A je podtřídou třídy B =&gt; hierarchii tříd a vztahy mezi třídami</p>
+</div>
+<div class="section" id="schema">
+<h3>5.3.2. Schéma<a class="headerlink" href="#schema" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>RDF Schema, The RDF Vocabulary Description language</li>
+</ul>
+<ul class="simple">
+<li>Nadstavba jazyka RDF pro tvorbu ontologií, která vznikla rozšířením</li>
+<li>a sémantiky RDF</li>
+<li>Určeno pro tvorbu struktury RDF tvrzení, resp. pro tvorbu tříd</li>
+<li>a tříd vlastností pro reprezentaci vztahů mezi třídami</li>
+<li>Zdroje tak mohou být kategorizovány a vnímány jako instance tříd</li>
+<li>Třídy zdrojů jsou seskupovány do hierarchie</li>
+<li>Třídy jsou vnímány jako rozšíření popisu zdrojů, více je konkretizují</li>
+<li>Hierarchie RDF tříd je chápána jako RDF slovník obsahující množinu</li>
+<li>RDF tvrzení se specifickým významem</li>
+<li>Jedná se také o RDF graf, jako v případě RDF</li>
+<li>Jmenný prostor má následující tvar:</li>
+<li>://www.w3.org/2000/01/rdf-schema# (rdfs prefix)</li>
+</ul>
+</div>
+<div class="section" id="sila-rdf">
+<h3>5.3.3. Síla RDF<a class="headerlink" href="#sila-rdf" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>tvorba jednoduchých ontologií, resp. vztahů  mezi třídami</li>
+</ul>
+<ul class="simple">
+<li>Nízká výpočetní složitost</li>
+</ul>
+<ul>
+<li><p class="first">S RDF schématem lze vyjádřit:</p>
+<blockquote>
+<div><ul class="simple">
+<li>explicitně třídu,</li>
+<li>datové typy,</li>
+<li>def. obor, obor hodnot,</li>
+<li>podtřídu,</li>
+<li>„pod-vlastnost“, a další</li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+</div>
+<div class="section" id="slabe-stranky-rdfs">
+<h3>5.3.4. Slabé stránky RDFS<a class="headerlink" href="#slabe-stranky-rdfs" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>ekvivalenci tříd</li>
+<li>inverzní vlastnosti</li>
+<li>funkcionalitu vlastnosti nebo její tranzitivitu</li>
+<li>omezení kardinality vlastností</li>
+<li>negaci tvrzení</li>
+<li>disjunktnost tříd, ale pouze vztah je podtřídou</li>
+<li>třídu použitím logických operátorů AND (průnik), OR (sjednocení), NOT (negace) na třídy</li>
+</ul>
+</div>
+<div class="section" id="metadatovy-framework-zalozeny-na-owl-w3c">
+<h3>5.3.5. Metadatový framework založený na OWL (W3C)<a class="headerlink" href="#metadatovy-framework-zalozeny-na-owl-w3c" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>OWL jazyk nabízí konstrukce, které umožňují vyjádřit různé typy omezení a axiomů na úrovni schémat a dat</li>
+</ul>
+</div>
+<div class="section" id="shrnuti-funkci-metadat">
+<h3>5.3.6. Shrnutí funkcí metadat<a class="headerlink" href="#shrnuti-funkci-metadat" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Shrnutí (popisná funkce): sumarizace obsahu</li>
+<li>Vyhledávání: prohledávání metadat s cílem vyšší přesnosti výsledků</li>
+<li>Doporučení: umožňuje uživateli určit, která data potřebuje</li>
+<li>Vybírání: pomoc při rozhodování, který zdroj informací načíst</li>
+<li>Přístup: zajištění přístupu k datům (např. uvedením přesné lokace)</li>
+<li>Interpretace: instrukce, jak se má s daty zacházet (např. formát, kódování, jazyk, šifrování, ...)</li>
+<li>Specifikace: informace ovlivňující užití dat (např. právní podmínky, velikost, stáří, přístup. práva, ...)</li>
+<li>Historie: popis historie nebo původu dat</li>
+<li>Správa dat: specifikace pro správu objektu (např. datum poslední modifikace, datum vytvoření, ...)</li>
+<li>Propojování a vztahy mezi daty: specifikace vztahů mezi objekty (např. mezi článkem a časopisem, mezi překladem a originálem, ...)</li>
+</ul>
+</div>
+<div class="section" id="budoucnost-metadat">
+<h3>5.3.7. Budoucnost metadat<a class="headerlink" href="#budoucnost-metadat" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Některé standardy se stanou vůdčími</li>
+<li>Důležitost vícejazyčnosti při tvorbě metadat (již zakomponováno v RDF)</li>
+<li>Nutné počítat se širokým spektrem zdrojů (obrázky, videa, dynamicky generované objekty, ...)</li>
+<li>Způsoby hodnocení efektivnosti metadat (metriky)</li>
+<li>Teoretické základy pro tvorbu metadat (formální modely, metodologie, úvaha nad právními otázkami)</li>
+<li>přednášky ZT2 na <a class="reference external" href="https://github.com/michaelkuty/ssz-ai-hk-3/tree/gh-pages/source/prednasky/zt2/">https://github.com/michaelkuty/ssz-ai-hk-3/tree/gh-pages/source/prednasky/zt2/</a></li>
+</ul>
+</div>
+</div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.2.3.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

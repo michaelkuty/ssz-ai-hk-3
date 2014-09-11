@@ -1,5 +1,5 @@
 ======
-Otázka č. 3. Konceptuální modelování. E-R model a jeho grafické znázornění. Relační model. Typy vztahů mezi entitami a jejich reprezentace v relačním modelu. Vlastnosti relační tabulky. Normální formy relačního schématu.
+Konceptuální modelování. E-R model a jeho grafické znázornění. Relační model. Typy vztahů mezi entitami a jejich reprezentace v relačním modelu. Vlastnosti relační tabulky. Normální formy relačního schématu.
 ======
 
 Podle ANSI/SPARC architektury databázových systému lze rozlišit tři úrovně návrhu:

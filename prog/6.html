@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>6. Námětové mapy: standard Topic Maps a jeho součásti, základní stavební prvky námětové mapy, postup tvorby námětové mapy, implementace námětových map (prostředí, syntaxe), dotazování se na námětové mapy, odvozování s námětovými mapami, aplikace námětových map. &mdash; Otázky na státnice 0.1.0 documentation</title>
+    
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-3.1.0/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-3.1.0/css/bootstrap-theme.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '0.1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-3.1.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <link rel="top" title="Otázky na státnice 0.1.0 documentation" href="../index.html" />
+    <link rel="next" title="7. Objektové modelování a programování - základní pojmy, podstata, využití. Softwarový proces. UML. Událostmi řízené programování. Architektura MVC." href="7.html" />
+    <link rel="prev" title="5. Sémantický web: technologie sémantického webu, metadata, RDF, RDFS, OWL, dotazování se na sémantický web (význam, jazyky), sémantický web a odvozování (význam, jazyky), aplikace sémantického webu." href="5.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+  </head>
+  <body>
+
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../index.html">
+          Otázky na státnice</a>
+        <span class="navbar-text navbar-version pull-left"><b>0.0.2</b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            <li class="divider-vertical"></li>
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="../index.html">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="1.html">1. Logický program - struktura, základní pojmy, datová struktura seznam, práce s databází Prologu. Hlavní odlišnosti oproti procedurálnímu programování, možnosti použití neprocedurálního programovacího jazyka.</a></li>
+<li class="toctree-l1"><a class="reference internal" href="2.html">2. Databáze, databázový systém. Hlavní funkce DBS. Historický vývoj DBS. Modely dat. Relační algebra: projekce, selekce, spojení. SQL.</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3.html">3. Konceptuální modelování. E-R model a jeho grafické znázornění. Relační model. Typy vztahů mezi entitami a jejich reprezentace v relačním modelu. Vlastnosti relační tabulky. Normální formy relačního schématu.</a></li>
+<li class="toctree-l1"><a class="reference internal" href="4.html">4. Ontologické inženýrství: pojem ontologie v kontextu informatiky, základní stavební prvky ontologií, typy ontologií, jazyky ontologického modelování, návrhové vzory, normalizace ontologie. Odvozování nad ontologií (kontrola konzistence, klasifikace), nástroje, použití ontologií.</a></li>
+<li class="toctree-l1"><a class="reference internal" href="5.html">5. Sémantický web: technologie sémantického webu, metadata, RDF, RDFS, OWL, dotazování se na sémantický web (význam, jazyky), sémantický web a odvozování (význam, jazyky), aplikace sémantického webu.</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">6. Námětové mapy: standard Topic Maps a jeho součásti, základní stavební prvky námětové mapy, postup tvorby námětové mapy, implementace námětových map (prostředí, syntaxe), dotazování se na námětové mapy, odvozování s námětovými mapami, aplikace námětových map.</a></li>
+<li class="toctree-l1"><a class="reference internal" href="7.html">7. Objektové modelování a programování - základní pojmy, podstata, využití. Softwarový proces. UML. Událostmi řízené programování. Architektura MVC.</a></li>
+<li class="toctree-l1"><a class="reference internal" href="8.html">8. Práce s kolekcemi – typy kolekcí, příklady použití, algoritmy pracující nad kolekcemi (řazení, vyhledávání), základní principy implementace ve zvoleném programovacím jazyce.</a></li>
+<li class="toctree-l1"><a class="reference internal" href="9.html">9. Problematika perzistentního (trvalého) ukládání dat ve vybraném programovacím jazyce.</a></li>
+<li class="toctree-l1"><a class="reference internal" href="10.html">10. Webové aplikace – principy, nástroje. Vícevrstvé aplikace. Zabezpečení aplikace.</a></li>
+<li class="toctree-l1"><a class="reference internal" href="11.html">11. Základní algoritmy a principy počítačové grafiky  – metody vizualizace, určení viditelnosti a osvětlení, reprezentace grafické informace, OPENGL.</a></li>
+<li class="toctree-l1"><a class="reference internal" href="12.html">12. Základy zpracování obrazu a počítačového rozpoznávání – metody snímání, předzpracování, segmentace a klasifikace obrazu, formáty pro ukládání rastrového obrazu, komprese, barva a barevné modely.</a></li>
+<li class="toctree-l1"><a class="reference internal" href="13.html">13. Algoritmy pracující s grafy. Prohledávání grafů do hloubky a do šířky, využití prohledávání grafů v dalších úlohách.</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../tech/2.html">1. Otázka č.2: Architektura počítače (von Neumannovo a Harwardské schéma, Flynnova taxonomie, základní deska, procesor, mikroarchitektura procesoru, paměti, sběrnice, řadič, přídavné karty, ovladače).</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tech/3.html">2. Otázka č.3 Paměťový systém počítače a ukládání dat (typy, principy fungování, frekvence, normy, logická a fyzická struktura disku, RAM, ROM, Cache, HDD, CD, DVD, FLASH…)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tech/5.html">3. Servery a pracovní stanice (rozdíly, kritéria výběru, role serverů, serverové technologie, zálohování dat včetně RAID)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tech/6.html">4. 6. Komunikační prostředky (principy komunikace, modulace signálu, rozdělení a porovnání, média, mobilní technologie)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tech/7.html">5. 7. ETHERNET (principy fungování, vývoj a topologie, přístupová metoda, síťová karta, strukturovaná kabeláž)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tech/8.html">6. 8. ISO - OSI TCP/IP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tech/9.html">7. 9. Internet (organizační struktura, vývoj, RFC dokumenty, domény, technické předpoklady pro připojení, hrozby)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tech/10.html">8. 9. Směrování (základní principy, směrovací protokoly, směrovací algoritmy, směrovače)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tech/11.html">9. Management (správa) sítě</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tech/11.html#wifi">10. WIFI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tech/11.html#s-postupnym-rustem-site-se-v-ni-musi-nachazet-vice-zarizeni">11. S postupným růstem sítě se v ní musí nacházet více zařízení</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tech/11.html#vpn">12. VPN</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tech/11.html#systemy-pro-vzdaleny-pristup">13. Systémy pro vzdálený přístup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tech/11.html#snmp">14. SNMP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tech/11.html#nastroje-pro-monitoring-management-a-analyzu-pocitacove-site">15. Nástroje pro monitoring, management a analýzu počítačové sítě</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tech/12.html">16. Principy operačních systémů (základní rozdělení, druhy operačních systémů, procesy, správa procesů a systémových zdrojů, uživatelská rozhraní).</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tech/13.html">17. Souborové systémy a logická struktura dat (principy, porovnání, příklady).</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tech/14.html">18. Operační systémy Windows (principy MS DOS, MS Windows, architektura, verze, funkce, rozdíly).</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tech/15.html">19. Operační systémy Unix, Linux, BSD, MacOS (základní myšlenky, výhody a nevýhody, open-source, vznik a vývoj, licence, distribuce, základy ovládání - shell, rozdíly, historie a vývoj)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tech/16.html">20. Serverové operační systémy (specifika serverových operačních systémů, rozdíly mezi OS pro osobní počítač a pro server, serverové služby, správa uživatelů)</a></li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
+<li><a class="reference internal" href="#">6. Námětové mapy: standard Topic Maps a jeho součásti, základní stavební prvky námětové mapy, postup tvorby námětové mapy, implementace námětových map (prostředí, syntaxe), dotazování se na námětové mapy, odvozování s námětovými mapami, aplikace námětových map.</a><ul>
+<li><a class="reference internal" href="#topic-namet-instance">6.1. Topic námět, instance</a><ul>
+<li><a class="reference internal" href="#priklady">6.1.1. Příklady:</a></li>
+<li><a class="reference internal" href="#namet">6.1.2. Námět</a></li>
+<li><a class="reference internal" href="#typ-asociace">6.1.3. Typ asociace</a></li>
+<li><a class="reference internal" href="#asociace">6.1.4. Asociace</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#typ-role">6.2. Typ role</a></li>
+<li><a class="reference internal" href="#typ-vyskytu">6.3. Typ výskytu</a></li>
+<li><a class="reference internal" href="#vyskyt">6.4. Výskyt</a></li>
+<li><a class="reference internal" href="#omnigator">6.5. Omnigator</a><ul>
+<li><a class="reference internal" href="#omnigator-a-jeho-moznosti">6.5.1. Omnigator a jeho možnosti</a></li>
+<li><a class="reference internal" href="#vizualizace-nametove-mapy">6.5.2. Vizualizace námětové mapy</a><ul>
+<li><a class="reference internal" href="#topic-maps">6.5.2.1. Topic Maps</a></li>
+<li><a class="reference internal" href="#vyuziti-nametovych-map">6.5.2.2. Využití námětových map</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#reprezentace-slozitych-procesu-a-pravidel">6.5.3. Reprezentace složitých procesů a pravidel</a><ul>
+<li><a class="reference internal" href="#postup-tvorby-nametove-mapy">6.5.3.1. postup tvorby námětové mapy</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#omezeni-zkoumane-oblasti">6.6. Omezení zkoumané oblasti</a></li>
+<li><a class="reference internal" href="#navrh-hierarchie-typu">6.7. Návrh: hierarchie typů</a></li>
+<li><a class="reference internal" href="#syntaxe-xtm-xml-topic-maps">6.8. Syntaxe XTM (XML Topic Maps)</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+  <li>
+    <a href="5.html" title="Previous Chapter: 5. Sémantický web: technologie sémantického webu, metadata, RDF, RDFS, OWL, dotazování se na sémantický web (význam, jazyky), sémantický web a odvozování (význam, jazyky), aplikace sémantického webu."><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm">&laquo; 5. Sémantický we...</span>
+    </a>
+  </li>
+  <li>
+    <a href="7.html" title="Next Chapter: 7. Objektové modelování a programování - základní pojmy, podstata, využití. Softwarový proces. UML. Událostmi řízené programování. Architektura MVC."><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm">7. Objektové mod... &raquo;</span>
+    </a>
+  </li>
+              
+            
+            
+            
+            
+              <li class="hidden-sm">
+<div id="sourcelink">
+  <a href="../_sources/prog/6.txt"
+     rel="nofollow">Source</a>
+</div></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      
+  <div class="section" id="nametove-mapy-standard-topic-maps-a-jeho-soucasti-zakladni-stavebni-prvky-nametove-mapy-postup-tvorby-nametove-mapy-implementace-nametovych-map-prostredi-syntaxe-dotazovani-se-na-nametove-mapy-odvozovani-s-nametovymi-mapami-aplikace-nametovych-map">
+<h1>6. Námětové mapy: standard Topic Maps a jeho součásti, základní stavební prvky námětové mapy, postup tvorby námětové mapy, implementace námětových map (prostředí, syntaxe), dotazování se na námětové mapy, odvozování s námětovými mapami, aplikace námětových map.<a class="headerlink" href="#nametove-mapy-standard-topic-maps-a-jeho-soucasti-zakladni-stavebni-prvky-nametove-mapy-postup-tvorby-nametove-mapy-implementace-nametovych-map-prostredi-syntaxe-dotazovani-se-na-nametove-mapy-odvozovani-s-nametovymi-mapami-aplikace-nametovych-map" title="Permalink to this headline">¶</a></h1>
+<p>Struktura mapy (ontologie) má části:
+* Topic type - typ námětu, třída
+* Association type - typ asociace
+* Occurrence type - typ výskytu
+* Role type - typ role
+* Name type - typ názvu</p>
+<div class="section" id="topic-namet-instance">
+<h2>6.1. Topic námět, instance<a class="headerlink" href="#topic-namet-instance" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Typ námětu (topic type) vystihuje skupinu prvků, ke kterým námět náleží na základě společných charakteristik</li>
+</ul>
+<ul class="simple">
+<li>Odpovídá pojmu třída v ontologii</li>
+</ul>
+<div class="section" id="priklady">
+<h3>6.1.1. Příklady:<a class="headerlink" href="#priklady" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Jazyk</li>
+<li>Opera</li>
+<li>Skladatel</li>
+</ul>
+</div>
+<div class="section" id="namet">
+<h3>6.1.2. Námět<a class="headerlink" href="#namet" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Námět (topic) představuje konkrétní prvek, o kterém uvádíme jeho vlastnosti a vztahy k dalším námětům</li>
+</ul>
+<ul class="simple">
+<li>Odpovídá pojmu jedinec v ontologii</li>
+</ul>
+</div>
+<div class="section" id="typ-asociace">
+<h3>6.1.3. Typ asociace<a class="headerlink" href="#typ-asociace" title="Permalink to this headline">¶</a></h3>
+<ul class="simple" id="index-0">
+<li>Association type, Association class (angl.)</li>
+<li>Obecný předpis vztahu mezi typy námětů</li>
+<li>různé pojetí</li>
+<li>Šablona pro tvorbu konkrétních asociací</li>
+<li>Třída konkrétních asociací</li>
+<li>Odpovídá pojmu asociační třída</li>
+<li>Zpravidla podstatní jméno, sloveso není výjimkou</li>
+<li>Typ asociace není orientován, namísto směru se používají typy rolí</li>
+<li>Typu asociace lze přiřadit různé názvy z hlediska jednotlivých typů rolí</li>
+</ul>
+<p><strong>Příklady</strong></p>
+<ul class="simple">
+<li>composed... aktéři v roli: Artist, Work</li>
+<li>bornIn ... aktéři v roli: Person, Place</li>
+</ul>
+</div>
+<div class="section" id="asociace">
+<h3>6.1.4. Asociace<a class="headerlink" href="#asociace" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Association (angl.)</li>
+<li>Vyjadřuje konkrétní vztah mezi náměty</li>
+<li>Základ sémantické sítě (či „znalostní mapy“)</li>
+<li>Odpovídá pojmu „konkrétní“ objektová relace v ontologii</li>
+</ul>
+<p><strong>Příklady</strong></p>
+<ul class="simple">
+<li>Puccini zkomponoval (composed) Tosca</li>
+</ul>
+<ul class="simple">
+<li>Puccini a Tosca jsou konkrétní hráči v asociaci zkomponoval</li>
+<li>Puccini narodil-se-v (bornIn) Lucca</li>
+<li>Puccini a Lucca jsou konkrétní hráči v asociaci narodil-se-v</li>
+</ul>
+</div>
+</div>
+<div class="section" id="typ-role">
+<h2>6.2. Typ role<a class="headerlink" href="#typ-role" title="Permalink to this headline">¶</a></h2>
+<p><em>Vyjadřuje způsob účasti aktéra v asociaci</em>
+* „role“ používané v ontologii: nepřesně vyjádřeno v podobě D(f) a H(f)</p>
+<p><strong>Příklad:</strong></p>
+<ul>
+<li><dl class="first docutils">
+<dt>Role Tvůrce, použití v asociacích:</dt>
+<dd><ul class="first last simple">
+<li>Zkomponoval ... aktéři v roli: Skladatel</li>
+<li>Napsal ... aktéři v roli: Spisovatel</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p class="first">Asociace není orientovaná, namísto směru se používají role</p>
+</li>
+</ul>
+</div>
+<div class="section" id="typ-vyskytu">
+<h2>6.3. Typ výskytu<a class="headerlink" href="#typ-vyskytu" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Typ výskytu (occurrence type) vyjadřuje obecný</li>
+<li>Výskyt (occurrence) popisuje vztah mezi konkrétním námětem a předpis vztahu mezi námětem a informací konkrétní informací o předmětu</li>
+<li>Rozlišujeme interní typ výskyt (= atribut) a externí</li>
+</ul>
+</div>
+<div class="section" id="vyskyt">
+<h2>6.4. Výskyt<a class="headerlink" href="#vyskyt" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Odpovídá pojmu „hodnota“ datotypové relace v ontologii (odkaz na zdroj informací, typicky URL)</li>
+</ul>
+<ul>
+<li><dl class="first docutils">
+<dt>Interní výskyt (internal occurrence)</dt>
+<dd><ul class="first last simple">
+<li>Vlastnost, atribut, řetězec</li>
+<li>Hodnota uložena přímo v námětové mapě</li>
+<li>Příklad interního výskytu: 12. 12. 2010</li>
+<li>interní typ výskytu: datum narození</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+<ul>
+<li><dl class="first docutils">
+<dt>Externí výskyt (external occurrence)</dt>
+<dd><ul class="first last simple">
+<li>Příklad: datum narození, popis, číslo kanceláře</li>
+<li>Určený pomocí lokátoru, např. URL</li>
+<li>Hodnota dostupná např. na Internetu (mimo mapu)</li>
+<li>Příklad externího výskytu: <a class="reference external" href="http://web.mit.edu/">http://web.mit.edu/</a></li>
+<li>Externí typ výskytu</li>
+<li>Příklad: webová stránka, zvuková nahrávka</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+<ul class="simple">
+<li>Ontopia Topic Maps Engine: management námětových map</li>
+<li>Ontopoly: editor námětových map</li>
+<li>Omnigator: prohlížeč námětových map</li>
+<li>Vizigator: vizualizace námětových map</li>
+<li>Ontopia Navigator Framework (ONF): komponenta pro tvorbu webových aplikací s využitím dotazovacího jazyka tolog, jazyka JSP a</li>
+</ul>
+<p>specifických elementů ONF
+* Ontopia Full-text Search: implementace vyhledávací funkcionality pro webovou aplikaci
+* Ontopia Web Editor Framework: komponenta pro tvorbu editoru
+námětových map ... viz. blíže dokumentace distribuovaná s prostředím Ontopia</p>
+</div>
+<div class="section" id="omnigator">
+<h2>6.5. Omnigator<a class="headerlink" href="#omnigator" title="Permalink to this headline">¶</a></h2>
+<p>„Omnivorous navigator“ = všežravý navigátor - schopný interpretovat jakýkoliv dokument vytvořený dle standardu Topic Maps</p>
+<ul class="simple">
+<li>Klient-server architektura postavená na http protokolu</li>
+<li>Na straně serveru pracuje webová aplikace J2EE používající Ontopia</li>
+</ul>
+<ul class="simple">
+<li>Topic Map Engine a Navigator Framework, který běží na webovém  serveru Tomcat</li>
+</ul>
+<ul class="simple">
+<li>Tato aplikace čte (a zapisuje) Topic Maps dokumenty a generuje HTML stránky. Na straně klienta dostává standardní webový prohlížeč HTML stránky a pomocí nich zobrazuje pohledy na Topic Maps dokumenty</li>
+</ul>
+<div class="section" id="omnigator-a-jeho-moznosti">
+<h3>6.5.1. Omnigator a jeho možnosti<a class="headerlink" href="#omnigator-a-jeho-moznosti" title="Permalink to this headline">¶</a></h3>
+<p>Prohlížení ontologie a připojených informačních zdrojů</p>
+<ul class="simple">
+<li>Zobrazení statistik námětové mapy</li>
+<li>Dotazování v jazyce Tolog (kombinuje SQL a Prolog)</li>
+</ul>
+<ul class="simple">
+<li>vyhledávání témat, instancí, asociací, výskytů, agregování, třídění, odvozovací pravidla</li>
+</ul>
+<ul class="simple">
+<li>Slučování více map, export a import</li>
+<li>Filtrování pohledů (vytváření verzí v různých jazycích, možnost filtrování podle uživatelských práv,...)</li>
+</ul>
+</div>
+<div class="section" id="vizualizace-nametove-mapy">
+<h3>6.5.2. Vizualizace námětové mapy<a class="headerlink" href="#vizualizace-nametove-mapy" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Možnost přizpůsobení vizualizace námětové mapy vlastním potřebám: komponenta Vizdesktop (adresář bin v balíku s produktem Ontopia)</li>
+</ul>
+<div class="section" id="topic-maps">
+<h4>6.5.2.1. Topic Maps<a class="headerlink" href="#topic-maps" title="Permalink to this headline">¶</a></h4>
+<p>Všeobecné použití: tvorba pojmových map</p>
+<ul class="simple">
+<li>Ve vztahu k námětovým mapám – možnost exportu námětové mapy v syntaxi XTM ver. 1.0</li>
+</ul>
+</div>
+<div class="section" id="vyuziti-nametovych-map">
+<h4>6.5.2.2. Využití námětových map<a class="headerlink" href="#vyuziti-nametovych-map" title="Permalink to this headline">¶</a></h4>
+</div>
+</div>
+<div class="section" id="reprezentace-slozitych-procesu-a-pravidel">
+<h3>6.5.3. Reprezentace složitých procesů a pravidel<a class="headerlink" href="#reprezentace-slozitych-procesu-a-pravidel" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Organizace velkých objemů informací pomocí ontologií</li>
+<li>Zachycení „paměti organizace“, tacitních znalostí</li>
+</ul>
+<ul class="simple">
+<li>E-learning zaměřený na osvojování si konceptů</li>
+<li>Správa distribuovaných bází znalostí a informací</li>
+<li>Sloučení informací a znalostí</li>
+</ul>
+<div class="section" id="postup-tvorby-nametove-mapy">
+<h4>6.5.3.1. postup tvorby námětové mapy<a class="headerlink" href="#postup-tvorby-nametove-mapy" title="Permalink to this headline">¶</a></h4>
+<ul>
+<li><dl class="first docutils">
+<dt>Analýza</dt>
+<dd><ul class="first last simple">
+<li>Specifikace domény a stanovení šíře záběru</li>
+<li>Všeobecné otázky spojené s vývojem námětové mapy</li>
+<li>Snaha nevyvíjet to, co už bylo jednou vyvinuto</li>
+<li>Brainstorming</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p class="first">Návrh</p>
+</li>
+<li><p class="first">Specifikace schématu námětové mapy a instancí</p>
+</li>
+<li><p class="first">Implementace</p>
+</li>
+<li><p class="first">Výběr přístupu pro tvorbu kódu námětové mapy</p>
+</li>
+<li><p class="first">Tvorba dokumentace</p>
+</li>
+<li><p class="first">Údržba námětové mapy</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="section" id="omezeni-zkoumane-oblasti">
+<h2>6.6. Omezení zkoumané oblasti<a class="headerlink" href="#omezeni-zkoumane-oblasti" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Které předměty má a nemá námětová mapa pokrývat?</li>
+</ul>
+<ul class="simple">
+<li>Nutno určit úroveň detailnosti modelování jednotlivých elementů námětové mapy a množství těchto elementů</li>
+<li>Toto určujeme pro snadnější management námět. mapy</li>
+</ul>
+<ul class="simple">
+<li>Které informační zdroje mají být zahrnuty a jakou mají mít formu (formát)?</li>
+</ul>
+<p>Koncoví uživatelé
+* Jaké uživatelské skupině je námětová mapa určena?
+* Jaká jsou očekávání této uživatelské skupiny?
+* Je zde uživatelská skupina se specifickými požadavky?</p>
+<ul class="simple">
+<li>instance-of (is-a): je instancí typu</li>
+</ul>
+<p>(vztah mezi námětem a typem námětu)
+* is-subclass-of (is-a-kind-of, ako)
+* (vztah mezi typy námětů)</p>
+</div>
+<div class="section" id="navrh-hierarchie-typu">
+<h2>6.7. Návrh: hierarchie typů<a class="headerlink" href="#navrh-hierarchie-typu" title="Permalink to this headline">¶</a></h2>
+<p>Při tvorbě hierarchie kombinujeme dva typy vztahů:</p>
+<p>Příklady:
+* Maxipes Fík is-a Pes
+* Pes ako Šelma</p>
+<ul class="simple">
+<li>Ne každá hierarchie je hierarchií typů!</li>
+<li>Například nemůže říct: “Paříž AKO Francie“</li>
+<li>Pro hierarchii typů platí:</li>
+<li>Když typ A je nadtypem typu B, potom</li>
+</ul>
+<ul class="simple">
+<li><ol class="first loweralpha">
+<li>A i B jsou typy</li>
+</ol>
+</li>
+<li><ol class="first loweralpha" start="2">
+<li>je-li C instancí typu B, musí být také instancí typu A</li>
+</ol>
+</li>
+<li><ol class="first loweralpha" start="3">
+<li>je-li D podtypem typu B, musí být i podtype</li>
+</ol>
+</li>
+</ul>
+</div>
+<div class="section" id="syntaxe-xtm-xml-topic-maps">
+<h2>6.8. Syntaxe XTM (XML Topic Maps)<a class="headerlink" href="#syntaxe-xtm-xml-topic-maps" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Část standardu ISO 13250 pod názvem ISO/IEC-3 XML syntaxe</li>
+</ul>
+<ul class="simple">
+<li>Syntaxe XTM je založená na značkovacím jazyce XML a jazyce XLink =&gt; XTM dokument je XML dokumentem</li>
+<li>Vznik syntaxe na základě požadavku využití technologie Topic Maps i ve webovém prostředí</li>
+<li>Autor syntaxe: nezávislá organizace TopicMaps.org</li>
+<li>První verze syntaxe (1.0) představena r. 2000 na konferenci XML 2000 ve Washingtonu</li>
+<li>Oficiální publikace syntaxe r. 2001 ve formě standardu ISO</li>
+<li>V současné době se jedná o jednu z nejpoužívanějších syntaxí pro tvorbu námětových map</li>
+<li>Možnost využití verze 2.0 (prostředí Ontopia ji má v nabídce)</li>
+</ul>
+</div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.2.3.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>
