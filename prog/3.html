@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Otázka č. 3. Konceptuální modelování. E-R model a jeho grafické znázornění. Relační model. Typy vztahů mezi entitami a jejich reprezentace v relačním modelu. Vlastnosti relační tabulky. Normální formy relačního schématu. &mdash; Otazky na statnice 0.0.1 documentation</title>
+    
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-3.1.0/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-3.1.0/css/bootstrap-theme.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '0.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-3.1.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <link rel="top" title="Otazky na statnice 0.0.1 documentation" href="../index.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+  </head>
+  <body>
+
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../index.html">
+          Otazky na statnice</a>
+        <span class="navbar-text navbar-version pull-left"><b>0.0.1</b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            <li class="divider-vertical"></li>
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="../index.html">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"></ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
+<li><a class="reference internal" href="#">Otázka č. 3. Konceptuální modelování. E-R model a jeho grafické znázornění. Relační model. Typy vztahů mezi entitami a jejich reprezentace v relačním modelu. Vlastnosti relační tabulky. Normální formy relačního schématu.</a><ul>
+<li><a class="reference internal" href="#relacni-model-dat">Relační model dat</a></li>
+<li><a class="reference internal" href="#transformace-er-modelu-do-relacniho-modelu">Transformace ER modelu do relačního modelu</a></li>
+<li><a class="reference internal" href="#normalni-formy-relaci">Normální formy relací</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+              
+            
+            
+            
+            
+              <li class="hidden-sm">
+<div id="sourcelink">
+  <a href="../_sources/prog/3.txt"
+     rel="nofollow">Source</a>
+</div></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      
+  <div class="section" id="otazka-c-3-konceptualni-modelovani-e-r-model-a-jeho-graficke-znazorneni-relacni-model-typy-vztahu-mezi-entitami-a-jejich-reprezentace-v-relacnim-modelu-vlastnosti-relacni-tabulky-normalni-formy-relacniho-schematu">
+<h1>Otázka č. 3. Konceptuální modelování. E-R model a jeho grafické znázornění. Relační model. Typy vztahů mezi entitami a jejich reprezentace v relačním modelu. Vlastnosti relační tabulky. Normální formy relačního schématu.<a class="headerlink" href="#otazka-c-3-konceptualni-modelovani-e-r-model-a-jeho-graficke-znazorneni-relacni-model-typy-vztahu-mezi-entitami-a-jejich-reprezentace-v-relacnim-modelu-vlastnosti-relacni-tabulky-normalni-formy-relacniho-schematu" title="Permalink to this headline">¶</a></h1>
+<p>Podle ANSI/SPARC architektury databázových systému lze rozlišit tři úrovně návrhu:</p>
+<ul class="simple">
+<li>externí hladina - odpovídá pohledu jednotlivých skupin uživatelů</li>
+<li>konceptuální hladina -  celkový logický pohled na data, její vytvoření = první krok databázového návrhu</li>
+<li>interní hladina popis dat na nižší úrovni, interface pro operační systém</li>
+</ul>
+<p>Konceptuální modelování tvoří:</p>
+<ul class="simple">
+<li>návrh struktury dat na konceptuální úrovni</li>
+<li>analýza požadavků a jejich zobrazení pomocí grafických prostředků</li>
+</ul>
+<p>Základní prvky</p>
+<ul class="simple">
+<li>entity - objekt reálného světa, schopen samostatné existence je odlišitelný od ostatních objektů</li>
+<li>vztahy</li>
+<li>atributy - vlastnost entity (nebo vztahu), doména atributu = přípustné hodnoty, jednoduchý atribut = dále nedělitelný (primitivní datový typ), složený atribut = dělitelný, např. adresa (objekty) - jeden z používaných postupů = entitně relační (ER) modelování (různé notace dle Chena, UML Class Diagram...)</li>
+</ul>
+<p>Entitně Relační model kromě entit, vztahů a atributů pracuje také s</p>
+<ul class="simple">
+<li>typem entity (třídou) – množina objektů stejného typu</li>
+<li>kardinalitou vztahů – násobnost, např. 1:1, m:1, m:n ...</li>
+<li>klíči  kandidátní klíč = minimální množina atributů pro jednoznačnou identifikaci entity, primární klíč = kandidátní klíč, který byl vybrán k té identifikaci</li>
+</ul>
+<p>Rozšířený ER model = EER
+zavádí supertřídu / podtřídu (tvoří IS-A hierarchii), existuje zde dědičnost vztahů, pro grafické znázornění lze použít např. diagram tříd z UML, kromě prostých vztahů také poskytuje kompozice a generalizace</p>
+<div class="section" id="relacni-model-dat">
+<h2>Relační model dat<a class="headerlink" href="#relacni-model-dat" title="Permalink to this headline">¶</a></h2>
+<p>Základní struktura = relace (definovaná jako podmnožina kartézského součinu n množin).
+Cíly zavedení byly:</p>
+<ul class="simple">
+<li>disciplína v manipulaci s daty</li>
+<li>zabezpečení nezávislosti dat</li>
+<li>vyšší produktivita programování</li>
+</ul>
+<p>Samotná databáze je potom kolekce relací, které jsou reprezentované tabulkami (tzn. Všechny informace jsou v tabulkách).
+Oproti matematické definici relaci je databázová relace vybavena pomocnou strukturou jménem relace, jmény atributů a definicí domén.
+Tyto hodnoty jsou dále nedělitelné.</p>
+<p>Vlastnosti databázové tabulky</p>
+<ul class="simple">
+<li>jednoznačné jméno tabulky a jednotlivých sloupců</li>
+<li>vsechny hodnoty v jednom sloupci jsou stejného typu</li>
+<li>na pořadí sloupců a řádků nezáleží</li>
+<li>nemá duplicitní řádky</li>
+<li>každá tabulka má primární klíč</li>
+</ul>
+</div>
+<div class="section" id="transformace-er-modelu-do-relacniho-modelu">
+<h2>Transformace ER modelu do relačního modelu<a class="headerlink" href="#transformace-er-modelu-do-relacniho-modelu" title="Permalink to this headline">¶</a></h2>
+<p>typ entity =&gt; tabulka, její sloupce odpovídají atributům
+asociace =&gt; tabulka, která obsahuje primární klíče účastníků vztahu,</p>
+<p>Vztahy v databázi</p>
+<ul class="simple">
+<li>1:1 , N:1 - není nutná nová tabulka u N:1 stačí zahrnout cizí klíč na stranu N</li>
+<li>1:1 – je-li účast na vztahu oboustranná =&gt; sloučit do jedné tabulky je-li jednostranná, pak zahrnout cizí klíč k povinné části vztahu</li>
+<li>N:N - nutno řešit vazební tabulkou</li>
+</ul>
+</div>
+<div class="section" id="normalni-formy-relaci">
+<h2>Normální formy relací<a class="headerlink" href="#normalni-formy-relaci" title="Permalink to this headline">¶</a></h2>
+<p>Snaha o takové relace, kde budou</p>
+<ol class="arabic simple">
+<li>odstraněny nadbytečnosti (redundance)</li>
+<li>mít zjednodušenou kontrolu integrity</li>
+<li>odolné vůči anomáliím při údržbě dat</li>
+</ol>
+<p>K tomuto účelu slouží proces normalizace tabulek, tedy formální technika pro návrh relačních db tabulek.
+Postupná dekompozice původních tabulek na základě analýzy závislostí atributů.</p>
+<p>Existují různé úrovně normalizace = normální formy relací</p>
+<ol class="arabic simple">
+<li><ol class="first arabic">
+<li>NF všechny hodnoty jsou atomické</li>
+</ol>
+</li>
+<li><ol class="first arabic" start="2">
+<li>NF splňuje požadavky 1. NF a každý neklíčový atribut je plně funkčně závislý na primárním klíči</li>
+</ol>
+</li>
+<li><ol class="first arabic" start="3">
+<li>NF splňuje požadavky 2. NF a všechny neklíčové atributy jsou vzájemně neklíčové</li>
+</ol>
+</li>
+</ol>
+</div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2014, Michael Kutý.<br/>
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.2.3.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

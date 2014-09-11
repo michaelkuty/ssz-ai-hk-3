@@ -1,0 +1,81 @@
+======
+Otázka č. 3. Konceptuální modelování. E-R model a jeho grafické znázornění. Relační model. Typy vztahů mezi entitami a jejich reprezentace v relačním modelu. Vlastnosti relační tabulky. Normální formy relačního schématu.
+======
+
+Podle ANSI/SPARC architektury databázových systému lze rozlišit tři úrovně návrhu:
+
+* externí hladina - odpovídá pohledu jednotlivých skupin uživatelů
+* konceptuální hladina -  celkový logický pohled na data, její vytvoření = první krok databázového návrhu
+* interní hladina popis dat na nižší úrovni, interface pro operační systém
+
+Konceptuální modelování tvoří:
+
+* návrh struktury dat na konceptuální úrovni
+* analýza požadavků a jejich zobrazení pomocí grafických prostředků
+
+Základní prvky
+
+* entity - objekt reálného světa, schopen samostatné existence je odlišitelný od ostatních objektů
+* vztahy
+* atributy - vlastnost entity (nebo vztahu), doména atributu = přípustné hodnoty, jednoduchý atribut = dále nedělitelný (primitivní datový typ), složený atribut = dělitelný, např. adresa (objekty) - jeden z používaných postupů = entitně relační (ER) modelování (různé notace dle Chena, UML Class Diagram...)
+
+
+Entitně Relační model kromě entit, vztahů a atributů pracuje také s
+
+* typem entity (třídou) – množina objektů stejného typu
+* kardinalitou vztahů – násobnost, např. 1:1, m:1, m:n ...
+* klíči  kandidátní klíč = minimální množina atributů pro jednoznačnou identifikaci entity, primární klíč = kandidátní klíč, který byl vybrán k té identifikaci
+
+Rozšířený ER model = EER
+zavádí supertřídu / podtřídu (tvoří IS-A hierarchii), existuje zde dědičnost vztahů, pro grafické znázornění lze použít např. diagram tříd z UML, kromě prostých vztahů také poskytuje kompozice a generalizace
+
+Relační model dat
+------
+Základní struktura = relace (definovaná jako podmnožina kartézského součinu n množin). 
+Cíly zavedení byly:
+
+* disciplína v manipulaci s daty
+* zabezpečení nezávislosti dat
+* vyšší produktivita programování
+
+Samotná databáze je potom kolekce relací, které jsou reprezentované tabulkami (tzn. Všechny informace jsou v tabulkách).
+Oproti matematické definici relaci je databázová relace vybavena pomocnou strukturou jménem relace, jmény atributů a definicí domén.
+Tyto hodnoty jsou dále nedělitelné.
+        
+Vlastnosti databázové tabulky
+
+* jednoznačné jméno tabulky a jednotlivých sloupců
+* vsechny hodnoty v jednom sloupci jsou stejného typu
+* na pořadí sloupců a řádků nezáleží
+* nemá duplicitní řádky
+* každá tabulka má primární klíč
+
+
+Transformace ER modelu do relačního modelu 
+-----
+typ entity => tabulka, její sloupce odpovídají atributům
+asociace => tabulka, která obsahuje primární klíče účastníků vztahu,
+
+Vztahy v databázi
+
+* 1:1 , N:1 - není nutná nová tabulka u N:1 stačí zahrnout cizí klíč na stranu N
+* 1:1 – je-li účast na vztahu oboustranná => sloučit do jedné tabulky je-li jednostranná, pak zahrnout cizí klíč k povinné části vztahu
+* N:N - nutno řešit vazební tabulkou
+
+Normální formy relací
+-----
+Snaha o takové relace, kde budou
+
+1. odstraněny nadbytečnosti (redundance)
+2. mít zjednodušenou kontrolu integrity
+3. odolné vůči anomáliím při údržbě dat
+
+K tomuto účelu slouží proces normalizace tabulek, tedy formální technika pro návrh relačních db tabulek.
+Postupná dekompozice původních tabulek na základě analýzy závislostí atributů.
+
+Existují různé úrovně normalizace = normální formy relací
+
+1. 1. NF všechny hodnoty jsou atomické
+2. 2. NF splňuje požadavky 1. NF a každý neklíčový atribut je plně funkčně závislý na primárním klíči
+3. 3. NF splňuje požadavky 2. NF a všechny neklíčové atributy jsou vzájemně neklíčové
+        
