@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Management (správa) sítě &mdash; Otazky na statnice 0.0.1 documentation</title>
+    
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-3.1.0/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-3.1.0/css/bootstrap-theme.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '0.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-3.1.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <link rel="top" title="Otazky na statnice 0.0.1 documentation" href="../index.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+  </head>
+  <body>
+
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../index.html">
+          Otazky na statnice</a>
+        <span class="navbar-text navbar-version pull-left"><b>0.0.1</b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            <li class="divider-vertical"></li>
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="../index.html">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"></ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
+<li><a class="reference internal" href="#">Management (správa) sítě</a><ul>
+<li><a class="reference internal" href="#nms-manager-agent">NMS - Manager - Agent</a></li>
+<li><a class="reference internal" href="#agent">Agent</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#wifi">WIFI</a><ul>
+<li><a class="reference internal" href="#zabezpeceni">Zabezpečení</a></li>
+<li><a class="reference internal" href="#pasma">Pásma</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#s-postupnym-rustem-site-se-v-ni-musi-nachazet-vice-zarizeni">S postupným růstem sítě se v ní musí nacházet více zařízení</a><ul>
+<li><a class="reference internal" href="#paterni-vrstva-core">Páteřní vrstva (Core)</a></li>
+<li><a class="reference internal" href="#vyuziti-dvou-rovnocennych-cest-kazdeho-core-zarizeni-pro-spojeni-s-distribucni-vrstvou">Využití dvou rovnocenných cest každého core zařízení pro spojení s distribuční vrstvou</a></li>
+<li><a class="reference internal" href="#distribucni-vrstva-distribution">Distribuční vrstva (Distribution)</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#vpn">VPN</a></li>
+<li><a class="reference internal" href="#systemy-pro-vzdaleny-pristup">Systémy pro vzdálený přístup</a><ul>
+<li><a class="reference internal" href="#terminal-emulation-when-used-to-interface-with-a-remote-system-may-use-standard-tools-like">Terminal emulation - when used to interface with a remote system. May use standard tools like:</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#snmp">SNMP</a><ul>
+<li><a class="reference internal" href="#management-information-base-mib">Management Information Base (MIB)</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#nastroje-pro-monitoring-management-a-analyzu-pocitacove-site">Nástroje pro monitoring, management a analýzu počítačové sítě</a><ul>
+<li><a class="reference internal" href="#komercni-reseni">Komerční řešení</a></li>
+<li><a class="reference internal" href="#open-source-reseni">Open source řešení</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+              
+            
+            
+            
+            
+              <li class="hidden-sm">
+<div id="sourcelink">
+  <a href="../_sources/tech/11.txt"
+     rel="nofollow">Source</a>
+</div></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      
+  <hr class="docutils" />
+<div class="section" id="management-sprava-site">
+<h1>Management (správa) sítě<a class="headerlink" href="#management-sprava-site" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li>je výkon funkcí požadovaných pro kontrolu, plánování, rozvržení, rozmístění, koordinaci a monitorování zdrojů sítě*</li>
+<li>Počáteční plánování sítě</li>
+<li>Konfigurace sítě a řešení závad</li>
+<li>Nastavení výkonu sítě a směrování provozu</li>
+<li>Aplikování bezpečnostních politik v síti</li>
+<li>Accounting v síti</li>
+<li>Management zátěže v síti</li>
+<li>Automatická detekce/prevence průniků do sítě</li>
+<li>Detekce a případná oprava havárií v síti</li>
+<li>Signalizace chybových stavů v síti</li>
+<li>Správa aktivních prvků v síti</li>
+<li>Dozor nad službami v síti</li>
+<li>Podpora a rozvoj systému pro management sítě</li>
+<li>Tvorba statistik a přehledů</li>
+</ul>
+<div class="section" id="nms-manager-agent">
+<h2>NMS - Manager - Agent<a class="headerlink" href="#nms-manager-agent" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Přenos a komunikace mezi správcem sítě a agenty na jednotlivých síťových zařízeních (servery, stanice, aktivní prvky)</li>
+<li>Každé zařízení o sobě poskytuje informace</li>
+</ul>
+</div>
+<div class="section" id="agent">
+<h2>Agent<a class="headerlink" href="#agent" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Malý program, reprezentující dané zařízení, který neustále monitoruje a sbírá informace o všech dostupných funkcích a stavech daného zařízení</li>
+<li>Ukládá je do speciální databáze (management database)</li>
+<li>Veškerá komunikace mezi manažerem a agentem je vykonávána</li>
+</ul>
+<p>prostřednictvím Network Management Protocol</p>
+</div>
+</div>
+<div class="section" id="wifi">
+<h1>WIFI<a class="headerlink" href="#wifi" title="Permalink to this headline">¶</a></h1>
+<p>Wi-Fi (nebo také Wi-fi, WiFi, Wifi, wi-fi, wifi) je v informatice označení pro několik standardů IEEE 802.11 popisujících bezdrátovou komunikaci v počítačových sítích (též Wireless LAN, WLAN). Samotný název WiFi vytvořilo Wireless Ethernet Compatibility Aliance. Tato technologie využívá bezlicenčního frekvenčního pásma, proto je ideální pro budování levné, ale výkonné sítě bez nutnosti pokládky kabelů. Název původně neměl znamenat nic,[1] ale časem se z něj stala slovní hříčka wireless fidelity (bezdrátová věrnost) analogicky k Hi-Fi (high fidelity – vysoká věrnost).</p>
+<div class="section" id="zabezpeceni">
+<h2>Zabezpečení<a class="headerlink" href="#zabezpeceni" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>WEP</li>
+<li>WPA</li>
+<li>WPA2</li>
+</ul>
+</div>
+<div class="section" id="pasma">
+<h2>Pásma<a class="headerlink" href="#pasma" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>2.4GHz</li>
+<li>5Ghz</li>
+</ul>
+</div>
+</div>
+<div class="section" id="s-postupnym-rustem-site-se-v-ni-musi-nachazet-vice-zarizeni">
+<h1>S postupným růstem sítě se v ní musí nacházet více zařízení<a class="headerlink" href="#s-postupnym-rustem-site-se-v-ni-musi-nachazet-vice-zarizeni" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li>Proto je vhodné je rozdělit podle funkce, kterou mají v síti plnit, a organizovat je ve vrstvách</li>
+<li>Jisté zařízení budou sloužit k připojení koncových zařízení k síti</li>
+<li>Jiné, vyšší zařízení budou navzájem propojovat přístupové zařízení. Přitom mohou vykonávat bezpečnostní nebo ukončující operace</li>
+<li>Zařízení na vyšší úrovni budou tvořit páteř celé sítě</li>
+<li>Tento systém třech vrstev – přístupové, distribuční a páteřní je klasický starší trojvrstvý model sítě</li>
+</ul>
+<img alt="../_images/layers.png" src="../_images/layers.png" />
+<div class="section" id="paterni-vrstva-core">
+<h2>Páteřní vrstva (Core)<a class="headerlink" href="#paterni-vrstva-core" title="Permalink to this headline">¶</a></h2>
+<ul>
+<li><p class="first">Je obvykle směrovaná s nutností rychlé konvergence</p>
+</li>
+<li><p class="first">Obsahuje redundantní spoje s dostatečnou kapacitou, zajišťuje vysokorychlostní přepínání s směrování, implementuje QoS mechanismy</p>
+</li>
+<li><dl class="first docutils">
+<dt>Využití směrování (L3), které garantuje topologii s využitím všech agregovaných a redundantních linek (proti L2 STP)</dt>
+<dd><ul class="first last simple">
+<li>Dynamické směrovací protokoly jsou preferované proti využití STP protokolu, protože tento koncept dovoluje využití konvergence a equal/unequal load balancingu skrze více cest</li>
+<li>Je preferované využití protokolu OSPF, díky jeho otevřenému standardu a multivendor interoperabilitě.</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Využití Layer 3 přepínačů v core vrstvě, které poskytují pokročilé služby, jež Layer 2 přepínače nepodporují</dt>
+<dd><ul class="first last simple">
+<li>Inter-VLAN routing</li>
+<li>Podpora dynamických směrovacích protokolů</li>
+<li>Virtualizace síťových prvků (stále proprietální technolgie Cisco Systems – VSS Virtual Switching System na Catalyst 6500)</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div>
+<div class="section" id="vyuziti-dvou-rovnocennych-cest-kazdeho-core-zarizeni-pro-spojeni-s-distribucni-vrstvou">
+<h2>Využití dvou rovnocenných cest každého core zařízení pro spojení s distribuční vrstvou<a class="headerlink" href="#vyuziti-dvou-rovnocennych-cest-kazdeho-core-zarizeni-pro-spojeni-s-distribucni-vrstvou" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>2 aktivní cesty poskytují větší šířku pásma než 1 aktivní a 1 záložní cesta (dynamic routing vs. STP)</li>
+</ul>
+</div>
+<div class="section" id="distribucni-vrstva-distribution">
+<h2>Distribuční vrstva (Distribution)<a class="headerlink" href="#distribucni-vrstva-distribution" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Je obvykle směrovaná</li>
+<li>Ukončuje VLANy, zajišťuje inter-VLAN routing, sumarizuje adresní rozsahy přístupové vrstvy, implementuje bezpečnostní mechanismy při komunikaci, zajišťuje QoS mechanismy</li>
+<li>Propojení distribučních přepínačů s vícero přepínači na přístupové vrstvě. To dovolí existenci záložních cest</li>
+</ul>
+<img alt="../_images/distribution_layer.png" src="../_images/distribution_layer.png" />
+<p>Přístupová vrstva (Access)</p>
+<ul class="simple">
+<li>Obvykle přepíná, v poslední době je i směrovaná</li>
+<li>Zajišťuje přístup klientů do sítě, zařazení do VLAN, implementuje bezpečnostní mechanismy při přístupu a komunikaci, zajišťuje QoS mechanismy</li>
+</ul>
+</div>
+</div>
+<div class="section" id="vpn">
+<h1>VPN<a class="headerlink" href="#vpn" title="Permalink to this headline">¶</a></h1>
+<p>Virtuální privátní síť (zkratka VPN, anglicky virtual private network) je v informatice prostředek k propojení několika počítačů prostřednictvím (veřejné) nedůvěryhodné počítačové sítě. Lze tak snadno dosáhnout stavu, kdy spojené počítače budou mezi sebou moci komunikovat, jako kdyby byly propojeny v rámci jediné uzavřené privátní (a tedy důvěryhodné) sítě. Při navazování spojení je totožnost obou stran ověřována pomocí digitálních certifikátů, dojde k autentizaci, veškerá komunikace je šifrována, a proto můžeme takové propojení považovat za bezpečné.</p>
+</div>
+<div class="section" id="systemy-pro-vzdaleny-pristup">
+<h1>Systémy pro vzdálený přístup<a class="headerlink" href="#systemy-pro-vzdaleny-pristup" title="Permalink to this headline">¶</a></h1>
+<p>Connection to a data-processing system from a remote location, for example through a virtual private network
+Remote desktop software, refers to a software or an OS feature allowing applications to be run remotely on a server while being graphically displayed locally</p>
+<div class="section" id="terminal-emulation-when-used-to-interface-with-a-remote-system-may-use-standard-tools-like">
+<h2>Terminal emulation - when used to interface with a remote system. May use standard tools like:<a class="headerlink" href="#terminal-emulation-when-used-to-interface-with-a-remote-system-may-use-standard-tools-like" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Telnet, software used to remotely control a computer system</li>
+<li>ssh, secure shell often used with remote applications</li>
+<li>Activation of features of a business telephone system from outside the business&#8217;s premises</li>
+<li>RemoteAccess, a DOS-based bulletin board system</li>
+<li>Remote Database Access, a protocol standard for database access</li>
+</ul>
+</div>
+</div>
+<div class="section" id="snmp">
+<h1>SNMP<a class="headerlink" href="#snmp" title="Permalink to this headline">¶</a></h1>
+<p>Simple Network Management Protocol (SNMP) je součástí sady internetových protokolů. Slouží potřebám správy sítí. Umožňuje průběžný sběr nejrůznějších dat pro potřeby správy sítě, a jejich následné vyhodnocování. Na tomto protokolu je dnes založena většina prostředků a nástrojů pro správu sítě.</p>
+<p>Má tři verze: druhá obsahuje navíc autentizaci a třetí šifrování. Nejvíce zařízení podporuje druhou verzi.</p>
+<p>Rozlišuje se mezi stranou monitorovanou (hlídaný systém) a monitorovací (sběrna dat). Tyto strany mohou běžet buď odděleně na různých fyzických strojích, nebo v rámci jednoho stroje. Na monitorované straně je spuštěn agent a na straně monitorovací manager. Na straně monitorované jsou operativně shromažďovány informace o stavu systému (zařízení). Manager vznáší požadavky agentovi, zpravidla na zaslání požadovaných informací (zpráv). Agent zajišťuje realizaci reakcí na požadavky managera. Získaný obsah zpráv se na straně monitorovací může dále různým způsobem zpracovávat (tabulky, grafy, …). Komunikace mezi agentem a managerem se označuje jako SNMP operace.</p>
+<p>Na straně monitorované může existovat možnost takové konfigurace, kdy agent zašle managerovi informace (SNMP MESSAGE) automaticky bez jeho požadavku. K tomu dojde zpravidla potom, kdy byla splněna předem definovaná podmínka (výpadek, kolize, dosažení hraniční hodnoty, …), agent nečeká na odpověď. Takové konfiguraci agenta se říká SNMP TRAP (tzv. past na události).</p>
+<ul>
+<li><dl class="first docutils">
+<dt>GetRequest</dt>
+<dd><ul class="first last simple">
+<li>žádost o informaci, kterou posílá Manager Agentovi, o stavu nebo hodnotě jistého objektu. („Read“)</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>GetNextRequest</dt>
+<dd><ul class="first last simple">
+<li>žádost o další informaci v hierarchickyorganizované nižší vrstvě MIB struktury</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>GetResponse</dt>
+<dd><ul class="first last simple">
+<li>tento příkaz je vyslán Agentem jako odpověď na příkaz GetRequest -návrat vyžádané informace</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>SetRequest</dt>
+<dd><ul class="first last simple">
+<li>příkaz nastavuje hodnotu proměnné v MIB Agenta. („Write“). Ne všichni výrobci</li>
+<li>SNMP zařízení jej umožňují</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Trap</dt>
+<dd><ul class="first last simple">
+<li>Příkaz je vyslán Agentem Managerovi jako oznámení nějaké významné události</li>
+<li>Na rozdíl od předchozích příkazů, není očekávaná odpověď</li>
+<li>Výrobci definují vlastní Trapy, specifické pro jejich zařízení</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+<div class="section" id="management-information-base-mib">
+<h2>Management Information Base (MIB)<a class="headerlink" href="#management-information-base-mib" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Popisuje sadu objektů správy</li>
+<li>Spravované zařízení může implementovat jednu nebo více MIB, v závislosti na funkci. popisují strukturu a formát dat</li>
+<li>MIB jsou napsány dle Structure of Management Information(SMI)</li>
+<li>popsány v dokumentech RFC1155, RFC1212 a RFC1215</li>
+</ul>
+</div>
+</div>
+<div class="section" id="nastroje-pro-monitoring-management-a-analyzu-pocitacove-site">
+<h1>Nástroje pro monitoring, management a analýzu počítačové sítě<a class="headerlink" href="#nastroje-pro-monitoring-management-a-analyzu-pocitacove-site" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="komercni-reseni">
+<h2>Komerční řešení<a class="headerlink" href="#komercni-reseni" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>obvykle velmi nákladné</li>
+<li>výhodou je zajištěná podpora, upgrade a servis systému</li>
+<li>není třeba „rozsáhlých“ znalostí</li>
+<li>systém by měl automaticky zastat svěřené úkoly</li>
+<li>HP Openview, IBM TIVOLI</li>
+</ul>
+</div>
+<div class="section" id="open-source-reseni">
+<h2>Open source řešení<a class="headerlink" href="#open-source-reseni" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>obvykle zahrnuje pouze náklady spojené s instalací a nastavením</li>
+<li>umožňují volitelné sestavení a konfiguraci systému</li>
+<li>klade řádově vyšší nároky na správce</li>
+<li>musí být schopen takovýto systém navrhnout a vytvořit</li>
+<li>často je vyčítána nedostatečná podpora plynoucí z podstaty OpenSource či vyšší závislost na správci sítě</li>
+<li>jedná se však o velmi oblíbené a rozšířené nástroje, které může aplikovat prakticky kdokoliv s uživatelskou znalostí Linux a Windows</li>
+</ul>
+</div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2014, Michael Kutý.<br/>
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.2.3.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

@@ -62,6 +62,9 @@ Syntaxe - **reStructuredText**
 * SublimeText plugin https://sublime.wbond.net/packages/RestructuredText%20Improved
 * SublimeText plugin https://github.com/mgaitan/sublime-rst-completion
 * dostupné formáty pro export http://sphinx-doc.org/builders.html
+* Auto build https://pypi.python.org/pypi/sphinx-autobuild
+	* pip install watchdog  
+	* watchmedo shell-command --patterns=*.rst --recursive --command='sphinxuild -b html ./source/ ./' 
 
 Jak přispět ?
 ------

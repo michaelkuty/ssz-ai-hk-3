@@ -1,5 +1,4 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
 
 
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -8,8 +7,11 @@
     
     <title>7. ETHERNET (principy fungování, vývoj a topologie, přístupová metoda, síťová karta, strukturovaná kabeláž) &mdash; Otazky na statnice 0.0.1 documentation</title>
     
-    <link rel="stylesheet" href="../_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-3.1.0/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-3.1.0/css/bootstrap-theme.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
     
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
@@ -24,24 +26,122 @@
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
     <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <link rel="top" title="Otazky na statnice 0.0.1 documentation" href="../index.html" /> 
+    <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-3.1.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <link rel="top" title="Otazky na statnice 0.0.1 documentation" href="../index.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
   </head>
   <body>
-    <div class="related">
-      <h3>Navigation</h3>
-      <ul>
-        <li class="right" style="margin-right: 10px">
-          <a href="../genindex.html" title="General Index"
-             accesskey="I">index</a></li>
-        <li><a href="../index.html">Otazky na statnice 0.0.1 documentation</a> &raquo;</li> 
-      </ul>
-    </div>  
 
-    <div class="document">
-      <div class="documentwrapper">
-        <div class="bodywrapper">
-          <div class="body">
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../index.html">
+          Otazky na statnice</a>
+        <span class="navbar-text navbar-version pull-left"><b>0.0.1</b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            <li class="divider-vertical"></li>
             
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="../index.html">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"></ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
+<li><a class="reference internal" href="#">7. ETHERNET (principy fungování, vývoj a topologie, přístupová metoda, síťová karta, strukturovaná kabeláž)</a><ul>
+<li><a class="reference internal" href="#preamble">Preamble</a></li>
+<li><a class="reference internal" href="#sof">SOF</a><ul>
+<li><a class="reference internal" href="#data">Data</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#pristupove-metoda">Přístupové metoda</a><ul>
+<li><a class="reference internal" href="#skupiny-metod">skupiny metod:</a></li>
+<li><a class="reference internal" href="#staticke-pristupove-metody-dano-konstrukci-zarizeni">STATICKÉ PŘÍSTUPOVÉ METODY - dáno konstrukcí zařízení</a></li>
+<li><a class="reference internal" href="#frekvencni-multiplex">Frekvenční multiplex</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#distribuovane-pristupove-metody">DISTRIBUOVANÉ PŘÍSTUPOVÉ METODY</a></li>
+<li><a class="reference internal" href="#nahodne-pristupove-metody">NÁHODNÉ PŘÍSTUPOVÉ METODY</a><ul>
+<li><a class="reference internal" href="#aloha">ALOHA</a></li>
+<li><a class="reference internal" href="#csma-carrier-sense-multiple-access">CSMA (Carrier sense multiple access)</a></li>
+<li><a class="reference internal" href="#csma-cd-with-collision-detection">3. CSMA/CD  (with Collision Detection)</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#klicem-k-dobremu-navrhu-site-je-jeji-hierarchicky-design">Klíčem k dobrému návrhu sítě je její hierarchický design</a><ul>
+<li><a class="reference internal" href="#hierarchicka-sit">Hierarchická síť</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+              
+            
+            
+            
+            
+              <li class="hidden-sm">
+<div id="sourcelink">
+  <a href="../_sources/tech/7.txt"
+     rel="nofollow">Source</a>
+</div></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      
   <div class="section" id="ethernet-principy-fungovani-vyvoj-a-topologie-pristupova-metoda-sitova-karta-strukturovana-kabelaz">
 <h1>7. ETHERNET (principy fungování, vývoj a topologie, přístupová metoda, síťová karta, strukturovaná kabeláž)<a class="headerlink" href="#ethernet-principy-fungovani-vyvoj-a-topologie-pristupova-metoda-sitova-karta-strukturovana-kabelaz" title="Permalink to this headline">¶</a></h1>
 <p>Technologie pro lokální počítačové sítě, založená na přenosech paketů. Definuje vedení a jeho instalaci, formáty paketů, protokoly a metodu řízení přístupu (CSMA/CD). Původ něnavržena firmou Xerox Corporation, pracující rychlostí10 Mbit/s s použitím přístupové metody CSMA/CD na koaxiálním kabelu. Bob Metcalfe nazval novou technologii s všesměrovým vysíláním dle teoriez  19. století o neprostupujícím &#8220;etheru&#8221;, kterým se šíří elektromagnetické vlny &#8220;Ether&#8221; net.
@@ -235,73 +335,91 @@ jednodušší než implementace různých logických kruhů</p>
 <p>Používá se v&nbsp;sítích ETHERNET, Fast Ethernet a Gigabit ETHERNET.</p>
 </div>
 </div>
+<div class="section" id="klicem-k-dobremu-navrhu-site-je-jeji-hierarchicky-design">
+<h2>Klíčem k dobrému návrhu sítě je její hierarchický design<a class="headerlink" href="#klicem-k-dobremu-navrhu-site-je-jeji-hierarchicky-design" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="hierarchicka-sit">
+<h3>Hierarchická síť<a class="headerlink" href="#hierarchicka-sit" title="Permalink to this headline">¶</a></h3>
+<ul>
+<li><p class="first">Ohraničuje velikost a rozsah kolizních domén</p>
+</li>
+<li><p class="first">Zjednodušuje činnost různých mechanismů, které pracují v jednotlivých oblastech sítě</p>
+</li>
+<li><p class="first">Dovoluje efektivně přidělovat adresy a lehce je sumarizovat ve směrovacích protokolech</p>
+</li>
+<li><p class="first">Zpřehledňuje toky dat</p>
+</li>
+<li><p class="first">Jasně odděluje funkční bloky pro Layer 2 a Layer 3</p>
+</li>
+<li><dl class="first docutils">
+<dt>Voice and video traffic</dt>
+<dd><ul class="first last simple">
+<li>IP telefonie, video, konference</li>
+<li>Jedná se o real-time data a ty vyžadují použití QoS nástrojů pro garanci jejich včasného doručení</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Voice application traffic</dt>
+<dd><ul class="first last simple">
+<li>Data související s provozem datových služeb, např. kontaktní centra</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Mission- crirical traffic</dt>
+<dd><ul class="first last simple">
+<li>Data aplikací kritického významu pro podnik</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Transactional traffic</dt>
+<dd><ul class="first last simple">
+<li>Aplikace pro e-commerce</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Routing protocol traffic</dt>
+<dd><ul class="first last simple">
+<li>Provoz generovaný směrovacími protokoly</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Network management traffic</dt>
+<dd><ul class="first last simple">
+<li>Dohledové protokoly nad sítí</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div>
+</div>
 </div>
 
 
-          </div>
-        </div>
-      </div>
-      <div class="sphinxsidebar">
-        <div class="sphinxsidebarwrapper">
-  <h3><a href="../index.html">Table Of Contents</a></h3>
-  <ul>
-<li><a class="reference internal" href="#">7. ETHERNET (principy fungování, vývoj a topologie, přístupová metoda, síťová karta, strukturovaná kabeláž)</a><ul>
-<li><a class="reference internal" href="#preamble">Preamble</a></li>
-<li><a class="reference internal" href="#sof">SOF</a><ul>
-<li><a class="reference internal" href="#data">Data</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#pristupove-metoda">Přístupové metoda</a><ul>
-<li><a class="reference internal" href="#skupiny-metod">skupiny metod:</a></li>
-<li><a class="reference internal" href="#staticke-pristupove-metody-dano-konstrukci-zarizeni">STATICKÉ PŘÍSTUPOVÉ METODY - dáno konstrukcí zařízení</a></li>
-<li><a class="reference internal" href="#frekvencni-multiplex">Frekvenční multiplex</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#distribuovane-pristupove-metody">DISTRIBUOVANÉ PŘÍSTUPOVÉ METODY</a></li>
-<li><a class="reference internal" href="#nahodne-pristupove-metody">NÁHODNÉ PŘÍSTUPOVÉ METODY</a><ul>
-<li><a class="reference internal" href="#aloha">ALOHA</a></li>
-<li><a class="reference internal" href="#csma-carrier-sense-multiple-access">CSMA (Carrier sense multiple access)</a></li>
-<li><a class="reference internal" href="#csma-cd-with-collision-detection">3. CSMA/CD  (with Collision Detection)</a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-
-  <h3>This Page</h3>
-  <ul class="this-page-menu">
-    <li><a href="../_sources/tech/7.txt"
-           rel="nofollow">Show Source</a></li>
-  </ul>
-<div id="searchbox" style="display: none">
-  <h3>Quick search</h3>
-    <form class="search" action="../search.html" method="get">
-      <input type="text" name="q" />
-      <input type="submit" value="Go" />
-      <input type="hidden" name="check_keywords" value="yes" />
-      <input type="hidden" name="area" value="default" />
-    </form>
-    <p class="searchtip" style="font-size: 90%">
-    Enter search terms or a module, class or function name.
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
     </p>
-</div>
-<script type="text/javascript">$('#searchbox').show(0);</script>
-        </div>
-      </div>
-      <div class="clearer"></div>
-    </div>
-    <div class="related">
-      <h3>Navigation</h3>
-      <ul>
-        <li class="right" style="margin-right: 10px">
-          <a href="../genindex.html" title="General Index"
-             >index</a></li>
-        <li><a href="../index.html">Otazky na statnice 0.0.1 documentation</a> &raquo;</li> 
-      </ul>
-    </div>
-    <div class="footer">
-        &copy; Copyright 2014, Michael Kutý.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.3.
-    </div>
+    <p>
+        &copy; Copyright 2014, Michael Kutý.<br/>
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.2.3.<br/>
+    </p>
+  </div>
+</footer>
   </body>
 </html>

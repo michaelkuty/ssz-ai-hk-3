@@ -160,3 +160,28 @@ jednodušší než implementace různých logických kruhů
 stanice nemusí být již nijak zvlášť dále synchronizovány (děje se automaticky jako vedlejší efekt)
 
 Používá se v sítích ETHERNET, Fast Ethernet a Gigabit ETHERNET.
+
+Klíčem k dobrému návrhu sítě je její hierarchický design 
+---------
+
+Hierarchická síť 
+""""""""
+* Ohraničuje velikost a rozsah kolizních domén 
+* Zjednodušuje činnost různých mechanismů, které pracují v jednotlivých oblastech sítě 
+* Dovoluje efektivně přidělovat adresy a lehce je sumarizovat ve směrovacích protokolech 
+* Zpřehledňuje toky dat 
+* Jasně odděluje funkční bloky pro Layer 2 a Layer 3 
+ 
+* Voice and video traffic
+	* IP telefonie, video, konference 
+	* Jedná se o real-time data a ty vyžadují použití QoS nástrojů pro garanci jejich včasného doručení 
+* Voice application traffic 
+	* Data související s provozem datových služeb, např. kontaktní centra 
+* Mission- crirical traffic 
+	* Data aplikací kritického významu pro podnik 
+* Transactional traffic 
+	* Aplikace pro e-commerce 
+* Routing protocol traffic 
+	* Provoz generovaný směrovacími protokoly 
+* Network management traffic 
+	* Dohledové protokoly nad sítí 
