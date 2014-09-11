@@ -1,0 +1,95 @@
+========
+6. Námětové mapy: standard Topic Maps a jeho součásti, základní stavební prvky námětové mapy, postup tvorby námětové mapy, implementace námětových map (prostředí, syntaxe), dotazování se na námětové mapy, odvozování s námětovými mapami, aplikace námětových map.
+========
+
+Struktura mapy (ontologie) má části:
+* Topic type - typ námětu, třída
+* Association type - typ asociace
+* Occurrence type - typ výskytu
+* Role type - typ role
+* Name type - typ názvu
+
+Topic námět, instance
+""""""
+* Typ námětu (topic type) vystihuje skupinu prvků, ke kterým námět náleží na základě společných charakteristik 
+• Odpovídá pojmu třída v ontologii 
+
+Příklady:
+^^^^^^
+• Jazyk
+• Opera
+• Skladatel
+
+Námět 
+^^^^^^
+
+* Námět (topic) představuje konkrétní prvek, o kterém uvádíme jeho vlastnosti a vztahy k dalším námětům 
+• Odpovídá pojmu jedinec v ontologii 
+
+Typ asociace
+^^^^^^^
+
+* Association type, Association class (angl.)
+* Obecný předpis vztahu mezi typy námětů
+* různé pojetí
+* Šablona pro tvorbu konkrétních asociací
+* Třída konkrétních asociací
+* Odpovídá pojmu asociační třída
+* Zpravidla podstatní jméno, sloveso není výjimkou
+* Typ asociace není orientován, namísto směru se používají typy rolí
+* Typu asociace lze přiřadit různé názvy z hlediska jednotlivých typů rolí
+
+**Příklady**
+
+• composed... aktéři v roli: Artist, Work
+• bornIn ... aktéři v roli: Person, Place
+
+
+Asociace
+^^^^^^^
+* Association (angl.)
+* Vyjadřuje konkrétní vztah mezi náměty
+* Základ sémantické sítě (či „znalostní mapy“)
+* Odpovídá pojmu „konkrétní“ objektová relace v ontologii
+
+**Příklady**
+
+• Puccini zkomponoval (composed) Tosca
+* Puccini a Tosca jsou konkrétní hráči v asociaci zkomponoval
+* Puccini narodil-se-v (bornIn) Lucca
+* Puccini a Lucca jsou konkrétní hráči v asociaci narodil-se-v
+
+Typ role
+""""""
+
+*Vyjadřuje způsob účasti aktéra v asociaci*
+* „role“ používané v ontologii: nepřesně vyjádřeno v podobě D(f) a H(f)
+
+**Příklad:**
+
+* Role Tvůrce, použití v asociacích:
+	* Zkomponoval ... aktéři v roli: Skladatel
+	* Napsal ... aktéři v roli: Spisovatel
+
+* Asociace není orientovaná, namísto směru se používají role
+
+Typ výskytu Výskyt
+"""""""
+
+* Typ výskytu (occurrence type) vyjadřuje obecný 
+* Výskyt (occurrence) popisuje vztah mezi konkrétním námětem a předpis vztahu mezi námětem a informací konkrétní informací o předmětu
+* Rozlišujeme interní typ výskyt (= atribut) a externí 
+* Odpovídá pojmu „hodnota“ datotypové relace v ontologii (odkaz na zdroj informací, typicky URL) 
+
+• Interní výskyt (internal occurrence)
+	* Vlastnost, atribut, řetězec
+	* Hodnota uložena přímo v námětové mapě
+	* Příklad interního výskytu: 12. 12. 2010
+	* interní typ výskytu: datum narození
+* Externí výskyt (external occurrence)
+	* Příklad: datum narození, popis, číslo kanceláře
+	* Určený pomocí lokátoru, např. URL
+	* Hodnota dostupná např. na Internetu (mimo mapu)
+	* Příklad externího výskytu: http://web.mit.edu/
+	* Externí typ výskytu
+	* Příklad: webová stránka, zvuková nahrávka

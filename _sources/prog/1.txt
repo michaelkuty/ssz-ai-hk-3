@@ -2,6 +2,9 @@
 Otázka PROG č.1 - Logický program - struktura, základní pojmy, datová struktura seznam, práce s databází Prologu. Hlavní odlišnosti oproti procedurálnímu programování, možnosti použití neprocedurálního programovacího jazyka.
 ==========
 
+.. toctree::
+   :maxdepth: 2
+
 Prolog je jazyk pro programování symbolických výpočtů. Jeho název, odvozený ze slov PROgramování v LOGice, naznačuje, že jazyk vychází z principů matematické logiky. Jeho úspěch byl podnětem pro vznik nové disciplíny matematické informatiky – logického programování, což je perspektivní styl programování na vyšší abstraktní úrovni.
 
 Prolog je také strojovým jazykem nejmodernějších počítačů. Má doposud specifické oblasti použití - umělou inteligenci, znalostní inženýrství, atp.
