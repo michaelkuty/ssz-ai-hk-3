@@ -1,0 +1,3 @@
+=======
+Servery a pracovní stanice (rozdíly, kritéria výběru, role serverů, serverové technologie, zálohování dat včetně RAID)
+=======

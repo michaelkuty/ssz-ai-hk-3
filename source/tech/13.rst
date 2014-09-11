@@ -1,0 +1,3 @@
+=======
+Souborové systémy a logická struktura dat (principy, porovnání, příklady).
+=======

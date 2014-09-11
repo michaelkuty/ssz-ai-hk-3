@@ -1,0 +1,3 @@
+======
+Operační systémy Windows (principy MS DOS, MS Windows, architektura, verze, funkce, rozdíly).
+======
