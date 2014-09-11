@@ -1,5 +1,5 @@
 ======
-Otázka č. 13 - Algoritmy pracující s grafy. Prohledávání grafů do hloubky a do šířky, využití prohledávání grafů v dalších úlohách.
+Algoritmy pracující s grafy. Prohledávání grafů do hloubky a do šířky, využití prohledávání grafů v dalších úlohách.
 ======
 
 :download:`Otázka v PDF <pdf/13.pdf>`

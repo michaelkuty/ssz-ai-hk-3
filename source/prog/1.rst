@@ -1,5 +1,5 @@
 ==========
-Otázka PROG č.1 - Logický program - struktura, základní pojmy, datová struktura seznam, práce s databází Prologu. Hlavní odlišnosti oproti procedurálnímu programování, možnosti použití neprocedurálního programovacího jazyka.
+Logický program - struktura, základní pojmy, datová struktura seznam, práce s databází Prologu. Hlavní odlišnosti oproti procedurálnímu programování, možnosti použití neprocedurálního programovacího jazyka.
 ==========
 
 .. toctree::

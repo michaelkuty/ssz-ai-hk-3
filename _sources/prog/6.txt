@@ -1,5 +1,5 @@
 ========
-6. Námětové mapy: standard Topic Maps a jeho součásti, základní stavební prvky námětové mapy, postup tvorby námětové mapy, implementace námětových map (prostředí, syntaxe), dotazování se na námětové mapy, odvozování s námětovými mapami, aplikace námětových map.
+Námětové mapy: standard Topic Maps a jeho součásti, základní stavební prvky námětové mapy, postup tvorby námětové mapy, implementace námětových map (prostředí, syntaxe), dotazování se na námětové mapy, odvozování s námětovými mapami, aplikace námětových map.
 ========
 
 Struktura mapy (ontologie) má části:
@@ -28,6 +28,8 @@ Námět
 
 Typ asociace
 ^^^^^^^
+
+.. index:: typ asociace
 
 * Association type, Association class (angl.)
 * Obecný předpis vztahu mezi typy námětů
@@ -73,12 +75,15 @@ Typ role
 
 * Asociace není orientovaná, namísto směru se používají role
 
-Typ výskytu Výskyt
+Typ výskytu 
 """""""
 
 * Typ výskytu (occurrence type) vyjadřuje obecný 
 * Výskyt (occurrence) popisuje vztah mezi konkrétním námětem a předpis vztahu mezi námětem a informací konkrétní informací o předmětu
 * Rozlišujeme interní typ výskyt (= atribut) a externí 
+
+Výskyt
+"""""""
 * Odpovídá pojmu „hodnota“ datotypové relace v ontologii (odkaz na zdroj informací, typicky URL) 
 
 • Interní výskyt (internal occurrence)
@@ -93,3 +98,79 @@ Typ výskytu Výskyt
 	* Příklad externího výskytu: http://web.mit.edu/
 	* Externí typ výskytu
 	* Příklad: webová stránka, zvuková nahrávka
+
+Software
+-------
+
+* Ontopia Topic Maps Engine: management námětových map
+* Ontopoly: editor námětových map
+* Omnigator: prohlížeč námětových map
+* Vizigator: vizualizace námětových map
+* Ontopia Navigator Framework (ONF): komponenta pro tvorbu webových aplikací s využitím dotazovacího jazyka tolog, jazyka JSP a
+specifických elementů ONF
+* Ontopia Full-text Search: implementace vyhledávací funkcionality pro webovou aplikaci
+* Ontopia Web Editor Framework: komponenta pro tvorbu editoru
+námětových map ... viz. blíže dokumentace distribuovaná s prostředím Ontopia
+
+Omnigator
+"""""""
+
+„Omnivorous navigator“ = všežravý navigátor - schopný interpretovat jakýkoliv dokument vytvořený dle standardu Topic Maps 
+
+• Klient-server architektura postavená na http protokolu 
+• Na straně serveru pracuje webová aplikace J2EE používající Ontopia 
+* Topic Map Engine a Navigator Framework, který běží na webovém  serveru Tomcat 
+• Tato aplikace čte (a zapisuje) Topic Maps dokumenty a generuje HTML stránky. Na straně klienta dostává standardní webový prohlížeč HTML stránky a pomocí nich zobrazuje pohledy na Topic Maps dokumenty 
+
+Omnigator a jeho možnosti
+^^^^^^^
+
+Prohlížení ontologie a připojených informačních zdrojů
+
+• Zobrazení statistik námětové mapy
+• Dotazování v jazyce Tolog (kombinuje SQL a Prolog)
+* vyhledávání témat, instancí, asociací, výskytů, agregování, třídění, odvozovací pravidla
+• Slučování více map, export a import
+• Filtrování pohledů (vytváření verzí v různých jazycích, možnost filtrování podle uživatelských práv,...)
+
+
+Vizualizace námětové mapy 
+^^^^^^
+
+• Možnost přizpůsobení vizualizace námětové mapy vlastním potřebám: komponenta Vizdesktop (adresář bin v balíku s produktem Ontopia) 
+
+
+Topic Maps
+------
+
+Všeobecné použití: tvorba pojmových map
+
+• Ve vztahu k námětovým mapám – možnost importu námětové mapy v syntaxi XTM ver. 1.0
+* Ve vztahu k námětovým mapám – možnost exportu námětové mapy v syntaxi XTM ver. 1.0
+
+Využití námětových map
+------
+
+Reprezentace složitých procesů a pravidel
+^^^^^^^
+
+* Organizace velkých objemů informací pomocí ontologií
+* Zachycení „paměti organizace“, tacitních znalostí
+• E-learning zaměřený na osvojování si konceptů
+• Správa distribuovaných bází znalostí a informací
+• Sloučení informací a znalostí
+
+postup tvorby námětové mapy
+-------
+
+* Analýza
+	* Specifikace domény a stanovení šíře záběru
+	* Všeobecné otázky spojené s vývojem námětové mapy
+	* Snaha nevyvíjet to, co už bylo jednou vyvinuto
+	* Brainstorming
+* Návrh
+* Specifikace schématu námětové mapy a instancí
+* Implementace
+* Výběr přístupu pro tvorbu kódu námětové mapy
+* Tvorba dokumentace
+* Údržba námětové mapy

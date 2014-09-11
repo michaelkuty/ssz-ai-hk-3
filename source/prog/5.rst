@@ -1,5 +1,5 @@
 =========
-5. Sémantický web: technologie sémantického webu, metadata, RDF, RDFS, OWL, dotazování se na sémantický web (význam, jazyky), sémantický web a odvozování (význam, jazyky), aplikace sémantického webu.
+Sémantický web: technologie sémantického webu, metadata, RDF, RDFS, OWL, dotazování se na sémantický web (význam, jazyky), sémantický web a odvozování (význam, jazyky), aplikace sémantického webu.
 =========
 
 Metadata: klíčový aspekt sémantického webu
