@@ -211,6 +211,7 @@ Příklady:
 
 Syntaxe XTM (XML Topic Maps)
 """""""
+
 * Část standardu ISO 13250 pod názvem ISO/IEC-3 XML syntaxe 
 • Syntaxe XTM je založená na značkovacím jazyce XML a jazyce XLink => XTM dokument je XML dokumentem 
 • Vznik syntaxe na základě požadavku využití technologie Topic Maps i ve webovém prostředí 

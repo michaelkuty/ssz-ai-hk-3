@@ -21,7 +21,7 @@ Příklad metadat: knihovní katalog
 * Strukturovaná metadata: metadata spojená se strukturováním dokumentu (kapitoly a odstavce knihy, položky objednávky, ...)
 * Doménově specifická metadata: metadata související s aplikační doménou
 • Intra-doménově specifická: zachycují vztahy mezi daty týkající se stejné domény (např. pacient a alergie)
-• Inter-doménově specifická: zachycují vztahy mezi daty různých domén (např. ontologie – filosofie i informatika)
+• Inter-doménově specifická: zachycují vztahy mezi daty různých domén (např. ontologie * filosofie i informatika)
 
 Metadatový framework
 --------
@@ -36,7 +36,7 @@ Komponenty
 * Serializační formát: poskytuje meta-jazyk a syntaktické konstrukce pro kódování metadat
 * příklad: RDF i OWL mají různé datové modely, přičemž jsou serializovány (zapsány) s použitím XML syntaxe
 
-* Dotazovací jazyk: existence různých přístupů pro dotazování (např. RDF – SPARQL, OWL – SQWRL)
+* Dotazovací jazyk: existence různých přístupů pro dotazování (např. RDF * SPARQL, OWL * SQWRL)
 
 * Specifikace RDF založená na XML (RDF/XML)
 * Specifikace RDF Schématu: tvorba hierarchií
@@ -84,7 +84,30 @@ Schéma
 * Jmenný prostor má následující tvar: 
 * ://www.w3.org/2000/01/rdf-schema# (rdfs prefix) 
 
+Síla RDF
+""""""
 
+* tvorba jednoduchých ontologií, resp. vztahů  mezi třídami
+• Nízká výpočetní složitost
+
+* S RDF schématem lze vyjádřit:
+
+	* explicitně třídu,
+	* datové typy,
+	* def. obor, obor hodnot,
+	* podtřídu,
+	* „pod-vlastnost“, a další 
+
+Slabé stránky RDFS 
+"""""""
+
+* ekvivalenci tříd
+* inverzní vlastnosti
+* funkcionalitu vlastnosti nebo její tranzitivitu
+* omezení kardinality vlastností
+* negaci tvrzení
+* disjunktnost tříd, ale pouze vztah je podtřídou
+* třídu použitím logických operátorů AND (průnik), OR (sjednocení), NOT (negace) na třídy
 
 Metadatový framework založený na OWL (W3C)
 """""""

@@ -126,9 +126,11 @@
 <li><a class="reference internal" href="#rdf">5.3. RDF</a><ul>
 <li><a class="reference internal" href="#vlastnosti">5.3.1. Vlastnosti</a></li>
 <li><a class="reference internal" href="#schema">5.3.2. Schéma</a></li>
-<li><a class="reference internal" href="#metadatovy-framework-zalozeny-na-owl-w3c">5.3.3. Metadatový framework založený na OWL (W3C)</a></li>
-<li><a class="reference internal" href="#shrnuti-funkci-metadat">5.3.4. Shrnutí funkcí metadat</a></li>
-<li><a class="reference internal" href="#budoucnost-metadat">5.3.5. Budoucnost metadat</a></li>
+<li><a class="reference internal" href="#sila-rdf">5.3.3. Síla RDF</a></li>
+<li><a class="reference internal" href="#slabe-stranky-rdfs">5.3.4. Slabé stránky RDFS</a></li>
+<li><a class="reference internal" href="#metadatovy-framework-zalozeny-na-owl-w3c">5.3.5. Metadatový framework založený na OWL (W3C)</a></li>
+<li><a class="reference internal" href="#shrnuti-funkci-metadat">5.3.6. Shrnutí funkcí metadat</a></li>
+<li><a class="reference internal" href="#budoucnost-metadat">5.3.7. Budoucnost metadat</a></li>
 </ul>
 </li>
 </ul>
@@ -214,7 +216,7 @@
 </ul>
 <ul class="simple">
 <li>Intra-doménově specifická: zachycují vztahy mezi daty týkající se stejné domény (např. pacient a alergie)</li>
-<li>Inter-doménově specifická: zachycují vztahy mezi daty různých domén (např. ontologie – filosofie i informatika)</li>
+<li>Inter-doménově specifická: zachycují vztahy mezi daty různých domén (např. ontologie * filosofie i informatika)</li>
 </ul>
 </div>
 <div class="section" id="metadatovy-framework">
@@ -226,7 +228,7 @@
 <li>Datový model: soubor datových typů a funkcí, pomocí kterých se tvoří abstraktní pohled na webový dokument s možností přístupu k hodnotám uložených v proměnných datových typů</li>
 <li>Serializační formát: poskytuje meta-jazyk a syntaktické konstrukce pro kódování metadat</li>
 <li>příklad: RDF i OWL mají různé datové modely, přičemž jsou serializovány (zapsány) s použitím XML syntaxe</li>
-<li>Dotazovací jazyk: existence různých přístupů pro dotazování (např. RDF – SPARQL, OWL – SQWRL)</li>
+<li>Dotazovací jazyk: existence různých přístupů pro dotazování (např. RDF * SPARQL, OWL * SQWRL)</li>
 <li>Specifikace RDF založená na XML (RDF/XML)</li>
 <li>Specifikace RDF Schématu: tvorba hierarchií</li>
 <li>Specifikace SPARQL: protokol a dotazovací jazyk pro zpřístupnění RDF dat</li>
@@ -280,14 +282,48 @@
 <li>://www.w3.org/2000/01/rdf-schema# (rdfs prefix)</li>
 </ul>
 </div>
+<div class="section" id="sila-rdf">
+<h3>5.3.3. Síla RDF<a class="headerlink" href="#sila-rdf" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>tvorba jednoduchých ontologií, resp. vztahů  mezi třídami</li>
+</ul>
+<ul class="simple">
+<li>Nízká výpočetní složitost</li>
+</ul>
+<ul>
+<li><p class="first">S RDF schématem lze vyjádřit:</p>
+<blockquote>
+<div><ul class="simple">
+<li>explicitně třídu,</li>
+<li>datové typy,</li>
+<li>def. obor, obor hodnot,</li>
+<li>podtřídu,</li>
+<li>„pod-vlastnost“, a další</li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+</div>
+<div class="section" id="slabe-stranky-rdfs">
+<h3>5.3.4. Slabé stránky RDFS<a class="headerlink" href="#slabe-stranky-rdfs" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>ekvivalenci tříd</li>
+<li>inverzní vlastnosti</li>
+<li>funkcionalitu vlastnosti nebo její tranzitivitu</li>
+<li>omezení kardinality vlastností</li>
+<li>negaci tvrzení</li>
+<li>disjunktnost tříd, ale pouze vztah je podtřídou</li>
+<li>třídu použitím logických operátorů AND (průnik), OR (sjednocení), NOT (negace) na třídy</li>
+</ul>
+</div>
 <div class="section" id="metadatovy-framework-zalozeny-na-owl-w3c">
-<h3>5.3.3. Metadatový framework založený na OWL (W3C)<a class="headerlink" href="#metadatovy-framework-zalozeny-na-owl-w3c" title="Permalink to this headline">¶</a></h3>
+<h3>5.3.5. Metadatový framework založený na OWL (W3C)<a class="headerlink" href="#metadatovy-framework-zalozeny-na-owl-w3c" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li>OWL jazyk nabízí konstrukce, které umožňují vyjádřit různé typy omezení a axiomů na úrovni schémat a dat</li>
 </ul>
 </div>
 <div class="section" id="shrnuti-funkci-metadat">
-<h3>5.3.4. Shrnutí funkcí metadat<a class="headerlink" href="#shrnuti-funkci-metadat" title="Permalink to this headline">¶</a></h3>
+<h3>5.3.6. Shrnutí funkcí metadat<a class="headerlink" href="#shrnuti-funkci-metadat" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li>Shrnutí (popisná funkce): sumarizace obsahu</li>
 <li>Vyhledávání: prohledávání metadat s cílem vyšší přesnosti výsledků</li>
@@ -302,7 +338,7 @@
 </ul>
 </div>
 <div class="section" id="budoucnost-metadat">
-<h3>5.3.5. Budoucnost metadat<a class="headerlink" href="#budoucnost-metadat" title="Permalink to this headline">¶</a></h3>
+<h3>5.3.7. Budoucnost metadat<a class="headerlink" href="#budoucnost-metadat" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li>Některé standardy se stanou vůdčími</li>
 <li>Důležitost vícejazyčnosti při tvorbě metadat (již zakomponováno v RDF)</li>
