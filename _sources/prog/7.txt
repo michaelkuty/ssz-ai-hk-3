@@ -1,0 +1,5 @@
+======
+Otázka č.7 - Objektové modelování a programování - základní pojmy, podstata, využití. Softwarový proces. UML. Událostmi řízené programování. Architektura MVC.
+======
+
+:download:`Otázka v PDF <pdf/7.pdf>`
