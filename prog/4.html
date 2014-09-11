@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Ontologické inženýrství: pojem ontologie v kontextu informatiky, základní stavební prvky ontologií, typy ontologií, jazyky ontologického modelování, návrhové vzory, normalizace ontologie. Odvozování nad ontologií (kontrola konzistence, klasifikace), nástroje, použití ontologií. &mdash; Otazky na statnice 0.0.1 documentation</title>
+    
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-3.1.0/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-3.1.0/css/bootstrap-theme.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '0.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-3.1.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <link rel="top" title="Otazky na statnice 0.0.1 documentation" href="../index.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+  </head>
+  <body>
+
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../index.html">
+          Otazky na statnice</a>
+        <span class="navbar-text navbar-version pull-left"><b>0.0.1</b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            <li class="divider-vertical"></li>
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="../index.html">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"></ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
+<li><a class="reference internal" href="#">Ontologické inženýrství: pojem ontologie v kontextu informatiky, základní stavební prvky ontologií, typy ontologií, jazyky ontologického modelování, návrhové vzory, normalizace ontologie. Odvozování nad ontologií (kontrola konzistence, klasifikace), nástroje, použití ontologií.</a><ul>
+<li><a class="reference internal" href="#index">Index</a></li>
+<li><a class="reference internal" href="#typy-trid">Typy tříd</a><ul>
+<li><a class="reference internal" href="#trida">Třída</a><ul>
+<li><a class="reference internal" href="#primitivni-trida">Primitivní třída</a></li>
+<li><a class="reference internal" href="#definovana-trida-definable-class-1">DEFINOVANÁ TŘÍDA (DEFINABLE CLASS) 1</a></li>
+<li><a class="reference internal" href="#definovana-trida-definable-class-2">DEFINOVANÁ TŘÍDA (DEFINABLE CLASS) 2</a></li>
+<li><a class="reference internal" href="#pridavna-trida-modifier-class">PŘÍDAVNÁ TŘÍDA (MODIFIER CLASS)</a></li>
+<li><a class="reference internal" href="#rozklad-tridy-na-podtridy">ROZKLAD TŘÍDY NA PODTŘÍDY</a></li>
+<li><a class="reference internal" href="#anonymni-trida-anonymous-class">ANONYMNÍ TŘÍDA (ANONYMOUS CLASS)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#vymezeni-tridy">VYMEZENÍ TŘÍDY</a><ul>
+<li><a class="reference internal" href="#vymezeni-tridy-popsanim">VYMEZENÍ TŘÍDY POPSÁNÍM</a><ul>
+<li><a class="reference internal" href="#dulezitost-popisu-trid">DŮLEŽITOST POPISU TŘÍD</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#vymezeni-tridy-definovanim">VYMEZENÍ TŘÍDY DEFINOVÁNÍM</a></li>
+<li><a class="reference internal" href="#vymezeni-tridy-vyctem">VYMEZENÍ TŘÍDY VÝČTEM</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#omezeni">Omezení</a><ul>
+<li><a class="reference internal" href="#omezeni-some-values-from">OMEZENÍ SOME VALUES FROM</a></li>
+<li><a class="reference internal" href="#omezeni-all-values-from">OMEZENÍ ALL VALUES FROM</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#klasifikace">klasifikace</a><ul>
+<li><a class="reference internal" href="#vyuziti-klasifikatoru">VYUŽITÍ KLASIFIKÁTORŮ</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+              
+            
+            
+            
+            
+              <li class="hidden-sm">
+<div id="sourcelink">
+  <a href="../_sources/prog/4.txt"
+     rel="nofollow">Source</a>
+</div></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      
+  <div class="section" id="ontologicke-inzenyrstvi-pojem-ontologie-v-kontextu-informatiky-zakladni-stavebni-prvky-ontologii-typy-ontologii-jazyky-ontologickeho-modelovani-navrhove-vzory-normalizace-ontologie-odvozovani-nad-ontologii-kontrola-konzistence-klasifikace-nastroje-pouziti-ontologii">
+<h1>Ontologické inženýrství: pojem ontologie v kontextu informatiky, základní stavební prvky ontologií, typy ontologií, jazyky ontologického modelování, návrhové vzory, normalizace ontologie. Odvozování nad ontologií (kontrola konzistence, klasifikace), nástroje, použití ontologií.<a class="headerlink" href="#ontologicke-inzenyrstvi-pojem-ontologie-v-kontextu-informatiky-zakladni-stavebni-prvky-ontologii-typy-ontologii-jazyky-ontologickeho-modelovani-navrhove-vzory-normalizace-ontologie-odvozovani-nad-ontologii-kontrola-konzistence-klasifikace-nastroje-pouziti-ontologii" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="index">
+<h2>Index<a class="headerlink" href="#index" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Typy tříd</li>
+<li>Třídy a jejich vymezení</li>
+<li>Sémantika tříd</li>
+<li>Odvozovací stroje</li>
+<li>Princip otevřeného světa</li>
+<li>Princip jedinečného jména</li>
+</ul>
+</div>
+<div class="section" id="typy-trid">
+<h2>Typy tříd<a class="headerlink" href="#typy-trid" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="trida">
+<h3>Třída<a class="headerlink" href="#trida" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Základní konstrukční prvek</li>
+<li>Slouží jako předpis pro jedince (nikoliv objekty)</li>
+<li>Analogie s třídou z objektovéhoprogramování</li>
+<li>Protégé implicitně obsahuje nejméně jednu základní, zcela obecnou třídu owl:Thing, od níž jsou odvozeny všechny ostatní třídy</li>
+<li>Primitivní třída  Primitive Class</li>
+<li>Definovaná třída Definable Class</li>
+<li>Přídavná třída   Modifier Class</li>
+<li>Anonymní třída   Anonymous Class</li>
+<li>Testovací třída  Test Class</li>
+</ul>
+<div class="section" id="primitivni-trida">
+<h4>Primitivní třída<a class="headerlink" href="#primitivni-trida" title="Permalink to this headline">¶</a></h4>
+<ul>
+<li><p class="first">Výchozí typ třídy</p>
+</li>
+<li><dl class="first docutils">
+<dt>Obsahuje:</dt>
+<dd><ul class="first last simple">
+<li>Název (musí být zřejmé, jakou část reality reprezentuje)</li>
+<li>Popis (vlastnosti, které ji charakterizují)</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p class="first">V přirozeném jazyce se obvykle jedná o</p>
+</li>
+</ul>
+<p>podstatné jména
+* Modeluje se jako neúplná třída – pouze omezení v bloku necessary</p>
+</div>
+<div class="section" id="definovana-trida-definable-class-1">
+<h4>DEFINOVANÁ TŘÍDA (DEFINABLE CLASS) 1<a class="headerlink" href="#definovana-trida-definable-class-1" title="Permalink to this headline">¶</a></h4>
+<ul>
+<li><dl class="first docutils">
+<dt>Třída vymezená přesnou definicí</dt>
+<dd><ul class="first last simple">
+<li>Může u ní být uveden popis</li>
+<li>Obecně nemusí existovat pouze jeden správný popis definované třídy, věci lze definovat různými způsoby</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p class="first">Def. třída vytváří kategorie, do nichž se po</p>
+</li>
+</ul>
+<p>aplikaci klasifikátoru (odvození) odvodí třídy
+odpovídající definici</p>
+</div>
+<div class="section" id="definovana-trida-definable-class-2">
+<h4>DEFINOVANÁ TŘÍDA (DEFINABLE CLASS) 2<a class="headerlink" href="#definovana-trida-definable-class-2" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li>Obvykle odpovídá konceptu, k jehož vymezení jsou použity jiné koncepty, např.</li>
+<li>Stařec (člověk, který je starý)</li>
+<li>Student (člověk, který studuje)</li>
+<li>Matka (člověk ženského pohlaví, který má alespoň jednoho potomka)</li>
+<li>Modeluje se pomocí omezení v bloku necessary and sufficient, případně dále i</li>
+</ul>
+<p>pomocí omezení v bloku necessary</p>
+</div>
+<div class="section" id="pridavna-trida-modifier-class">
+<h4>PŘÍDAVNÁ TŘÍDA (MODIFIER CLASS)<a class="headerlink" href="#pridavna-trida-modifier-class" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li>Je typem třídy, která slouží k upřesnění jiných pojmů</li>
+<li>Obvykle v přirozeném jazyce odpovídá přídavnému jménu (šedý, mladý, náročné, dlouho, levně) – otázka JAKÝ?</li>
+<li>Příslovci – otázka JAK?</li>
+<li>Modeluje se použitím návrhového vzoru „Rozklad třídy na podtřídy“</li>
+</ul>
+</div>
+<div class="section" id="rozklad-tridy-na-podtridy">
+<h4>ROZKLAD TŘÍDY NA PODTŘÍDY<a class="headerlink" href="#rozklad-tridy-na-podtridy" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li>Nadřazená třída představuje dimenzi (nějakou vlastnost, atribut), kterou chceme modelovat</li>
+<li>Podtřídy představují možné hodnoty, kterých tato dimenze může nabývat</li>
+<li>Hodnoty dimenze jsou navzájem různé, musí být disjunktní</li>
+</ul>
+</div>
+<div class="section" id="anonymni-trida-anonymous-class">
+<h4>ANONYMNÍ TŘÍDA (ANONYMOUS CLASS)<a class="headerlink" href="#anonymni-trida-anonymous-class" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li>Je bezejmenná (odtud název)</li>
+<li>Vymezena pomocí logických výrazů:</li>
+<li>Sjednocení (OR)</li>
+<li>Průnik (AND)</li>
+<li>Doplněk (NOT)</li>
+<li>Výčtem (specifikuje členství v dané třídě)</li>
+<li>Omezeními (vztahují se k použité vlastnosti)</li>
+<li>Třída nemá explicitní vyjádření v hierarchii tříd</li>
+<li>Do anonymní třídy spadají jedinci, kteří splňují určitou logickou definici</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="section" id="vymezeni-tridy">
+<h2>VYMEZENÍ TŘÍDY<a class="headerlink" href="#vymezeni-tridy" title="Permalink to this headline">¶</a></h2>
+<p>Tři možné přístupy
+* Vymezení popsáním (částečné)
+* Vymezení definováním (úplné)
+* Vymezení výčtem (úplné)</p>
+<p>Důležité je mít jasno v otázkách:
+* Jaký je význam třídy?
+* Kteří jedinci do třídy patří a kteří ne?
+* Jak posoudit, zda jedinec do třídy patří?</p>
+<p><em>Vymezení určuje význam třídy v kontextu jiných
+tříd</em></p>
+<div class="section" id="vymezeni-tridy-popsanim">
+<h3>VYMEZENÍ TŘÍDY POPSÁNÍM<a class="headerlink" href="#vymezeni-tridy-popsanim" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Třída je vymezena použitím jejích charakteristik</li>
+<li>Je uveden výčet vlastností, které třída má</li>
+<li>Hrozí rozpor mezi výčtem charakteristik a tím, co se nám do třídy řadí – popsání třídy nemusí nutně stačit pro jednoznačné a správné zařazení jedince do třídy</li>
+<li>Výčet vlastností musí být dosti detailní, aby</li>
+</ul>
+<p>zařazení fungovalo správně</p>
+<div class="section" id="dulezitost-popisu-trid">
+<h4>DŮLEŽITOST POPISU TŘÍD<a class="headerlink" href="#dulezitost-popisu-trid" title="Permalink to this headline">¶</a></h4>
+<p><em>Jazyk OWL je založený na deskripční logice</em></p>
+<ul class="simple">
+<li>Popis třídy dovoluje ověřit, zda jedinec skutečně do dané třídy patří, zda splňuje</li>
+</ul>
+<p>daná kriteria
+* Uvažování s použitím klasifikátoru – nástroje
+pro odvozování implicitních souvislostí v
+rámci ontologie</p>
+</div>
+</div>
+<div class="section" id="vymezeni-tridy-definovanim">
+<h3>VYMEZENÍ TŘÍDY DEFINOVÁNÍM<a class="headerlink" href="#vymezeni-tridy-definovanim" title="Permalink to this headline">¶</a></h3>
+<p>Jednoznačné zařazení jedince do třídy</p>
+<p>Příklad:
+„Každá sýrová pizza má sýrovou přísadu“
+„CheesePizza hasTopping some CheeseTopping“</p>
+<p>Definice třídy
+Jestliže je něco sýrová pizza, pak patří do třídy Pizza a zároveň patří do třídy všech jedinců, kteří obsahují sýrovou přísadu
+&lt;=
+Jestliže je něco Pizza a obsahuje sýrovou přísadu, pak patří do
+třídy sýrová pizza</p>
+<p>Tzn. třída je vymezená popsáním + zavádí se ekvivalence
+„Sýrová pizza je totéž, co pizza se sýrovou přísadou“</p>
+</div>
+<div class="section" id="vymezeni-tridy-vyctem">
+<h3>VYMEZENÍ TŘÍDY VÝČTEM<a class="headerlink" href="#vymezeni-tridy-vyctem" title="Permalink to this headline">¶</a></h3>
+<p><em>Je uveden výčet jedinců, kteří do třídy patří</em>
+* Tím je třída vymezena jednoznačně, není sporu co do třídy patří a co ne</p>
+</div>
+</div>
+<div class="section" id="omezeni">
+<h2>Omezení<a class="headerlink" href="#omezeni" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="omezeni-some-values-from">
+<h3>OMEZENÍ SOME VALUES FROM<a class="headerlink" href="#omezeni-some-values-from" title="Permalink to this headline">¶</a></h3>
+<p>Alespoň jedna hodnota vlastnosti musí být uvedeného typu</p>
+<ul class="simple">
+<li>Mohou existovat i další hodnoty</li>
+<li>Příklad: Sýrová pizza je taková pizza, že alespoň jedna její přísada je sýrová</li>
+<li>Z toho mj. plyne, že sýrová pizza má alespoň jednu přísadu (sýr)</li>
+</ul>
+</div>
+<div class="section" id="omezeni-all-values-from">
+<h3>OMEZENÍ ALL VALUES FROM<a class="headerlink" href="#omezeni-all-values-from" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Všechny hodnoty vlastnosti musí být uvedeného typu Pozor na triviální splnění omezení:</li>
+<li>Jestliže jedinec nemá danou vlastnost, splňuje omezení allValuesFrom, což znamená</li>
+</ul>
+<p>Ze splnění omezení allValuesFrom neplyne splnění omezení someValuesFrom
+Příklad: vegetariánská pizza je taková pizza, že všechny její přísady jsou zeleninové nebo sýrové</p>
+<p>Nevíme, zda nějakou přísadu vůbec má</p>
+<p>přednášky ZT1 na <a class="reference external" href="https://github.com/michaelkuty/ssz-ai-hk-3/tree/gh-pages/source/prednasky/zt1/">https://github.com/michaelkuty/ssz-ai-hk-3/tree/gh-pages/source/prednasky/zt1/</a>
+přednášky ZT2 na <a class="reference external" href="https://github.com/michaelkuty/ssz-ai-hk-3/tree/gh-pages/source/prednasky/zt1/">https://github.com/michaelkuty/ssz-ai-hk-3/tree/gh-pages/source/prednasky/zt1/</a></p>
+</div>
+</div>
+<div class="section" id="klasifikace">
+<h2>klasifikace<a class="headerlink" href="#klasifikace" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="vyuziti-klasifikatoru">
+<h3>VYUŽITÍ KLASIFIKÁTORŮ<a class="headerlink" href="#vyuziti-klasifikatoru" title="Permalink to this headline">¶</a></h3>
+<p>Strojové zpracování znalostí bez asistence člověka (sémantický web)</p>
+<p>Zvyšování kvality ontologie:
+* Smysluplnost – všechny pojmenované třídy mohou mít instance
+* Korektnost – zachycení znalostí doménovýchexpertů
+* Minimální redundance – žádná neúmyslná synonyma
+* Bohatá axiomatizace – detailní popis tříd</p>
+</div>
+</div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2014, Michael Kutý.<br/>
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.2.3.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

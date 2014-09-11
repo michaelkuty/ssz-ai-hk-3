@@ -15,11 +15,13 @@
 import sys
 import os
 
-# At the top.
-import sphinx_bootstrap_theme
+try:
+  import sphinx_bootstrap_theme
+  html_theme = 'bootstrap'
+  html_theme_path = sphinx_bootstrap_theme.get_html_theme_path()
+except Exception, e:
+  html_theme = 'haiku'
 
-html_theme = 'bootstrap'
-html_theme_path = sphinx_bootstrap_theme.get_html_theme_path()
 
 #html_theme = 'haiku'
 

@@ -65,6 +65,7 @@ Syntaxe - **reStructuredText**
 * Auto build https://pypi.python.org/pypi/sphinx-autobuild
 	* pip install watchdog  
 	* watchmedo shell-command --patterns=*.rst --recursive --command='sphinxuild -b html ./source/ ./' 
+* pro build bootstrap skinu *pip install sphinx_bootstrap_theme*
 
 Jak přispět ?
 ------
