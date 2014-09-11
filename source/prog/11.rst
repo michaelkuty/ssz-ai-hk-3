@@ -1,0 +1,88 @@
+
+========
+Základní algoritmy a principy počítačové grafiky  – metody vizualizace, určení viditelnosti a osvětlení, reprezentace grafické informace, OPENGL.
+========
+
+Přehled
+--------
+
+Vrhání paprsku
+""""""""
+* rastrová objektově orientovaná metoda
+* ray casting - hledáme nejbližší objekt zasažený paprskem směřující od pozorovatele a procházejícím průmětnou
+
+Sledování paprsku
+""""""""
+* rozšíření vrhání paprsku = sledování nekončí po nalezení nejbližšího objektu – sledodvání paprsku vyššího řádu
+* ray traycing – realistické zobrazení scény odrazivost, průhlednost tělesa – stíny a odlesky v algoritmu je dopočítávání osvětlení pro paprsek
+
+Výpočet osvětlení ve scéně, metody stínování, Phongův osvětlovací model.
+------
+
+Phong
+""""""
+osvětlení I je součtem 3 složek: difůzní Id, speculární Is, ambientní Ia, I = Id + Is + Ia
+vypočítáváno pro každý pixel
+okolní světlo se vypočítává jen jednou
+difůzní a speculární světlo se vypočítá pro každý bod povrchu a pro všechny zdroje světla
+difůzní složka 
+způsobená odrazem a lomem světla na nerovném povrchu
+není závislá na směru pohledu – odraz do všech směrů
+závisí pouze na úhlu dopadu
+charakteristické pro matná tělesa
+koeficient od 0 do 1
+ambientní složka
+všesměrové konstantní světlo
+napodobuje sekundární odražené světlo
+nezávisí na úhlu pohledu ani směru a velikosti osvětlení
+zabraňuje tomu, aby odvrácené plochy byly černé
+speculární složka
+směrová složká
+zrcadlová složka
+zrcatdlové (hladké) objekty mají pouze tuto složku
+vede k vytváření odlesků
+charakteristická pro lesklá tělesa
+koeficient zrcadlového odrazu od 0 do 1
+stupeň ostrosti zrcadlového odrazu od 1 do 100
+
+Metody stínování
+""""""
+Konstantní stínování
+pro každou plochu stínovaného tělesa se vypočte osvětlení a plocha se obarví vypočtenou barvou
+vhodné pro hranatá tělesa
+
+Gouraudovo stínování
+""""""
+osvětlení se vypočte na vrcholech plochy a výsledná barva se interpoluje v ploše
+vhodné pro matné plochy
+
+Phongovo stínování
+""""""
+normála se vypočte ve vrcholech plochy a vypočtená normála se interpoluje
+osvětlení se vypočítává pro každý bod s interpolovanou normálou
+
+Algoritmus viditelnosti
+------
+
+paměť hloubky. Popište princip. Problematika perspektivně korektní interpolace.
+"""""""
+Z-buffer – paměť hloubky
+používání paměti hloubky, která tvoří dvojrozměrné pole, jehož rozměry jsou totožné  s rozměry  zobrazovacího okna
+jestliže plocha rozložená na pixeli bude blíže k pozorovateli než z-buffer, tak se daný pixel obarví
+z-buffer se poté upraví a uloží si souřadnice
+
+Malíř
+"""""""
+objektově orientovaný algoritmus
+princip překreslování vzdálenějších ploch plochami v popředí
+nanášení barev na plátno 
+setřídění podle z-tové souřadnice – odzadu dopředu
+nelze použít pro protínající se plochy
+možnost zacyklení algoritmu – vzájemné překrývání
+
+Warnockův
+"""""""
+dělení obrazovky
+rastrový algoritmus
+žádná stěna nemá v sobě jen pozadí, jediná stěna má celou výplň jednoho tělesa, jedna stěna zasahuje těleso + barvu pozadí, několik stěn obsahuje obě barvy
+vytváří se seznam pro každé uvažované těleso

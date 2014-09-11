@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Základní algoritmy a principy počítačové grafiky – metody vizualizace, určení viditelnosti a osvětlení, reprezentace grafické informace, OPENGL. &mdash; Otazky na statnice 0.0.1 documentation</title>
+    
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-3.1.0/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-3.1.0/css/bootstrap-theme.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '0.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-3.1.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <link rel="top" title="Otazky na statnice 0.0.1 documentation" href="../index.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+  </head>
+  <body>
+
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../index.html">
+          Otazky na statnice</a>
+        <span class="navbar-text navbar-version pull-left"><b>0.0.1</b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            <li class="divider-vertical"></li>
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="../index.html">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"></ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
+<li><a class="reference internal" href="#">Základní algoritmy a principy počítačové grafiky  – metody vizualizace, určení viditelnosti a osvětlení, reprezentace grafické informace, OPENGL.</a><ul>
+<li><a class="reference internal" href="#prehled">Přehled</a><ul>
+<li><a class="reference internal" href="#vrhani-paprsku">Vrhání paprsku</a></li>
+<li><a class="reference internal" href="#sledovani-paprsku">Sledování paprsku</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#vypocet-osvetleni-ve-scene-metody-stinovani-phonguv-osvetlovaci-model">Výpočet osvětlení ve scéně, metody stínování, Phongův osvětlovací model.</a><ul>
+<li><a class="reference internal" href="#phong">Phong</a></li>
+<li><a class="reference internal" href="#metody-stinovani">Metody stínování</a></li>
+<li><a class="reference internal" href="#gouraudovo-stinovani">Gouraudovo stínování</a></li>
+<li><a class="reference internal" href="#phongovo-stinovani">Phongovo stínování</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#algoritmus-viditelnosti">Algoritmus viditelnosti</a><ul>
+<li><a class="reference internal" href="#pamet-hloubky-popiste-princip-problematika-perspektivne-korektni-interpolace">paměť hloubky. Popište princip. Problematika perspektivně korektní interpolace.</a></li>
+<li><a class="reference internal" href="#malir">Malíř</a></li>
+<li><a class="reference internal" href="#warnockuv">Warnockův</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+              
+            
+            
+            
+            
+              <li class="hidden-sm">
+<div id="sourcelink">
+  <a href="../_sources/prog/11.txt"
+     rel="nofollow">Source</a>
+</div></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      
+  <div class="section" id="zakladni-algoritmy-a-principy-pocitacove-grafiky-metody-vizualizace-urceni-viditelnosti-a-osvetleni-reprezentace-graficke-informace-opengl">
+<h1>Základní algoritmy a principy počítačové grafiky  – metody vizualizace, určení viditelnosti a osvětlení, reprezentace grafické informace, OPENGL.<a class="headerlink" href="#zakladni-algoritmy-a-principy-pocitacove-grafiky-metody-vizualizace-urceni-viditelnosti-a-osvetleni-reprezentace-graficke-informace-opengl" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="prehled">
+<h2>Přehled<a class="headerlink" href="#prehled" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="vrhani-paprsku">
+<h3>Vrhání paprsku<a class="headerlink" href="#vrhani-paprsku" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>rastrová objektově orientovaná metoda</li>
+<li>ray casting - hledáme nejbližší objekt zasažený paprskem směřující od pozorovatele a procházejícím průmětnou</li>
+</ul>
+</div>
+<div class="section" id="sledovani-paprsku">
+<h3>Sledování paprsku<a class="headerlink" href="#sledovani-paprsku" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>rozšíření vrhání paprsku = sledování nekončí po nalezení nejbližšího objektu – sledodvání paprsku vyššího řádu</li>
+<li>ray traycing – realistické zobrazení scény odrazivost, průhlednost tělesa – stíny a odlesky v&nbsp;algoritmu je dopočítávání osvětlení pro paprsek</li>
+</ul>
+</div>
+</div>
+<div class="section" id="vypocet-osvetleni-ve-scene-metody-stinovani-phonguv-osvetlovaci-model">
+<h2>Výpočet osvětlení ve scéně, metody stínování, Phongův osvětlovací model.<a class="headerlink" href="#vypocet-osvetleni-ve-scene-metody-stinovani-phonguv-osvetlovaci-model" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="phong">
+<h3>Phong<a class="headerlink" href="#phong" title="Permalink to this headline">¶</a></h3>
+<p>osvětlení I je součtem 3 složek: difůzní Id, speculární Is, ambientní Ia, I = Id + Is + Ia
+vypočítáváno pro každý pixel
+okolní světlo se vypočítává jen jednou
+difůzní a speculární světlo se vypočítá pro každý bod povrchu a pro všechny zdroje světla
+difůzní složka
+způsobená odrazem a lomem světla na nerovném povrchu
+není závislá na směru pohledu – odraz do všech směrů
+závisí pouze na úhlu dopadu
+charakteristické pro matná tělesa
+koeficient od 0 do 1
+ambientní složka
+všesměrové konstantní světlo
+napodobuje sekundární odražené světlo
+nezávisí na úhlu pohledu ani směru a velikosti osvětlení
+zabraňuje tomu, aby odvrácené plochy byly černé
+speculární složka
+směrová složká
+zrcadlová složka
+zrcatdlové (hladké) objekty mají pouze tuto složku
+vede k&nbsp;vytváření odlesků
+charakteristická pro lesklá tělesa
+koeficient zrcadlového odrazu od 0 do 1
+stupeň ostrosti zrcadlového odrazu od 1 do 100</p>
+</div>
+<div class="section" id="metody-stinovani">
+<h3>Metody stínování<a class="headerlink" href="#metody-stinovani" title="Permalink to this headline">¶</a></h3>
+<p>Konstantní stínování
+pro každou plochu stínovaného tělesa se vypočte osvětlení a plocha se obarví vypočtenou barvou
+vhodné pro hranatá tělesa</p>
+</div>
+<div class="section" id="gouraudovo-stinovani">
+<h3>Gouraudovo stínování<a class="headerlink" href="#gouraudovo-stinovani" title="Permalink to this headline">¶</a></h3>
+<p>osvětlení se vypočte na vrcholech plochy a výsledná barva se interpoluje v&nbsp;ploše
+vhodné pro matné plochy</p>
+</div>
+<div class="section" id="phongovo-stinovani">
+<h3>Phongovo stínování<a class="headerlink" href="#phongovo-stinovani" title="Permalink to this headline">¶</a></h3>
+<p>normála se vypočte ve vrcholech plochy a vypočtená normála se interpoluje
+osvětlení se vypočítává pro každý bod s&nbsp;interpolovanou normálou</p>
+</div>
+</div>
+<div class="section" id="algoritmus-viditelnosti">
+<h2>Algoritmus viditelnosti<a class="headerlink" href="#algoritmus-viditelnosti" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="pamet-hloubky-popiste-princip-problematika-perspektivne-korektni-interpolace">
+<h3>paměť hloubky. Popište princip. Problematika perspektivně korektní interpolace.<a class="headerlink" href="#pamet-hloubky-popiste-princip-problematika-perspektivne-korektni-interpolace" title="Permalink to this headline">¶</a></h3>
+<p>Z-buffer – paměť hloubky
+používání paměti hloubky, která tvoří dvojrozměrné pole, jehož rozměry jsou totožné  s&nbsp;rozměry  zobrazovacího okna
+jestliže plocha rozložená na pixeli bude blíže k&nbsp;pozorovateli než z-buffer, tak se daný pixel obarví
+z-buffer se poté upraví a uloží si souřadnice</p>
+</div>
+<div class="section" id="malir">
+<h3>Malíř<a class="headerlink" href="#malir" title="Permalink to this headline">¶</a></h3>
+<p>objektově orientovaný algoritmus
+princip překreslování vzdálenějších ploch plochami v&nbsp;popředí
+nanášení barev na plátno
+setřídění podle z-tové souřadnice – odzadu dopředu
+nelze použít pro protínající se plochy
+možnost zacyklení algoritmu – vzájemné překrývání</p>
+</div>
+<div class="section" id="warnockuv">
+<h3>Warnockův<a class="headerlink" href="#warnockuv" title="Permalink to this headline">¶</a></h3>
+<p>dělení obrazovky
+rastrový algoritmus
+žádná stěna nemá v&nbsp;sobě jen pozadí, jediná stěna má celou výplň jednoho tělesa, jedna stěna zasahuje těleso + barvu pozadí, několik stěn obsahuje obě barvy
+vytváří se seznam pro každé uvažované těleso</p>
+</div>
+</div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2014, Michael Kutý.<br/>
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.2.3.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>
