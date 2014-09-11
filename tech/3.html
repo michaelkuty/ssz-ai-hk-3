@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Otázka č.3 Paměťový systém počítače a ukládání dat (typy, principy fungování, frekvence, normy, logická a fyzická struktura disku, RAM, ROM, Cache, HDD, CD, DVD, FLASH…) &mdash; Otazky na statnice 0.0.1 documentation</title>
+    
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-3.1.0/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-3.1.0/css/bootstrap-theme.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '0.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-3.1.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <link rel="top" title="Otazky na statnice 0.0.1 documentation" href="../index.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+  </head>
+  <body>
+
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../index.html">
+          Otazky na statnice</a>
+        <span class="navbar-text navbar-version pull-left"><b>0.0.1</b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            <li class="divider-vertical"></li>
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="../index.html">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"></ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
+<li><a class="reference internal" href="#">Otázka č.3 Paměťový systém počítače a ukládání dat (typy, principy fungování, frekvence, normy, logická a fyzická struktura disku, RAM, ROM, Cache, HDD, CD, DVD, FLASH…)</a><ul>
+<li><a class="reference internal" href="#ulozeni-dat">Uložení dat</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+              
+            
+            
+            
+            
+              <li class="hidden-sm">
+<div id="sourcelink">
+  <a href="../_sources/tech/3.txt"
+     rel="nofollow">Source</a>
+</div></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      
+  <div class="section" id="otazka-c-3-pametovy-system-pocitace-a-ukladani-dat-typy-principy-fungovani-frekvence-normy-logicka-a-fyzicka-struktura-disku-ram-rom-cache-hdd-cd-dvd-flash">
+<h1>Otázka č.3 Paměťový systém počítače a ukládání dat (typy, principy fungování, frekvence, normy, logická a fyzická struktura disku, RAM, ROM, Cache, HDD, CD, DVD, FLASH…)<a class="headerlink" href="#otazka-c-3-pametovy-system-pocitace-a-ukladani-dat-typy-principy-fungovani-frekvence-normy-logicka-a-fyzicka-struktura-disku-ram-rom-cache-hdd-cd-dvd-flash" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="ulozeni-dat">
+<h2>Uložení dat<a class="headerlink" href="#ulozeni-dat" title="Permalink to this headline">¶</a></h2>
+<p>Podle fyzikálního principu použitého pro uložení dat můžeme média rozdělit na:
+* magnetická (disky, diskety)
+* optická (CD a DVD)
+* elektrická (Flash disky, paměťové karty)
+* Pružné disky (FD, Flopy Disk, diskety) mají velikost 3.5&#8221;. Disketu i pevný disk je nutno před prvním použitím naformátovat příkazem FORMAT. Počítač vytvoří na magnetickém povrchu &#8220;značky&#8221;, podle kterých později zapisuje data. Povrch je rozdělen na stopy (soustředné kružnice), resp. válce, a každá stopa je rozdělena na sektory (výseče). Do jedné výseče se zapisuje 512 bajtů. V současnosti používané diskety jsou oboustranné. Standardní způsob formátování diskety 3.5&#8221; HD je tento:
+2strany x 80stop x 18sektorů x 512 B = 1474560 B = 1440 KB = 1.41 MB - tato disketa se nepřesně označuje 1.44 MB.
+Diskety s kvalitnějšími povrchy lze formátovat na ještě větší kapacity. V horních rozích diskety se nacházejí dva malé otvory. Jeden z nich je možné zakrýt jezdcem. Pokud jsou oba otvory volné, je disketa chráněna proti zápisu.
+Pevný disk (HDD, Hard Disk) je uložen uvnitř počítače. Pevné disky se skládají z více částí, takže mají několik povrchů a kapacity v řádu desítek GB. Údaje o použitém pevném disku bývalo nutno zapsat do programu SETUP BIOS, jinak disk nebyl přístupný. Moderní BIOSy mají i autodetekci disků. Pevný disk můžeme rozdělit na několik částí (partitions) programem FDISK. Jednotlivé části se potom formátují jako FAT (File Alocation Table) nebo NTFS (New Technology File System). Novější NTFS formátování umožňuje nastavovat přístupová práva k jednotlivým souborům a složkám na disku. Dlouhodobým používáním disku či diskety vzniká fragmentace souborů - soubory jsou rozděleny do několika nesouvislých částí, což zpomaluje jejich čtení. K odstranění fragmentace se používá program DEFRAG. Pro vyhledávání chyb na disku slouží program SCANDISK.
+K ukládání a distribuci dat se používají i optické disky:
+CD-ROM - optické disky s kapacitou od 650 MB, které nelze přepisovat. Princip ani formát záznamu se neliší od zvukových CD. Rychlost CD mechanik se udává v násobcích rychlosti 150KB/s.
+CD-R - (Recordable) - CD disky, na které lze zapisovat. Jednou zapsaná data již nemohou být přepsána.
+CD-RW - (ReWriteable) - CD disky, na které lze zapisovat a lze i přepisovat starší data novými.
+DVD - (Digital Versatile Disc) - optický disk s vysokou hustotou záznamu. Podle počtu povrchů a vrstev rozdělujeme 4 typy</p>
+</div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2014, Michael Kutý.<br/>
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.2.3.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

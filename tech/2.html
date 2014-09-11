@@ -5,7 +5,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>&lt;no title&gt; &mdash; Otazky na statnice 0.0.1 documentation</title>
+    <title>Otázka č.2: Architektura počítače (von Neumannovo a Harwardské schéma, Flynnova taxonomie, základní deska, procesor, mikroarchitektura procesoru, paměti, sběrnice, řadič, přídavné karty, ovladače). &mdash; Otazky na statnice 0.0.1 documentation</title>
     
     <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -77,7 +77,23 @@
      href="#">Page <b class="caret"></b></a>
   <ul class="dropdown-menu localtoc"
       role="menu"
-      aria-labelledby="dLabelLocalToc"><ul class="simple">
+      aria-labelledby="dLabelLocalToc"><ul>
+<li><a class="reference internal" href="#">Otázka č.2: Architektura počítače (von Neumannovo a Harwardské schéma, Flynnova taxonomie, základní deska, procesor, mikroarchitektura procesoru, paměti, sběrnice, řadič, přídavné karty, ovladače).</a><ul>
+<li><a class="reference internal" href="#von-neumannova-architektura">Von Neumannova architektura</a></li>
+<li><a class="reference internal" href="#realny-rezim-real-mode">Reálný režim (real mode)</a></li>
+<li><a class="reference internal" href="#multiprocessing">Multiprocessing</a></li>
+<li><a class="reference internal" href="#multitasking">Multitasking</a></li>
+<li><a class="reference internal" href="#harvardske-schema">Harvardské schéma</a></li>
+<li><a class="reference internal" href="#harvardska-architektura">Harvardská architektura</a></li>
+<li><a class="reference internal" href="#flynnova-taxonomie">Flynnova taxonomie</a></li>
+<li><a class="reference internal" href="#zakladni-deska-pc-procesor-chipset-sbernice">Základní deska PC, procesor, chipset, sběrnice</a></li>
+<li><a class="reference internal" href="#zakladni-deska-mainboard">Základní deska (mainboard)</a></li>
+<li><a class="reference internal" href="#mikroprocesor">Mikroprocesor</a></li>
+<li><a class="reference internal" href="#sbernice">Sběrnice</a></li>
+<li><a class="reference internal" href="#lokalni-sbernice">Lokální sběrnice</a></li>
+<li><a class="reference internal" href="#dalsi-sbernice">Další sběrnice</a></li>
+</ul>
+</li>
 </ul>
 </ul>
 </li>
@@ -117,7 +133,183 @@
   <div class="row">
     <div class="col-md-12">
       
-  
+  <div class="section" id="otazka-c-2-architektura-pocitace-von-neumannovo-a-harwardske-schema-flynnova-taxonomie-zakladni-deska-procesor-mikroarchitektura-procesoru-pameti-sbernice-radic-pridavne-karty-ovladace">
+<h1>Otázka č.2: Architektura počítače (von Neumannovo a Harwardské schéma, Flynnova taxonomie, základní deska, procesor, mikroarchitektura procesoru, paměti, sběrnice, řadič, přídavné karty, ovladače).<a class="headerlink" href="#otazka-c-2-architektura-pocitace-von-neumannovo-a-harwardske-schema-flynnova-taxonomie-zakladni-deska-procesor-mikroarchitektura-procesoru-pameti-sbernice-radic-pridavne-karty-ovladace" title="Permalink to this headline">¶</a></h1>
+<p>Von Neumannovo schéma bylo navrženo roku 1945 americkým matematikem (narozeným v Maďarsku) Johnem von Neumannem jako model samočinného počítače. Tento model s jistými výjimkami zůstal zachován dodnes.</p>
+<img alt="../_images/neuman.gif" src="../_images/neuman.gif" />
+<img alt="../_images/neuman2.png" src="../_images/neuman2.png" />
+<p>Podle tohoto schématu se počítač skládá z pěti hlavních modulů:</p>
+<ul class="simple">
+<li>Operační paměť (memory): slouží k uchování zpracovávaného programu, zpracovávaných dat a výsledků výpočtu</li>
+<li>ALU - Arithmetic-Logic Unit (aritmetickologická jednotka): jednotka provádějící veškeré aritmetické výpočty a logické operace. Obsahuje sčítačky, násobičky (pro aritmetické výpočty) a komparátory (pro porovnávání)</li>
+<li>Řadič (control unit): řídící jednotka, která řídí činnost všech částí počítače. Toto řízení je prováděno pomocí řídících signálů, které jsou zasílány jednotlivým modulům. Reakce na řídící signály, stavy jednotlivých modulů jsou naopak zasílány zpět řadiči pomocí stavových hlášení</li>
+<li>Vstupní zařízení (input): zařízení určená pro vstup programu a dat.</li>
+<li>Výstupní zařízení (output): zařízení určená pro výstup výsledků, které program zpracoval</li>
+</ul>
+<p>Ve von Neumannově schématu je možné ještě vyznačit dva další moduly vzniklé spojením předcházejících modulů:
+* Procesor: Řadič + ALU
+* CPU - Central Processor Unit (centrální procesorová jednotka): Procesor + Operační paměť</p>
+<div class="section" id="von-neumannova-architektura">
+<h2>Von Neumannova architektura<a class="headerlink" href="#von-neumannova-architektura" title="Permalink to this headline">¶</a></h2>
+<div class="line-block">
+<div class="line">počítač (mikroprocesor) se skládá z pěti funkčních bloků - paměti, řadiče, aritmeticko-logické jednotky (ALU) a vstupních a výstupních jednotek,</div>
+</div>
+<p>struktura počítače je nezávislá na typu řešení úlohy a je řízena obsahem paměti,
+| instrukce a operandy jsou uloženy v téže paměti,
+| paměť je rozdělena do buněk stejné velikosti, jejichž pořadová čísla se používají jako adresy,
+| program je tvořen posloupností elementárních příkazů (instrukcí), v nichž zpravidla není obsažena hodnota operandu (uvádí se pouze jeho adresa), takže | program se při změně dat nemění; instrukce se provádějí jednotlivě v pořadí, v němž jsou zapsány do paměti,
+| změna provádění instrukcí se vyvolá instrukcí podmíněného a nepodmíněného skoku,
+| pro reprezentaci instrukcí a čísel (operandů, výsledků, adres apod.) se používají dvojkové signály a dvojková číselná soustava.
+| Tato koncepce ovlivnila výrobu počítačů a pak i mikroprocesorů až do osmdesátých let minulého století, kdy se objevil první signálový procesor s harvardskou architekturou</p>
+<p>Princip činnosti počítače podle von Neumannova schématu:</p>
+<ol class="arabic simple">
+<li>Do operační paměti se pomocí vstupních zařízení přes ALU umístí program, který bude provádět výpočet.</li>
+<li>Stejným způsobem se do operační paměti umístí data, která bude program zpracovávat</li>
+<li>Proběhne vlastní výpočet, jehož jednotlivé kroky provádí ALU. Tato jednotka je v průběhu výpočtu spolu s ostatními moduly řízena řadičem počítače. Mezivýsledky výpočtu jsou ukládány do operační paměti.</li>
+<li>Po skončení výpočtu jsou výsledky poslány přes ALU na výstupní zařízení.</li>
+</ol>
+<p>Základní odlišnosti dnešních počítačů od von Neumannova schématu:
+· Podle von Neumannova schématu počítač pracuje vždy nad jedním programem. Toto vede k velmi špatnému využití strojového času. Je tedy obvyklé, že počítač zpracovává paralelně více programů zároveň - tzv. multitasking
+· Počítač může disponovat i více než jedním procesorem – tzv. multiprocessing
+· Počítač podle von Neumannova schématu pracoval pouze v tzv. diskrétním režimu
+· Existují vstupní / výstupní zařízení I/O devices, která umožňují jak vstup, tak výstup dat (programu)
+· Program se do paměti nemusí zavést celý, ale je možné zavést pouze jeho část a ostatní části zavádět až v případě potřeby
+Diskrétní režim (protected mode - chráněný režim, též ochranný režim)
+Provozní režim procesorů Intel 80x86 a kompatibilních, při kterém je k dispozici větší paměťový prostor, možnosti multitaskingu a možnost využití virtuální paměti. V chráněném režimu pracuje automaticky operační systém OS/2, Windows NT a většina systémů UNIX.</p>
+</div>
+<div class="section" id="realny-rezim-real-mode">
+<h2>Reálný režim (real mode)<a class="headerlink" href="#realny-rezim-real-mode" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div>Druh paměťového režimu u počítačů založených na procesoru Intel 80x86. Je to jediný režim, který přímo podporuje operační systém MS-DOS. Hlavními znaky tohoto režimu je, že podporuje pouze jednoúlohové prostředí (tedy neumožňuje pravý multitasking) a že dokáže přímo zpřístupnit pouze paměť do 1 MB. Druhým režimem, který podporují procesory této řady, je chráněný režim.</div></blockquote>
+</div>
+<div class="section" id="multiprocessing">
+<h2>Multiprocessing<a class="headerlink" href="#multiprocessing" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div>Souběžné zpracování více úloh nebo podúloh. Systému s více procesory schopnému zpracovávat více úloh současně říkáme víceprocesorový systém. Ve víceprocesorovém systému jsou běžící procesy přiděleny ke zpracování jednotlivým procesorům, přičemž ty obvykle vykonávají různé části kódu a vyměňují si s ostatními procesory např. data a výsledky své činnosti.</div></blockquote>
+</div>
+<div class="section" id="multitasking">
+<h2>Multitasking<a class="headerlink" href="#multitasking" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div>Současné provádění více programových aplikací. V režimu multitasking je výpočetní čas procesoru počítače (CPU) rozdělen mezi současně spuštěné aplikace, takže vzhledem k rychlosti procesoru vzniká dojem současného zpracovávání více úloh. Multitasking je vlastností operačního systému a pravým multitaskingem disponují až pokročilé systémy, jako je MS Windows NT nebo systémy UNIX. Systém MS Windows umožňuje rovněž spouštět více aplikací, nicméně se nejedná o „pravý“ multitasking, ale o přepínání mezi více spuštěnými aplikacemi v dosti velkých časových intervalech (tzv. task swapping).</div></blockquote>
+</div>
+<div class="section" id="harvardske-schema">
+<h2>Harvardské schéma<a class="headerlink" href="#harvardske-schema" title="Permalink to this headline">¶</a></h2>
+<img alt="../_images/harvard_arch.png" src="../_images/harvard_arch.png" />
+<p>Harvardská architektura má na rozdíl od von Neumanovy architektury oddělený paměťový prostor pro data a pro program. Harvardská koncepce dovoluje používat pro paměť programu například paměti typu ROM (Read Only Memory) a umožňuje v podstatě zdvojnásobení velikosti paměti oproti von Neumanově architektuře při stejně veliké adresové sběrnici. Bit nutný pro realizaci této možnosti je obsažen v instrukčním souboru, který obsahuje instrukce pro komunikaci s datovou pamětí. U von Neumanovy koncepce je paměť pro data a pro program společná. Tímto způsobem se můžeme na instrukce dívat jako na data a během programu je můžeme měnit a ovlivňovat chování programu.</p>
+</div>
+<div class="section" id="harvardska-architektura">
+<h2>Harvardská architektura<a class="headerlink" href="#harvardska-architektura" title="Permalink to this headline">¶</a></h2>
+<p>Tato architektura byla navržena Howardem Aikenem v třicátých letech minulého století na Harvardské univerzitě ve Spojených státech při vývoji reléového počítače HARVARD MARK 1 (1944). Dále byla využita na Pensylvánské univerzitě pro elektronkový počítač ENIAC (Electronic Numerical Integrator and Calculator). Již tehdy byla moderní koncepcí, ale technické prostředky v té době neumožnily její realizaci, a proto byla zavržena a byla převzata koncepce von Neumannova. Později asi po čtyřiceti letech dosáhla technologie výroby integrovaných obvodů takového stupně, že mohla být tato koncepce realizována.</p>
+<p>Základní principy harvardské architektury jsou:</p>
+<ul class="simple">
+<li>paměť je rozdělena na paměť programu a dvě paměti dat tak, aby současně mohly dva operandy vstupovat do ALU,</li>
+<li>součin dvou operandů v jednom instrukčním cyklu provede hardwarová násobička a výsledek součinu je přičten k akumulátoru (operace typu MAC - Multiply And Accumulate),</li>
+<li>pro zvýšení výpočetní výkonnosti se používá pipelining (zřetězené zpracování instrukcí),</li>
+<li>je zvýšen počet samostatných datových a adresových sběrnic a přímý přístup do paměti je prováděn vícenásobným kanálem DMA (Direct Memory Access),</li>
+<li>řízení jádra procesoru je odděleno od řízení vstupních a výstupních jednotek a architektura typu 1X a 2X znamená, že jedna instrukce je provedena v jednom nebo ve dvou hodinových cyklech (taktech).</li>
+</ul>
+</div>
+<div class="section" id="flynnova-taxonomie">
+<h2>Flynnova taxonomie<a class="headerlink" href="#flynnova-taxonomie" title="Permalink to this headline">¶</a></h2>
+<p>Flynnova klasifikace je zřejmě nejznámější klasifikací paralelních systémů, vznikla v roce 1966. Systémy jsou klasifikovány podle dvou hledisek - toku instrukcí a toku dat. Klasifikace obsahuje 4 hlavní typy paralelních systémů a další 2 rozšiřující typy.</p>
+<ul class="simple">
+<li>SISD (s jedním tokem instrukcí, s jedním tokem dat): Počítač zpracovává data sériově podle jednoho programu. Takto pracuje například počítač von Neumannova typu.</li>
+<li>SIMD (s jedním tokem instrukcí, s vícenásobným tokem dat): Počítač používající více stejných procesorů, které jsou řízeny společným programem. Zpracovávaná data jsou různá, takže každý procesor pracuje s jinou hodnotu, ale všechny procesory současně provádějí stejnou instrukci.</li>
+<li>MISD (s vícenásobným tokem instrukcí, s jedním tokem dat): Tento typ se v praxi prakticky nepoužívá. Vznikl spíše pro doplnění jednotlivých kategorií.</li>
+<li>MIMD (s vícenásobným tokem instrukcí, s vícenásobným tokem dat): Víceprocesorový systém, v němž je každý procesor řízen vlastním programem a pracuje na vlastních datech.</li>
+<li>MSIMD (vícenásobné SIMD): V tomto systému pracuje několik podsystémů SIMD nezávisle na sobě. Jednotlivé podsystémy zpracovávají jiný program, proto musí být řízeny stejně jako systém MIMD.</li>
+<li>SPMD (stejný program, s vícenásobným tokem dat): Všechny procesory vykonávají stejný program, ale jsou na sobě nezávislé (nejsou synchronizovány). Jednotlivé procesory musí mít svůj řadič, který řídí rychlost přísunu instrukcí a jejich provádění.</li>
+</ul>
+</div>
+<div class="section" id="zakladni-deska-pc-procesor-chipset-sbernice">
+<h2>Základní deska PC, procesor, chipset, sběrnice<a class="headerlink" href="#zakladni-deska-pc-procesor-chipset-sbernice" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="zakladni-deska-mainboard">
+<h2>Základní deska (mainboard)<a class="headerlink" href="#zakladni-deska-mainboard" title="Permalink to this headline">¶</a></h2>
+<p>Obvody umístěné na desce plošného spoje mainboardu slouží především pro podporu mikroprocesoru a sběrnic, konektory propojují jednotky umístěné mimo mainboard (pevné disky, operační paměti…). Mainboard je základním prvkem PC, spojuje všechny další zařízení.
+Základní desky nemají stejné rozměry a nemusí jít umístit do každé skříně (většinou se ale dodržují dvě základní velikosti). Úkolem výrobce je vyrobit desku co nejuniverzálněji, aby spolupracovala s co největším počtem dalších komponent.
+K „dorozumívání“ desky (o vybavení na hardwarové úrovni) s operačním systémem slouží speciální program BIOS, který je umístěn v paměti typu ROM v DIP pouzdře. Výstupy BIOSu jsou vzhledem k OS přesně definovány, vstupy od hardwaru jsou však různé. Nejznámější výrobci BIOSů jsou AMI (American Megatrens Incorporated), Award a Phoenix. Ke konfiguraci BIOSu slouží program SETUP.
+Propojky (jumpery) - některé parametry základní desky je v zájmu univerzálnosti nutné nastavit nezávisle na BIOSu a toto nastavení se provádí pomocí jumperů. Jumper je skupina kontaktů (pinů), které můžeme propojit, a nastavit tak určitou vlastnost mainboardu. Propojení se provádí podle dokumentace k základní desce.
+Přepínače (switch) - vyskytovaly se hlavně u starších desek, bývaly sdružovány do větších celků a sloužily také k definování vlastností desky pomocí polohy ON/OFF.</p>
+<p>Prvky základní desky:</p>
+<ol class="arabic simple">
+<li>patice ZIF (zero input force) pro mikroprocesor</li>
+<li>patice s obvody DIP, v kterých je umístěna cache L2 (vedle mikroprocesoru)</li>
+<li>baterie pro napájení CMOS</li>
+<li>rozšiřující sloty ISA, PCI, AGP</li>
+<li>konektor integrovaného VGA adaptéru</li>
+<li>konektory integrovaného rozhraní I/O a integrovaného rozhraní IDE pro HDD a disketové mechaniky</li>
+<li>banky pro obvody operační paměti</li>
+<li>konektor myši PS/2</li>
+<li>připojení klávesnice (vedle konektoru pro myš)</li>
+<li>napájení základní desky (vzadu u konektoru klávesnice)</li>
+<li><ul class="first">
+<li>další neoznačené obvody pro podporu mikroprocesoru (nazývané chipset)</li>
+</ul>
+</li>
+</ol>
+</div>
+<div class="section" id="mikroprocesor">
+<h2>Mikroprocesor<a class="headerlink" href="#mikroprocesor" title="Permalink to this headline">¶</a></h2>
+<p>Mikroprocesor je „mozkem“ počítače, který slouží k zpracování instrukcí od programů, kterými je řízen. Některé instrukce zpracovává sám, k provedení některých dalších instrukcí používá různé komponenty počítače (např. operační paměť, disky, sběrnice, displej nebo tiskárny). Základní vlastností mikroprocesoru je vytváření dat podle pokynů určitého programu. Jeho kvalita podstatně ovlivňuje rychlost a výkonnost počítače.
+Jádrem každého mikroprocesoru je logický obvod, který dokáže zpracovat sadu jednoduchých mikroinstrukcí. Mikroinstrukce jsou jen jednoduché příkazy. Každý mikroprocesor je navíc vybaven instrukční sadou, která programátorům poskytuje přívětivější prostředky pro napsání složitějšího aplikačního programu. Převod instrukční sady na mikroinstrukce, které je mikroprocesor schopen řešit, obstarává program napsaný v mikroinstrukcích. Ten je další podstatnou částí mikroprocesoru.
+Dnes se uplatňují dvě koncepce mikroprocesorů: RISC a CISC, které se liší ve velikosti instrukční sady. CISC, tedy Complete Instruction Set Computer je řešením, kdy je mikroprocesor vybaven co nejúplnější instrukční sadou, a mikroprocesor RISC, tzn. Reduced Instruction Set Computer, pak obsahuje jen základní instrukce, které jsou jednodušší a rychleji proveditelné. Procesory RISC jsou rychlejší, uplatnily se ale jen v mikroprocesoru PowerPC (u IBM, Applu, Motoroly) a u velkých nebo jednoúčelových počítačů. U osobních počítačů převládají mikroprocesory CISC (u Intelu, AMD, Cyrixu), které stále více začínají uplatňovat prvky procesorů RISC.
+Každý mikroprocesor obsahuje registry. Ty fungují jako vnitřní paměti mikroprocesorů, do kterých se ukládají momentálně zpracovávaná data. Počet registrů a jejich přesné použití se u jednotlivých mikroprocesorů liší. K specifikaci adres v paměti, na kterých se nacházejí zpracovávaná data, se používají různé způsoby adresovacích mechanismů.
+Instrukční sada mikroprocesoru musí obsahovat instrukce pro přesuny dat mezi pamětí a registry, aritmetické a logické funkce, instrukce pro řízení programu a několik systémových instrukcí.
+Mikroprocesor vyhodnocuje během své činnosti celou řadu přerušení, tzn. signálů, které vysílají hardwarová zařízení nebo programy. Snad všechny moderní mikroprocesory mají vektorový systém přerušení. Vektory uložené v operační paměti, identifikované číslem přerušení, ukazují na adresu v paměti, kde je uložen obslužný program přerušení. Aby se po zpracování přerušení mohl procesor vrátit ke své původní činnosti, ukládá svůj momentální stav do speciálního registru - do zásobníku. Mikroprocesor také může přerušení dočasně zakázat.
+Paměť spravuje mikroprocesor pomocí jednotek správy paměti, které v paměti překládají adresy tak, aby to bylo výhodné pro operační systém. Jednotky správy paměti zabezpečují také ochranu paměti, zabraňují programům v narušení běhu ostatních programů nebo operačního systému.
+Mikroprocesory dále obsahují paměť cache, která je jakýmsi meziskladem dat mezi různě rychlými komponentami počítače. Účelem této paměti je vyrovnávání rychlostí v přenosu dat. Paměť L1 cache slouží k přechovávání dat ze sběrnice, na základní desce je pak instalovaná paměť cache L2, která optimalizuje přesuny dat mezi mikroprocesorem a operační pamětí.
+Schopnost mikroprocesoru zpracovávat posloupnost instrukcí se nazývá architektura mikroprocesoru. Instrukce se zpracovávají buď sekvenčně, tj. jedna za druhou, nebo superskalárně, tzn. nezávisle na sobě. Dalším zrychlujícím prvkem mikroprocesoru je pipelining, kdy se instrukce zpracovávají najednou ve více fázích.
+S ostatními komponentami počítače komunikuje mikroprocesor pomocí sběrnic, kterými proudí data, adresy nebo řídící signály (adresové, datové, řídící sběrnice). Čím více vodičů sběrnice má (definuje se tzv. „šířka sběrnice“), tím více dat je schopna přenášet. Veškeré přenášené informace se skládají z nul a jedniček. Pokud má sběrnice 32 vodičů (sběrnice je 32bitová), může přenášet 232 různých informací. Sběrnice se dělí na adresové (obhospodařující paměť) a datové (přenáší data mezi mikroprocesorem a okolím).
+Elektronické obvody tvořící mikroprocesor pracují v jednotlivých taktech, které udávají jejich pracovní tempo. Každá základní deska je vybavena generátorem taktů, který generuje taktovací impulsy pro mikroprocesor. Základní deska nabízí přepínání více taktovacích frekvencí. Čím je vnitřní frekvence mikroprocesoru vyšší, tím rychleji mikroprocesor pracuje, ale také se více zahřívá. V současnosti dosahují procesory taktovací frekvence až 2,8 GHz. Vnitřní frekvence je vždy násobkem frekvence vnější, která určuje rytmus práce periferních zařízení (=&gt; pomalejší práce). Vnější frekvence je generována stejným časovým obvodem jako vnitřní, lze ji nastavovat umístěním jumperů (propojek). Popř. lze nastavit u modernějších BIOSů a základních desek přímo v SETUPu.
+Na základní desce lze upravit také napájení mikroprocesoru. Napětí, kterým jsou procesory napájeny se neustále snižuje, aby se snížilo jejich zahřívání vlivem spotřeby většího množství elektrické energie. Velikosti napětí se pohybují kolem 3,3 V. Mikroprocesory pro notebooky mají napětí nižší než 3 V. Napájecí zdroj dodává na desku napětí vyšší (asi 5 V), nastavení napětí pro mikroprocesor se provádí pomocí jumperů nebo v SETUPu (všechny potřebné údaje nalezneme v dokumentaci).
+Dříve se mikroprocesory pájely napevno do základní desky. Dnes jsou upevňovány pomocí patic (socketů). Patice bývají typu ZIF (patice Socket 7, Socket 370, Socket A), tzn. že mají na boku páčku, jejímž zvednutím se mikroprocesor z patice uvolní a stlačením se naopak do patice upevní. Do patice je tak možné vložit např. výkonnější procesor, který je s paticí vývodově kompatibilní (nutné je zkontrolovat kompatibilitu napájecího napětí, šířku sběrnice a frekvence podporované zákl. deskou). Asi od Pentií 75 MHz je nezbytné procesory chladit pomocí aktivních a pasivních chladičů. Pasivní chladiče se skládají z chladících žeber, kterými proudí vzduch. Chladiče se na mikroprocesor lepí, nebo se k němu připínají speciálními klipsami, dále se aktivní chladiče připojují ke konektoru napájecího zdroje. Výrobci chladičů: Cryotech, Titan.</p>
+</div>
+<div class="section" id="sbernice">
+<h2>Sběrnice<a class="headerlink" href="#sbernice" title="Permalink to this headline">¶</a></h2>
+<p>Sběrnici si můžeme obecně představit jako skupinu elektrických vodičů spojujících jednotlivé součásti počítače. Přes sběrnice probíhá komunikace mezi mikroprocesorem a periferiemi, přičemž komunikovat s okolím může mikroprocesor třemi způsoby:</p>
+<ol class="arabic simple">
+<li>pomocí sběrnic</li>
+<li>pomocí hardwarových přerušení (IRQ)</li>
+<li>kanály přímého přístupu do paměti (DMA)</li>
+</ol>
+<p>Sběrnic v počítači existuje hned několik (sběrnice procesoru, přídavných karet ap.). Většina sběrnic je rozdělena na tři podsystémy:</p>
+<ul class="simple">
+<li>sběrnice datová - přenáší pouze numerické údaje mezi zdrojovým a cílovým zařízením.</li>
+<li>sběrnice adresová - přenáší adresy zařízení, které se účastní komunikace.</li>
+<li>sběrnice řídící - přenáší signály pro řízení celé komunikace.</li>
+</ul>
+<p>Základním požadavkem na sběrnici je rychlost přenosu dat. Ideální by bylo, kdyby jednotlivé komponenty počítače byly mezi sebou propojeny nejrychlejším možným způsobem. To by ale výrazně zvýšilo cenu počítače a zabránilo by standardizaci zařízení. Starší počítače byly konstruovány okolo jedné jediné sběrnice. To sice snížilo jejich cenu, ale také výkon. Na sběrnici mezi sebou mohly komunikovat jen právě dva prvky (vysílající a přijímající). Ostatním částem nebyl přistup na sběrnici v dané chvíli umožněn. Sběrnice musí vyhovovat typu mikroprocesoru, který udává šířku datové i adresové části sběrnice.</p>
+<p>Režimy využívané sběrnicemi:</p>
+<ul class="simple">
+<li>Multimastering - provoz sběrnice řídí některá z přídavných karet, která provádí některé úkoly mikroprocesoru. Procesor se tak nemusí zatěžovat komunikací přes sběrnici a prací některých periférií.</li>
+<li>Burst režim - data jsou přenášena po skupinách bez adresy u každého datového bloku -&gt; urychlení.</li>
+</ul>
+</div>
+<div class="section" id="lokalni-sbernice">
+<h2>Lokální sběrnice<a class="headerlink" href="#lokalni-sbernice" title="Permalink to this headline">¶</a></h2>
+<p>Současné počítače jsou postaveny na hierarchické sběrnicové struktuře. Základní je tzv. lokální sběrnice. Po ní musí komunikace probíhat nejrychleji, protože na ni vstupuje procesor, který je nejrychlejší součástí počítače. Pomalá sběrnice by výrazně zpomalovala jeho provoz. Dokonce ani konstrukce dnešních sběrnic není na takové úrovni, aby vyhovovala výkonu procesoru, proto se do taktu procesoru vkládají tzv. čekací cykly. Tyto cykly zajišťují bezchybnou komunikaci procesoru se sběrnicí, ale zároveň snižují jeho výkon.
+Rozšiřovací sběrnice (=systémová)
+Odděluje mikroprocesor od “okolního světa”, je cestou pro připojení dalších komponent (většinou od různých výrobců). Sběrnice vyúsťuje konektory - jednotlivými sloty, do kterých se přídavné karty zasazují. U systémové sběrnice jsou kladeny nejvyšší nároky na rychlost přenosu a na důslednou standardizaci (kompatibilitu) tak, aby do slotů (patlí, zástrček) sběrnice mohly být instalovány přídavné karty různých výrobců.
+Rozšiřovacích sběrnic je u počítačů IBM PC kompatibilních hned několik druhů, ty se liší především svou propustností (množstvím dat, která projdou přes sběrnici za jednotku času):</p>
+<ul class="simple">
+<li>XT BUS - stará osmibitová sběrnice</li>
+<li>osmibitová ISA (lndustry Standard Architecture) - nejstarší varianta sběrnice osobních počítačů PC XT (před 80286). Stará a relativně pomalá sběrnice, která se vyskytuje ve dvou variantách (starší osmibitová a novější šestnáctibitová).</li>
+<li>šestnáctibitová ISA - zdokonalená verze pro počítače PC AT a 80286, má 16bitové rozšíření, počet karet připojených přes sběrnici není už omezen. Slot sběrnice bývá hnědý nebo černý, v BIOSu lze zvýšit její kmitočet, nastavení - pomocí jumperů.</li>
+<li>MCA (MicroChannel Architecture) - sběrnice vyvinutá firmou IBM pro počítače řady PS/2, 80386, není kompatibilní s ISA.</li>
+<li>EISA (Extended ISA) - jak název napovídá, jedná se o zdokonalení dřívějšího standardu ISA - kompatibilní s ISA, stále však nízká frekvence, slot sběrnice je dvoupatrový (vytvořený ze starých ISA slotů), konfiguruje se programově. Nedosáhla velkého rozšíření.</li>
+<li>VL-BUS (Video Local Bus), VESA VL-BUS - standard vytvořený v roce 1991 několika výrobci základních desek. Předchůdce PCI, používala se hlavně u starších mikroprocesorů 80486. Je koncipována jako rozšíření ISA. VL-BUS není klasickou sběrnicí - je jen nástavbou ISA. Nevýhodné je, že s rostoucí frekvencí rychle stoupá zatížení sběrnice - mohlo se použít jen pár slotů, a proto se sběrnice také nerozšířila.</li>
+<li>PCI (Peripheral Component Interconnect) - sběrnice definovaná v roce 1993 firmou Intel v souvislosti s nástupem Pentií. Vyznačovala se vysokou přenosovou rychlostí (nad 100 MB) a spolehlivostí, nezávislostí na frekvenci procesoru. Sběrnice přinesla také normu PnP (plug-and-play). Kvůli zatížení nemůže být na desce více než 3-4 PCI slotů.</li>
+<li>AGP - 32-bitová, oproti PCI průchodnější pro paměti, podpora grafických akcelerátorů - často se na ni napojují videokarty.</li>
+</ul>
+</div>
+<div class="section" id="dalsi-sbernice">
+<h2>Další sběrnice<a class="headerlink" href="#dalsi-sbernice" title="Permalink to this headline">¶</a></h2>
+<p>V počítači IBM PC kompatibilním jsou používány i jiné sběrnice (např. SCSI, IDE nebo Centronics), které však plní rozdílné úkoly.
+Při koupi jakékoliv nové karty musíme brát v úvahu typ sběrnice našeho počítače, protože nová karta by nemusela odpovídat slotům na našem motherboardu. Na základní desce je většinou několik slotů PCI, AGP (2-3), od starších ISA slotů se postupně upouští.</p>
+</div>
+</div>
+
 
     </div>
       
