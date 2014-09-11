@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>5. Sémantický web: technologie sémantického webu, metadata, RDF, RDFS, OWL, dotazování se na sémantický web (význam, jazyky), sémantický web a odvozování (význam, jazyky), aplikace sémantického webu. &mdash; Otazky na statnice 0.0.1 documentation</title>
+    
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-3.1.0/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-3.1.0/css/bootstrap-theme.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '0.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-3.1.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <link rel="top" title="Otazky na statnice 0.0.1 documentation" href="../index.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+  </head>
+  <body>
+
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../index.html">
+          Otazky na statnice</a>
+        <span class="navbar-text navbar-version pull-left"><b>0.0.1</b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            <li class="divider-vertical"></li>
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="../index.html">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"></ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
+<li><a class="reference internal" href="#">5. Sémantický web: technologie sémantického webu, metadata, RDF, RDFS, OWL, dotazování se na sémantický web (význam, jazyky), sémantický web a odvozování (význam, jazyky), aplikace sémantického webu.</a><ul>
+<li><a class="reference internal" href="#typy-metadat">Typy metadat</a></li>
+<li><a class="reference internal" href="#metadatovy-framework">Metadatový framework</a><ul>
+<li><a class="reference internal" href="#komponenty">Komponenty</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+              
+            
+            
+            
+            
+              <li class="hidden-sm">
+<div id="sourcelink">
+  <a href="../_sources/prog/5.txt"
+     rel="nofollow">Source</a>
+</div></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      
+  <div class="section" id="semanticky-web-technologie-semantickeho-webu-metadata-rdf-rdfs-owl-dotazovani-se-na-semanticky-web-vyznam-jazyky-semanticky-web-a-odvozovani-vyznam-jazyky-aplikace-semantickeho-webu">
+<h1>5. Sémantický web: technologie sémantického webu, metadata, RDF, RDFS, OWL, dotazování se na sémantický web (význam, jazyky), sémantický web a odvozování (význam, jazyky), aplikace sémantického webu.<a class="headerlink" href="#semanticky-web-technologie-semantickeho-webu-metadata-rdf-rdfs-owl-dotazovani-se-na-semanticky-web-vyznam-jazyky-semanticky-web-a-odvozovani-vyznam-jazyky-aplikace-semantickeho-webu" title="Permalink to this headline">¶</a></h1>
+<dl class="docutils">
+<dt>Metadata: klíčový aspekt sémantického webu</dt>
+<dd><dl class="first last docutils">
+<dt>Obsah sémantického webu = data + metadata</dt>
+<dd><ul class="first last simple">
+<li>Smysl: obohacení dat na webu o významově bohaté popisy (výroky) pro dosažení automatizovaného zpracování webových               dokumentů webovými agenty</li>
+<li>Přechod od webu informačního k webu znalostnímu</li>
+</ul>
+</dd>
+</dl>
+</dd>
+</dl>
+<div class="section" id="typy-metadat">
+<h2>Typy metadat<a class="headerlink" href="#typy-metadat" title="Permalink to this headline">¶</a></h2>
+<p>Příklad metadat: knihovní katalog</p>
+<ul class="simple">
+<li>Obsahově nezávislá metadata</li>
+<li>Katalogový knihovní záznam publikace (standardní záznam)</li>
+</ul>
+<ul class="simple">
+<li>Příklady: Poslední datum uložení dokumentu, místo uložení, přístup typu uživatele k dokumentu, ...</li>
+</ul>
+<ul class="simple">
+<li>Obsahově závislá metadata</li>
+</ul>
+<ul class="simple">
+<li>Příklady: Velikost dokumentu, barva obrázků, autor, počet stran, jazyk dokumentu, ...</li>
+<li>Strukturovaná metadata: metadata spojená se strukturováním dokumentu (kapitoly a odstavce knihy, položky objednávky, ...)</li>
+<li>Doménově specifická metadata: metadata související s aplikační doménou</li>
+</ul>
+<ul class="simple">
+<li>Intra-doménově specifická: zachycují vztahy mezi daty týkající se stejné domény (např. pacient a alergie)</li>
+<li>Inter-doménově specifická: zachycují vztahy mezi daty různých domén (např. ontologie – filosofie i informatika)</li>
+</ul>
+</div>
+<div class="section" id="metadatovy-framework">
+<h2>Metadatový framework<a class="headerlink" href="#metadatovy-framework" title="Permalink to this headline">¶</a></h2>
+<p>Sestává z množiny specifikací, které jsou zaměřeny např. na reprezentaci, manipulaci, uložení, údržbu a dotazování se na data a     metadata</p>
+<div class="section" id="komponenty">
+<h3>Komponenty<a class="headerlink" href="#komponenty" title="Permalink to this headline">¶</a></h3>
+<ul>
+<li><p class="first">Datový model: soubor datových typů a funkcí, pomocí kterých se tvoří abstraktní pohled na webový dokument s možností přístupu k hodnotám uložených v proměnných datových typů</p>
+</li>
+<li><dl class="first docutils">
+<dt>Serializační formát: poskytuje meta-jazyk a syntaktické konstrukce pro kódování metadat</dt>
+<dd><ul class="first last simple">
+<li>příklad: RDF i OWL mají různé datové modely, přičemž jsou serializovány (zapsány) s použitím XML syntaxe</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p class="first">Dotazovací jazyk: existence různých přístupů pro dotazování (např. RDF – SPARQL, OWL – SQWRL)</p>
+</li>
+</ul>
+<ul>
+<li><p class="first">Metadatový framework na bázi XML (W3C)</p>
+</li>
+<li><p class="first">Metadatový framework na bázi RDF (W3C)</p>
+</li>
+<li><dl class="first docutils">
+<dt>Jeden z nejstarších vyvinut s cílem oddělení obsahu od • Primárně určen pro reprezentaci metadat způsobu prezentace webového obsahu přidělených různým webovým zdrojům</dt>
+<dd><ul class="first last simple">
+<li>Komponenty: • Komponenty:</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+<p>– XLink, XPointer: reprezentace hypertextových odkazů
+– XSL specifikace s XSLT (transformace XML dokumentu do
+formy HTML stránky zobrazitelné na webu)
+– Specifikace Xquery a Xpath: extrakce XML informací z
+webových dokumentů
+– Specifikace XML Schématu: definice struktury XML
+dokumentů pro rozšíření jejich sémantiky
+– Specifikace RDF založená na XML (RDF/XML)
+– Specifikace RDF Schématu: tvorba hierarchií
+– Specifikace SPARQL: protokol a</p>
+<ul class="simple">
+<li>přednášky ZT2 na <a class="reference external" href="https://github.com/michaelkuty/ssz-ai-hk-3/tree/gh-pages/source/prednasky/zt2/">https://github.com/michaelkuty/ssz-ai-hk-3/tree/gh-pages/source/prednasky/zt2/</a></li>
+</ul>
+</div>
+</div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2014, Michael Kutý.<br/>
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.2.3.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

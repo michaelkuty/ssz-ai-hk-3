@@ -1,0 +1,58 @@
+=========
+5. Sémantický web: technologie sémantického webu, metadata, RDF, RDFS, OWL, dotazování se na sémantický web (význam, jazyky), sémantický web a odvozování (význam, jazyky), aplikace sémantického webu.
+=========
+
+Metadata: klíčový aspekt sémantického webu
+    Obsah sémantického webu = data + metadata
+     • Smysl: obohacení dat na webu o významově bohaté popisy (výroky) pro dosažení automatizovaného zpracování webových               dokumentů webovými agenty
+     • Přechod od webu informačního k webu znalostnímu
+
+
+Typy metadat 
+--------
+
+Příklad metadat: knihovní katalog
+
+• Obsahově nezávislá metadata 
+• Katalogový knihovní záznam publikace (standardní záznam)
+* Příklady: Poslední datum uložení dokumentu, místo uložení, přístup typu uživatele k dokumentu, ...
+• Obsahově závislá metadata
+* Příklady: Velikost dokumentu, barva obrázků, autor, počet stran, jazyk dokumentu, ...
+* Strukturovaná metadata: metadata spojená se strukturováním dokumentu (kapitoly a odstavce knihy, položky objednávky, ...)
+* Doménově specifická metadata: metadata související s aplikační doménou
+• Intra-doménově specifická: zachycují vztahy mezi daty týkající se stejné domény (např. pacient a alergie)
+• Inter-doménově specifická: zachycují vztahy mezi daty různých domén (např. ontologie – filosofie i informatika)
+
+Metadatový framework
+--------
+
+Sestává z množiny specifikací, které jsou zaměřeny např. na reprezentaci, manipulaci, uložení, údržbu a dotazování se na data a     metadata
+
+Komponenty
+"""""""
+
+* Datový model: soubor datových typů a funkcí, pomocí kterých se tvoří abstraktní pohled na webový dokument s možností přístupu k hodnotám uložených v proměnných datových typů
+
+* Serializační formát: poskytuje meta-jazyk a syntaktické konstrukce pro kódování metadat
+	* příklad: RDF i OWL mají různé datové modely, přičemž jsou serializovány (zapsány) s použitím XML syntaxe
+
+* Dotazovací jazyk: existence různých přístupů pro dotazování (např. RDF – SPARQL, OWL – SQWRL)
+
+
+• Metadatový framework na bázi XML (W3C)
+• Metadatový framework na bázi RDF (W3C)
+• Jeden z nejstarších vyvinut s cílem oddělení obsahu od • Primárně určen pro reprezentaci metadat způsobu prezentace webového obsahu přidělených různým webovým zdrojům
+             • Komponenty: • Komponenty:
+– XLink, XPointer: reprezentace hypertextových odkazů
+– XSL specifikace s XSLT (transformace XML dokumentu do
+formy HTML stránky zobrazitelné na webu)
+– Specifikace Xquery a Xpath: extrakce XML informací z
+webových dokumentů
+– Specifikace XML Schématu: definice struktury XML
+dokumentů pro rozšíření jejich sémantiky
+– Specifikace RDF založená na XML (RDF/XML)
+– Specifikace RDF Schématu: tvorba hierarchií
+– Specifikace SPARQL: protokol a 
+
+
+* přednášky ZT2 na https://github.com/michaelkuty/ssz-ai-hk-3/tree/gh-pages/source/prednasky/zt2/
