@@ -145,7 +145,6 @@ Topic Maps
 
 Všeobecné použití: tvorba pojmových map
 
-• Ve vztahu k námětovým mapám – možnost importu námětové mapy v syntaxi XTM ver. 1.0
 * Ve vztahu k námětovým mapám – možnost exportu námětové mapy v syntaxi XTM ver. 1.0
 
 Využití námětových map
@@ -174,3 +173,49 @@ postup tvorby námětové mapy
 * Výběr přístupu pro tvorbu kódu námětové mapy
 * Tvorba dokumentace
 * Údržba námětové mapy
+
+Omezení zkoumané oblasti
+"""""
+
+* Které předměty má a nemá námětová mapa pokrývat?
+• Nutno určit úroveň detailnosti modelování jednotlivých elementů námětové mapy a množství těchto elementů
+• Toto určujeme pro snadnější management námět. mapy
+* Které informační zdroje mají být zahrnuty a jakou mají mít formu (formát)?
+
+Koncoví uživatelé
+* Jaké uživatelské skupině je námětová mapa určena?
+* Jaká jsou očekávání této uživatelské skupiny?
+* Je zde uživatelská skupina se specifickými požadavky?
+
+
+* instance-of (is-a): je instancí typu
+(vztah mezi námětem a typem námětu)
+* is-subclass-of (is-a-kind-of, ako) 
+* (vztah mezi typy námětů)
+
+Návrh: hierarchie typů
+""""""
+Při tvorbě hierarchie kombinujeme dva typy vztahů:
+
+Příklady:
+* Maxipes Fík is-a Pes
+* Pes ako Šelma
+
+* Ne každá hierarchie je hierarchií typů! 
+* Například nemůže říct: “Paříž AKO Francie“
+* Pro hierarchii typů platí:
+* Když typ A je nadtypem typu B, potom
+• (a) A i B jsou typy
+• (b) je-li C instancí typu B, musí být také instancí typu A
+• (c) je-li D podtypem typu B, musí být i podtype
+
+Syntaxe XTM (XML Topic Maps)
+"""""""
+* Část standardu ISO 13250 pod názvem ISO/IEC-3 XML syntaxe 
+• Syntaxe XTM je založená na značkovacím jazyce XML a jazyce XLink => XTM dokument je XML dokumentem 
+• Vznik syntaxe na základě požadavku využití technologie Topic Maps i ve webovém prostředí 
+• Autor syntaxe: nezávislá organizace TopicMaps.org 
+• První verze syntaxe (1.0) představena r. 2000 na konferenci XML 2000 ve Washingtonu 
+• Oficiální publikace syntaxe r. 2001 ve formě standardu ISO 
+• V současné době se jedná o jednu z nejpoužívanějších syntaxí pro tvorbu námětových map 
+• Možnost využití verze 2.0 (prostředí Ontopia ji má v nabídce) 

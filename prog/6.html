@@ -141,6 +141,9 @@
 </li>
 </ul>
 </li>
+<li><a class="reference internal" href="#omezeni-zkoumane-oblasti">6.6. Omezení zkoumané oblasti</a></li>
+<li><a class="reference internal" href="#navrh-hierarchie-typu">6.7. Návrh: hierarchie typů</a></li>
+<li><a class="reference internal" href="#syntaxe-xtm-xml-topic-maps">6.8. Syntaxe XTM (XML Topic Maps)</a></li>
 </ul>
 </li>
 </ul>
@@ -370,9 +373,6 @@ námětových map ... viz. blíže dokumentace distribuovaná s prostředím Ont
 <h4>6.5.2.1. Topic Maps<a class="headerlink" href="#topic-maps" title="Permalink to this headline">¶</a></h4>
 <p>Všeobecné použití: tvorba pojmových map</p>
 <ul class="simple">
-<li>Ve vztahu k námětovým mapám – možnost importu námětové mapy v syntaxi XTM ver. 1.0</li>
-</ul>
-<ul class="simple">
 <li>Ve vztahu k námětovým mapám – možnost exportu námětové mapy v syntaxi XTM ver. 1.0</li>
 </ul>
 </div>
@@ -421,6 +421,71 @@ námětových map ... viz. blíže dokumentace distribuovaná s prostředím Ont
 </div>
 </div>
 </div>
+<div class="section" id="omezeni-zkoumane-oblasti">
+<h2>6.6. Omezení zkoumané oblasti<a class="headerlink" href="#omezeni-zkoumane-oblasti" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Které předměty má a nemá námětová mapa pokrývat?</li>
+</ul>
+<ul class="simple">
+<li>Nutno určit úroveň detailnosti modelování jednotlivých elementů námětové mapy a množství těchto elementů</li>
+<li>Toto určujeme pro snadnější management námět. mapy</li>
+</ul>
+<ul class="simple">
+<li>Které informační zdroje mají být zahrnuty a jakou mají mít formu (formát)?</li>
+</ul>
+<p>Koncoví uživatelé
+* Jaké uživatelské skupině je námětová mapa určena?
+* Jaká jsou očekávání této uživatelské skupiny?
+* Je zde uživatelská skupina se specifickými požadavky?</p>
+<ul class="simple">
+<li>instance-of (is-a): je instancí typu</li>
+</ul>
+<p>(vztah mezi námětem a typem námětu)
+* is-subclass-of (is-a-kind-of, ako)
+* (vztah mezi typy námětů)</p>
+</div>
+<div class="section" id="navrh-hierarchie-typu">
+<h2>6.7. Návrh: hierarchie typů<a class="headerlink" href="#navrh-hierarchie-typu" title="Permalink to this headline">¶</a></h2>
+<p>Při tvorbě hierarchie kombinujeme dva typy vztahů:</p>
+<p>Příklady:
+* Maxipes Fík is-a Pes
+* Pes ako Šelma</p>
+<ul class="simple">
+<li>Ne každá hierarchie je hierarchií typů!</li>
+<li>Například nemůže říct: “Paříž AKO Francie“</li>
+<li>Pro hierarchii typů platí:</li>
+<li>Když typ A je nadtypem typu B, potom</li>
+</ul>
+<ul class="simple">
+<li><ol class="first loweralpha">
+<li>A i B jsou typy</li>
+</ol>
+</li>
+<li><ol class="first loweralpha" start="2">
+<li>je-li C instancí typu B, musí být také instancí typu A</li>
+</ol>
+</li>
+<li><ol class="first loweralpha" start="3">
+<li>je-li D podtypem typu B, musí být i podtype</li>
+</ol>
+</li>
+</ul>
+</div>
+<div class="section" id="syntaxe-xtm-xml-topic-maps">
+<h2>6.8. Syntaxe XTM (XML Topic Maps)<a class="headerlink" href="#syntaxe-xtm-xml-topic-maps" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Část standardu ISO 13250 pod názvem ISO/IEC-3 XML syntaxe</li>
+</ul>
+<ul class="simple">
+<li>Syntaxe XTM je založená na značkovacím jazyce XML a jazyce XLink =&gt; XTM dokument je XML dokumentem</li>
+<li>Vznik syntaxe na základě požadavku využití technologie Topic Maps i ve webovém prostředí</li>
+<li>Autor syntaxe: nezávislá organizace TopicMaps.org</li>
+<li>První verze syntaxe (1.0) představena r. 2000 na konferenci XML 2000 ve Washingtonu</li>
+<li>Oficiální publikace syntaxe r. 2001 ve formě standardu ISO</li>
+<li>V současné době se jedná o jednu z nejpoužívanějších syntaxí pro tvorbu námětových map</li>
+<li>Možnost využití verze 2.0 (prostředí Ontopia ji má v nabídce)</li>
+</ul>
+</div>
 </div>
 
 
@@ -435,7 +500,6 @@ námětových map ... viz. blíže dokumentace distribuovaná s prostředím Ont
       
     </p>
     <p>
-        &copy; Copyright 2014, Michael Kutý.<br/>
       Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.2.3.<br/>
     </p>
   </div>

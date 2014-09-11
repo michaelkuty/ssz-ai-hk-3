@@ -55,6 +55,10 @@ Přednášky
 * `ZT2`_
 * `PSIT4`_
 
+.. _ZT1: https://github.com/michaelkuty/ssz-ai-hk-3/tree/gh-pages/source/prednasky/zt1/
+.. _ZT2: https://github.com/michaelkuty/ssz-ai-hk-3/tree/gh-pages/source/prednasky/zt2/
+.. _PSIT4: https://github.com/michaelkuty/ssz-ai-hk-3/tree/gh-pages/source/prednasky/psit4/
+
 Syntaxe - **reStructuredText**
 ------
 
@@ -63,8 +67,8 @@ Syntaxe - **reStructuredText**
 * SublimeText plugin https://github.com/mgaitan/sublime-rst-completion
 * dostupné formáty pro export http://sphinx-doc.org/builders.html
 * Auto build https://pypi.python.org/pypi/sphinx-autobuild
-	* pip install watchdog  
-	* watchmedo shell-command --patterns=*.rst --recursive --command='sphinxuild -b html ./source/ ./' 
+   * pip install watchdog  
+   * watchmedo shell-command --patterns=*.rst --recursive --command='sphinxuild -b html ./source/ ./' 
 * pro build bootstrap skinu *pip install sphinx_bootstrap_theme*
 
 Jak přispět ?
@@ -84,6 +88,3 @@ Indices and tables
 * :ref:`modindex`
 * :ref:`search`
 
-.. _ZT1: https://github.com/michaelkuty/ssz-ai-hk-3/tree/gh-pages/source/prednasky/zt1/
-.. _ZT2: https://github.com/michaelkuty/ssz-ai-hk-3/tree/gh-pages/source/prednasky/zt2/
-.. _PSIT4: https://github.com/michaelkuty/ssz-ai-hk-3/tree/gh-pages/source/prednasky/psit4/

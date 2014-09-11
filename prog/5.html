@@ -121,9 +121,14 @@
 <li><a class="reference internal" href="#typy-metadat">5.1. Typy metadat</a></li>
 <li><a class="reference internal" href="#metadatovy-framework">5.2. Metadatový framework</a><ul>
 <li><a class="reference internal" href="#komponenty">5.2.1. Komponenty</a></li>
-<li><a class="reference internal" href="#metadatovy-framework-zalozeny-na-owl-w3c">5.2.2. Metadatový framework založený na OWL (W3C)</a></li>
-<li><a class="reference internal" href="#shrnuti-funkci-metadat">5.2.3. Shrnutí funkcí metadat</a></li>
-<li><a class="reference internal" href="#budoucnost-metadat">5.2.4. Budoucnost metadat</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#rdf">5.3. RDF</a><ul>
+<li><a class="reference internal" href="#vlastnosti">5.3.1. Vlastnosti</a></li>
+<li><a class="reference internal" href="#schema">5.3.2. Schéma</a></li>
+<li><a class="reference internal" href="#metadatovy-framework-zalozeny-na-owl-w3c">5.3.3. Metadatový framework založený na OWL (W3C)</a></li>
+<li><a class="reference internal" href="#shrnuti-funkci-metadat">5.3.4. Shrnutí funkcí metadat</a></li>
+<li><a class="reference internal" href="#budoucnost-metadat">5.3.5. Budoucnost metadat</a></li>
 </ul>
 </li>
 </ul>
@@ -238,14 +243,51 @@
 <li>Primárně určen pro reprezentaci metadat způsobu prezentace webového obsahu přidělených různým webovým zdrojům</li>
 </ul>
 </div>
+</div>
+<div class="section" id="rdf">
+<h2>5.3. RDF<a class="headerlink" href="#rdf" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="vlastnosti">
+<h3>5.3.1. Vlastnosti<a class="headerlink" href="#vlastnosti" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Lze tvořit jen jednoduchá tvrzení tvaru podmět-přísudek-předmět</li>
+<li>Nelze vyjádřit co podmět, přísudek a předmět znamenají, ani jaké jsou mezi nimi vztahy</li>
+<li>Krkonoše jsou pohoří, Sněžka je hora, každá hora má výšku, ...</li>
+</ul>
+<ul class="simple">
+<li>Pro tvorbu komplexních ontologií se nehodí,</li>
+</ul>
+<p>vhodnější je OWL
+* Explicitně nemá zabudován koncept reprezentace tříd, implicitně ano ve formě rdf:type a rdf:property =&gt; v RDF lze reprezentovat, že něco“ je třídou nebo vlastností
+* S RDF ale nelze reprezentovat, že třída A je podtřídou třídy B =&gt; hierarchii tříd a vztahy mezi třídami</p>
+</div>
+<div class="section" id="schema">
+<h3>5.3.2. Schéma<a class="headerlink" href="#schema" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>RDF Schema, The RDF Vocabulary Description language</li>
+</ul>
+<ul class="simple">
+<li>Nadstavba jazyka RDF pro tvorbu ontologií, která vznikla rozšířením</li>
+<li>a sémantiky RDF</li>
+<li>Určeno pro tvorbu struktury RDF tvrzení, resp. pro tvorbu tříd</li>
+<li>a tříd vlastností pro reprezentaci vztahů mezi třídami</li>
+<li>Zdroje tak mohou být kategorizovány a vnímány jako instance tříd</li>
+<li>Třídy zdrojů jsou seskupovány do hierarchie</li>
+<li>Třídy jsou vnímány jako rozšíření popisu zdrojů, více je konkretizují</li>
+<li>Hierarchie RDF tříd je chápána jako RDF slovník obsahující množinu</li>
+<li>RDF tvrzení se specifickým významem</li>
+<li>Jedná se také o RDF graf, jako v případě RDF</li>
+<li>Jmenný prostor má následující tvar:</li>
+<li>://www.w3.org/2000/01/rdf-schema# (rdfs prefix)</li>
+</ul>
+</div>
 <div class="section" id="metadatovy-framework-zalozeny-na-owl-w3c">
-<h3>5.2.2. Metadatový framework založený na OWL (W3C)<a class="headerlink" href="#metadatovy-framework-zalozeny-na-owl-w3c" title="Permalink to this headline">¶</a></h3>
+<h3>5.3.3. Metadatový framework založený na OWL (W3C)<a class="headerlink" href="#metadatovy-framework-zalozeny-na-owl-w3c" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li>OWL jazyk nabízí konstrukce, které umožňují vyjádřit různé typy omezení a axiomů na úrovni schémat a dat</li>
 </ul>
 </div>
 <div class="section" id="shrnuti-funkci-metadat">
-<h3>5.2.3. Shrnutí funkcí metadat<a class="headerlink" href="#shrnuti-funkci-metadat" title="Permalink to this headline">¶</a></h3>
+<h3>5.3.4. Shrnutí funkcí metadat<a class="headerlink" href="#shrnuti-funkci-metadat" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li>Shrnutí (popisná funkce): sumarizace obsahu</li>
 <li>Vyhledávání: prohledávání metadat s cílem vyšší přesnosti výsledků</li>
@@ -260,7 +302,7 @@
 </ul>
 </div>
 <div class="section" id="budoucnost-metadat">
-<h3>5.2.4. Budoucnost metadat<a class="headerlink" href="#budoucnost-metadat" title="Permalink to this headline">¶</a></h3>
+<h3>5.3.5. Budoucnost metadat<a class="headerlink" href="#budoucnost-metadat" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li>Některé standardy se stanou vůdčími</li>
 <li>Důležitost vícejazyčnosti při tvorbě metadat (již zakomponováno v RDF)</li>
@@ -285,7 +327,6 @@
       
     </p>
     <p>
-        &copy; Copyright 2014, Michael Kutý.<br/>
       Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.2.3.<br/>
     </p>
   </div>

@@ -53,6 +53,38 @@ Komponenty
 • Jeden z nejstarších vyvinut s cílem oddělení obsahu od 
 • Primárně určen pro reprezentaci metadat způsobu prezentace webového obsahu přidělených různým webovým zdrojům
 
+RDF
+------
+
+Vlastnosti
+""""""
+
+* Lze tvořit jen jednoduchá tvrzení tvaru podmět-přísudek-předmět 
+* Nelze vyjádřit co podmět, přísudek a předmět znamenají, ani jaké jsou mezi nimi vztahy
+* Krkonoše jsou pohoří, Sněžka je hora, každá hora má výšku, ...
+• Pro tvorbu komplexních ontologií se nehodí,
+vhodnější je OWL
+* Explicitně nemá zabudován koncept reprezentace tříd, implicitně ano ve formě rdf:type a rdf:property => v RDF lze reprezentovat, že něco“ je třídou nebo vlastností
+* S RDF ale nelze reprezentovat, že třída A je podtřídou třídy B => hierarchii tříd a vztahy mezi třídami
+
+Schéma
+"""""""
+
+• RDF Schema, The RDF Vocabulary Description language 
+* Nadstavba jazyka RDF pro tvorbu ontologií, která vznikla rozšířením 
+* a sémantiky RDF 
+* Určeno pro tvorbu struktury RDF tvrzení, resp. pro tvorbu tříd 
+* a tříd vlastností pro reprezentaci vztahů mezi třídami 
+* Zdroje tak mohou být kategorizovány a vnímány jako instance tříd 
+* Třídy zdrojů jsou seskupovány do hierarchie 
+* Třídy jsou vnímány jako rozšíření popisu zdrojů, více je konkretizují 
+* Hierarchie RDF tříd je chápána jako RDF slovník obsahující množinu 
+* RDF tvrzení se specifickým významem 
+* Jedná se také o RDF graf, jako v případě RDF 
+* Jmenný prostor má následující tvar: 
+* ://www.w3.org/2000/01/rdf-schema# (rdfs prefix) 
+
+
 
 Metadatový framework založený na OWL (W3C)
 """""""
