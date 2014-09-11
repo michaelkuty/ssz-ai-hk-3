@@ -54,6 +54,12 @@ TECH
 15. :doc:`Operační systémy Unix, Linux, BSD, MacOS (základní myšlenky, výhody a nevýhody, open-source, vznik a vývoj, licence, distribuce, základy ovládání - shell, rozdíly, historie a vývoj)<tech/15>`
 16. :doc:`Serverové operační systémy (specifika serverových operačních systémů, rozdíly mezi OS pro osobní počítač a pro server, serverové služby, správa uživatelů)<tech/16>`
 
+Přednášky
+--------
+
+* `ZT1`_
+* `ZT2`_
+* `PSIT4`_
 
 Syntaxe - **reStructuredText**
 ------
@@ -84,3 +90,6 @@ Indices and tables
 * :ref:`modindex`
 * :ref:`search`
 
+.. _ZT1: https://github.com/michaelkuty/ssz-ai-hk-3/tree/gh-pages/source/prednasky/zt1/
+.. _ZT2: https://github.com/michaelkuty/ssz-ai-hk-3/tree/gh-pages/source/prednasky/zt2/
+.. _PSIT4: https://github.com/michaelkuty/ssz-ai-hk-3/tree/gh-pages/source/prednasky/psit4/

@@ -34,25 +34,53 @@ Komponenty
 * Datový model: soubor datových typů a funkcí, pomocí kterých se tvoří abstraktní pohled na webový dokument s možností přístupu k hodnotám uložených v proměnných datových typů
 
 * Serializační formát: poskytuje meta-jazyk a syntaktické konstrukce pro kódování metadat
-	* příklad: RDF i OWL mají různé datové modely, přičemž jsou serializovány (zapsány) s použitím XML syntaxe
+* příklad: RDF i OWL mají různé datové modely, přičemž jsou serializovány (zapsány) s použitím XML syntaxe
 
 * Dotazovací jazyk: existence různých přístupů pro dotazování (např. RDF – SPARQL, OWL – SQWRL)
 
+* Specifikace RDF založená na XML (RDF/XML)
+* Specifikace RDF Schématu: tvorba hierarchií
+* Specifikace SPARQL: protokol a dotazovací jazyk pro zpřístupnění RDF dat
+* XSL specifikace s XSLT (transformace XML dokumentu do formy HTML stránky zobrazitelné na webu)
+* XLink, XPointer: reprezentace hypertextových odkazů
+* Specifikace Xquery a Xpath: extrakce XML informací z webových dokumentů
+* Specifikace XML Schématu: definice struktury XML dokumentů pro rozšíření jejich sémantiky
+* Specifikace RDF založená na XML (RDF/XML)
+* Specifikace RDF Schématu: tvorba hierarchií
+* Specifikace SPARQL: protokol a 
 
-• Metadatový framework na bázi XML (W3C)
-• Metadatový framework na bázi RDF (W3C)
-• Jeden z nejstarších vyvinut s cílem oddělení obsahu od • Primárně určen pro reprezentaci metadat způsobu prezentace webového obsahu přidělených různým webovým zdrojům
-             • Komponenty: • Komponenty:
-– XLink, XPointer: reprezentace hypertextových odkazů
-– XSL specifikace s XSLT (transformace XML dokumentu do
-formy HTML stránky zobrazitelné na webu)
-– Specifikace Xquery a Xpath: extrakce XML informací z
-webových dokumentů
-– Specifikace XML Schématu: definice struktury XML
-dokumentů pro rozšíření jejich sémantiky
-– Specifikace RDF založená na XML (RDF/XML)
-– Specifikace RDF Schématu: tvorba hierarchií
-– Specifikace SPARQL: protokol a 
+
+• Jeden z nejstarších vyvinut s cílem oddělení obsahu od 
+• Primárně určen pro reprezentaci metadat způsobu prezentace webového obsahu přidělených různým webovým zdrojům
+
+
+Metadatový framework založený na OWL (W3C)
+"""""""
+
+• OWL jazyk nabízí konstrukce, které umožňují vyjádřit různé typy omezení a axiomů na úrovni schémat a dat 
+
+Shrnutí funkcí metadat
+"""""""
+
+* Shrnutí (popisná funkce): sumarizace obsahu
+* Vyhledávání: prohledávání metadat s cílem vyšší přesnosti výsledků
+* Doporučení: umožňuje uživateli určit, která data potřebuje
+* Vybírání: pomoc při rozhodování, který zdroj informací načíst
+* Přístup: zajištění přístupu k datům (např. uvedením přesné lokace)
+* Interpretace: instrukce, jak se má s daty zacházet (např. formát, kódování, jazyk, šifrování, ...)
+* Specifikace: informace ovlivňující užití dat (např. právní podmínky, velikost, stáří, přístup. práva, ...)
+* Historie: popis historie nebo původu dat
+* Správa dat: specifikace pro správu objektu (např. datum poslední modifikace, datum vytvoření, ...)
+* Propojování a vztahy mezi daty: specifikace vztahů mezi objekty (např. mezi článkem a časopisem, mezi překladem a originálem, ...)
+
+Budoucnost metadat
+""""""
+
+* Některé standardy se stanou vůdčími
+* Důležitost vícejazyčnosti při tvorbě metadat (již zakomponováno v RDF)
+* Nutné počítat se širokým spektrem zdrojů (obrázky, videa, dynamicky generované objekty, ...)
+* Způsoby hodnocení efektivnosti metadat (metriky)
+* Teoretické základy pro tvorbu metadat (formální modely, metodologie, úvaha nad právními otázkami)
 
 
 * přednášky ZT2 na https://github.com/michaelkuty/ssz-ai-hk-3/tree/gh-pages/source/prednasky/zt2/

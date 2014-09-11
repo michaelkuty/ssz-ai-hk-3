@@ -5,7 +5,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>5. Sémantický web: technologie sémantického webu, metadata, RDF, RDFS, OWL, dotazování se na sémantický web (význam, jazyky), sémantický web a odvozování (význam, jazyky), aplikace sémantického webu. &mdash; Otazky na statnice 0.0.1 documentation</title>
+    <title>5. Sémantický web: technologie sémantického webu, metadata, RDF, RDFS, OWL, dotazování se na sémantický web (význam, jazyky), sémantický web a odvozování (význam, jazyky), aplikace sémantického webu. &mdash; Otázky na státnice 0.0.1 documentation</title>
     
     <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -30,7 +30,7 @@
     <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
     <script type="text/javascript" src="../_static/bootstrap-3.1.0/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
-    <link rel="top" title="Otazky na statnice 0.0.1 documentation" href="../index.html" />
+    <link rel="top" title="Otázky na státnice 0.0.1 documentation" href="../index.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
 <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
@@ -49,7 +49,7 @@
           <span class="icon-bar"></span>
         </button>
         <a class="navbar-brand" href="../index.html">
-          Otazky na statnice</a>
+          Otázky na státnice</a>
         <span class="navbar-text navbar-version pull-left"><b>0.0.1</b></span>
       </div>
 
@@ -82,6 +82,9 @@
 <li><a class="reference internal" href="#typy-metadat">Typy metadat</a></li>
 <li><a class="reference internal" href="#metadatovy-framework">Metadatový framework</a><ul>
 <li><a class="reference internal" href="#komponenty">Komponenty</a></li>
+<li><a class="reference internal" href="#metadatovy-framework-zalozeny-na-owl-w3c">Metadatový framework založený na OWL (W3C)</a></li>
+<li><a class="reference internal" href="#shrnuti-funkci-metadat">Shrnutí funkcí metadat</a></li>
+<li><a class="reference internal" href="#budoucnost-metadat">Budoucnost metadat</a></li>
 </ul>
 </li>
 </ul>
@@ -167,45 +170,56 @@
 <p>Sestává z množiny specifikací, které jsou zaměřeny např. na reprezentaci, manipulaci, uložení, údržbu a dotazování se na data a     metadata</p>
 <div class="section" id="komponenty">
 <h3>Komponenty<a class="headerlink" href="#komponenty" title="Permalink to this headline">¶</a></h3>
-<ul>
-<li><p class="first">Datový model: soubor datových typů a funkcí, pomocí kterých se tvoří abstraktní pohled na webový dokument s možností přístupu k hodnotám uložených v proměnných datových typů</p>
-</li>
-<li><dl class="first docutils">
-<dt>Serializační formát: poskytuje meta-jazyk a syntaktické konstrukce pro kódování metadat</dt>
-<dd><ul class="first last simple">
-<li>příklad: RDF i OWL mají různé datové modely, přičemž jsou serializovány (zapsány) s použitím XML syntaxe</li>
-</ul>
-</dd>
-</dl>
-</li>
-<li><p class="first">Dotazovací jazyk: existence různých přístupů pro dotazování (např. RDF – SPARQL, OWL – SQWRL)</p>
-</li>
-</ul>
-<ul>
-<li><p class="first">Metadatový framework na bázi XML (W3C)</p>
-</li>
-<li><p class="first">Metadatový framework na bázi RDF (W3C)</p>
-</li>
-<li><dl class="first docutils">
-<dt>Jeden z nejstarších vyvinut s cílem oddělení obsahu od • Primárně určen pro reprezentaci metadat způsobu prezentace webového obsahu přidělených různým webovým zdrojům</dt>
-<dd><ul class="first last simple">
-<li>Komponenty: • Komponenty:</li>
-</ul>
-</dd>
-</dl>
-</li>
-</ul>
-<p>– XLink, XPointer: reprezentace hypertextových odkazů
-– XSL specifikace s XSLT (transformace XML dokumentu do
-formy HTML stránky zobrazitelné na webu)
-– Specifikace Xquery a Xpath: extrakce XML informací z
-webových dokumentů
-– Specifikace XML Schématu: definice struktury XML
-dokumentů pro rozšíření jejich sémantiky
-– Specifikace RDF založená na XML (RDF/XML)
-– Specifikace RDF Schématu: tvorba hierarchií
-– Specifikace SPARQL: protokol a</p>
 <ul class="simple">
+<li>Datový model: soubor datových typů a funkcí, pomocí kterých se tvoří abstraktní pohled na webový dokument s možností přístupu k hodnotám uložených v proměnných datových typů</li>
+<li>Serializační formát: poskytuje meta-jazyk a syntaktické konstrukce pro kódování metadat</li>
+<li>příklad: RDF i OWL mají různé datové modely, přičemž jsou serializovány (zapsány) s použitím XML syntaxe</li>
+<li>Dotazovací jazyk: existence různých přístupů pro dotazování (např. RDF – SPARQL, OWL – SQWRL)</li>
+<li>Specifikace RDF založená na XML (RDF/XML)</li>
+<li>Specifikace RDF Schématu: tvorba hierarchií</li>
+<li>Specifikace SPARQL: protokol a dotazovací jazyk pro zpřístupnění RDF dat</li>
+<li>XSL specifikace s XSLT (transformace XML dokumentu do formy HTML stránky zobrazitelné na webu)</li>
+<li>XLink, XPointer: reprezentace hypertextových odkazů</li>
+<li>Specifikace Xquery a Xpath: extrakce XML informací z webových dokumentů</li>
+<li>Specifikace XML Schématu: definice struktury XML dokumentů pro rozšíření jejich sémantiky</li>
+<li>Specifikace RDF založená na XML (RDF/XML)</li>
+<li>Specifikace RDF Schématu: tvorba hierarchií</li>
+<li>Specifikace SPARQL: protokol a</li>
+</ul>
+<ul class="simple">
+<li>Jeden z nejstarších vyvinut s cílem oddělení obsahu od</li>
+<li>Primárně určen pro reprezentaci metadat způsobu prezentace webového obsahu přidělených různým webovým zdrojům</li>
+</ul>
+</div>
+<div class="section" id="metadatovy-framework-zalozeny-na-owl-w3c">
+<h3>Metadatový framework založený na OWL (W3C)<a class="headerlink" href="#metadatovy-framework-zalozeny-na-owl-w3c" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>OWL jazyk nabízí konstrukce, které umožňují vyjádřit různé typy omezení a axiomů na úrovni schémat a dat</li>
+</ul>
+</div>
+<div class="section" id="shrnuti-funkci-metadat">
+<h3>Shrnutí funkcí metadat<a class="headerlink" href="#shrnuti-funkci-metadat" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Shrnutí (popisná funkce): sumarizace obsahu</li>
+<li>Vyhledávání: prohledávání metadat s cílem vyšší přesnosti výsledků</li>
+<li>Doporučení: umožňuje uživateli určit, která data potřebuje</li>
+<li>Vybírání: pomoc při rozhodování, který zdroj informací načíst</li>
+<li>Přístup: zajištění přístupu k datům (např. uvedením přesné lokace)</li>
+<li>Interpretace: instrukce, jak se má s daty zacházet (např. formát, kódování, jazyk, šifrování, ...)</li>
+<li>Specifikace: informace ovlivňující užití dat (např. právní podmínky, velikost, stáří, přístup. práva, ...)</li>
+<li>Historie: popis historie nebo původu dat</li>
+<li>Správa dat: specifikace pro správu objektu (např. datum poslední modifikace, datum vytvoření, ...)</li>
+<li>Propojování a vztahy mezi daty: specifikace vztahů mezi objekty (např. mezi článkem a časopisem, mezi překladem a originálem, ...)</li>
+</ul>
+</div>
+<div class="section" id="budoucnost-metadat">
+<h3>Budoucnost metadat<a class="headerlink" href="#budoucnost-metadat" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Některé standardy se stanou vůdčími</li>
+<li>Důležitost vícejazyčnosti při tvorbě metadat (již zakomponováno v RDF)</li>
+<li>Nutné počítat se širokým spektrem zdrojů (obrázky, videa, dynamicky generované objekty, ...)</li>
+<li>Způsoby hodnocení efektivnosti metadat (metriky)</li>
+<li>Teoretické základy pro tvorbu metadat (formální modely, metodologie, úvaha nad právními otázkami)</li>
 <li>přednášky ZT2 na <a class="reference external" href="https://github.com/michaelkuty/ssz-ai-hk-3/tree/gh-pages/source/prednasky/zt2/">https://github.com/michaelkuty/ssz-ai-hk-3/tree/gh-pages/source/prednasky/zt2/</a></li>
 </ul>
 </div>

@@ -61,7 +61,7 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = u'Otazky na statnice'
+project = u'Otázky na státnice'
 copyright = u'2014, Michael Kutý'
 
 # The version info for the project you're documenting, acts as replacement for
