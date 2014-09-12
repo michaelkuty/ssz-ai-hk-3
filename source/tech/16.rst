@@ -1,3 +1,5 @@
 ======
 Serverové operační systémy (specifika serverových operačních systémů, rozdíly mezi OS pro osobní počítač a pro server, serverové služby, správa uživatelů)
 ======
+
+:download:`Otázka v PDF <pdf/16.pdf>`

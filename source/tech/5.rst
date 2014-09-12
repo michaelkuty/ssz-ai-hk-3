@@ -1,3 +1,5 @@
 =======
 Servery a pracovní stanice (rozdíly, kritéria výběru, role serverů, serverové technologie, zálohování dat včetně RAID)
 =======
+
+:download:`Otázka v PDF <pdf/5.pdf>`

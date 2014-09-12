@@ -47,6 +47,14 @@ TECH
    tech/15
    tech/16
 
+Celé předměty
+=============
+
+* `PROG`_
+* `TECH`_
+
+.. _PROG: source/prog/pdf/cele.pdf
+.. _TECH: source/tech/pdf/cele.pdf
 
 Přednášky
 --------

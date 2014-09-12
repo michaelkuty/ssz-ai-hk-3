@@ -1,0 +1,5 @@
+=============
+Architektura periferních zařízení (rozdělení, principy, funkce, typy, rozhraní, příklady)
+=============
+
+:download:`Otázka v PDF <pdf/4.pdf>`

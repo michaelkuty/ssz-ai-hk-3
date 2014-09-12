@@ -40,3 +40,5 @@ nula je znázorněna změnou z vyšší hodnoty napětí na nižší a jednička
 diferenciální Manchester
 jedna jeho změna je časování a druhá změna je datový bit.
 0 je tedy změna a 1 beze změny.
+
+:download:`Otázka v PDF <pdf/6.pdf>`
