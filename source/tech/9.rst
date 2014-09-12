@@ -1,5 +1,5 @@
 =================
-9. Internet (organizační struktura, vývoj, RFC dokumenty, domény, technické předpoklady pro připojení, hrozby)
+Internet (organizační struktura, vývoj, RFC dokumenty, domény, technické předpoklady pro připojení, hrozby)
 =================
 
 Organizační struktura zajištění provozu sítě Internet

@@ -1,3 +1,5 @@
 ========
 Operační systémy Unix, Linux, BSD, MacOS (základní myšlenky, výhody a nevýhody, open-source, vznik a vývoj, licence, distribuce, základy ovládání - shell, rozdíly, historie a vývoj)
 ========
+
+:download:`Otázka v PDF <pdf/15.pdf>`
