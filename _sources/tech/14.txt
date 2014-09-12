@@ -1,3 +1,5 @@
 ======
 Operační systémy Windows (principy MS DOS, MS Windows, architektura, verze, funkce, rozdíly).
 ======
+
+:download:`Otázka v PDF <pdf/14.pdf>`

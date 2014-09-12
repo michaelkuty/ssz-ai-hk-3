@@ -1,5 +1,5 @@
 =================
-9. Směrování (základní principy, směrovací protokoly, směrovací algoritmy, směrovače)
+Směrování (základní principy, směrovací protokoly, směrovací algoritmy, směrovače)
 =================
 
 Základní funkce routeru

@@ -1,3 +1,5 @@
 =======
 Souborové systémy a logická struktura dat (principy, porovnání, příklady).
 =======
+
+:download:`Otázka v PDF <pdf/13.pdf>`
